@@ -8,9 +8,9 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#FFF">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="//cdn.jsdelivr.net/gh/victin/victin@latest/images/apple-touch-icon.png">
 
-<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+<link rel="icon" type="image/ico" sizes="32x32" href="//cdn.jsdelivr.net/gh/victin/victin@latest/images/favicon.ico">
   <meta http-equiv="Cache-Control" content="no-transform">
   <meta http-equiv="Cache-Control" content="no-siteapp">
 
@@ -21,7 +21,7 @@
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/victin/victin@latest/css/app.css?v=0.2.5">
 
   
   <meta name="keywords" content="react,react-redux,redux" />
@@ -102,12 +102,12 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclga70tsj20zk0m84mr.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclimtf7dj20zk0m8qav.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipewr8iypj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipesx5fdwj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li>
         </ul>
       </div>
     </header>
@@ -144,7 +144,7 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
   <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/07/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="image" content="//cdn.jsdelivr.net/gh/victin/victin@latest/images/avatar.jpg">
     <meta itemprop="name" content="John Doe">
     <meta itemprop="description" content=", ">
   </span>
@@ -156,14 +156,10 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
   <div class="body md" itemprop="articleBody">
     
 
-    <h2 id="问题描述"><a class="markdownIt-Anchor" href="#问题描述">#</a> 问题描述</h2>
-<p>在使用 react-redux 或者 redux 时，需要让 redux 的状态修改改变时通知页面及时更新并渲染页面。于是采用了在 index.js 文件中使用<strong> store.subscribe</strong> 包裹页面的 render，该监听函数可以让<strong> render</strong> 重复渲染。不用担心效率问题，因为有 react 的虚拟 DOM 的<strong> diff 算法</strong>兜底，不会导致页面全部重新渲染。<br>
-代码如下：</p>
+    <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在使用react-redux或者redux时，需要让redux的状态修改改变时通知页面及时更新并渲染页面。于是采用了在index.js文件中使用<strong>store.subscribe</strong>包裹页面的render，该监听函数可以让<strong>render</strong>重复渲染。不用担心效率问题，因为有react的虚拟DOM的<strong>diff算法</strong>兜底，不会导致页面全部重新渲染。<br>代码如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ReactDOM</span> <span class="keyword">from</span> <span class="string">&#x27;react-dom/client&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;./redux/store&#x27;</span></span><br><span class="line"></span><br><span class="line">store.<span class="title function_">subscribe</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> root = <span class="title class_">ReactDOM</span>.<span class="title function_">createRoot</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>));</span><br><span class="line">  root.<span class="title function_">render</span>(</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="出现的错误"><a class="markdownIt-Anchor" href="#出现的错误">#</a> 出现的错误</h2>
-<p>页面出现空白并且没有任何错误提示</p>
-<h2 id="解决方案"><a class="markdownIt-Anchor" href="#解决方案">#</a> 解决方案</h2>
-<p>暂未解决</p>
+<h2 id="出现的错误"><a href="#出现的错误" class="headerlink" title="出现的错误"></a>出现的错误</h2><p>页面出现空白并且没有任何错误提示</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>暂未解决</p>
 
       <div class="tags">
           <a href="/tags/react/" rel="tag"><i class="ic i-tag"></i> react</a>
@@ -199,7 +195,7 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
   <div id="qr">
       
       <div>
-        <img data-src="/images/wechat-pay.png" alt="John Doe WeChat Pay">
+        <img data-src="//cdn.jsdelivr.net/gh/victin/victin@latest/images/wechat-pay.png" alt="John Doe WeChat Pay">
         <p>WeChat Pay</p>
       </div>
   </div>
@@ -233,7 +229,7 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
     <div class="item left">
       
 
-  <a href="/2022/09/06/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclimtf7dj20zk0m8qav.jpg" title="react与vue的路由辨析">
+  <a href="/2022/09/06/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeybxm1pj20zk0m8niv.jpg" title="react与vue的路由辨析">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> 前端</span>
   <h3>react与vue的路由辨析</h3>
@@ -257,7 +253,7 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text"> 问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BA%E7%8E%B0%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-number">2.</span> <span class="toc-text"> 出现的错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">3.</span> <span class="toc-text"> 解决方案</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BA%E7%8E%B0%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-number">2.</span> <span class="toc-text">出现的错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
@@ -267,7 +263,7 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
       <div class="overview panel" data-title="Overview">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="image" itemprop="image" alt="John Doe"
-      data-src="/images/avatar.jpg">
+      data-src="//cdn.jsdelivr.net/gh/victin/victin@latest/images/avatar.jpg">
   <p class="name" itemprop="name">John Doe</p>
   <div class="description" itemprop="description"></div>
 </div>
@@ -367,20 +363,20 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E5%85%B6%E4%BB%96/" title="In 其他">其他</a>
+<a href="/categories/%E5%89%8D%E7%AB%AF/" title="In 前端">前端</a>
 </div>
 
-    <span><a href="/2022/09/06/hello-world/" title="第一篇个人博客">第一篇个人博客</a></span>
+    <span><a href="/2022/09/06/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" title="react与vue的路由辨析">react与vue的路由辨析</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF/" title="In 前端">前端</a>
+<a href="/categories/%E5%85%B6%E4%BB%96/" title="In 其他">其他</a>
 </div>
 
-    <span><a href="/2022/09/06/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" title="react与vue的路由辨析">react与vue的路由辨析</a></span>
+    <span><a href="/2022/09/06/hello-world/" title="第一篇个人博客">第一篇个人博客</a></span>
   </li>
 
       
@@ -450,7 +446,7 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
 
 <script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
 
-<script src="/js/app.js?v=0.2.5"></script>
+<script src="//cdn.jsdelivr.net/gh/victin/victin@latest/js/app.js?v=0.2.5"></script>
 
 
 
