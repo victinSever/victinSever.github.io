@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Hexo • Posts by &#34;vue&#34; tag</title>
+        <link>http://example.com</link>
+        <description></description>
+        <language>en</language>
+        <pubDate>Tue, 06 Sep 2022 22:25:24 +0800</pubDate>
+        <lastBuildDate>Tue, 06 Sep 2022 22:25:24 +0800</lastBuildDate>
+        <category>react</category>
+        <category>vue</category>
+        <category>react-router-dom</category>
+        <category>vue-router</category>
+        <category>react-redux</category>
+        <category>redux</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/09/06/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/</guid>
+            <title>react与vue的路由辨析</title>
+            <link>http://example.com/2022/09/06/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/</link>
+            <category>react</category>
+            <category>vue</category>
+            <category>react-router-dom</category>
+            <category>vue-router</category>
+            <pubDate>Tue, 06 Sep 2022 22:25:24 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;react-router-dom 是 react 中的内置插件&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

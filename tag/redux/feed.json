@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Hexo • All posts by \"redux\" tag",
+    "description": "",
+    "home_page_url": "http://example.com",
+    "items": [
+        {
+            "id": "http://example.com/2022/09/07/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/",
+            "url": "http://example.com/2022/09/07/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/",
+            "title": "react中引入react-redux使用subscribe监听入口render出现页面空白问题",
+            "date_published": "2022-09-07T15:23:24.000Z",
+            "content_html": "<h2 id=\"问题描述\"><a class=\"markdownIt-Anchor\" href=\"#问题描述\">#</a> 问题描述</h2>\n<p>在使用 react-redux 或者 redux 时，需要让 redux 的状态修改改变时通知页面及时更新并渲染页面。于是采用了在 index.js 文件中使用<strong> store.subscribe</strong> 包裹页面的 render，该监听函数可以让<strong> render</strong> 重复渲染。不用担心效率问题，因为有 react 的虚拟 DOM 的<strong> diff 算法</strong>兜底，不会导致页面全部重新渲染。<br>\n代码如下：</p>\n<figure class=\"highlight js\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br><span class=\"line\">8</span><br><span class=\"line\">9</span><br><span class=\"line\">10</span><br><span class=\"line\">11</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"keyword\">import</span> <span class=\"title class_\">React</span> <span class=\"keyword\">from</span> <span class=\"string\">&#x27;react&#x27;</span>;</span><br><span class=\"line\"><span class=\"keyword\">import</span> <span class=\"title class_\">ReactDOM</span> <span class=\"keyword\">from</span> <span class=\"string\">&#x27;react-dom/client&#x27;</span>;</span><br><span class=\"line\"><span class=\"keyword\">import</span> <span class=\"title class_\">App</span> <span class=\"keyword\">from</span> <span class=\"string\">&#x27;./App&#x27;</span>;</span><br><span class=\"line\"><span class=\"keyword\">import</span> store <span class=\"keyword\">from</span> <span class=\"string\">&#x27;./redux/store&#x27;</span></span><br><span class=\"line\"></span><br><span class=\"line\">store.<span class=\"title function_\">subscribe</span>(<span class=\"function\">() =&gt;</span> &#123;</span><br><span class=\"line\">  <span class=\"keyword\">const</span> root = <span class=\"title class_\">ReactDOM</span>.<span class=\"title function_\">createRoot</span>(<span class=\"variable language_\">document</span>.<span class=\"title function_\">getElementById</span>(<span class=\"string\">&#x27;root&#x27;</span>));</span><br><span class=\"line\">  root.<span class=\"title function_\">render</span>(</span><br><span class=\"line\">      <span class=\"language-xml\"><span class=\"tag\">&lt;<span class=\"name\">App</span> /&gt;</span></span></span><br><span class=\"line\">  );</span><br><span class=\"line\">&#125;)</span><br></pre></td></tr></table></figure>\n<h2 id=\"出现的错误\"><a class=\"markdownIt-Anchor\" href=\"#出现的错误\">#</a> 出现的错误</h2>\n<p>页面出现空白并且没有任何错误提示</p>\n<h2 id=\"解决方案\"><a class=\"markdownIt-Anchor\" href=\"#解决方案\">#</a> 解决方案</h2>\n<p>暂未解决</p>\n",
+            "tags": [
+                "react",
+                "react-redux",
+                "redux"
+            ]
+        }
+    ]
+}

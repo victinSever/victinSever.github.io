@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://example.com</id>
+    <title>Hexo • Posts by &#34;vue&#34; tag</title>
+    <link href="http://example.com" />
+    <updated>2022-09-06T14:25:24.000Z</updated>
+    <category term="react" />
+    <category term="vue" />
+    <category term="react-router-dom" />
+    <category term="vue-router" />
+    <category term="react-redux" />
+    <category term="redux" />
+    <entry>
+        <id>http://example.com/2022/09/06/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/</id>
+        <title>react与vue的路由辨析</title>
+        <link rel="alternate" href="http://example.com/2022/09/06/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/"/>
+        <content type="html">&lt;p&gt;react-router-dom 是 react 中的内置插件&lt;/p&gt;
+</content>
+        <category term="react" />
+        <category term="vue" />
+        <category term="react-router-dom" />
+        <category term="vue-router" />
+        <updated>2022-09-06T14:25:24.000Z</updated>
+    </entry>
+</feed>
