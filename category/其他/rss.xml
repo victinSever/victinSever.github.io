@@ -13,6 +13,9 @@
         <category>vue-router</category>
         <category>react-redux</category>
         <category>redux</category>
+        <category>密码学</category>
+        <category>凯斯密码</category>
+        <category>维吉尼亚密码</category>
         <item>
             <guid isPermalink="true">http://example.com/2022/09/06/hello-world/</guid>
             <title>第一篇个人博客</title>

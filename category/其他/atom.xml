@@ -10,6 +10,9 @@
     <category term="vue-router" />
     <category term="react-redux" />
     <category term="redux" />
+    <category term="密码学" />
+    <category term="凯斯密码" />
+    <category term="维吉尼亚密码" />
     <entry>
         <id>http://example.com/2022/09/06/hello-world/</id>
         <title>第一篇个人博客</title>
