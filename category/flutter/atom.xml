@@ -4,33 +4,45 @@
     <title>Hexo • Posts by &#34;flutter&#34; category</title>
     <link href="http://example.com" />
     <updated>2022-09-13T08:37:55.000Z</updated>
+    <category term="JavaScript" />
     <category term="react" />
     <category term="vue" />
     <category term="react-router-dom" />
     <category term="vue-router" />
     <category term="react-redux" />
     <category term="redux" />
+    <category term="hexo" />
+    <category term="Typora" />
+    <category term="Dijkstra" />
     <category term="密码学" />
     <category term="凯斯密码" />
     <category term="维吉尼亚密码" />
     <entry>
-        <id>http://example.com/2022/09/13/flutter-01-introduce/</id>
+        <id>http://example.com/2022/09/13/flutter/flutter-01-introduce/</id>
         <title>flutter-01-introduce</title>
-        <link rel="alternate" href="http://example.com/2022/09/13/flutter-01-introduce/"/>
-        <content type="html">&lt;h2 id=&#34;Flutter特点&#34;&gt;&lt;a href=&#34;#Flutter特点&#34; class=&#34;headerlink&#34; title=&#34;Flutter特点&#34;&gt;&lt;/a&gt;Flutter特点&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;多平台支持 iOS Android Linux 未来 Fuchsia OS&lt;/p&gt;
+        <link rel="alternate" href="http://example.com/2022/09/13/flutter/flutter-01-introduce/"/>
+        <content type="html">&lt;h2 id=&#34;flutter特点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#flutter特点&#34;&gt;#&lt;/a&gt; Flutter 特点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;多平台支持 iOS Android Linux 未来 Fuchsia OS&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;原生用户界面&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;原生用户界面&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;120fps 超高性能&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;120fps 超高性能&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;两套成熟 UI 库 Material Design 和 Cupertino&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;两套成熟 UI 库 Material Design 和 Cupertino&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;响应式的框架 Redux、RxDart、BloC 业务和 UI 分离&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;响应式的框架 Redux、RxDart、BloC 业务和 UI 分离&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Flutter 支持 Hot Reload&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;Flutter 支持 Hot Reload&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;国内阿里咸鱼、腾讯、京东、国外的谷歌等公司都已经有上线产品在使用 Flutter 开发&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;国内阿里咸鱼、腾讯、京东、国外的谷歌等公司都已经有上线产品在使用 Flutter 开发&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </content>

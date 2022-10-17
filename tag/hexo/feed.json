@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Hexo • All posts by \"hexo\" tag",
+    "description": "",
+    "home_page_url": "http://example.com",
+    "items": [
+        {
+            "id": "http://example.com/2022/10/17/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo%E5%92%8CTypora%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/",
+            "url": "http://example.com/2022/10/17/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo%E5%92%8CTypora%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/",
+            "title": "hexo和Typora中插入图片",
+            "date_published": "2022-10-17T13:39:01.000Z",
+            "content_html": "<h2 id=\"hexo与typora完美结合插入图片方便\"><a class=\"markdownIt-Anchor\" href=\"#hexo与typora完美结合插入图片方便\">#</a> hexo 与 Typora 完美结合：插入图片方便</h2>\n<ul>\n<li>\n<p>安装插件 hexo-renderer-marked</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">npm install hexo-renderer-marked</span><br></pre></td></tr></table></figure>\n</li>\n<li>\n<p>在 config.yml 中修改配置如下</p>\n<figure class=\"highlight yml\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"attr\">post_asset_folder:</span> <span class=\"literal\">true</span></span><br></pre></td></tr></table></figure>\n</li>\n<li>\n<p>在 config.yml 中添加配置如下</p>\n<figure class=\"highlight yml\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"attr\">marked:</span></span><br><span class=\"line\">  <span class=\"attr\">prependRoot:</span> <span class=\"literal\">true</span></span><br><span class=\"line\">  <span class=\"attr\">postAsset:</span> <span class=\"literal\">true</span></span><br></pre></td></tr></table></figure>\n</li>\n<li>\n<p>在 source 文件中创建一个文件夹来存储图片，我这里创建的文件名为 image（不要再主题的 source 文件夹下创建），如下</p>\n<p><img data-src=\"./../../image/1-1666017983181-19.png\" alt=\"1\"></p>\n</li>\n<li>\n<p>打开 typora: 文件 -&gt; 偏好设置 -&gt; 图像，选择复制到指定路径 -&gt; 点开文件图标，选择刚刚创建的 “image”（自己创建的存储图片的文件）文件 -&gt; 勾选如图下的四个勾选，版本不同可能不同，如图下：</p>\n<p><img data-src=\"./../../image/2-1666017979650-17.png\" alt=\"2\"></p>\n</li>\n<li>\n<p>接下来在用 typora 时，右键点击导入或者直接拖动图片直接复制进来进好啦会进行自动复制配置在你的 image 下了，此时已经可以正常使用了，如果本地使用 <strong>hexo s</strong> 命令后发现并没有成功，请看下一步。</p>\n</li>\n<li>\n<p>大概率可能是命名重复，需要手动点击设置。</p>\n</li>\n<li>\n<p>需要在 Typora 中右击图片选择复制到 image</p>\n<p><img data-src=\"./../../image/3-1666017975781-15.png\" alt=\"3\"></p>\n</li>\n<li>\n<p>大功告成！</p>\n</li>\n</ul>\n<h5 id=\"参考文章hexo博客如何插入图片-知乎-zhihucom\"><a class=\"markdownIt-Anchor\" href=\"#参考文章hexo博客如何插入图片-知乎-zhihucom\">#</a> 参考文章：<span class=\"exturl\" data-url=\"aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yNjUwNzc0Njg=\">hexo 博客如何插入图片 - 知乎 (zhihu.com)</span></h5>\n",
+            "tags": [
+                "hexo",
+                "Typora"
+            ]
+        }
+    ]
+}

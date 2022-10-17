@@ -1,0 +1,572 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Hexo" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Hexo" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="Hexo" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="密码学,凯斯密码,维吉尼亚密码" />
+
+
+<link rel="canonical" href="http://example.com/2022/09/09/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/">
+
+
+
+  <title>
+古典密码学：凯撒密码和维吉尼亚密码 - 密码学 - 课程 |
+眸光似星辰 = Hexo</title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">古典密码学：凯撒密码和维吉尼亚密码
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2022-09-09 21:23:29">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-09-09T21:23:29+08:00">2022-09-09</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">眸光似星辰</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclxfdlttj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AF%BE%E7%A8%8B/" itemprop="item" rel="index" title="In 课程"><span itemprop="name">课程</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AF%BE%E7%A8%8B/%E5%AF%86%E7%A0%81%E5%AD%A6/" itemprop="item" rel="index" title="In 密码学"><span itemprop="name">密码学</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/09/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="John Doe">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="凯撒密码和维吉尼亚密码"><a class="markdownIt-Anchor" href="#凯撒密码和维吉尼亚密码">#</a> 凯撒密码和维吉尼亚密码</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTYlODElQkElRTYlOTIlOTIlRTUlQUYlODYlRTclQTAlODEvNDkwNTI4NA==">凯撒密码</span>是一种比较简单的古典密码，仅仅将明文的每个字符偏移相同的偏移量，从而达到加密的目的。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTclQkIlQjQlRTUlOTAlODklRTUlQjAlQkMlRTQlQkElOUElRTUlQUYlODYlRTclQTAlODE/ZnJvbU1vZHVsZT1sZW1tYV9zZWFyY2gtYm94">维吉尼亚密码</span>则是在凯撒密码的基础上演变而来，是使用一系列凯撒密码组成密码字母表的加密算法，属于多表密码的一种简单形式。</p>
+<h2 id="本人创建的两种编译器"><a class="markdownIt-Anchor" href="#本人创建的两种编译器">#</a> 本人创建的两种编译器</h2>
+<p>本人采用 Java 语法编写算法，使用了两种思路来分别编写两种编译器类：CaesarCodeGenerator、VirginiaCodeGenerator</p>
+<ul>
+<li>
+<p>CaesarCodeGenerator 类将明文集合和密文集合定义在内，明文集合固定，而密文集合通过传入的密匙和明文集合生成。加密和解密算法分别将明密文集合一一对应即可达到编译码的功能。</p>
+<ul>
+<li>明密文集合定义如下：</li>
+</ul>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">MING</span> <span class="operator">=</span> <span class="string">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>;<span class="comment">//明文集合</span></span><br><span class="line">   <span class="type">String</span> <span class="variable">MI</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;<span class="comment">//密文集合</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span> <span class="title function_">CaesarCodeGenerator</span><span class="params">()</span> &#123;</span><br><span class="line">       <span class="built_in">this</span>.MI = <span class="built_in">this</span>.MING.toUpperCase();</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span> <span class="title function_">CaesarCodeGenerator</span><span class="params">(<span class="type">char</span> k)</span> &#123;</span><br><span class="line">       <span class="built_in">this</span>();</span><br><span class="line">       <span class="built_in">this</span>.setMI(k);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>VirginiaCodeGenerator 类中加密解密直接完成，没有定义明密文集合或者表完成。</p>
+<ul>
+<li>
+<p>加密算法：对每个明文遍历，获取当前的密匙，然后根据公式（p 为明文，k 为密匙，c 为密文，都为 0~25 的数字） <strong><strong>(p + k) = c</strong></strong> 获取密文，对空格明文跳过。</p>
+</li>
+<li>
+<p>解密算法：对每个密文遍历，获取当前的密匙，然后根据公式（p 为明文，k 为密匙，c 为密文，都为 0~25 的数字） <strong><strong>(c - k) = p</strong></strong> 获取密文。</p>
+</li>
+<li>
+<p>维吉尼亚加密算法如下：</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> String <span class="title function_">vigenere_enc</span><span class="params">(String m, String k)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">c</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;<span class="comment">//密文</span></span><br><span class="line">    m = m.toUpperCase();</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">char</span> x: m.toCharArray()) &#123;</span><br><span class="line">        <span class="keyword">if</span>(x == <span class="string">&#x27; &#x27;</span>) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="type">char</span> <span class="variable">ch</span> <span class="operator">=</span> k.charAt(index++);<span class="comment">//获取密匙字母</span></span><br><span class="line">        <span class="keyword">if</span>(index == k.length()) index = <span class="number">0</span>;<span class="comment">//重置密匙</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">key</span> <span class="operator">=</span> Character.isUpperCase(ch) ? ch - <span class="string">&#x27;A&#x27;</span>: ch - <span class="string">&#x27;a&#x27;</span>;<span class="comment">//获取偏移量</span></span><br><span class="line">        c += (<span class="type">char</span>)((x - <span class="string">&#x27;A&#x27;</span> + key) % <span class="number">26</span> + <span class="string">&#x27;A&#x27;</span>);<span class="comment">//求出密文字母</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>后附完整代码</p>
+<h2 id="破译难度"><a class="markdownIt-Anchor" href="#破译难度">#</a> 破译难度</h2>
+<p>毫无疑问维吉尼亚密码破译是极度困难的，而凯撒密码相对容易。此处不介绍方法，详情见<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pdGNoZWxsX0Rvbm92YW4vYXJ0aWNsZS9kZXRhaWxzLzEyMzg5ODIxNT9vcHNfcmVxdWVzdF9taXNjPSUyNTdCJTI1MjJyZXF1ZXN0JTI1NUZpZCUyNTIyJTI1M0ElMjUyMjE2NjI3MjUzNzMxNjgwMDE4NjUyOTcwOSUyNTIyJTI1MkMlMjUyMnNjbSUyNTIyJTI1M0ElMjUyMjIwMTQwNzEzLjEzMDEwMjMzNC5wYyUyNTVGYWxsLiUyNTIyJTI1N0QmYW1wO3JlcXVlc3RfaWQ9MTY2MjcyNTM3MzE2ODAwMTg2NTI5NzA5JmFtcDtiaXpfaWQ9MCZhbXA7dXRtX21lZGl1bT1kaXN0cmlidXRlLnBjX3NlYXJjaF9yZXN1bHQubm9uZS10YXNrLWJsb2ctMn5hbGx+Zmlyc3RfcmFua19lY3BtX3YxfnJhbmtfdjMxX2VjcG0tMS0xMjM4OTgyMTUtbnVsbC1udWxsLjE0MiU1RXY0NyU1RWNvbnRyb2xfMSwyMDElNUV2MyU1RWNvbnRyb2xfMSZhbXA7dXRtX3Rlcm09JUU3JUJCJUI0JUU1JTkwJTg5JUU1JUIwJUJDJUU0JUJBJTlBJUU3JUJDJTk2JUU4JUFGJTkxJUU3JUEwJTgxJUU1JTk5JUE4JmFtcDtzcG09MTAxOC4yMjI2LjMwMDEuNDE4Nw==">维吉尼亚密码破译</span>。</p>
+<h2 id="完整代码"><a class="markdownIt-Anchor" href="#完整代码">#</a> 完整代码</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 1、实现凯撒加密和解密：caesar_enc(m, k)和caesar_dec(c, k)。</span></span><br><span class="line"><span class="comment"> * 参数说明：</span></span><br><span class="line"><span class="comment"> * m：明文字符串，要求只能是字母（可以有空格，加密时删除，不区分大小写）</span></span><br><span class="line"><span class="comment"> * c：密文字符串，要求只能是字母（不区分大小写）</span></span><br><span class="line"><span class="comment"> * k：加密和解密密钥，允许为整数或字母（按0~25对应）</span></span><br><span class="line"><span class="comment"> * 返回值：加密返回密文（大写），解密返回明文（小写）</span></span><br><span class="line"><span class="comment"> * &lt;p&gt;</span></span><br><span class="line"><span class="comment"> * 2、实现维吉尼亚加密和解密：vigenere_enc(m, k)和vigenere_dec(c, k)</span></span><br><span class="line"><span class="comment"> * 参数说明：</span></span><br><span class="line"><span class="comment"> * m：明文字符串，要求只能是字母（可以有空格，加密时删除，不区分大小写）</span></span><br><span class="line"><span class="comment"> * c：密文字符串，要求只能是字母（不区分大小写）</span></span><br><span class="line"><span class="comment"> * k：加密和解密密钥，只能为字母</span></span><br><span class="line"><span class="comment"> * 返回值：加密返回密文（大写），解密返回明文（小写）</span></span><br><span class="line"><span class="comment"> * 注：必须调用凯撒加密和解密。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 凯撒编译码器</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">CaesarCodeGenerator</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">MING</span> <span class="operator">=</span> <span class="string">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>;<span class="comment">//明文集合</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">MI</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;<span class="comment">//密文集合</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">CaesarCodeGenerator</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.MI = <span class="built_in">this</span>.MING.toUpperCase();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">CaesarCodeGenerator</span><span class="params">(<span class="type">char</span> k)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>();</span><br><span class="line">        <span class="built_in">this</span>.setMI(k);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取密文集合</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> k</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">setMI</span><span class="params">(<span class="type">int</span> k)</span>&#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">key</span> <span class="operator">=</span> Character.isDigit(k) ? k - <span class="string">&#x27;0&#x27;</span> : Character.isUpperCase(k) ? k - <span class="string">&#x27;A&#x27;</span> + <span class="number">1</span> : k - <span class="string">&#x27;a&#x27;</span> + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; MI.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (MI.length() - i &lt;= key) &#123;</span><br><span class="line">                str = MI.charAt(i) + str;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                str += MI.charAt(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">this</span>.MI = str;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 加密</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> m 明文</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> k 密匙</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> c 密文</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">caesar_enc</span><span class="params">(String m, <span class="type">char</span> k)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">c</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;<span class="comment">//密文</span></span><br><span class="line">        m = m.toLowerCase();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">char</span> x: m.toCharArray()) &#123;</span><br><span class="line">            <span class="keyword">if</span>(x == <span class="string">&#x27; &#x27;</span>) <span class="keyword">continue</span>;</span><br><span class="line">            c += MI.charAt(MING.indexOf(x));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> c;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 解密</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> c 密文</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> k 密匙</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 明文</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">caesar_dec</span><span class="params">(String c, <span class="type">char</span> k)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">m</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        c = c.toUpperCase();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">char</span> x: c.toCharArray()) &#123;</span><br><span class="line">            m += MING.charAt(MI.indexOf(x));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> m;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 维吉尼亚编译码器</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">VirginiaCodeGenerator</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 加密</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> m 明文</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> k 密匙</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> c 密文</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">vigenere_enc</span><span class="params">(String m, String k)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">c</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;<span class="comment">//密文</span></span><br><span class="line">        m = m.toUpperCase();</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">char</span> x: m.toCharArray()) &#123;</span><br><span class="line">            <span class="keyword">if</span>(x == <span class="string">&#x27; &#x27;</span>) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="type">char</span> <span class="variable">ch</span> <span class="operator">=</span> k.charAt(index++);<span class="comment">//获取密匙字母</span></span><br><span class="line">            <span class="keyword">if</span>(index == k.length()) index = <span class="number">0</span>;<span class="comment">//重置密匙</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">key</span> <span class="operator">=</span> Character.isUpperCase(ch) ? ch - <span class="string">&#x27;A&#x27;</span>: ch - <span class="string">&#x27;a&#x27;</span>;<span class="comment">//获取偏移量</span></span><br><span class="line">            c += (<span class="type">char</span>)((x - <span class="string">&#x27;A&#x27;</span> + key) % <span class="number">26</span> + <span class="string">&#x27;A&#x27;</span>);<span class="comment">//求出密文字母</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> c;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 解密</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> c 密文</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> k 密匙</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 明文</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">vigenere_dec</span><span class="params">(String c, String k)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">m</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        c = c.toLowerCase();</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">char</span> x: c.toCharArray()) &#123;</span><br><span class="line">            <span class="keyword">if</span>(x == <span class="string">&#x27; &#x27;</span>) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="type">char</span> <span class="variable">ch</span> <span class="operator">=</span> k.charAt(index++);<span class="comment">//获取密匙字母</span></span><br><span class="line">            <span class="keyword">if</span>(index == k.length()) index = <span class="number">0</span>;<span class="comment">//重置密匙</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">key</span> <span class="operator">=</span> Character.isUpperCase(ch) ? ch - <span class="string">&#x27;A&#x27;</span>: ch - <span class="string">&#x27;a&#x27;</span>;<span class="comment">//获取偏移量</span></span><br><span class="line">            m += (<span class="type">char</span>)((x - <span class="string">&#x27;a&#x27;</span> - key) % <span class="number">26</span> + <span class="string">&#x27;a&#x27;</span>);<span class="comment">//求出明文字母</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> m;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="type">Scanner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">runCaesar</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.print(<span class="string">&quot;请输入明文（字符串：字母和空格组成）：&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">m</span> <span class="operator">=</span> in.nextLine();</span><br><span class="line">        System.out.print(<span class="string">&quot;\n请输入密匙（数字或者字母）：&quot;</span>);</span><br><span class="line">        <span class="type">char</span> <span class="variable">k</span> <span class="operator">=</span> in.nextLine().charAt(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="type">CaesarCodeGenerator</span> <span class="variable">caesar</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">CaesarCodeGenerator</span>(<span class="string">&#x27;3&#x27;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;\n明文集合：&quot;</span> + caesar.MING);</span><br><span class="line">        System.out.println(<span class="string">&quot;密文集合：&quot;</span> + caesar.MI);</span><br><span class="line">        System.out.println(<span class="string">&quot;原文：&quot;</span> + m);</span><br><span class="line">        <span class="type">String</span> <span class="variable">encStr</span> <span class="operator">=</span> caesar.caesar_enc(m, k);</span><br><span class="line">        System.out.println(<span class="string">&quot;密文：&quot;</span> + encStr);</span><br><span class="line">        <span class="type">String</span> <span class="variable">decStr</span> <span class="operator">=</span> caesar.caesar_dec(encStr, k);</span><br><span class="line">        System.out.println(<span class="string">&quot;译文：&quot;</span> + decStr);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">runVirginia</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.print(<span class="string">&quot;请输入明文（字符串：字母和空格组成）：&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">m</span> <span class="operator">=</span> in.nextLine();</span><br><span class="line">        System.out.print(<span class="string">&quot;\n请输入密匙（单词）：&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">k</span> <span class="operator">=</span> in.next();</span><br><span class="line"></span><br><span class="line">        <span class="type">VirginiaCodeGenerator</span> <span class="variable">virginia</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">VirginiaCodeGenerator</span>();</span><br><span class="line">        System.out.println(<span class="string">&quot;原文：&quot;</span> + m);</span><br><span class="line">        <span class="type">String</span> <span class="variable">encStr</span> <span class="operator">=</span> virginia.vigenere_enc(m, k);</span><br><span class="line">        System.out.println(<span class="string">&quot;密文：&quot;</span> + encStr);</span><br><span class="line">        <span class="type">String</span> <span class="variable">decStr</span> <span class="operator">=</span> virginia.vigenere_dec(encStr, k);</span><br><span class="line">        System.out.println(<span class="string">&quot;译文：&quot;</span> + decStr);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;--\t古典编译器\t--\n&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;选择编译器：&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;\t1，凯撒编译码器&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;\t2，维吉尼亚编译码器&quot;</span>);</span><br><span class="line">        System.out.print(<span class="string">&quot;请选择：&quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">option</span> <span class="operator">=</span> in.nextInt();</span><br><span class="line">        System.out.println();</span><br><span class="line">        in.nextLine();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">switch</span> (option) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">1</span>: runCaesar(); <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>: runVirginia(); <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                System.out.println(<span class="string">&quot;输入错误！&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>这其实是我密码学的一个平时作业。算法不唯一，凯撒编译器或者维吉尼亚编译器都可以互换算法，此处就只完成其中一种。有问题请指正～</p>
+
+      <div class="tags">
+          <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" rel="tag"><i class="ic i-tag"></i> 密码学</a>
+          <a href="/tags/%E5%87%AF%E6%96%AF%E5%AF%86%E7%A0%81/" rel="tag"><i class="ic i-tag"></i> 凯斯密码</a>
+          <a href="/tags/%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" rel="tag"><i class="ic i-tag"></i> 维吉尼亚密码</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2022-09-09 22:05:06" itemprop="dateModified" datetime="2022-09-09T22:05:06+08:00">2022-09-09</time>
+  </span>
+  <span id="2022/09/09/网络前沿安全技术/古典密码学：凯撒密码和维吉尼亚密码/" class="item leancloud_visitors" data-flag-title="古典密码学：凯撒密码和维吉尼亚密码" title="Views">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">Views</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">times</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechat-pay.png" alt="John Doe WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>John Doe <i class="ic i-at"><em>@</em></i>Hexo
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2022/09/09/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" title="古典密码学：凯撒密码和维吉尼亚密码">http://example.com/2022/09/09/网络前沿安全技术/古典密码学：凯撒密码和维吉尼亚密码/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/09/07/react/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxxcb6rj20zk0m8b29.jpg" title="react中引入react-redux使用subscribe监听入口render出现页面空白问题">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> BUG</span>
+  <h3>react中引入react-redux使用subscribe监听入口render出现页面空白问题</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2022/09/13/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%AE%80%E8%BF%B0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclh3brzpj20zk0m8ann.jpg" title="密码学简述">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> 近代加密技术</span>
+  <h3>密码学简述</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text"> 凯撒密码和维吉尼亚密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E4%BA%BA%E5%88%9B%E5%BB%BA%E7%9A%84%E4%B8%A4%E7%A7%8D%E7%BC%96%E8%AF%91%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text"> 本人创建的两种编译器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%B4%E8%AF%91%E9%9A%BE%E5%BA%A6"><span class="toc-number">3.</span> <span class="toc-text"> 破译难度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="toc-number">4.</span> <span class="toc-text"> 完整代码</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li class="active"><a href="/2022/09/09/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" rel="bookmark" title="古典密码学：凯撒密码和维吉尼亚密码">古典密码学：凯撒密码和维吉尼亚密码</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="John Doe"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">John Doe</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">12</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">12</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">13</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3ZpY3RpblNldmVyL3ZpY3RpblNldmVy" title="https:&#x2F;&#x2F;github.com&#x2F;victinSever&#x2F;victinSever"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9naXRlZS5jb20vdmljdGluL3ZpY3Rpbg==" title="https:&#x2F;&#x2F;gitee.com&#x2F;victin&#x2F;victin"><i class="ic i-address-card"></i></span>
+      <a href="/victinzhong@163.com" title="victinzhong@163.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item csdn" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU0MzUzNjMxP3NwbT0xMDAwLjIxMTUuMzAwMS41MzQz" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_54353631?spm&#x3D;1000.2115.3001.5343"><i class="ic i-instagram"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2022/09/07/react/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2022/09/13/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%AE%80%E8%BF%B0/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/01-%E9%A2%84%E7%BC%96%E8%AF%91/" title="JavaScript预编辑">JavaScript预编辑</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%85%B6%E4%BB%96/" title="In 其他">其他</a>
+</div>
+
+    <span><a href="/2022/09/06/hello-world/" title="第一篇个人博客">第一篇个人博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%8D%9A%E5%AE%A2/" title="In 博客">博客</a>
+</div>
+
+    <span><a href="/2022/10/17/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo%E5%92%8CTypora%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" title="hexo和Typora中插入图片">hexo和Typora中插入图片</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF/" title="In 前端">前端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF/BUG/" title="In BUG">BUG</a>
+</div>
+
+    <span><a href="/2022/09/07/react/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/" title="react中引入react-redux使用subscribe监听入口render出现页面空白问题">react中引入react-redux使用subscribe监听入口render出现页面空白问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B/" title="In 课程">课程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B/%E5%AF%86%E7%A0%81%E5%AD%A6/" title="In 密码学">密码学</a>
+</div>
+
+    <span><a href="/2022/09/09/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" title="古典密码学：凯撒密码和维吉尼亚密码">古典密码学：凯撒密码和维吉尼亚密码</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B/" title="In 课程">课程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" title="In 数据结构和算法">数据结构和算法</a>
+</div>
+
+    <span><a href="/2022/09/15/%E7%AE%97%E6%B3%95/algorithm-01-%E7%AE%97%E6%B3%95%E5%A2%9E%E9%95%BF/" title="algorithm-01-算法增长">algorithm-01-算法增长</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B/" title="In 课程">课程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/" title="In 算法分析">算法分析</a>
+</div>
+
+    <span><a href="/2022/10/17/%E7%AE%97%E6%B3%95/Dijkstra%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/" title="Dijkstra单源最短路径算法">Dijkstra单源最短路径算法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/02-JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/" title="JS代码执行过程">JS代码执行过程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/03-%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/" title="执行上下文">执行上下文</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/flutter/" title="In flutter">flutter</a>
+</div>
+
+    <span><a href="/2022/09/13/flutter/flutter-01-introduce/" title="flutter-01-introduce">flutter-01-introduce</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe @ 眸光似星辰</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/09/09/网络前沿安全技术/古典密码学：凯撒密码和维吉尼亚密码/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

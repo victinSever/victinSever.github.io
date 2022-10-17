@@ -1,0 +1,564 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Hexo" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Hexo" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="Hexo" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="Dijkstra" />
+
+
+<link rel="canonical" href="http://example.com/2022/10/17/%E7%AE%97%E6%B3%95/Dijkstra%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/">
+
+
+
+  <title>
+Dijkstra单源最短路径算法 - 算法分析 - 课程 |
+眸光似星辰 = Hexo</title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Dijkstra单源最短路径算法
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2022-10-17 21:51:03">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-10-17T21:51:03+08:00">2022-10-17</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">眸光似星辰</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AF%BE%E7%A8%8B/" itemprop="item" rel="index" title="In 课程"><span itemprop="name">课程</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AF%BE%E7%A8%8B/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/" itemprop="item" rel="index" title="In 算法分析"><span itemprop="name">算法分析</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/17/%E7%AE%97%E6%B3%95/Dijkstra%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="John Doe">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="单源最短路径问题"><a class="markdownIt-Anchor" href="#单源最短路径问题">#</a> 单源最短路径问题</h2>
+<h3 id="问题描述"><a class="markdownIt-Anchor" href="#问题描述">#</a> 问题描述</h3>
+<p>给定一个带权有向图 G=（V,E），其中每条边的权是一个实数。另外，还给定 V 中的一个顶点，称为源。要计算从源到其他所有各顶点的<span class="exturl" data-url="aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT0lRTYlOUMlODAlRTclOUYlQUQlRTglQjclQUYlRTUlQkUlODQmYW1wO3NwbT0xMDAxLjIxMDEuMzAwMS43MDIw">最短路径</span>长度。这里的长度就是指路上各边权之和。这个问题通常称为单源最短路径问题。</p>
+<h3 id="dijkstra算法简介"><a class="markdownIt-Anchor" href="#dijkstra算法简介">#</a> Dijkstra 算法简介</h3>
+<p>迪杰斯特拉算法 (Dijkstra)，是从一个顶点到其余各顶点的最短路径算法，解决的是有权图中最短路径问题。迪杰斯特拉算法主要特点是从起始点开始，采用<span class="exturl" data-url="aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT0lRTglQjQlQUElRTUlQkYlODMlRTclQUUlOTclRTYlQjMlOTUmYW1wO3NwbT0xMDAxLjIxMDEuMzAwMS43MDIw">贪心算法</span>的策略，每次遍历到始点距离最近且未访问过的顶点的邻接节点，直到扩展到终点为止。</p>
+<h3 id="算法分析"><a class="markdownIt-Anchor" href="#算法分析">#</a> 算法分析</h3>
+<p>伪代码描述</p>
+<p><img data-src="./../../image/6-1666018070046-21.png" alt="6"></p>
+<h3 id="数据结构"><a class="markdownIt-Anchor" href="#数据结构">#</a> 数据结构</h3>
+<ul>
+<li>数据结构：邻接表，数组队列，HashMap（此处没有采用，而是直接遍历查询）</li>
+<li>数据描述：
+<ul>
+<li>邻接表点类
+<ul>
+<li>包含：名称，被指向的权重，链接指针</li>
+<li>作用：邻接表的每个初始点</li>
+</ul>
+</li>
+<li>顶点表结构
+<ul>
+<li>包含：名称，该点的前一个顶点，距离起点距离</li>
+<li>作用：用于生成树的每个节点</li>
+</ul>
+</li>
+<li>邻接表
+<ul>
+<li>对于初始边集和顶点集数据的集合</li>
+<li>初始化时需要将边集的两个顶点都加入指针域</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="源代码ts版"><a class="markdownIt-Anchor" href="#源代码ts版">#</a> 源代码（TS 版）</h3>
+<p>本算法源码解决的问题是无向图的单源最短路径问题。有向图的类似，只是在生成邻接表时，只生成一个方向。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//邻接表的点</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Point</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="attr">name</span>: T;<span class="comment">//顶点名称</span></span><br><span class="line">    <span class="attr">weight</span>: <span class="built_in">number</span>;<span class="comment">//指向该顶点的边的权重</span></span><br><span class="line">    <span class="attr">next</span>: <span class="title class_">Point</span>&lt;T&gt; | <span class="literal">null</span>;<span class="comment">//下一个邻接顶点</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//顶点表的点</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Vertex</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="attr">name</span>: T,<span class="comment">//顶点名称索引</span></span><br><span class="line">    <span class="attr">prePoint</span>: <span class="title class_">Point</span>&lt;T&gt; | <span class="literal">null</span>;<span class="comment">//前一个点</span></span><br><span class="line">    <span class="attr">distance</span>: <span class="built_in">number</span>;<span class="comment">//距离起点的距离</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//邻接表</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Table</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="attr">table</span>: <span class="title class_">Point</span>&lt;<span class="built_in">number</span>&gt;[];</span><br><span class="line">    <span class="keyword">private</span> <span class="attr">len</span>: <span class="built_in">number</span>;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">vertexSet: <span class="built_in">Array</span>&lt;<span class="built_in">number</span>&gt;, edgeSet: <span class="built_in">Array</span>&lt;<span class="built_in">Array</span>&lt;<span class="built_in">number</span>&gt;&gt;</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">len</span> = vertexSet.<span class="property">length</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">table</span> = <span class="keyword">new</span> <span class="title class_">Array</span>();</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">init</span>(vertexSet, edgeSet);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">init</span>(<span class="params">vertexSet: <span class="built_in">Array</span>&lt;<span class="built_in">number</span>&gt;, edgeSet: <span class="built_in">Array</span>&lt;<span class="built_in">Array</span>&lt;<span class="built_in">number</span>&gt;&gt;</span>) &#123;</span><br><span class="line">        <span class="comment">//根据顶点集新建邻接表第一个节点</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="variable language_">this</span>.<span class="property">len</span>; i++) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">table</span>.<span class="title function_">push</span>(&#123; <span class="attr">name</span>: vertexSet[i], <span class="attr">weight</span>: <span class="number">0</span>, <span class="attr">next</span>: <span class="literal">null</span> &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//根据边集进行关系链接</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; edgeSet.<span class="property">length</span>; i++) &#123;</span><br><span class="line">            <span class="comment">//根据边集的顺序阿加入</span></span><br><span class="line">            <span class="keyword">let</span> temp = <span class="variable language_">this</span>.<span class="property">table</span>[edgeSet[i][<span class="number">0</span>] - <span class="number">1</span>]</span><br><span class="line">            <span class="keyword">let</span> obj = &#123;<span class="attr">name</span>: edgeSet[i][<span class="number">1</span>], <span class="attr">weight</span>: edgeSet[i][<span class="number">2</span>], <span class="attr">next</span>: <span class="literal">null</span>&#125;                     </span><br><span class="line">            <span class="keyword">while</span>(temp.<span class="property">next</span>) temp = temp.<span class="property">next</span>;</span><br><span class="line">            temp.<span class="property">next</span> = obj;</span><br><span class="line">            <span class="comment">//在加入相反方向的边</span></span><br><span class="line">            temp = <span class="variable language_">this</span>.<span class="property">table</span>[edgeSet[i][<span class="number">1</span>] - <span class="number">1</span>]</span><br><span class="line">            obj = &#123;<span class="attr">name</span>: edgeSet[i][<span class="number">0</span>], <span class="attr">weight</span>: edgeSet[i][<span class="number">2</span>], <span class="attr">next</span>: <span class="literal">null</span>&#125;                     </span><br><span class="line">            <span class="keyword">while</span>(temp.<span class="property">next</span>) temp = temp.<span class="property">next</span>;<span class="comment">//找到下个点</span></span><br><span class="line">            temp.<span class="property">next</span> = obj;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">getTable</span>(): <span class="title class_">Point</span>&lt;<span class="built_in">number</span>&gt;[] &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">table</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">toString</span>(): <span class="title class_">String</span> &#123;   </span><br><span class="line">        <span class="keyword">let</span> <span class="attr">str</span>: <span class="title class_">String</span> = <span class="string">&#x27;&#x27;</span>;   </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="variable language_">this</span>.<span class="property">len</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">let</span> k = <span class="number">1</span>;<span class="comment">//右边括号个数</span></span><br><span class="line">            str += <span class="string">&#x27;&#123; name: &#x27;</span> + <span class="variable language_">this</span>.<span class="property">table</span>[i].<span class="property">name</span> + <span class="string">&#x27;, weight: &#x27;</span> + <span class="variable language_">this</span>.<span class="property">table</span>[i].<span class="property">weight</span> + <span class="string">&#x27;, next: &#x27;</span>;</span><br><span class="line">            <span class="keyword">let</span> temp = <span class="variable language_">this</span>.<span class="property">table</span>[i].<span class="property">next</span>;</span><br><span class="line">            <span class="keyword">while</span>(temp)&#123;</span><br><span class="line">                str += <span class="string">&#x27;&#123; name: &#x27;</span> + temp.<span class="property">name</span> + <span class="string">&#x27;, weight: &#x27;</span> + temp.<span class="property">weight</span> + <span class="string">&#x27;, next: &#x27;</span>;</span><br><span class="line">                temp = temp.<span class="property">next</span>;</span><br><span class="line">                k++;</span><br><span class="line">            &#125;</span><br><span class="line">            str += <span class="string">&#x27;null&#x27;</span>;</span><br><span class="line">            <span class="keyword">while</span>(k--)&#123;</span><br><span class="line">                str += <span class="string">&#x27; &#125;&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">            str += <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//单元最短路径问题（输入顶点s的下标索引）</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">getMinDistance</span>(<span class="params">s: <span class="built_in">number</span></span>) &#123;</span><br><span class="line">        <span class="comment">// 顶点优先队列初始化为空</span></span><br><span class="line">        <span class="keyword">const</span> <span class="attr">queue</span>: <span class="title class_">Array</span>&lt;<span class="title class_">Vertex</span>&lt;<span class="built_in">number</span>&gt;&gt; = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//将每个顶点入栈，初始化优先级</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">1</span>; i&lt;= <span class="variable language_">this</span>.<span class="property">len</span>; i++) &#123;</span><br><span class="line">            queue.<span class="title function_">push</span>(&#123;<span class="attr">name</span>: i, <span class="attr">prePoint</span>: <span class="literal">null</span>, <span class="attr">distance</span>: <span class="title class_">Infinity</span>&#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//将起点的优先级更新</span></span><br><span class="line">        queue[s].<span class="property">distance</span> = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义一个方法：删除优先级最小的元素：即删除distance最小的元素</span></span><br><span class="line">        <span class="keyword">const</span> <span class="title function_">deleteMin</span> = (<span class="params">queue: <span class="built_in">Array</span>&lt;Vertex&lt;<span class="built_in">number</span>&gt;&gt;</span>) =&gt; &#123;</span><br><span class="line">            <span class="keyword">if</span>(queue.<span class="property">length</span> === <span class="number">0</span>) <span class="keyword">throw</span> <span class="title class_">Error</span>(<span class="string">&#x27;Array is null !&#x27;</span>);</span><br><span class="line">            <span class="comment">// let min = queue.reduce((pre, next) =&gt; &#123; return pre.distance &lt; next.distance ? pre : next&#125;)</span></span><br><span class="line">            <span class="keyword">let</span> min = <span class="number">0</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; queue.<span class="property">length</span>; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span>(queue[min].<span class="property">distance</span> &gt; queue[i].<span class="property">distance</span>) min = i;</span><br><span class="line">            &#125;   </span><br><span class="line">            <span class="keyword">return</span> queue.<span class="title function_">splice</span>(min, <span class="number">1</span>)[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义一个方法：树上节点和删除的节点取并集</span></span><br><span class="line">        <span class="keyword">const</span> <span class="title function_">unionTree</span> = (<span class="params">tree: <span class="built_in">Array</span>&lt;Vertex&lt;<span class="built_in">number</span>&gt;&gt;, u: Vertex&lt;<span class="built_in">number</span>&gt;</span>) =&gt; &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; tree.<span class="property">length</span>; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span>(tree[i].<span class="property">name</span> === u.<span class="property">name</span>) <span class="keyword">return</span>;<span class="comment">//如果是相同点就不合并</span></span><br><span class="line">            &#125;</span><br><span class="line">            tree.<span class="title function_">push</span>(u);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义一个方法：findIndex</span></span><br><span class="line">        <span class="keyword">const</span> <span class="title function_">findIndex</span> = (<span class="params">arr: <span class="built_in">Array</span>&lt;Point&lt;<span class="built_in">number</span>&gt;&gt; | <span class="built_in">Array</span>&lt;Vertex&lt;<span class="built_in">number</span>&gt;&gt;, target: Point&lt;<span class="built_in">number</span>&gt; | Vertex&lt;<span class="built_in">number</span>&gt;</span>) =&gt; &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span>(arr[i].<span class="property">name</span> === target.<span class="property">name</span>) <span class="keyword">return</span> i;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">       </span><br><span class="line">        <span class="comment">//初始树</span></span><br><span class="line">        <span class="keyword">let</span> <span class="attr">tree</span>: <span class="title class_">Array</span>&lt;<span class="title class_">Vertex</span>&lt;<span class="built_in">number</span>&gt;&gt; = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">0</span>);</span><br><span class="line">        tree.<span class="title function_">push</span>(queue[s]);<span class="comment">//初始树包含一个给定的起点</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="variable language_">this</span>.<span class="property">len</span> - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">const</span> u = <span class="title function_">deleteMin</span>(queue);<span class="comment">//删除优先级最小的元素</span></span><br><span class="line">            <span class="title function_">unionTree</span>(tree, u);<span class="comment">//取并集</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//ps:此处应该用HashMap进行索引和name隐射</span></span><br><span class="line">            <span class="comment">//不在tree中，也每个和u相邻的顶点</span></span><br><span class="line">            <span class="keyword">let</span> index = <span class="title function_">findIndex</span>(<span class="variable language_">this</span>.<span class="property">table</span>, u);<span class="comment">//地址映射：从余下顶点到邻接表</span></span><br><span class="line">            <span class="comment">// let index = u.name - 1;</span></span><br><span class="line">            <span class="keyword">let</span> temp = <span class="variable language_">this</span>.<span class="property">table</span>[index];<span class="comment">//邻接表中的u点</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">while</span>(temp.<span class="property">next</span>) &#123;</span><br><span class="line">                <span class="keyword">let</span> t = temp.<span class="property">next</span></span><br><span class="line">                index = <span class="title function_">findIndex</span>(queue, t);<span class="comment">//地址映射：从邻接表到余下顶点</span></span><br><span class="line">                <span class="comment">// index = t.name - 1;</span></span><br><span class="line">                <span class="comment">// console.log(index, queue[index]);</span></span><br><span class="line">                <span class="keyword">if</span>(index !== -<span class="number">1</span>) &#123;<span class="comment">//不在树上</span></span><br><span class="line">                    <span class="keyword">if</span>(u.<span class="property">distance</span> + temp.<span class="property">weight</span> &lt; queue[index].<span class="property">distance</span>)&#123;</span><br><span class="line">                        queue[index].<span class="property">distance</span> = u.<span class="property">distance</span> + t.<span class="property">weight</span>;<span class="comment">//刷新最短距离</span></span><br><span class="line">                        queue[index].<span class="property">prePoint</span> = t;<span class="comment">//刷新前驱节点</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;              </span><br><span class="line">                </span><br><span class="line">                temp = t;<span class="comment">//遍历所有的相邻点</span></span><br><span class="line">            &#125;                 </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//并上最后一个</span></span><br><span class="line">        <span class="title function_">unionTree</span>(tree, queue[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> tree;        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//测试代码</span></span><br><span class="line"><span class="keyword">const</span> <span class="attr">vertexSet</span>: <span class="title class_">Array</span>&lt;<span class="built_in">number</span>&gt; = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];<span class="comment">//顶点集</span></span><br><span class="line"><span class="keyword">const</span> <span class="attr">edgeSet</span>: <span class="title class_">Array</span>&lt;<span class="title class_">Array</span>&lt;<span class="built_in">number</span>&gt;&gt; = [[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">1</span>, <span class="number">4</span>, <span class="number">7</span>], [<span class="number">2</span>, <span class="number">4</span>, <span class="number">2</span>], [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>], [<span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>]]; <span class="comment">// 顶点 顶点 权值  //边集</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> table = <span class="keyword">new</span> <span class="title class_">Table</span>(vertexSet, edgeSet);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(table.<span class="title function_">toString</span>());</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(table.<span class="title function_">getMinDistance</span>(<span class="number">1</span>));</span><br></pre></td></tr></table></figure>
+
+      <div class="tags">
+          <a href="/tags/Dijkstra/" rel="tag"><i class="ic i-tag"></i> Dijkstra</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2022-10-17 22:47:58" itemprop="dateModified" datetime="2022-10-17T22:47:58+08:00">2022-10-17</time>
+  </span>
+  <span id="2022/10/17/算法/Dijkstra单源最短路径算法/" class="item leancloud_visitors" data-flag-title="Dijkstra单源最短路径算法" title="Views">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">Views</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">times</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechat-pay.png" alt="John Doe WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>John Doe <i class="ic i-at"><em>@</em></i>Hexo
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2022/10/17/%E7%AE%97%E6%B3%95/Dijkstra%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/" title="Dijkstra单源最短路径算法">http://example.com/2022/10/17/算法/Dijkstra单源最短路径算法/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/10/17/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo%E5%92%8CTypora%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeudstjqj20zk0m8k3r.jpg" title="hexo和Typora中插入图片">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> 博客</span>
+  <h3>hexo和Typora中插入图片</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text"> 单源最短路径问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text"> 问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dijkstra%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B"><span class="toc-number">1.2.</span> <span class="toc-text"> Dijkstra 算法简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90"><span class="toc-number">1.3.</span> <span class="toc-text"> 算法分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.4.</span> <span class="toc-text"> 数据结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E4%BB%A3%E7%A0%81ts%E7%89%88"><span class="toc-number">1.5.</span> <span class="toc-text"> 源代码（TS 版）</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li class="active"><a href="/2022/10/17/%E7%AE%97%E6%B3%95/Dijkstra%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/" rel="bookmark" title="Dijkstra单源最短路径算法">Dijkstra单源最短路径算法</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="John Doe"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">John Doe</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">12</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">12</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">13</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3ZpY3RpblNldmVyL3ZpY3RpblNldmVy" title="https:&#x2F;&#x2F;github.com&#x2F;victinSever&#x2F;victinSever"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9naXRlZS5jb20vdmljdGluL3ZpY3Rpbg==" title="https:&#x2F;&#x2F;gitee.com&#x2F;victin&#x2F;victin"><i class="ic i-address-card"></i></span>
+      <a href="/victinzhong@163.com" title="victinzhong@163.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item csdn" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU0MzUzNjMxP3NwbT0xMDAwLjIxMTUuMzAwMS41MzQz" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_54353631?spm&#x3D;1000.2115.3001.5343"><i class="ic i-instagram"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/03-%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/" title="执行上下文">执行上下文</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF/" title="In 前端">前端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF/BUG/" title="In BUG">BUG</a>
+</div>
+
+    <span><a href="/2022/09/07/react/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/" title="react中引入react-redux使用subscribe监听入口render出现页面空白问题">react中引入react-redux使用subscribe监听入口render出现页面空白问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B/" title="In 课程">课程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" title="In 数据结构和算法">数据结构和算法</a>
+</div>
+
+    <span><a href="/2022/09/15/%E7%AE%97%E6%B3%95/algorithm-01-%E7%AE%97%E6%B3%95%E5%A2%9E%E9%95%BF/" title="algorithm-01-算法增长">algorithm-01-算法增长</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B/" title="In 课程">课程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/" title="In 算法分析">算法分析</a>
+</div>
+
+    <span><a href="/2022/10/17/%E7%AE%97%E6%B3%95/Dijkstra%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/" title="Dijkstra单源最短路径算法">Dijkstra单源最短路径算法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF/" title="In 前端">前端</a>
+</div>
+
+    <span><a href="/2022/09/06/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" title="react与vue的路由辨析">react与vue的路由辨析</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/01-%E9%A2%84%E7%BC%96%E8%AF%91/" title="JavaScript预编辑">JavaScript预编辑</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" title="In 密码学">密码学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/%E8%BF%91%E4%BB%A3%E5%8A%A0%E5%AF%86%E6%8A%80%E6%9C%AF/" title="In 近代加密技术">近代加密技术</a>
+</div>
+
+    <span><a href="/2022/09/13/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%AE%80%E8%BF%B0/" title="密码学简述">密码学简述</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B/" title="In 课程">课程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B/%E5%AF%86%E7%A0%81%E5%AD%A6/" title="In 密码学">密码学</a>
+</div>
+
+    <span><a href="/2022/09/09/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" title="古典密码学：凯撒密码和维吉尼亚密码">古典密码学：凯撒密码和维吉尼亚密码</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%85%B6%E4%BB%96/" title="In 其他">其他</a>
+</div>
+
+    <span><a href="/2022/09/06/hello-world/" title="第一篇个人博客">第一篇个人博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%8D%9A%E5%AE%A2/" title="In 博客">博客</a>
+</div>
+
+    <span><a href="/2022/10/17/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo%E5%92%8CTypora%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" title="hexo和Typora中插入图片">hexo和Typora中插入图片</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe @ 眸光似星辰</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/10/17/算法/Dijkstra单源最短路径算法/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
