@@ -5,8 +5,8 @@
         <link>http://example.com</link>
         <description></description>
         <language>en</language>
-        <pubDate>Fri, 09 Sep 2022 21:23:29 +0800</pubDate>
-        <lastBuildDate>Fri, 09 Sep 2022 21:23:29 +0800</lastBuildDate>
+        <pubDate>Thu, 15 Sep 2022 14:03:03 +0800</pubDate>
+        <lastBuildDate>Thu, 15 Sep 2022 14:03:03 +0800</lastBuildDate>
         <category>react</category>
         <category>vue</category>
         <category>react-router-dom</category>
@@ -16,6 +16,31 @@
         <category>密码学</category>
         <category>凯斯密码</category>
         <category>维吉尼亚密码</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/09/15/algorithm-01-%E7%AE%97%E6%B3%95%E5%A2%9E%E9%95%BF/</guid>
+            <title>algorithm-01-算法增长</title>
+            <link>http://example.com/2022/09/15/algorithm-01-%E7%AE%97%E6%B3%95%E5%A2%9E%E9%95%BF/</link>
+            <pubDate>Thu, 15 Sep 2022 14:03:03 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;渐进符号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#渐进符号&#34;&gt;#&lt;/a&gt; 渐进符号&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：衡量算法增长效率&lt;/li&gt;
+&lt;li&gt;类型：
+&lt;ul&gt;
+&lt;li&gt;O：上届&lt;/li&gt;
+&lt;li&gt;seta：下界&lt;/li&gt;
+&lt;li&gt;欧姆：等价&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;分治思想&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分治思想&#34;&gt;#&lt;/a&gt; 分治思想&lt;/h3&gt;
+&lt;h2 id=&#34;递归&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#递归&#34;&gt;#&lt;/a&gt; 递归&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;概念：&lt;/li&gt;
+&lt;li&gt;例子：&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;F&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;n&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(n === &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;) &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;F&lt;/span&gt;(n-&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;) * n&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2022/09/09/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/</guid>
             <title>古典密码学：凯撒密码和维吉尼亚密码</title>

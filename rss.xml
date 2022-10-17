@@ -5,8 +5,8 @@
         <link>http://example.com</link>
         <description></description>
         <language>en</language>
-        <pubDate>Fri, 09 Sep 2022 21:23:29 +0800</pubDate>
-        <lastBuildDate>Fri, 09 Sep 2022 21:23:29 +0800</lastBuildDate>
+        <pubDate>Thu, 15 Sep 2022 14:03:03 +0800</pubDate>
+        <lastBuildDate>Thu, 15 Sep 2022 14:03:03 +0800</lastBuildDate>
         <category>react</category>
         <category>vue</category>
         <category>react-router-dom</category>
@@ -16,6 +16,144 @@
         <category>密码学</category>
         <category>凯斯密码</category>
         <category>维吉尼亚密码</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/09/15/algorithm-01-%E7%AE%97%E6%B3%95%E5%A2%9E%E9%95%BF/</guid>
+            <title>algorithm-01-算法增长</title>
+            <link>http://example.com/2022/09/15/algorithm-01-%E7%AE%97%E6%B3%95%E5%A2%9E%E9%95%BF/</link>
+            <pubDate>Thu, 15 Sep 2022 14:03:03 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;渐进符号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#渐进符号&#34;&gt;#&lt;/a&gt; 渐进符号&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：衡量算法增长效率&lt;/li&gt;
+&lt;li&gt;类型：
+&lt;ul&gt;
+&lt;li&gt;O：上届&lt;/li&gt;
+&lt;li&gt;seta：下界&lt;/li&gt;
+&lt;li&gt;欧姆：等价&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;分治思想&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分治思想&#34;&gt;#&lt;/a&gt; 分治思想&lt;/h3&gt;
+&lt;h2 id=&#34;递归&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#递归&#34;&gt;#&lt;/a&gt; 递归&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;概念：&lt;/li&gt;
+&lt;li&gt;例子：&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;F&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;n&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(n === &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;) &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;F&lt;/span&gt;(n-&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;) * n&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/09/13/flutter-01-introduce/</guid>
+            <title>flutter-01-introduce</title>
+            <link>http://example.com/2022/09/13/flutter-01-introduce/</link>
+            <pubDate>Tue, 13 Sep 2022 16:37:55 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;flutter特点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#flutter特点&#34;&gt;#&lt;/a&gt; Flutter 特点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;多平台支持 iOS Android Linux 未来 Fuchsia OS&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;原生用户界面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;120fps 超高性能&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两套成熟 UI 库 Material Design 和 Cupertino&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;响应式的框架 Redux、RxDart、BloC 业务和 UI 分离&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Flutter 支持 Hot Reload&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;国内阿里咸鱼、腾讯、京东、国外的谷歌等公司都已经有上线产品在使用 Flutter 开发&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/09/13/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%AE%80%E8%BF%B0/</guid>
+            <title>密码学简述</title>
+            <link>http://example.com/2022/09/13/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%AE%80%E8%BF%B0/</link>
+            <category>密码学</category>
+            <pubDate>Tue, 13 Sep 2022 14:22:03 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;对称密码学&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#对称密码学&#34;&gt;#&lt;/a&gt; 对称密码学&lt;/h2&gt;
+&lt;h3 id=&#34;古典&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#古典&#34;&gt;#&lt;/a&gt; 古典&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;概述
+&lt;ul&gt;
+&lt;li&gt;加密和解密使用相同的密匙&lt;/li&gt;
+&lt;li&gt;密匙使用秘密的渠道进行接送&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;加密算法特征
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;其加密密钥与解密密钥相同或很容易相互推算出来&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;整个通讯的安全性依赖于密钥的保密，而不是算法的保密&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;优缺点
+&lt;ul&gt;
+&lt;li&gt;优点：加密速度快，计算量小、加密效率高，硬件容易实现和大规模生产&lt;/li&gt;
+&lt;li&gt;缺点：密钥的分发与管理比较困难，当通信的人数 增加时，密钥数目急剧膨胀&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;扩散和混乱
+&lt;ul&gt;
+&lt;li&gt;混乱：密文和密钥之间的统计关系变得尽可能复杂，使得攻击无法得到密匙
+&lt;ul&gt;
+&lt;li&gt;混乱方法：&lt;em&gt;&lt;strong&gt;多次迭代&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;des算法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#des算法&#34;&gt;#&lt;/a&gt; DES 算法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;一种对称加密算法，体制公开，安全性完全依赖密钥，密钥是任意 56bits&lt;/li&gt;
+&lt;li&gt;安全性：密钥太短只有 56 个比特&lt;/li&gt;
+&lt;li&gt;地位：第一个公开密码算法&lt;/li&gt;
+&lt;li&gt;增强 DES 加密算法
+&lt;ul&gt;
+&lt;li&gt;DES 缺点是密钥短，使用多个密钥等同于更长的密钥&lt;/li&gt;
+&lt;li&gt;三个密钥的三重 DES
+&lt;ul&gt;
+&lt;li&gt;对一个明文进行三次加密解密&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;idea估计数据加密算法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#idea估计数据加密算法&#34;&gt;#&lt;/a&gt; IDEA（估计数据加密算法）&lt;/h3&gt;
+&lt;h3 id=&#34;aes算法高级加密算法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#aes算法高级加密算法&#34;&gt;#&lt;/a&gt; AES 算法（高级加密算法）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;长度可变&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;非对称密码学&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#非对称密码学&#34;&gt;#&lt;/a&gt; 非对称密码学&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RSA 算法
+&lt;ul&gt;
+&lt;li&gt;安全性是基于大整数素因子分解的困难性&lt;/li&gt;
+&lt;li&gt;公钥和私钥是一对大素数 P、Q 的函数，从一个公钥和密文中恢复出明文的难度等价于分解两个大素数之积&lt;/li&gt;
+&lt;li n,d=&#34;&#34;&gt;RSA 算法描述如下：&lt;br&gt;
+1 选择 p,q 为互异素数&lt;br&gt;
+ 2 计算 n=p&lt;em&gt;q，(n)=(p-1)&lt;/em&gt;(q-1)&lt;br&gt;
+ 3 选择整数 e 使 e 与(n) 互质&lt;br&gt;
+ 4 计算 d，使满足 d*e=1mod (n)(&lt;strong&gt;≡为同余符号，模运算结果相同&lt;/strong&gt;)&lt;br&gt;
+ 5  公钥 PK={n,e} 私钥 SK=&lt;/li&gt;
+&lt;li&gt;缺陷
+&lt;ul&gt;
+&lt;li&gt;RSA 的重大缺陷是无法从理论上把握它的保密性能如何&lt;/li&gt;
+&lt;li&gt;产生密钥很麻烦，受到素数产生技术的限制，因而难以做到一次一密。&lt;/li&gt;
+&lt;li&gt;分组长度太大，为保证安全性，n 至少也要 600 bits 以上，使运算代价很高，尤其是速度较慢，较对称密码算法慢几个数量级；且随着大数分解技术的发展，这个长度还在增加，不利于数据格式的标准化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2022/09/09/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/</guid>
             <title>古典密码学：凯撒密码和维吉尼亚密码</title>
