@@ -102,12 +102,12 @@ hexo和Typora中插入图片 - 博客 |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm0n457cj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipey84bjtj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicljitigmj20zk0m87fp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicm0n457cj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li>
         </ul>
       </div>
     </header>
@@ -153,44 +153,33 @@ hexo和Typora中插入图片 - 博客 |
   <div class="body md" itemprop="articleBody">
     
 
-    <h2 id="hexo与typora完美结合插入图片方便"><a class="markdownIt-Anchor" href="#hexo与typora完美结合插入图片方便">#</a> hexo 与 Typora 完美结合：插入图片方便</h2>
-<ul>
-<li>
-<p>安装插件 hexo-renderer-marked</p>
+    <h2 id="hexo与Typora完美结合：插入图片方便"><a href="#hexo与Typora完美结合：插入图片方便" class="headerlink" title="hexo与Typora完美结合：插入图片方便"></a>hexo与Typora完美结合：插入图片方便</h2><ul>
+<li><p>安装插件hexo-renderer-marked</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-marked</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>在 config.yml 中修改配置如下</p>
+<li><p>在config.yml中修改配置如下</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>在 config.yml 中添加配置如下</p>
+<li><p>在config.yml中添加配置如下</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">marked:</span></span><br><span class="line">  <span class="attr">prependRoot:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">postAsset:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>在 source 文件中创建一个文件夹来存储图片，我这里创建的文件名为 image（不要再主题的 source 文件夹下创建），如下</p>
-<p><img data-src="./../../image/1-1666017983181-19.png" alt="1"></p>
+<li><p>在source文件中创建一个文件夹来存储图片，我这里创建的文件名为image（不要再主题的source文件夹下创建），如下</p>
+<p><img data-src="/./../../image/1.png" alt="1"></p>
 </li>
-<li>
-<p>打开 typora: 文件 -&gt; 偏好设置 -&gt; 图像，选择复制到指定路径 -&gt; 点开文件图标，选择刚刚创建的 “image”（自己创建的存储图片的文件）文件 -&gt; 勾选如图下的四个勾选，版本不同可能不同，如图下：</p>
-<p><img data-src="./../../image/2-1666017979650-17.png" alt="2"></p>
+<li><p>打开typora:文件-&gt;偏好设置-&gt;图像，选择复制到指定路径-&gt;点开文件图标，选择刚刚创建的“image”（自己创建的存储图片的文件）文件-&gt;勾选如图下的四个勾选，版本不同可能不同，如图下：</p>
+<p><img data-src="/./../../image/2-1666019273231-4.png" alt="2"></p>
 </li>
-<li>
-<p>接下来在用 typora 时，右键点击导入或者直接拖动图片直接复制进来进好啦会进行自动复制配置在你的 image 下了，此时已经可以正常使用了，如果本地使用 <strong>hexo s</strong> 命令后发现并没有成功，请看下一步。</p>
+<li><p>接下来在用typora时，右键点击导入或者直接拖动图片直接复制进来进好啦会进行自动复制配置在你的image下了，此时已经可以正常使用了，如果本地使用 <strong>hexo s</strong> 命令后发现并没有成功，请看下一步。</p>
 </li>
-<li>
-<p>大概率可能是命名重复，需要手动点击设置。</p>
+<li><p>大概率可能是命名重复，需要手动点击设置。</p>
 </li>
-<li>
-<p>需要在 Typora 中右击图片选择复制到 image</p>
-<p><img data-src="./../../image/3-1666017975781-15.png" alt="3"></p>
+<li><p>需要在Typora中右击图片选择复制到image</p>
+<p><img data-src="/./../../image/3-1666019418250-12.png" alt="3"></p>
 </li>
-<li>
-<p>大功告成！</p>
+<li><p>大功告成！</p>
 </li>
 </ul>
-<h5 id="参考文章hexo博客如何插入图片-知乎-zhihucom"><a class="markdownIt-Anchor" href="#参考文章hexo博客如何插入图片-知乎-zhihucom">#</a> 参考文章：<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yNjUwNzc0Njg=">hexo 博客如何插入图片 - 知乎 (zhihu.com)</span></h5>
-
+<h5 id="参考文章：hexo博客如何插入图片-知乎-zhihu-com"><a href="#参考文章：hexo博客如何插入图片-知乎-zhihu-com" class="headerlink" title="参考文章：hexo博客如何插入图片 - 知乎 (zhihu.com)"></a>参考文章：<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yNjUwNzc0Njg=">hexo博客如何插入图片 - 知乎 (zhihu.com)</span></h5>
       <div class="tags">
           <a href="/tags/hexo/" rel="tag"><i class="ic i-tag"></i> hexo</a>
           <a href="/tags/Typora/" rel="tag"><i class="ic i-tag"></i> Typora</a>
@@ -205,7 +194,7 @@ hexo和Typora中插入图片 - 博客 |
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2022-10-17 22:49:21" itemprop="dateModified" datetime="2022-10-17T22:49:21+08:00">2022-10-17</time>
+    <time title="Modified: 2022-10-17 23:10:59" itemprop="dateModified" datetime="2022-10-17T23:10:59+08:00">2022-10-17</time>
   </span>
   <span id="2022/10/17/博客搭建/hexo和Typora中插入图片/" class="item leancloud_visitors" data-flag-title="hexo和Typora中插入图片" title="Views">
       <span class="icon">
@@ -258,7 +247,7 @@ hexo和Typora中插入图片 - 博客 |
     <div class="item left">
       
 
-  <a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/03-%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipewkhf1zj20zk0m81kx.jpg" title="执行上下文">
+  <a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/03-%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxfdlttj20zk0m8npd.jpg" title="执行上下文">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> JavaScript</span>
   <h3>执行上下文</h3>
@@ -268,7 +257,7 @@ hexo和Typora中插入图片 - 博客 |
     <div class="item right">
       
 
-  <a href="/2022/10/17/%E7%AE%97%E6%B3%95/Dijkstra%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhnx9glj20zk0m8npd.jpg" title="Dijkstra单源最短路径算法">
+  <a href="/2022/10/17/%E7%AE%97%E6%B3%95/Dijkstra%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciuja1j1j20zk0m8kjl.jpg" title="Dijkstra单源最短路径算法">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> 算法分析</span>
   <h3>Dijkstra单源最短路径算法</h3>
@@ -290,7 +279,7 @@ hexo和Typora中插入图片 - 博客 |
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E4%B8%8Etypora%E5%AE%8C%E7%BE%8E%E7%BB%93%E5%90%88%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%96%B9%E4%BE%BF"><span class="toc-number">1.</span> <span class="toc-text"> hexo 与 Typora 完美结合：插入图片方便</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0hexo%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87-%E7%9F%A5%E4%B9%8E-zhihucom"><span class="toc-number">1.0.0.1.</span> <span class="toc-text"> 参考文章：hexo 博客如何插入图片 - 知乎 (zhihu.com)</span></a></li></ol></li></ol></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E4%B8%8ETypora%E5%AE%8C%E7%BE%8E%E7%BB%93%E5%90%88%EF%BC%9A%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%96%B9%E4%BE%BF"><span class="toc-number">1.</span> <span class="toc-text">hexo与Typora完美结合：插入图片方便</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0%EF%BC%9Ahexo%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87-%E7%9F%A5%E4%B9%8E-zhihu-com"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">参考文章：hexo博客如何插入图片 - 知乎 (zhihu.com)</span></a></li></ol></li></ol></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
@@ -402,10 +391,86 @@ hexo和Typora中插入图片 - 博客 |
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E5%85%B6%E4%BB%96/" title="In 其他">其他</a>
+</div>
+
+    <span><a href="/2022/09/06/hello-world/" title="第一篇个人博客">第一篇个人博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
 </div>
 
-    <span><a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/01-%E9%A2%84%E7%BC%96%E8%AF%91/" title="JavaScript预编辑">JavaScript预编辑</a></span>
+    <span><a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/03-%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/" title="执行上下文">执行上下文</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF/" title="In 前端">前端</a>
+</div>
+
+    <span><a href="/2022/09/06/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" title="react与vue的路由辨析">react与vue的路由辨析</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%8D%9A%E5%AE%A2/" title="In 博客">博客</a>
+</div>
+
+    <span><a href="/2022/10/17/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo%E5%92%8CTypora%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" title="hexo和Typora中插入图片">hexo和Typora中插入图片</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF/" title="In 前端">前端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF/BUG/" title="In BUG">BUG</a>
+</div>
+
+    <span><a href="/2022/09/07/react/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/" title="react中引入react-redux使用subscribe监听入口render出现页面空白问题">react中引入react-redux使用subscribe监听入口render出现页面空白问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/flutter/" title="In flutter">flutter</a>
+</div>
+
+    <span><a href="/2022/09/13/flutter/flutter-01-introduce/" title="flutter-01-introduce">flutter-01-introduce</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B/" title="In 课程">课程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B/%E5%AF%86%E7%A0%81%E5%AD%A6/" title="In 密码学">密码学</a>
+</div>
+
+    <span><a href="/2022/09/09/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" title="古典密码学：凯撒密码和维吉尼亚密码">古典密码学：凯撒密码和维吉尼亚密码</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" title="In 密码学">密码学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/%E8%BF%91%E4%BB%A3%E5%8A%A0%E5%AF%86%E6%8A%80%E6%9C%AF/" title="In 近代加密技术">近代加密技术</a>
+</div>
+
+    <span><a href="/2022/09/13/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%AE%80%E8%BF%B0/" title="密码学简述">密码学简述</a></span>
   </li>
 
       
@@ -430,82 +495,6 @@ hexo和Typora中插入图片 - 博客 |
 </div>
 
     <span><a href="/2022/09/15/%E7%AE%97%E6%B3%95/algorithm-01-%E7%AE%97%E6%B3%95%E5%A2%9E%E9%95%BF/" title="algorithm-01-算法增长">algorithm-01-算法增长</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF/" title="In 前端">前端</a>
-</div>
-
-    <span><a href="/2022/09/06/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" title="react与vue的路由辨析">react与vue的路由辨析</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" title="In 密码学">密码学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/%E8%BF%91%E4%BB%A3%E5%8A%A0%E5%AF%86%E6%8A%80%E6%9C%AF/" title="In 近代加密技术">近代加密技术</a>
-</div>
-
-    <span><a href="/2022/09/13/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%AE%80%E8%BF%B0/" title="密码学简述">密码学简述</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E8%AF%BE%E7%A8%8B/" title="In 课程">课程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E8%AF%BE%E7%A8%8B/%E5%AF%86%E7%A0%81%E5%AD%A6/" title="In 密码学">密码学</a>
-</div>
-
-    <span><a href="/2022/09/09/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" title="古典密码学：凯撒密码和维吉尼亚密码">古典密码学：凯撒密码和维吉尼亚密码</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
-</div>
-
-    <span><a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/02-JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/" title="JS代码执行过程">JS代码执行过程</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%85%B6%E4%BB%96/" title="In 其他">其他</a>
-</div>
-
-    <span><a href="/2022/09/06/hello-world/" title="第一篇个人博客">第一篇个人博客</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF/" title="In 前端">前端</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E5%89%8D%E7%AB%AF/BUG/" title="In BUG">BUG</a>
-</div>
-
-    <span><a href="/2022/09/07/react/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/" title="react中引入react-redux使用subscribe监听入口render出现页面空白问题">react中引入react-redux使用subscribe监听入口render出现页面空白问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%8D%9A%E5%AE%A2/" title="In 博客">博客</a>
-</div>
-
-    <span><a href="/2022/10/17/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo%E5%92%8CTypora%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" title="hexo和Typora中插入图片">hexo和Typora中插入图片</a></span>
   </li>
 
   </ul>

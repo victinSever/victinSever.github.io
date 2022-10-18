@@ -9,7 +9,7 @@
             "url": "http://example.com/2022/09/13/flutter/flutter-01-introduce/",
             "title": "flutter-01-introduce",
             "date_published": "2022-09-13T08:37:55.000Z",
-            "content_html": "<h2 id=\"flutter特点\"><a class=\"markdownIt-Anchor\" href=\"#flutter特点\">#</a> Flutter 特点</h2>\n<ul>\n<li>\n<p>多平台支持 iOS Android Linux 未来 Fuchsia OS</p>\n</li>\n<li>\n<p>原生用户界面</p>\n</li>\n<li>\n<p>120fps 超高性能</p>\n</li>\n<li>\n<p>两套成熟 UI 库 Material Design 和 Cupertino</p>\n</li>\n<li>\n<p>响应式的框架 Redux、RxDart、BloC 业务和 UI 分离</p>\n</li>\n<li>\n<p>Flutter 支持 Hot Reload</p>\n</li>\n<li>\n<p>国内阿里咸鱼、腾讯、京东、国外的谷歌等公司都已经有上线产品在使用 Flutter 开发</p>\n</li>\n</ul>\n",
+            "content_html": "<h2 id=\"Flutter特点\"><a href=\"#Flutter特点\" class=\"headerlink\" title=\"Flutter特点\"></a>Flutter特点</h2><ul>\n<li><p>多平台支持 iOS Android Linux 未来 Fuchsia OS</p>\n</li>\n<li><p>原生用户界面</p>\n</li>\n<li><p>120fps 超高性能</p>\n</li>\n<li><p>两套成熟 UI 库 Material Design 和 Cupertino</p>\n</li>\n<li><p>响应式的框架 Redux、RxDart、BloC 业务和 UI 分离</p>\n</li>\n<li><p>Flutter 支持 Hot Reload</p>\n</li>\n<li><p>国内阿里咸鱼、腾讯、京东、国外的谷歌等公司都已经有上线产品在使用 Flutter 开发</p>\n</li>\n</ul>\n",
             "tags": []
         }
     ]

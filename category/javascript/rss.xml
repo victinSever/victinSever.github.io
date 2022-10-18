@@ -9,15 +9,15 @@
         <lastBuildDate>Mon, 17 Oct 2022 20:18:01 +0800</lastBuildDate>
         <category>JavaScript</category>
         <category>react</category>
+        <category>react-redux</category>
+        <category>redux</category>
         <category>vue</category>
         <category>react-router-dom</category>
         <category>vue-router</category>
-        <category>react-redux</category>
-        <category>redux</category>
+        <category>密码学</category>
+        <category>Dijkstra</category>
         <category>hexo</category>
         <category>Typora</category>
-        <category>Dijkstra</category>
-        <category>密码学</category>
         <category>凯斯密码</category>
         <category>维吉尼亚密码</category>
         <item>
@@ -34,42 +34,34 @@
             <link>http://example.com/2022/10/17/js%E9%AB%98%E7%BA%A7/02-JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/</link>
             <category>JavaScript</category>
             <pubDate>Mon, 17 Oct 2022 20:18:01 +0800</pubDate>
-            <description><![CDATA[ &lt;h3 id=&#34;区&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#区&#34;&gt;#&lt;/a&gt; 区&lt;/h3&gt;
-&lt;ul&gt;
+            <description><![CDATA[ &lt;h3 id=&#34;区&#34;&gt;&lt;a href=&#34;#区&#34; class=&#34;headerlink&#34; title=&#34;区&#34;&gt;&lt;/a&gt;区&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;内存分为两个区：堆区和栈区&lt;/li&gt;
 &lt;li&gt;栈区：存储基本数据类型&lt;/li&gt;
 &lt;li&gt;栈区：存储引用数据类型&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;javascript代码类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript代码类型&#34;&gt;#&lt;/a&gt; JavaScript 代码类型&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;全局代码：script 标签都是全局代码&lt;/li&gt;
+&lt;h3 id=&#34;JavaScript代码类型&#34;&gt;&lt;a href=&#34;#JavaScript代码类型&#34; class=&#34;headerlink&#34; title=&#34;JavaScript代码类型&#34;&gt;&lt;/a&gt;JavaScript代码类型&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;全局代码：script标签都是全局代码&lt;/li&gt;
 &lt;li&gt;函数代码：每一个函数都是一个代码块&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//全局代码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; a = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; b = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;fn&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;//局部代码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; c = &lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; d = &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;javascript代码执行&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript代码执行&#34;&gt;#&lt;/a&gt; JavaScript 代码执行&lt;/h3&gt;
-&lt;h4 id=&#34;定义&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定义&#34;&gt;#&lt;/a&gt; 定义&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;JS 执行时，堆内存创建一个全局对象（GO）&lt;/p&gt;
+
+&lt;h3 id=&#34;JavaScript代码执行&#34;&gt;&lt;a href=&#34;#JavaScript代码执行&#34; class=&#34;headerlink&#34; title=&#34;JavaScript代码执行&#34;&gt;&lt;/a&gt;JavaScript代码执行&lt;/h3&gt;&lt;h4 id=&#34;定义&#34;&gt;&lt;a href=&#34;#定义&#34; class=&#34;headerlink&#34; title=&#34;定义&#34;&gt;&lt;/a&gt;定义&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;JS执行时，堆内存创建一个全局对象（GO）&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;全局代码执行时，产生全局执行上下文（ECG）&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;全局代码执行时，产生全局执行上下文（ECG）&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;调用一个函数，产生一个局部执行上下文（EC）&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;调用一个函数，产生一个局部执行上下文（EC）&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;执行上下文产生放在栈中，栈叫做执行上下文栈（ECS）&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;执行上下文产生放在栈中，栈叫做执行上下文栈（ECS）&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;EC：给代码提供数据&lt;/p&gt;
-&lt;p&gt;GO：也是就 window 对象&lt;/p&gt;
-&lt;h4 id=&#34;执行步骤&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#执行步骤&#34;&gt;#&lt;/a&gt; 执行步骤&lt;/h4&gt;
-&lt;p&gt;执行代码开始，会将 GO 挂载&lt;/p&gt;
-&lt;p&gt;①执行全局代码，产上 ECG，入 ECS&lt;/p&gt;
-&lt;p&gt;②执行局部代码，产生 EC，入 ECS&lt;/p&gt;
-&lt;p&gt;③出栈，一次出 EC * N ,ECG&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;E:%5CCode%5C%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%5CJavaScript%5Cjs%E9%AB%98%E7%BA%A7%5Cjs%5C1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;GO：也是就window对象&lt;/p&gt;
+&lt;h4 id=&#34;执行步骤&#34;&gt;&lt;a href=&#34;#执行步骤&#34; class=&#34;headerlink&#34; title=&#34;执行步骤&#34;&gt;&lt;/a&gt;执行步骤&lt;/h4&gt;&lt;p&gt;执行代码开始，会将GO挂载&lt;/p&gt;
+&lt;p&gt;①执行全局代码，产上ECG，入ECS&lt;/p&gt;
+&lt;p&gt;②执行局部代码，产生EC，入ECS&lt;/p&gt;
+&lt;p&gt;③出栈，一次出EC * N ,ECG&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;E:\Code\基础学习\JavaScript\js高级\js\1.png&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -78,16 +70,15 @@
             <link>http://example.com/2022/10/17/js%E9%AB%98%E7%BA%A7/01-%E9%A2%84%E7%BC%96%E8%AF%91/</link>
             <category>JavaScript</category>
             <pubDate>Mon, 17 Oct 2022 18:40:29 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;JavaScript 运行分为预编译和代码执行运行&lt;/p&gt;
-&lt;h3 id=&#34;预编译&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#预编译&#34;&gt;#&lt;/a&gt; 预编译&lt;/h3&gt;
-&lt;p&gt;预编译也叫预解析&lt;/p&gt;
+            <description><![CDATA[ &lt;p&gt;JavaScript运行分为预编译和代码执行运行&lt;/p&gt;
+&lt;h3 id=&#34;预编译&#34;&gt;&lt;a href=&#34;#预编译&#34; class=&#34;headerlink&#34; title=&#34;预编译&#34;&gt;&lt;/a&gt;预编译&lt;/h3&gt;&lt;p&gt;预编译也叫预解析&lt;/p&gt;
 &lt;p&gt;做了什么？&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;- 声明要提升 会先进行var和function的定义提升（只提升声明，而没有赋值，放在代码块最前面）
 - 函数内部局部变量，要提升到函数内部最前面
 &lt;/code&gt;&lt;/pre&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;comment&#34;&gt;// 预编译会先进行var和function的定义提升&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; a = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;title function_&#34;&gt;fn&lt;/span&gt;()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;fn&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; b = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(a); &lt;span class=&#34;comment&#34;&gt;//undefind&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(b); &lt;span class=&#34;comment&#34;&gt;//2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(c); &lt;span class=&#34;comment&#34;&gt;//und&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; a = &lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; c = &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;运行执行&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#运行执行&#34;&gt;#&lt;/a&gt; 运行执行&lt;/h3&gt;
-&lt;p&gt;执行运行就是运行预编译后的 js 代码，现将所有的声明和函数执行后，运行代码块。&lt;/p&gt;
+
+&lt;h3 id=&#34;运行执行&#34;&gt;&lt;a href=&#34;#运行执行&#34; class=&#34;headerlink&#34; title=&#34;运行执行&#34;&gt;&lt;/a&gt;运行执行&lt;/h3&gt;&lt;p&gt;执行运行就是运行预编译后的js代码，现将所有的声明和函数执行后，运行代码块。&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
