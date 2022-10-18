@@ -102,12 +102,12 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclimtf7dj20zk0m8qav.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipey0a334j20zk0m8qpt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevuctzzj20zk0m84qp.jpg"></li>
         </ul>
       </div>
     </header>
@@ -156,10 +156,14 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
   <div class="body md" itemprop="articleBody">
     
 
-    <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在使用react-redux或者redux时，需要让redux的状态修改改变时通知页面及时更新并渲染页面。于是采用了在index.js文件中使用<strong>store.subscribe</strong>包裹页面的render，该监听函数可以让<strong>render</strong>重复渲染。不用担心效率问题，因为有react的虚拟DOM的<strong>diff算法</strong>兜底，不会导致页面全部重新渲染。<br>代码如下：</p>
+    <h2 id="问题描述"><a class="markdownIt-Anchor" href="#问题描述">#</a> 问题描述</h2>
+<p>在使用 react-redux 或者 redux 时，需要让 redux 的状态修改改变时通知页面及时更新并渲染页面。于是采用了在 index.js 文件中使用<strong> store.subscribe</strong> 包裹页面的 render，该监听函数可以让<strong> render</strong> 重复渲染。不用担心效率问题，因为有 react 的虚拟 DOM 的<strong> diff 算法</strong>兜底，不会导致页面全部重新渲染。<br>
+代码如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ReactDOM</span> <span class="keyword">from</span> <span class="string">&#x27;react-dom/client&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;./redux/store&#x27;</span></span><br><span class="line"></span><br><span class="line">store.<span class="title function_">subscribe</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> root = <span class="title class_">ReactDOM</span>.<span class="title function_">createRoot</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>));</span><br><span class="line">  root.<span class="title function_">render</span>(</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="出现的错误"><a href="#出现的错误" class="headerlink" title="出现的错误"></a>出现的错误</h2><p>页面出现空白并且没有任何错误提示</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>暂未解决</p>
+<h2 id="出现的错误"><a class="markdownIt-Anchor" href="#出现的错误">#</a> 出现的错误</h2>
+<p>页面出现空白并且没有任何错误提示</p>
+<h2 id="解决方案"><a class="markdownIt-Anchor" href="#解决方案">#</a> 解决方案</h2>
+<p>暂未解决</p>
 
       <div class="tags">
           <a href="/tags/react/" rel="tag"><i class="ic i-tag"></i> react</a>
@@ -229,7 +233,7 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
     <div class="item left">
       
 
-  <a href="/2022/09/06/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giph47e9vtj20zk0m8x6l.jpg" title="react与vue的路由辨析">
+  <a href="/2022/09/06/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicljgocqbj20zk0m8e81.jpg" title="react与vue的路由辨析">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> 前端</span>
   <h3>react与vue的路由辨析</h3>
@@ -239,7 +243,7 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
     <div class="item right">
       
 
-  <a href="/2022/09/09/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipey84bjtj20zk0m8hdt.jpg" title="古典密码学：凯撒密码和维吉尼亚密码">
+  <a href="/2022/09/09/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicit31ffoj20zk0m8naf.jpg" title="古典密码学：凯撒密码和维吉尼亚密码">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> 密码学</span>
   <h3>古典密码学：凯撒密码和维吉尼亚密码</h3>
@@ -261,7 +265,7 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BA%E7%8E%B0%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-number">2.</span> <span class="toc-text">出现的错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text"> 问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BA%E7%8E%B0%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-number">2.</span> <span class="toc-text"> 出现的错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">3.</span> <span class="toc-text"> 解决方案</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
@@ -279,7 +283,7 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">12</span>
+        <span class="count">13</span>
         <span class="name">posts</span>
       </a>
     </div>
@@ -291,7 +295,7 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">13</span>
+        <span class="count">14</span>
         <span class="name">tags</span>
       </a>
     </div>
@@ -373,22 +377,22 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E8%AF%BE%E7%A8%8B/" title="In 课程">课程</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E8%AF%BE%E7%A8%8B/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/" title="In 算法分析">算法分析</a>
+<a href="/categories/%E5%85%B6%E4%BB%96/" title="In 其他">其他</a>
 </div>
 
-    <span><a href="/2022/10/17/%E7%AE%97%E6%B3%95/Dijkstra%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/" title="Dijkstra单源最短路径算法">Dijkstra单源最短路径算法</a></span>
+    <span><a href="/2022/09/06/hello-world/" title="第一篇个人博客">第一篇个人博客</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+<a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" title="In 密码学">密码学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/%E8%BF%91%E4%BB%A3%E5%8A%A0%E5%AF%86%E6%8A%80%E6%9C%AF/" title="In 近代加密技术">近代加密技术</a>
 </div>
 
-    <span><a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/01-%E9%A2%84%E7%BC%96%E8%AF%91/" title="JavaScript预编辑">JavaScript预编辑</a></span>
+    <span><a href="/2022/09/13/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%AE%80%E8%BF%B0/" title="密码学简述">密码学简述</a></span>
   </li>
 
       
@@ -407,46 +411,6 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
-</div>
-
-    <span><a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/02-JS%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/" title="JS代码执行过程">JS代码执行过程</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
-</div>
-
-    <span><a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/03-%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/" title="执行上下文">执行上下文</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%85%B6%E4%BB%96/" title="In 其他">其他</a>
-</div>
-
-    <span><a href="/2022/09/06/hello-world/" title="第一篇个人博客">第一篇个人博客</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF/" title="In 前端">前端</a>
-</div>
-
-    <span><a href="/2022/09/06/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" title="react与vue的路由辨析">react与vue的路由辨析</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/%E5%89%8D%E7%AB%AF/" title="In 前端">前端</a>
 <i class="ic i-angle-right"></i>
 <a href="/categories/%E5%89%8D%E7%AB%AF/BUG/" title="In BUG">BUG</a>
@@ -459,10 +423,40 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E5%8D%9A%E5%AE%A2/" title="In 博客">博客</a>
+<a href="/categories/flutter/" title="In flutter">flutter</a>
 </div>
 
-    <span><a href="/2022/10/17/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo%E5%92%8CTypora%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" title="hexo和Typora中插入图片">hexo和Typora中插入图片</a></span>
+    <span><a href="/2022/09/13/flutter/flutter-01-introduce/" title="flutter-01-introduce">flutter-01-introduce</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/18/js%E9%AB%98%E7%BA%A7/04-OOP/" title="OOP">OOP</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/01-EC%E5%92%8CJS%E6%89%A7%E8%A1%8C/" title="JavaScript预编辑">JavaScript预编辑</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/18/js%E9%AB%98%E7%BA%A7/03-JS%E7%9A%84this/" title="JS的this">JS的this</a></span>
   </li>
 
       
@@ -475,6 +469,16 @@ react中引入react-redux使用subscribe监听入口render出现页面空白问�
 </div>
 
     <span><a href="/2022/09/15/%E7%AE%97%E6%B3%95/algorithm-01-%E7%AE%97%E6%B3%95%E5%A2%9E%E9%95%BF/" title="algorithm-01-算法增长">algorithm-01-算法增长</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF/" title="In 前端">前端</a>
+</div>
+
+    <span><a href="/2022/09/06/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" title="react与vue的路由辨析">react与vue的路由辨析</a></span>
   </li>
 
   </ul>
