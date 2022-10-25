@@ -24,6 +24,10 @@
     <category term="密码学" />
     <category term="凯斯密码" />
     <category term="维吉尼亚密码" />
+    <category term="canvas" />
+    <category term="Svelet" />
+    <category term="Solid.js" />
+    <category term="WebSocket" />
     <entry>
         <id>http://example.com/2022/10/17/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo%E5%92%8CTypora%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</id>
         <title>hexo和Typora中插入图片</title>

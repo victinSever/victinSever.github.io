@@ -24,6 +24,10 @@
     <category term="密码学" />
     <category term="凯斯密码" />
     <category term="维吉尼亚密码" />
+    <category term="canvas" />
+    <category term="Svelet" />
+    <category term="Solid.js" />
+    <category term="WebSocket" />
     <entry>
         <id>http://example.com/2022/09/07/react/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/</id>
         <title>react中引入react-redux使用subscribe监听入口render出现页面空白问题</title>

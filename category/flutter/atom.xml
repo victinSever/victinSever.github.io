@@ -24,6 +24,10 @@
     <category term="密码学" />
     <category term="凯斯密码" />
     <category term="维吉尼亚密码" />
+    <category term="canvas" />
+    <category term="Svelet" />
+    <category term="Solid.js" />
+    <category term="WebSocket" />
     <entry>
         <id>http://example.com/2022/09/13/flutter/flutter-01-introduce/</id>
         <title>flutter-01-introduce</title>

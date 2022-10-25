@@ -27,6 +27,10 @@
         <category>密码学</category>
         <category>凯斯密码</category>
         <category>维吉尼亚密码</category>
+        <category>canvas</category>
+        <category>Svelet</category>
+        <category>Solid.js</category>
+        <category>WebSocket</category>
         <item>
             <guid isPermalink="true">http://example.com/2022/09/09/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/</guid>
             <title>古典密码学：凯撒密码和维吉尼亚密码</title>

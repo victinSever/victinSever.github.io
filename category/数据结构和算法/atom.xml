@@ -24,6 +24,10 @@
     <category term="密码学" />
     <category term="凯斯密码" />
     <category term="维吉尼亚密码" />
+    <category term="canvas" />
+    <category term="Svelet" />
+    <category term="Solid.js" />
+    <category term="WebSocket" />
     <entry>
         <id>http://example.com/2022/09/15/%E7%AE%97%E6%B3%95/algorithm-01-%E7%AE%97%E6%B3%95%E5%A2%9E%E9%95%BF/</id>
         <title>algorithm-01-算法增长</title>

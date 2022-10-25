@@ -24,6 +24,10 @@
     <category term="密码学" />
     <category term="凯斯密码" />
     <category term="维吉尼亚密码" />
+    <category term="canvas" />
+    <category term="Svelet" />
+    <category term="Solid.js" />
+    <category term="WebSocket" />
     <entry>
         <id>http://example.com/2022/10/17/%E7%AE%97%E6%B3%95/Dijkstra%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/</id>
         <title>Dijkstra单源最短路径算法</title>

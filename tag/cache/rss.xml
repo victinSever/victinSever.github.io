@@ -27,6 +27,10 @@
         <category>密码学</category>
         <category>凯斯密码</category>
         <category>维吉尼亚密码</category>
+        <category>canvas</category>
+        <category>Svelet</category>
+        <category>Solid.js</category>
+        <category>WebSocket</category>
         <item>
             <guid isPermalink="true">http://example.com/2022/10/21/js%E9%AB%98%E7%BA%A7/08-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/</guid>
             <title>数据存储</title>

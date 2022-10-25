@@ -1,0 +1,579 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Hexo" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Hexo" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="Hexo" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="WebSocket" />
+
+
+<link rel="canonical" href="http://example.com/2022/10/24/%E5%85%B6%E4%BB%96/WebSocket/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E9%80%89%E5%9E%8B%EF%BC%9AWebSocket/">
+
+
+
+  <title>
+即时通讯协议选型：WebSocket协议 - 新技术栈 |
+眸光似星辰 = Hexo</title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">即时通讯协议选型：WebSocket协议
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2022-10-24 14:38:06">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-10-24T14:38:06+08:00">2022-10-24</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">眸光似星辰</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclga70tsj20zk0m84mr.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclxfdlttj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E6%96%B0%E6%8A%80%E6%9C%AF%E6%A0%88/" itemprop="item" rel="index" title="In 新技术栈"><span itemprop="name">新技术栈</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/24/%E5%85%B6%E4%BB%96/WebSocket/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E9%80%89%E5%9E%8B%EF%BC%9AWebSocket/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="John Doe">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h4 id="WebSocket"><a href="#WebSocket" class="headerlink" title="WebSocket"></a>WebSocket</h4><p><strong>Socket：</strong>对处于网络中不同主机上的应用进程之间进行双向通信的端点的抽象，是应用程序通过网络协议进行通信的接口，一个Socket对应着通信的一端，由IP地址和端口组合而成。</p>
+<h4 id="WebSocket服务端与客户端之间的通信过程"><a href="#WebSocket服务端与客户端之间的通信过程" class="headerlink" title="WebSocket服务端与客户端之间的通信过程"></a>WebSocket服务端与客户端之间的通信过程</h4><ul>
+<li>服务端创建包含有效主机与端口的WebSocket实例，随后启动并等待客户端连接</li>
+<li>客户端创建WebSocket实例，并为该实例提供一个URL，该URL代表希望连接的服务器端</li>
+<li>客户端通过HTTP请求握手建立连接之后，后面就使用刚才发起HTTP请求的TCP连接进行双向通信。</li>
+</ul>
+<h4 id="WebSocket特点"><a href="#WebSocket特点" class="headerlink" title="WebSocket特点"></a>WebSocket特点</h4><ul>
+<li>WebSocket本身只是一个应用层协议</li>
+<li>一种全双工通信机制</li>
+</ul>
+<h4 id="传统的全双工协议的两种方式"><a href="#传统的全双工协议的两种方式" class="headerlink" title="传统的全双工协议的两种方式"></a>传统的全双工协议的两种方式</h4><ul>
+<li><strong>短轮询</strong> 即客户端定时向服务端发送请求，服务端收到请求后马上返回响应并关闭连接。 <ul>
+<li>优点：实现简单 </li>
+<li>缺点： <ul>
+<li>1.并发请求对服务端造成较大压力 </li>
+<li>2.数据可能没有更新，造成无效请求 </li>
+<li>3.频繁的网络请求导致客户端设备电量、流量快速消耗 </li>
+<li>4.定时操作存在时间差，可能造成数据同步不及时 </li>
+<li>5.每次请求都需要携带完整的请求头</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>长轮询</strong> 即服务端在收到请求之后，如果数据无更新，会阻塞请求，直至数据更新或连接超时才返回。 <ul>
+<li>优点：相较于短轮询减少了HTTP请求的次数，节省了部分资源。 </li>
+<li>缺点： <ul>
+<li>1.连接挂起同样会消耗资源 </li>
+<li>2.冗余请求头问题依旧存在</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="WebSocket比传统全双工协议的优势"><a href="#WebSocket比传统全双工协议的优势" class="headerlink" title="WebSocket比传统全双工协议的优势"></a>WebSocket比传统全双工协议的优势</h4><p>当连接建立之后，后续的数据都是以<strong>帧的形式</strong>发送。<strong>除非某一端主动断开连接，否则无需重新建立连接</strong>。因此可以做到：</p>
+<ul>
+<li>1.减轻服务器的负担 </li>
+<li>2.极大地减少不必要的流量、电量消耗 </li>
+<li>3.提高实时性，保证客户端和服务端数据的同步 </li>
+<li>4.减少冗余请求头造成的开销</li>
+</ul>
+<h4 id="WebSocket比其他即时通讯协议的优势"><a href="#WebSocket比其他即时通讯协议的优势" class="headerlink" title="WebSocket比其他即时通讯协议的优势"></a>WebSocket比其他即时通讯协议的优势</h4><ul>
+<li><p>1.<strong>较少的控制开销。</strong>在连接创建后，服务器和客户端之间交换数据时，用于协议控制的数据包头部相对较小。 </p>
+</li>
+<li><p>2.<strong>更好的二进制支持。</strong>Websocket定义了二进制帧，相对HTTP，可以更轻松地处理二进制内容。 </p>
+</li>
+<li><p>3.<strong>可以支持扩展。</strong>Websocket定义了扩展，用户可以扩展协议、实现部分自定义的子协议，如XMPP协议、MQTT协议等。</p>
+</li>
+</ul>
+<h4 id="WebSocket协议在Android客户端的实现"><a href="#WebSocket协议在Android客户端的实现" class="headerlink" title="WebSocket协议在Android客户端的实现"></a>WebSocket协议在Android客户端的实现</h4><ul>
+<li>创建WebSocket实例并提供一个URL以指定要连接的服务器地址</li>
+<li>提供一个WebSocket连接事件监听器，用于监听事件回调以处理连接生命周期的每个阶段</li>
+</ul>
+<p>[即时通讯协议选型：WebSocket协议](<span class="exturl" data-url="aHR0cHM6Ly93d3cudG91dGlhby5jb20vYXJ0aWNsZS83MTU2MjA5OTM4NTM1MDM5NTI5Lz9vbmx5X3JlYz0xJnNoYXJlX3Rva2VuPTkzNTAyNzUxLTM0ZmEtNDZlZi1iODUxLWUyNzUyZWM0Yjg0OSZzb3VyY2U9bV9yZWRpcmVjdCZ3aWQ9MTY2NjU5Mjc2NzEyNg==">即时通讯协议选型：WebSocket协议-今日头条 (toutiao.com)</span>)</p>
+
+      <div class="tags">
+          <a href="/tags/WebSocket/" rel="tag"><i class="ic i-tag"></i> WebSocket</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2022-10-24 15:01:01" itemprop="dateModified" datetime="2022-10-24T15:01:01+08:00">2022-10-24</time>
+  </span>
+  <span id="2022/10/24/其他/WebSocket/即时通讯协议选型：WebSocket/" class="item leancloud_visitors" data-flag-title="即时通讯协议选型：WebSocket协议" title="Views">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">Views</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">times</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechat-pay.png" alt="John Doe WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>John Doe <i class="ic i-at"><em>@</em></i>Hexo
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2022/10/24/%E5%85%B6%E4%BB%96/WebSocket/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E9%80%89%E5%9E%8B%EF%BC%9AWebSocket/" title="即时通讯协议选型：WebSocket协议">http://example.com/2022/10/24/其他/WebSocket/即时通讯协议选型：WebSocket/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/10/22/js%E9%AB%98%E7%BA%A7/11-%E6%89%8B%E5%86%99new%EF%BC%8Ccall%EF%BC%8Capply%E7%9A%84%E5%AE%9E%E7%8E%B0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giph47e9vtj20zk0m8x6l.jpg" title="手写new，call，apply的实现">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> JavaScript</span>
+  <h3>手写new，call，apply的实现</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2022/10/24/%E5%85%B6%E4%BB%96/Svelet/Svelte%E5%92%8CSolid.js%EF%BC%9A%E6%96%B0%E9%94%90%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipew8gmvyj20zk0m87wh.jpg" title="Svelte和Solid.js：新锐前端框架">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> 新技术栈</span>
+  <h3>Svelte和Solid.js：新锐前端框架</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#WebSocket"><span class="toc-number">1.</span> <span class="toc-text">WebSocket</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WebSocket%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%B8%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">WebSocket服务端与客户端之间的通信过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WebSocket%E7%89%B9%E7%82%B9"><span class="toc-number">3.</span> <span class="toc-text">WebSocket特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E7%9A%84%E5%85%A8%E5%8F%8C%E5%B7%A5%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-number">4.</span> <span class="toc-text">传统的全双工协议的两种方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WebSocket%E6%AF%94%E4%BC%A0%E7%BB%9F%E5%85%A8%E5%8F%8C%E5%B7%A5%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-number">5.</span> <span class="toc-text">WebSocket比传统全双工协议的优势</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WebSocket%E6%AF%94%E5%85%B6%E4%BB%96%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-number">6.</span> <span class="toc-text">WebSocket比其他即时通讯协议的优势</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WebSocket%E5%8D%8F%E8%AE%AE%E5%9C%A8Android%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">7.</span> <span class="toc-text">WebSocket协议在Android客户端的实现</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li class="active"><a href="/2022/10/24/%E5%85%B6%E4%BB%96/WebSocket/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E9%80%89%E5%9E%8B%EF%BC%9AWebSocket/" rel="bookmark" title="即时通讯协议选型：WebSocket协议">即时通讯协议选型：WebSocket协议</a></li><li><a href="/2022/10/24/%E5%85%B6%E4%BB%96/Svelet/Svelte%E5%92%8CSolid.js%EF%BC%9A%E6%96%B0%E9%94%90%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" rel="bookmark" title="Svelte和Solid.js：新锐前端框架">Svelte和Solid.js：新锐前端框架</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="John Doe"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">John Doe</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">24</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">14</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">24</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3ZpY3RpblNldmVyL3ZpY3RpblNldmVy" title="https:&#x2F;&#x2F;github.com&#x2F;victinSever&#x2F;victinSever"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9naXRlZS5jb20vdmljdGluL3ZpY3Rpbg==" title="https:&#x2F;&#x2F;gitee.com&#x2F;victin&#x2F;victin"><i class="ic i-address-card"></i></span>
+      <a href="/victinzhong@163.com" title="victinzhong@163.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item csdn" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU0MzUzNjMxP3NwbT0xMDAwLjIxMTUuMzAwMS41MzQz" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_54353631?spm&#x3D;1000.2115.3001.5343"><i class="ic i-instagram"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2022/10/22/js%E9%AB%98%E7%BA%A7/11-%E6%89%8B%E5%86%99new%EF%BC%8Ccall%EF%BC%8Capply%E7%9A%84%E5%AE%9E%E7%8E%B0/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2022/10/24/%E5%85%B6%E4%BB%96/Svelet/Svelte%E5%92%8CSolid.js%EF%BC%9A%E6%96%B0%E9%94%90%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/flutter/" title="In flutter">flutter</a>
+</div>
+
+    <span><a href="/2022/09/13/flutter/flutter-01-introduce/" title="flutter-01-introduce">flutter-01-introduce</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/21/js%E9%AB%98%E7%BA%A7/06-%E7%BB%A7%E6%89%BF/" title="JS继承">JS继承</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/18/js%E9%AB%98%E7%BA%A7/02-%E5%8F%98%E9%87%8F%E5%92%8C%E9%97%AD%E5%8C%85/" title="变量和闭包">变量和闭包</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%96%B0%E6%8A%80%E6%9C%AF%E6%A0%88/" title="In 新技术栈">新技术栈</a>
+</div>
+
+    <span><a href="/2022/10/24/%E5%85%B6%E4%BB%96/Svelet/Svelte%E5%92%8CSolid.js%EF%BC%9A%E6%96%B0%E9%94%90%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" title="Svelte和Solid.js：新锐前端框架">Svelte和Solid.js：新锐前端框架</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/18/js%E9%AB%98%E7%BA%A7/04-OOP%E5%8F%8A%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%A1%88/" title="OOP">OOP</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/17/js%E9%AB%98%E7%BA%A7/01-EC%E5%92%8CJS%E6%89%A7%E8%A1%8C/" title="JavaScript预编辑">JavaScript预编辑</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/canvas/" title="In canvas">canvas</a>
+</div>
+
+    <span><a href="/2022/10/25/Canvas/%E7%BA%BF%E6%80%A7%E5%B0%8F%E7%90%83%E7%89%B9%E6%95%88/" title="线性小球特效">线性小球特效</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/21/js%E9%AB%98%E7%BA%A7/09-with%EF%BC%8Ceval%EF%BC%8C%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/" title="with，eval，严格模式">with，eval，严格模式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B/" title="In 课程">课程</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/" title="In 算法分析">算法分析</a>
+</div>
+
+    <span><a href="/2022/10/17/%E7%AE%97%E6%B3%95/Dijkstra%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/" title="Dijkstra单源最短路径算法">Dijkstra单源最短路径算法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JavaScript/" title="In JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/21/js%E9%AB%98%E7%BA%A7/08-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/" title="数据存储">数据存储</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe @ 眸光似星辰</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/10/24/其他/WebSocket/即时通讯协议选型：WebSocket/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

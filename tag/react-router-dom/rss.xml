@@ -27,6 +27,10 @@
         <category>密码学</category>
         <category>凯斯密码</category>
         <category>维吉尼亚密码</category>
+        <category>canvas</category>
+        <category>Svelet</category>
+        <category>Solid.js</category>
+        <category>WebSocket</category>
         <item>
             <guid isPermalink="true">http://example.com/2022/09/06/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/</guid>
             <title>react与vue的路由辨析</title>
