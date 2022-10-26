@@ -1,0 +1,581 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="victinSever" href="http://victinsever.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="victinSever" href="http://victinsever.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="victinSever" href="http://victinsever.github.io/feed.json" />
+
+
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="react,react-redux,redux" />
+
+
+<link rel="canonical" href="http://victinsever.github.io/2022/09/07/BUG/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/">
+
+
+
+  <title>
+react中引入react-redux使用subscribe监听入口render出现页面空白问题 - BUG |
+眸光似星辰 = victinSever</title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">react中引入react-redux使用subscribe监听入口render出现页面空白问题
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-09-07 23:23:24">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-09-07T23:23:24+08:00">2022-09-07</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>504</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">眸光似星辰</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1472053217156-31b42df2319c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTYxfHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzV8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1574063413132-354db9f190fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODB8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1545529468-42764ef8c85f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTAwfHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1598188306155-25e400eb5078?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/BUG/" itemprop="item" rel="index" title="分类于 BUG"><span itemprop="name">BUG</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://victinsever.github.io/2022/09/07/BUG/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="victinSever">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="victinSever">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="问题描述"><a class="markdownIt-Anchor" href="#问题描述">#</a> 问题描述</h2>
+<p>在使用 react-redux 或者 redux 时，需要让 redux 的状态修改改变时通知页面及时更新并渲染页面。于是采用了在 index.js 文件中使用<strong> store.subscribe</strong> 包裹页面的 render，该监听函数可以让<strong> render</strong> 重复渲染。不用担心效率问题，因为有 react 的虚拟 DOM 的<strong> diff 算法</strong>兜底，不会导致页面全部重新渲染。<br>
+代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ReactDOM</span> <span class="keyword">from</span> <span class="string">&#x27;react-dom/client&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;./redux/store&#x27;</span></span><br><span class="line"></span><br><span class="line">store.<span class="title function_">subscribe</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> root = <span class="title class_">ReactDOM</span>.<span class="title function_">createRoot</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;root&#x27;</span>));</span><br><span class="line">  root.<span class="title function_">render</span>(</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="出现的错误"><a class="markdownIt-Anchor" href="#出现的错误">#</a> 出现的错误</h2>
+<p>页面出现空白并且没有任何错误提示</p>
+<h2 id="解决方案"><a class="markdownIt-Anchor" href="#解决方案">#</a> 解决方案</h2>
+<p>暂未解决</p>
+
+      <div class="tags">
+          <a href="/tags/react/" rel="tag"><i class="ic i-tag"></i> react</a>
+          <a href="/tags/react-redux/" rel="tag"><i class="ic i-tag"></i> react-redux</a>
+          <a href="/tags/redux/" rel="tag"><i class="ic i-tag"></i> redux</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-10-26 19:39:07" itemprop="dateModified" datetime="2022-10-26T19:39:07+08:00">2022-10-26</time>
+  </span>
+  <span id="2022/09/07/BUG/react中引入react-redux使用store、sub包裹入口render出现页面空白问题/" class="item leancloud_visitors" data-flag-title="react中引入react-redux使用subscribe监听入口render出现页面空白问题" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechat-pay.png" alt="victinSever 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>victinSever <i class="ic i-at"><em>@</em></i>victinSever
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://victinsever.github.io/2022/09/07/BUG/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/" title="react中引入react-redux使用subscribe监听入口render出现页面空白问题">http://victinsever.github.io/2022/09/07/BUG/react中引入react-redux使用store、sub包裹入口render出现页面空白问题/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/09/06/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1599572739984-8ae9388f23b5?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8OTR8fGNhdHxlbnwwfHwwfHw%3D&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="react与vue的路由辨析">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> react</span>
+  <h3>react与vue的路由辨析</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2022/09/09/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1606214174585-fe31582dc6ee?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGNhdHxlbnwwfHwwfHw%3D&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="古典密码学：凯撒密码和维吉尼亚密码">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 网络前沿安全技术</span>
+  <h3>古典密码学：凯撒密码和维吉尼亚密码</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text"> 问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BA%E7%8E%B0%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-number">2.</span> <span class="toc-text"> 出现的错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">3.</span> <span class="toc-text"> 解决方案</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2022/09/07/BUG/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/" rel="bookmark" title="react中引入react-redux使用subscribe监听入口render出现页面空白问题">react中引入react-redux使用subscribe监听入口render出现页面空白问题</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="victinSever"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">victinSever</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">27</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">15</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">24</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3ZpY3RpblNldmVy" title="https:&#x2F;&#x2F;github.com&#x2F;victinSever"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9naXRlZS5jb20vdmljdGlu" title="https:&#x2F;&#x2F;gitee.com&#x2F;victin"><i class="ic i-check-circle"></i></span>
+      <a href="/victinzhong@163.com" title="victinzhong@163.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item csdn" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU0MzUzNjMxP3NwbT0xMDAwLjIxMTUuMzAwMS41MzQz" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_54353631?spm&#x3D;1000.2115.3001.5343"><i class="ic i-coffee"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2022/09/06/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2022/09/09/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/19/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/05-%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" title="原型和原型链">原型和原型链</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/" title="分类于 扩展技术">扩展技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Svelet/" title="分类于 Svelet">Svelet</a>
+</div>
+
+    <span><a href="/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Svelet/Svelte%E5%92%8CSolid.js%EF%BC%9A%E6%96%B0%E9%94%90%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" title="Svelte和Solid.js：新锐前端框架">Svelte和Solid.js：新锐前端框架</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/08-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/" title="数据存储">数据存储</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%9D%82%E8%B0%88/" title="分类于 杂谈">杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/" title="分类于 博客">博客</a>
+</div>
+
+    <span><a href="/2022/10/17/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/hexo%E5%92%8CTypora%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" title="hexo和Typora中插入图片">hexo和Typora中插入图片</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/18/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/03-JS%E7%9A%84this/" title="JS的this">JS的this</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%9D%82%E8%B0%88/" title="分类于 杂谈">杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/" title="分类于 博客">博客</a>
+</div>
+
+    <span><a href="/2022/10/26/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/%E7%BC%96%E5%86%99md%E6%96%87%E6%A1%A3/" title="md文档编写注意事项">md文档编写注意事项</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/" title="分类于 扩展技术">扩展技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/" title="分类于 WebSocket">WebSocket</a>
+</div>
+
+    <span><a href="/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E9%80%89%E5%9E%8B%EF%BC%9AWebSocket/" title="即时通讯协议选型：WebSocket协议">即时通讯协议选型：WebSocket协议</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" title="分类于 课程学习">课程学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/" title="分类于 算法分析与设计">算法分析与设计</a>
+</div>
+
+    <span><a href="/2022/10/17/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/Dijkstra%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/" title="Dijkstra单源最短路径算法">Dijkstra单源最短路径算法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" title="分类于 课程学习">课程学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/" title="分类于 网络前沿安全技术">网络前沿安全技术</a>
+</div>
+
+    <span><a href="/2022/09/09/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" title="古典密码学：凯撒密码和维吉尼亚密码">古典密码学：凯撒密码和维吉尼亚密码</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/22/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/11-%E6%89%8B%E5%86%99new%EF%BC%8Ccall%EF%BC%8Capply%E7%9A%84%E5%AE%9E%E7%8E%B0/" title="手写new，call，apply的实现">手写new，call，apply的实现</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">victinSever @ 眸光似星辰</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">37k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">33 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/09/07/BUG/react中引入react-redux使用store、sub包裹入口render出现页面空白问题/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

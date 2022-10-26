@@ -275,7 +275,7 @@
 .v .item .tag.master {
   background-color: var(--color-orange);
 }
-.v .item .tag.friend {
+.v .item .tag.admin {
   background-color: var(--color-aqua);
 }
 .v .item .tag.investor {

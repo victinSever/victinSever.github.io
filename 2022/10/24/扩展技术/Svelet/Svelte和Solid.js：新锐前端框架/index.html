@@ -1,0 +1,605 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="victinSever" href="http://victinsever.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="victinSever" href="http://victinsever.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="victinSever" href="http://victinsever.github.io/feed.json" />
+
+
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="Svelet,Solid.js" />
+
+
+<link rel="canonical" href="http://victinsever.github.io/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Svelet/Svelte%E5%92%8CSolid.js%EF%BC%9A%E6%96%B0%E9%94%90%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/">
+
+
+
+  <title>
+Svelte和Solid.js：新锐前端框架 - Svelet - 扩展技术 |
+眸光似星辰 = victinSever</title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Svelte和Solid.js：新锐前端框架
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-10-24 18:18:01">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-10-24T18:18:01+08:00">2022-10-24</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">眸光似星辰</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1545529468-42764ef8c85f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTAwfHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1599572739984-8ae9388f23b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTR8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1487300001871-12053913095d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1621238224334-20222c044b84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTk0fHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1626602411112-10742f9a3ab8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODF8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1562119464-7480f81577cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTUyfHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/" itemprop="item" rel="index" title="分类于 扩展技术"><span itemprop="name">扩展技术</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Svelet/" itemprop="item" rel="index" title="分类于 Svelet"><span itemprop="name">Svelet</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://victinsever.github.io/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Svelet/Svelte%E5%92%8CSolid.js%EF%BC%9A%E6%96%B0%E9%94%90%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="victinSever">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="victinSever">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h3 id="极简的组件表达式"><a class="markdownIt-Anchor" href="#极简的组件表达式">#</a> 极简的组件表达式</h3>
+<ul>
+<li>Svelet：贴近原生 JS</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">	<span class="keyword">let</span> count = <span class="number">0</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> <span class="title function_">increment</span> = (<span class="params"></span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">        count += <span class="number">1</span></span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">on:click</span>=<span class="string">&quot;increment&quot;</span>&gt;</span></span><br><span class="line">    count is &#123;count&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>Solid.js：React hooks 和 Composition API 的综合体</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Counter.jsx</span></span><br><span class="line"><span class="keyword">import</span> &#123; createSignal &#125; <span class="keyword">from</span> <span class="string">&#x27;solid-js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Counter</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> [count, setCount] = <span class="title function_">createSignal</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">const</span> <span class="title function_">increment</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">        <span class="title function_">setCount</span>(<span class="title function_">count</span>() + <span class="number">1</span>));</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> increment()&#125;&gt;</span></span><br><span class="line"><span class="language-xml">                count is &#123;count()&#125;</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>solid 自动依赖追踪避免手动设置依赖项（createEffect）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//solid</span></span><br><span class="line"><span class="title function_">createEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;count：&#x27;</span> + <span class="title function_">count</span>());</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//react：需要开发者操作依赖项</span></span><br><span class="line"><span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;count：&#x27;</span> + <span class="title function_">count</span>());</span><br><span class="line">&#125;, [count])</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Svelet：不需要响应式API</span></span><br><span class="line"><span class="keyword">let</span> count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="attr">$</span>: <span class="variable language_">console</span>.<span class="title function_">log</span>(count)</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">increment</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    count += <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="无虚拟dom底层实现"><a class="markdownIt-Anchor" href="#无虚拟dom底层实现">#</a> 无虚拟 DOM 底层实现</h3>
+<p>鱼和熊掌都可兼得！！！</p>
+<h3 id="性能表现"><a class="markdownIt-Anchor" href="#性能表现">#</a> 性能表现</h3>
+<ul>
+<li>solid 和 svelet 性能总体逗比 react hook 的性能表现较佳</li>
+<li>solid 和 vue 在生成代码量的表现上类似</li>
+</ul>
+<h3 id="总结"><a class="markdownIt-Anchor" href="#总结">#</a> 总结</h3>
+<p><code>Svelte</code>  和 <code>Solid</code>  有着优秀的开发体验和性能表现</p>
+<p>有很多适合它们的应用场景和优点</p>
+<p>底层独特巧妙的解决方案非常值得学习</p>
+
+      <div class="tags">
+          <a href="/tags/Svelet/" rel="tag"><i class="ic i-tag"></i> Svelet</a>
+          <a href="/tags/Solid-js/" rel="tag"><i class="ic i-tag"></i> Solid.js</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-10-26 19:45:45" itemprop="dateModified" datetime="2022-10-26T19:45:45+08:00">2022-10-26</time>
+  </span>
+  <span id="2022/10/24/扩展技术/Svelet/Svelte和Solid.js：新锐前端框架/" class="item leancloud_visitors" data-flag-title="Svelte和Solid.js：新锐前端框架" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechat-pay.png" alt="victinSever 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>victinSever <i class="ic i-at"><em>@</em></i>victinSever
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://victinsever.github.io/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Svelet/Svelte%E5%92%8CSolid.js%EF%BC%9A%E6%96%B0%E9%94%90%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" title="Svelte和Solid.js：新锐前端框架">http://victinsever.github.io/2022/10/24/扩展技术/Svelet/Svelte和Solid.js：新锐前端框架/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E9%80%89%E5%9E%8B%EF%BC%9AWebSocket/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1514888286974-6c03e2ca1dba?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fA%3D%3D&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="即时通讯协议选型：WebSocket协议">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> WebSocket</span>
+  <h3>即时通讯协议选型：WebSocket协议</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2022/10/25/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/%E7%BA%BF%E6%80%A7%E5%B0%8F%E7%90%83%E7%89%B9%E6%95%88/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;plus.unsplash.com&#x2F;premium_photo-1661508614319-b5e40d1143bb?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0fGVufDB8fDB8fA%3D%3D&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="线性小球特效">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> canvas</span>
+  <h3>线性小球特效</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%81%E7%AE%80%E7%9A%84%E7%BB%84%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text"> 极简的组件表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E8%99%9A%E6%8B%9Fdom%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.</span> <span class="toc-text"> 无虚拟 DOM 底层实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E8%A1%A8%E7%8E%B0"><span class="toc-number">3.</span> <span class="toc-text"> 性能表现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text"> 总结</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Svelet/Svelte%E5%92%8CSolid.js%EF%BC%9A%E6%96%B0%E9%94%90%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" rel="bookmark" title="Svelte和Solid.js：新锐前端框架">Svelte和Solid.js：新锐前端框架</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="victinSever"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">victinSever</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">27</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">15</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">24</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3ZpY3RpblNldmVy" title="https:&#x2F;&#x2F;github.com&#x2F;victinSever"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9naXRlZS5jb20vdmljdGlu" title="https:&#x2F;&#x2F;gitee.com&#x2F;victin"><i class="ic i-check-circle"></i></span>
+      <a href="/victinzhong@163.com" title="victinzhong@163.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item csdn" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU0MzUzNjMxP3NwbT0xMDAwLjIxMTUuMzAwMS41MzQz" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_54353631?spm&#x3D;1000.2115.3001.5343"><i class="ic i-coffee"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E9%80%89%E5%9E%8B%EF%BC%9AWebSocket/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2022/10/25/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/%E7%BA%BF%E6%80%A7%E5%B0%8F%E7%90%83%E7%89%B9%E6%95%88/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%9D%82%E8%B0%88/" title="分类于 杂谈">杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/" title="分类于 博客">博客</a>
+</div>
+
+    <span><a href="/2022/10/26/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/md%E7%BC%96%E5%86%99%E7%BB%83%E4%B9%A0%E9%A2%98/" title="练习题与答案">练习题与答案</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/10-%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9AJS%E4%B8%AD%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8Ba%E7%AD%89%E4%BA%8E1%E6%88%96%E8%80%852%E6%88%96%E8%80%853/" title="面试题：JS中在什么情况下a等于1或者2或者3">面试题：JS中在什么情况下a等于1或者2或者3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" title="分类于 课程学习">课程学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/" title="分类于 算法分析与设计">算法分析与设计</a>
+</div>
+
+    <span><a href="/2022/09/15/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/algorithm-01-%E7%AE%97%E6%B3%95%E5%A2%9E%E9%95%BF/" title="algorithm-01-算法增长">algorithm-01-算法增长</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/07-JSON/" title="JSON">JSON</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/22/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/11-%E6%89%8B%E5%86%99new%EF%BC%8Ccall%EF%BC%8Capply%E7%9A%84%E5%AE%9E%E7%8E%B0/" title="手写new，call，apply的实现">手写new，call，apply的实现</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%9D%82%E8%B0%88/" title="分类于 杂谈">杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/" title="分类于 博客">博客</a>
+</div>
+
+    <span><a href="/2022/10/17/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/hexo%E5%92%8CTypora%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" title="hexo和Typora中插入图片">hexo和Typora中插入图片</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/18/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/02-%E5%8F%98%E9%87%8F%E5%92%8C%E9%97%AD%E5%8C%85/" title="变量和闭包">变量和闭包</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" title="分类于 课程学习">课程学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/" title="分类于 网络前沿安全技术">网络前沿安全技术</a>
+</div>
+
+    <span><a href="/2022/09/13/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%AE%80%E8%BF%B0/" title="密码学简述">密码学简述</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/18/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/04-OOP%E5%8F%8A%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%A1%88/" title="OOP">OOP</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/19/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/05-%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" title="原型和原型链">原型和原型链</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">victinSever @ 眸光似星辰</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">37k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">33 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/10/24/扩展技术/Svelet/Svelte和Solid.js：新锐前端框架/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
