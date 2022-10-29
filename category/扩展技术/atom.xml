@@ -28,6 +28,8 @@
     <category term="密码学" />
     <category term="凯斯密码" />
     <category term="维吉尼亚密码" />
+    <category term="JDBC" />
+    <category term="MVC" />
     <entry>
         <id>http://victinsever.github.io/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Svelet/Svelte%E5%92%8CSolid.js%EF%BC%9A%E6%96%B0%E9%94%90%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/</id>
         <title>Svelte和Solid.js：新锐前端框架</title>

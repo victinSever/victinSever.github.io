@@ -5,8 +5,8 @@
         <link>http://victinSever.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Wed, 26 Oct 2022 20:50:01 +0800</pubDate>
-        <lastBuildDate>Wed, 26 Oct 2022 20:50:01 +0800</lastBuildDate>
+        <pubDate>Sat, 29 Oct 2022 13:52:58 +0800</pubDate>
+        <lastBuildDate>Sat, 29 Oct 2022 13:52:58 +0800</lastBuildDate>
         <category>react</category>
         <category>react-redux</category>
         <category>redux</category>
@@ -31,6 +31,121 @@
         <category>密码学</category>
         <category>凯斯密码</category>
         <category>维吉尼亚密码</category>
+        <category>JDBC</category>
+        <category>MVC</category>
+        <item>
+            <guid isPermalink="true">http://victinsever.github.io/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/JDBC/</guid>
+            <title>JDBC</title>
+            <link>http://victinsever.github.io/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/JDBC/</link>
+            <category>JDBC</category>
+            <pubDate>Sat, 29 Oct 2022 13:52:58 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;jdbc开发步骤&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#jdbc开发步骤&#34;&gt;#&lt;/a&gt; JDBC 开发步骤&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;创建一个以 JDBC 连接数据库的程序，包含几个步骤:
+&lt;ul&gt;
+&lt;li&gt;1) 加载并注册数据库驱动程序（Driver 类）&lt;/li&gt;
+&lt;li&gt;2) 创建数据库的连接（DriverManager 类）&lt;/li&gt;
+&lt;li&gt;3) 获取 SQL 语句执行者（Statement/PreparedStatement 对象）&lt;/li&gt;
+&lt;li&gt;4) 执行 SQL 语句&lt;/li&gt;
+&lt;li&gt;5) 获取结果集（ResultSet 对象）&lt;/li&gt;
+&lt;li&gt;6) 回收数据库资源（关闭 JDBC 对象）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption&gt;&lt;span&gt;执行JDBC查询的一般步骤如下&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//执行JDBC查询的一般步骤如下&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Class.forName(&lt;span class=&#34;string&#34;&gt;&amp;quot;com.mysql.cj.jdbc.Driver&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;jdbc:mysql://localhost:3306/javaweb&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;username&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;root&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;password&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;123456&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;Connection&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;con&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; DriverManager.getConnection(url, username, password);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;Statement&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;state&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; con.createStatement();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//4 + 5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;sql&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;select * from student&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;ResultSet&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; state.executeQuery(sql);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//6&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;state.close();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;conn.close();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;封装jdbc操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#封装jdbc操作&#34;&gt;#&lt;/a&gt; 封装 JDBC 操作&lt;/h3&gt;
+&lt;p&gt;JDBC 在实际业务中操作比较多，需要进行将各个业务的模块功能进行分离操作，封装的一般目录如下（无数据源操作）：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;./../../../image/image-20221029140700404.png&#34; alt=&#34;image-20221029140700404&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;dao：数据库的各个表的实现（增删查改）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;jdbc：数据库的连接操作和关闭操作的实现，一般可以是接口，也可以直接封装成类操作（一般数据源信息放再 src 目录下，通过数据源的方式读取配置文件，此处没有使用，而是直接封装在 jdbc 连接类中）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;test：main 函数调用实现，进行 jdbc 实现测试&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;vo：基本的工具类实现，如 Book，Student 类&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;连接池技术&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#连接池技术&#34;&gt;#&lt;/a&gt; 连接池技术&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在一个对象池中保存多个数据库的连接，也称为数据库连接池（Connection Pool），进行数据库操作时，直接从连接池中取出一个数据库连接，当数据库操作完成后，再将此连接放回到数据库连接池中，等待其他用户继续使用，提高访问数据库的效率&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库连接池作用：负责分配、管理和释放数据库连接，允许应用程序重复使用现有的数据库连接，而不是每次都重新创建。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;连接池的工作机制：数据库连接池在&lt;strong&gt;初始化时&lt;/strong&gt;将创建一定数量的数据库连接放到连接池中，这些数据库连接的数量是由&lt;strong&gt;最小数据库连接数&lt;/strong&gt;来设定的。无论这些数据库连接是否被使用，连接池都将一直保证至少拥有这么多的连接数量。连接池的最大数据库连接数量限定了这个连接池能占有的最大连接数，当应用程序向连接池请求的连接数超过最大连接数量时，这些请求将被加入到等待队列中。&lt;/p&gt;
+&lt;p&gt;连接池设置最小和最大连接数考虑因素：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;放置的最小连接要考虑数据库的使用量大不大，最小连接过多会导致资源浪费。&lt;/li&gt;
+&lt;li&gt;放置的最大连接要考虑高峰期会是多少，超过该数值会一直等待。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;思考&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#思考&#34;&gt;#&lt;/a&gt; 思考&lt;/h4&gt;
+&lt;h5 id=&#34;drivermanager&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#drivermanager&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT1Ecml2ZXJNYW5hZ2VyJmFtcDtzcG09MTAwMS4yMTAxLjMwMDEuNzAyMA==&#34;&gt;DriverManager&lt;/span&gt; 跟 DataSource 获取 getConnection 有什么不同？&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;DriverManager 是获取一个 connection，用完就进行关闭，需要又重新建立连接；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Datasource 获取多个 connection 并管理起来，作为数据库连接池；很多第三方连接池都通过实现该接口来做连接池；&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;参考文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参考文章&#34;&gt;#&lt;/a&gt; 参考文章&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ppbmhhaWppbmcvYXJ0aWNsZS9kZXRhaWxzLzg0Mjg0ODQ3&#34;&gt;(231 条消息) Java 中 DriverManager 跟 DataSource 获取 getConnection 有什么不同（Java 中数据源和连接池的区别）_林海静的博客 - CSDN 博客_datasource.getconnection ()&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vbWFyazUvcC8xMTY0MTA0Ni5odG1s&#34;&gt;数据库连接池的工作机制是什么 - 双间 - 博客园 (cnblogs.com)&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://victinsever.github.io/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/MVC%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+            <title>Java Web--MVC设计模式</title>
+            <link>http://victinsever.github.io/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/MVC%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+            <category>MVC</category>
+            <pubDate>Sat, 29 Oct 2022 13:38:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;mvc设计模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mvc设计模式&#34;&gt;#&lt;/a&gt; MVC 设计模式&lt;/h3&gt;
+&lt;p&gt;MVC 设计模式是对软件开发的一中模块划分的方法。将软件程序分为三个核心模块：模型（Model）、视图（View）和控制器（Controller）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;1、模型&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;作用：管理业务数据，定义访问控制以及修改数据的业务规则。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;业务流程：当模型状态改变。会通知视图发生改变，为视图提供查询模型状态的方法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;2、视图&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：负责和用户打交道，从模型中获取数据向用户展示，将用户请求传递给控制器处理。&lt;/li&gt;
+&lt;li&gt;模型状态改变，视图对用户界面同步更新，保证模型和页面的一致性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;3、控制器&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：负责处理用户交互，从视图中获取数据，控制用户输入，并向模型发送数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;./../../../image/image-20221029134815029.png&#34; alt=&#34;image-20221029134815029&#34;&gt;&lt;/p&gt;
+&lt;p&gt;控制器接收用户请求，根据信息调用模型组件业务方法，对哦业务信息处理后，根据模型返回结果选择试图组件来显示处理结果和模型中的数据。&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/10/26/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/md%E7%BC%96%E5%86%99%E7%BB%83%E4%B9%A0%E9%A2%98/</guid>
             <title>练习题与答案</title>

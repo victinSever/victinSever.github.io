@@ -28,6 +28,8 @@
     <category term="密码学" />
     <category term="凯斯密码" />
     <category term="维吉尼亚密码" />
+    <category term="JDBC" />
+    <category term="MVC" />
     <entry>
         <id>http://victinsever.github.io/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/08-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/</id>
         <title>数据存储</title>
