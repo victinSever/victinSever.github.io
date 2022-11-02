@@ -30,6 +30,13 @@
     <category term="维吉尼亚密码" />
     <category term="JDBC" />
     <category term="MVC" />
+    <category term="Vue2" />
+    <category term="Vuex" />
+    <category term="Vue-router" />
+    <category term="ElementUI" />
+    <category term="axios" />
+    <category term="sass" />
+    <category term="NProgress" />
     <entry>
         <id>http://victinsever.github.io/2022/10/26/%E4%BD%9C%E5%93%81/%E6%89%B6%E6%91%87%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%B9%B3%E5%8F%B0/</id>
         <title>扶摇低代码平台</title>

@@ -33,6 +33,13 @@
         <category>维吉尼亚密码</category>
         <category>JDBC</category>
         <category>MVC</category>
+        <category>Vue2</category>
+        <category>Vuex</category>
+        <category>Vue-router</category>
+        <category>ElementUI</category>
+        <category>axios</category>
+        <category>sass</category>
+        <category>NProgress</category>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/MVC%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
             <title>Java Web--MVC设计模式</title>

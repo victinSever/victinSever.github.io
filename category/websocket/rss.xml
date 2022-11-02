@@ -33,6 +33,13 @@
         <category>维吉尼亚密码</category>
         <category>JDBC</category>
         <category>MVC</category>
+        <category>Vue2</category>
+        <category>Vuex</category>
+        <category>Vue-router</category>
+        <category>ElementUI</category>
+        <category>axios</category>
+        <category>sass</category>
+        <category>NProgress</category>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E9%80%89%E5%9E%8B%EF%BC%9AWebSocket/</guid>
             <title>即时通讯协议选型：WebSocket协议</title>
