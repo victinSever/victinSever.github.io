@@ -16,23 +16,12 @@
         <category>原型</category>
         <category>原型链</category>
         <category>继承</category>
-        <category>cache</category>
         <category>JSON</category>
+        <category>cache</category>
         <category>面试题</category>
         <category>vue</category>
         <category>react-router-dom</category>
         <category>vue-router</category>
-        <category>Svelet</category>
-        <category>Solid.js</category>
-        <category>WebSocket</category>
-        <category>hexo</category>
-        <category>Typora</category>
-        <category>Dijkstra</category>
-        <category>密码学</category>
-        <category>凯斯密码</category>
-        <category>维吉尼亚密码</category>
-        <category>JDBC</category>
-        <category>MVC</category>
         <category>Vue2</category>
         <category>Vuex</category>
         <category>Vue-router</category>
@@ -40,6 +29,17 @@
         <category>axios</category>
         <category>sass</category>
         <category>NProgress</category>
+        <category>Svelet</category>
+        <category>Solid.js</category>
+        <category>JDBC</category>
+        <category>WebSocket</category>
+        <category>MVC</category>
+        <category>Dijkstra</category>
+        <category>密码学</category>
+        <category>凯斯密码</category>
+        <category>维吉尼亚密码</category>
+        <category>hexo</category>
+        <category>Typora</category>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/10/25/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/%E7%BB%98%E5%88%B6%E6%97%B6%E9%92%9F/</guid>
             <title>canvas绘制时钟</title>

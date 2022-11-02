@@ -117,12 +117,12 @@ JDBC - Java Web - 课程学习 |
       </div>
       <div id="imgs" class="pjax">
         <ul>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1596789866050-b7d8cf68c636?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjA4fHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
           <li class="item" data-background-image="https://images.unsplash.com/photo-1584290867415-527a8475726d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
-          <li class="item" data-background-image="https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
-          <li class="item" data-background-image="https://images.unsplash.com/photo-1566847438217-76e82d383f84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI5fHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
-          <li class="item" data-background-image="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"></li>
-          <li class="item" data-background-image="https://images.unsplash.com/photo-1536500152107-01ab1422f932?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTU1fHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
-          <li class="item" data-background-image="https://images.unsplash.com/photo-1622883442068-322bd2ca988c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTczfHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1600357077527-930ccbaf7773?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTUwfHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1626602411112-10742f9a3ab8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODF8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1594142404563-64cccaf5a10f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTIwfHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA2fHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
         </ul>
       </div>
     </header>
@@ -171,38 +171,48 @@ JDBC - Java Web - 课程学习 |
   <div class="body md" itemprop="articleBody">
     
 
-    <h3 id="JDBC开发步骤"><a href="#JDBC开发步骤" class="headerlink" title="JDBC开发步骤"></a>JDBC开发步骤</h3><ul>
-<li>创建一个以JDBC连接数据库的程序，包含几个步骤:<ul>
-<li>1)加载并注册数据库驱动程序（Driver类）  </li>
-<li>2)创建数据库的连接（DriverManager类）  </li>
-<li>3)获取SQL语句执行者（Statement&#x2F;PreparedStatement对象）</li>
-<li>4)执行SQL语句</li>
-<li>5)获取结果集（ResultSet对象）</li>
-<li>6)回收数据库资源（关闭JDBC对象）</li>
+    <h3 id="jdbc开发步骤"><a class="markdownIt-Anchor" href="#jdbc开发步骤">#</a> JDBC 开发步骤</h3>
+<ul>
+<li>创建一个以 JDBC 连接数据库的程序，包含几个步骤:
+<ul>
+<li>1) 加载并注册数据库驱动程序（Driver 类）</li>
+<li>2) 创建数据库的连接（DriverManager 类）</li>
+<li>3) 获取 SQL 语句执行者（Statement/PreparedStatement 对象）</li>
+<li>4) 执行 SQL 语句</li>
+<li>5) 获取结果集（ResultSet 对象）</li>
+<li>6) 回收数据库资源（关闭 JDBC 对象）</li>
 </ul>
 </li>
 </ul>
 <figure class="highlight java"><figcaption><span>执行JDBC查询的一般步骤如下</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//执行JDBC查询的一般步骤如下</span></span><br><span class="line"><span class="comment">//1</span></span><br><span class="line">Class.forName(<span class="string">&quot;com.mysql.cj.jdbc.Driver&quot;</span>);</span><br><span class="line"><span class="comment">//2</span></span><br><span class="line"><span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span> <span class="string">&quot;jdbc:mysql://localhost:3306/javaweb&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> <span class="string">&quot;root&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> <span class="string">&quot;123456&quot;</span>;</span><br><span class="line"><span class="type">Connection</span> <span class="variable">con</span> <span class="operator">=</span> DriverManager.getConnection(url, username, password);</span><br><span class="line"><span class="comment">//3</span></span><br><span class="line"><span class="type">Statement</span> <span class="variable">state</span> <span class="operator">=</span> con.createStatement();</span><br><span class="line"><span class="comment">//4 + 5</span></span><br><span class="line"><span class="type">String</span> <span class="variable">sql</span> <span class="operator">=</span> <span class="string">&quot;select * from student&quot;</span>;</span><br><span class="line"><span class="type">ResultSet</span> <span class="variable">set</span> <span class="operator">=</span> state.executeQuery(sql);</span><br><span class="line"><span class="comment">//6</span></span><br><span class="line">state.close();</span><br><span class="line">conn.close();</span><br></pre></td></tr></table></figure>
-
-<h3 id="封装JDBC操作"><a href="#封装JDBC操作" class="headerlink" title="封装JDBC操作"></a>封装JDBC操作</h3><p>JDBC在实际业务中操作比较多，需要进行将各个业务的模块功能进行分离操作，封装的一般目录如下（无数据源操作）：</p>
-<p><img data-src="/./../../../image/image-20221029140700404.png" alt="image-20221029140700404"></p>
+<h3 id="封装jdbc操作"><a class="markdownIt-Anchor" href="#封装jdbc操作">#</a> 封装 JDBC 操作</h3>
+<p>JDBC 在实际业务中操作比较多，需要进行将各个业务的模块功能进行分离操作，封装的一般目录如下（无数据源操作）：</p>
+<p><img data-src="./../../../image/image-20221029140700404.png" alt="image-20221029140700404"></p>
 <ul>
-<li><p>dao：数据库的各个表的实现（增删查改）</p>
+<li>
+<p>dao：数据库的各个表的实现（增删查改）</p>
 </li>
-<li><p>jdbc：数据库的连接操作和关闭操作的实现，一般可以是接口，也可以直接封装成类操作（一般数据源信息放再src目录下，通过数据源的方式读取配置文件，此处没有使用，而是直接封装在jdbc连接类中）</p>
+<li>
+<p>jdbc：数据库的连接操作和关闭操作的实现，一般可以是接口，也可以直接封装成类操作（一般数据源信息放再 src 目录下，通过数据源的方式读取配置文件，此处没有使用，而是直接封装在 jdbc 连接类中）</p>
 </li>
-<li><p>test：main函数调用实现，进行jdbc实现测试</p>
+<li>
+<p>test：main 函数调用实现，进行 jdbc 实现测试</p>
 </li>
-<li><p>vo：基本的工具类实现，如Book，Student类</p>
+<li>
+<p>vo：基本的工具类实现，如 Book，Student 类</p>
 </li>
 </ul>
-<h3 id="连接池技术"><a href="#连接池技术" class="headerlink" title="连接池技术"></a>连接池技术</h3><p><img data-src="/./../../../image/image-20221029142550059.png" alt="image-20221029142550059"></p>
+<h3 id="连接池技术"><a class="markdownIt-Anchor" href="#连接池技术">#</a> 连接池技术</h3>
+<p><img data-src="./../../../image/image-20221029142550059.png" alt="image-20221029142550059"></p>
 <ul>
-<li><p>在一个对象池中保存多个数据库的连接，也称为数据库连接池（Connection Pool），进行数据库操作时，直接从连接池中取出一个数据库连接，当数据库操作完成后，再将此连接放回到数据库连接池中，等待其他用户继续使用，提高访问数据库的效率</p>
+<li>
+<p>在一个对象池中保存多个数据库的连接，也称为数据库连接池（Connection Pool），进行数据库操作时，直接从连接池中取出一个数据库连接，当数据库操作完成后，再将此连接放回到数据库连接池中，等待其他用户继续使用，提高访问数据库的效率</p>
 </li>
-<li><p>数据库连接池作用：负责分配、管理和释放数据库连接，允许应用程序重复使用现有的数据库连接，而不是每次都重新创建。</p>
+<li>
+<p>数据库连接池作用：负责分配、管理和释放数据库连接，允许应用程序重复使用现有的数据库连接，而不是每次都重新创建。</p>
 </li>
-<li><p>连接池的工作机制：数据库连接池在<strong>初始化时</strong>将创建一定数量的数据库连接放到连接池中，这些数据库连接的数量是由<strong>最小数据库连接数</strong>来设定的。无论这些数据库连接是否被使用，连接池都将一直保证至少拥有这么多的连接数量。连接池的最大数据库连接数量限定了这个连接池能占有的最大连接数，当应用程序向连接池请求的连接数超过最大连接数量时，这些请求将被加入到等待队列中。</p>
+<li>
+<p>连接池的工作机制：数据库连接池在<strong>初始化时</strong>将创建一定数量的数据库连接放到连接池中，这些数据库连接的数量是由<strong>最小数据库连接数</strong>来设定的。无论这些数据库连接是否被使用，连接池都将一直保证至少拥有这么多的连接数量。连接池的最大数据库连接数量限定了这个连接池能占有的最大连接数，当应用程序向连接池请求的连接数超过最大连接数量时，这些请求将被加入到等待队列中。</p>
 <p>连接池设置最小和最大连接数考虑因素：</p>
 <ul>
 <li>放置的最小连接要考虑数据库的使用量大不大，最小连接过多会导致资源浪费。</li>
@@ -210,16 +220,23 @@ JDBC - Java Web - 课程学习 |
 </ul>
 </li>
 </ul>
-<h4 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h4><h5 id="DriverManager跟DataSource获取getConnection有什么不同"><a href="#DriverManager跟DataSource获取getConnection有什么不同" class="headerlink" title="DriverManager跟DataSource获取getConnection有什么不同?"></a><span class="exturl" data-url="aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT1Ecml2ZXJNYW5hZ2VyJnNwbT0xMDAxLjIxMDEuMzAwMS43MDIw">DriverManager</span>跟DataSource获取getConnection有什么不同?</h5><ul>
-<li><p>DriverManager是获取一个connection，用完就进行关闭，需要又重新建立连接；</p>
+<h4 id="思考"><a class="markdownIt-Anchor" href="#思考">#</a> 思考</h4>
+<h5 id="drivermanager"><a class="markdownIt-Anchor" href="#drivermanager">#</a> <span class="exturl" data-url="aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT1Ecml2ZXJNYW5hZ2VyJmFtcDtzcG09MTAwMS4yMTAxLjMwMDEuNzAyMA==">DriverManager</span> 跟 DataSource 获取 getConnection 有什么不同？</h5>
+<ul>
+<li>
+<p>DriverManager 是获取一个 connection，用完就进行关闭，需要又重新建立连接；</p>
 </li>
-<li><p>Datasource获取多个connection并管理起来，作为数据库连接池；很多第三方连接池都通过实现该接口来做连接池；</p>
+<li>
+<p>Datasource 获取多个 connection 并管理起来，作为数据库连接池；很多第三方连接池都通过实现该接口来做连接池；</p>
 </li>
 </ul>
-<h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><ul>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ppbmhhaWppbmcvYXJ0aWNsZS9kZXRhaWxzLzg0Mjg0ODQ3">(231条消息) Java中DriverManager跟DataSource获取getConnection有什么不同（Java中数据源和连接池的区别）_林海静的博客-CSDN博客_datasource.getconnection()</span></p>
+<h4 id="参考文章"><a class="markdownIt-Anchor" href="#参考文章">#</a> 参考文章</h4>
+<ul>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2ppbmhhaWppbmcvYXJ0aWNsZS9kZXRhaWxzLzg0Mjg0ODQ3">(231 条消息) Java 中 DriverManager 跟 DataSource 获取 getConnection 有什么不同（Java 中数据源和连接池的区别）_林海静的博客 - CSDN 博客_datasource.getconnection ()</span></p>
 </li>
-<li><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vbWFyazUvcC8xMTY0MTA0Ni5odG1s">数据库连接池的工作机制是什么 - 双间 - 博客园 (cnblogs.com)</span></p>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vbWFyazUvcC8xMTY0MTA0Ni5odG1s">数据库连接池的工作机制是什么 - 双间 - 博客园 (cnblogs.com)</span></p>
 </li>
 </ul>
 
@@ -289,7 +306,7 @@ JDBC - Java Web - 课程学习 |
     <div class="item left">
       
 
-  <a href="/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/MVC%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1597626133663-53df9633b799?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8MTEyfHxjYXR8ZW58MHx8MHx8&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="Java Web--MVC设计模式">
+  <a href="/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/MVC%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1472053217156-31b42df2319c?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8MTYxfHxjYXR8ZW58MHx8MHx8&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="Java Web--MVC设计模式">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> Java Web</span>
   <h3>Java Web--MVC设计模式</h3>
@@ -321,7 +338,7 @@ JDBC - Java Web - 课程学习 |
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JDBC%E5%BC%80%E5%8F%91%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.</span> <span class="toc-text">JDBC开发步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85JDBC%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">封装JDBC操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E6%B1%A0%E6%8A%80%E6%9C%AF"><span class="toc-number">3.</span> <span class="toc-text">连接池技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%80%83"><span class="toc-number">3.1.</span> <span class="toc-text">思考</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#DriverManager%E8%B7%9FDataSource%E8%8E%B7%E5%8F%96getConnection%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C"><span class="toc-number">3.1.1.</span> <span class="toc-text">DriverManager跟DataSource获取getConnection有什么不同?</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="toc-number">3.2.</span> <span class="toc-text">参考文章</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#jdbc%E5%BC%80%E5%8F%91%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.</span> <span class="toc-text"> JDBC 开发步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85jdbc%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text"> 封装 JDBC 操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E6%B1%A0%E6%8A%80%E6%9C%AF"><span class="toc-number">3.</span> <span class="toc-text"> 连接池技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%80%83"><span class="toc-number">3.1.</span> <span class="toc-text"> 思考</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#drivermanager"><span class="toc-number">3.1.1.</span> <span class="toc-text"> DriverManager 跟 DataSource 获取 getConnection 有什么不同？</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="toc-number">3.2.</span> <span class="toc-text"> 参考文章</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -435,22 +452,10 @@ JDBC - Java Web - 课程学习 |
 <div class="breadcrumb">
 <a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" title="分类于 课程学习">课程学习</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/" title="分类于 网络前沿安全技术">网络前沿安全技术</a>
-</div>
-
-    <span><a href="/2022/09/09/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" title="古典密码学：凯撒密码和维吉尼亚密码">古典密码学：凯撒密码和维吉尼亚密码</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" title="分类于 课程学习">课程学习</a>
-<i class="ic i-angle-right"></i>
 <a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java-Web/" title="分类于 Java Web">Java Web</a>
 </div>
 
-    <span><a href="/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/MVC%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="Java Web--MVC设计模式">Java Web--MVC设计模式</a></span>
+    <span><a href="/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/JDBC/" title="JDBC">JDBC</a></span>
   </li>
 
       
@@ -462,7 +467,43 @@ JDBC - Java Web - 课程学习 |
 <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
 </div>
 
-    <span><a href="/2022/10/22/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/11-%E6%89%8B%E5%86%99new%EF%BC%8Ccall%EF%BC%8Capply%E7%9A%84%E5%AE%9E%E7%8E%B0/" title="手写new，call，apply的实现">手写new，call，apply的实现</a></span>
+    <span><a href="/2022/10/19/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/05-%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" title="原型和原型链">原型和原型链</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/06-%E7%BB%A7%E6%89%BF/" title="JS继承">JS继承</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/" title="分类于 扩展技术">扩展技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/" title="分类于 WebSocket">WebSocket</a>
+</div>
+
+    <span><a href="/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E9%80%89%E5%9E%8B%EF%BC%9AWebSocket/" title="即时通讯协议选型：WebSocket协议">即时通讯协议选型：WebSocket协议</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/" title="分类于 vue">vue</a>
+</div>
+
+    <span><a href="/2022/11/02/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/Vue2%E9%A1%B9%E7%9B%AE%E7%BB%93%E5%90%88%E9%80%9A%E7%94%A8%E4%BE%9D%E8%B5%96%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/" title="Vue2项目结合通用依赖进行项目搭建">Vue2项目结合通用依赖进行项目搭建</a></span>
   </li>
 
       
@@ -481,24 +522,10 @@ JDBC - Java Web - 课程学习 |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/react/" title="分类于 react">react</a>
+<a href="/categories/%E4%BD%9C%E5%93%81/" title="分类于 作品">作品</a>
 </div>
 
-    <span><a href="/2022/09/06/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" title="react与vue的路由辨析">react与vue的路由辨析</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
-</div>
-
-    <span><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/07-JSON/" title="JSON">JSON</a></span>
+    <span><a href="/2022/10/26/%E4%BD%9C%E5%93%81/%E6%89%B6%E6%91%87%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%B9%B3%E5%8F%B0/" title="扶摇低代码平台">扶摇低代码平台</a></span>
   </li>
 
       
@@ -517,34 +544,22 @@ JDBC - Java Web - 课程学习 |
 <div class="breadcrumb">
 <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
 <i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/10-%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9AJS%E4%B8%AD%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8Ba%E7%AD%89%E4%BA%8E1%E6%88%96%E8%80%852%E6%88%96%E8%80%853/" title="面试题：JS中在什么情况下a等于1或者2或者3">面试题：JS中在什么情况下a等于1或者2或者3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
 <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/" title="分类于 canvas">canvas</a>
 </div>
 
     <span><a href="/2022/10/25/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/%E7%BB%98%E5%88%B6%E6%97%B6%E9%92%9F/" title="canvas绘制时钟">canvas绘制时钟</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
-</div>
-
-    <span><a href="/2022/10/18/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/03-JS%E7%9A%84this/" title="JS的this">JS的this</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
-</div>
-
-    <span><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/06-%E7%BB%A7%E6%89%BF/" title="JS继承">JS继承</a></span>
   </li>
 
   </ul>
