@@ -7,10 +7,10 @@
         <language>zh-CN</language>
         <pubDate>Tue, 13 Sep 2022 16:37:55 +0800</pubDate>
         <lastBuildDate>Tue, 13 Sep 2022 16:37:55 +0800</lastBuildDate>
-        <category>canvas</category>
         <category>react</category>
         <category>react-redux</category>
         <category>redux</category>
+        <category>canvas</category>
         <category>vue</category>
         <category>react-router-dom</category>
         <category>vue-router</category>
@@ -25,49 +25,41 @@
         <category>this</category>
         <category>原型</category>
         <category>原型链</category>
-        <category>JSON</category>
         <category>继承</category>
+        <category>JSON</category>
         <category>cache</category>
         <category>面试题</category>
+        <category>hexo</category>
+        <category>Typora</category>
+        <category>Nginx</category>
         <category>WebSocket</category>
         <category>Svelet</category>
         <category>Solid.js</category>
         <category>JDBC</category>
         <category>MVC</category>
-        <category>hexo</category>
-        <category>Typora</category>
         <category>Dijkstra</category>
         <category>密码学</category>
         <category>凯斯密码</category>
         <category>维吉尼亚密码</category>
-        <category>Nginx</category>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/09/13/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/flutter/flutter-01-introduce/</guid>
             <title>flutter-01-introduce</title>
             <link>http://victinsever.github.io/2022/09/13/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/flutter/flutter-01-introduce/</link>
             <pubDate>Tue, 13 Sep 2022 16:37:55 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;flutter特点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#flutter特点&#34;&gt;#&lt;/a&gt; Flutter 特点&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;多平台支持 iOS Android Linux 未来 Fuchsia OS&lt;/p&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;Flutter特点&#34;&gt;&lt;a href=&#34;#Flutter特点&#34; class=&#34;headerlink&#34; title=&#34;Flutter特点&#34;&gt;&lt;/a&gt;Flutter特点&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;多平台支持 iOS Android Linux 未来 Fuchsia OS&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;原生用户界面&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;原生用户界面&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;120fps 超高性能&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;120fps 超高性能&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;两套成熟 UI 库 Material Design 和 Cupertino&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;两套成熟 UI 库 Material Design 和 Cupertino&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;响应式的框架 Redux、RxDart、BloC 业务和 UI 分离&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;响应式的框架 Redux、RxDart、BloC 业务和 UI 分离&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Flutter 支持 Hot Reload&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Flutter 支持 Hot Reload&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;国内阿里咸鱼、腾讯、京东、国外的谷歌等公司都已经有上线产品在使用 Flutter 开发&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;国内阿里咸鱼、腾讯、京东、国外的谷歌等公司都已经有上线产品在使用 Flutter 开发&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
  ]]></description>

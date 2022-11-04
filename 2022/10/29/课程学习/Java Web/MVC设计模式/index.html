@@ -76,7 +76,7 @@ Java Web--MVC设计模式 - Java Web - 课程学习 |
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>332</span>
+    <span>331</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -117,12 +117,12 @@ Java Web--MVC设计模式 - Java Web - 课程学习 |
       </div>
       <div id="imgs" class="pjax">
         <ul>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1517451330947-7809dead78d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTk1fHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
           <li class="item" data-background-image="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
-          <li class="item" data-background-image="https://images.unsplash.com/photo-1493406300581-484b937cdc41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTd8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
-          <li class="item" data-background-image="https://images.unsplash.com/photo-1622883442068-322bd2ca988c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTczfHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
-          <li class="item" data-background-image="https://plus.unsplash.com/premium_photo-1661508614319-b5e40d1143bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"></li>
-          <li class="item" data-background-image="https://images.unsplash.com/photo-1562119464-7480f81577cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTUyfHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
-          <li class="item" data-background-image="https://images.unsplash.com/photo-1574063413132-354db9f190fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODB8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1487300001871-12053913095d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1586042091284-bd35c8c1d917?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTUzfHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
         </ul>
       </div>
     </header>
@@ -171,35 +171,29 @@ Java Web--MVC设计模式 - Java Web - 课程学习 |
   <div class="body md" itemprop="articleBody">
     
 
-    <h3 id="mvc设计模式"><a class="markdownIt-Anchor" href="#mvc设计模式">#</a> MVC 设计模式</h3>
-<p>MVC 设计模式是对软件开发的一中模块划分的方法。将软件程序分为三个核心模块：模型（Model）、视图（View）和控制器（Controller）。</p>
+    <h3 id="MVC设计模式"><a href="#MVC设计模式" class="headerlink" title="MVC设计模式"></a>MVC设计模式</h3><p>MVC设计模式是对软件开发的一中模块划分的方法。将软件程序分为三个核心模块：模型（Model）、视图（View）和控制器（Controller）。</p>
 <ul>
-<li>
-<p><strong>1、模型</strong></p>
+<li><p><strong>1、模型</strong></p>
 <ul>
-<li>
-<p>作用：管理业务数据，定义访问控制以及修改数据的业务规则。</p>
+<li><p>作用：管理业务数据，定义访问控制以及修改数据的业务规则。</p>
 </li>
-<li>
-<p>业务流程：当模型状态改变。会通知视图发生改变，为视图提供查询模型状态的方法。</p>
+<li><p>业务流程：当模型状态改变。会通知视图发生改变，为视图提供查询模型状态的方法。</p>
 </li>
 </ul>
 </li>
-<li>
-<p><strong>2、视图</strong></p>
+<li><p><strong>2、视图</strong></p>
 <ul>
 <li>作用：负责和用户打交道，从模型中获取数据向用户展示，将用户请求传递给控制器处理。</li>
 <li>模型状态改变，视图对用户界面同步更新，保证模型和页面的一致性。</li>
 </ul>
 </li>
-<li>
-<p><strong>3、控制器</strong></p>
+<li><p><strong>3、控制器</strong></p>
 <ul>
 <li>作用：负责处理用户交互，从视图中获取数据，控制用户输入，并向模型发送数据。</li>
 </ul>
 </li>
 </ul>
-<p><img data-src="./../../../image/image-20221029134815029.png" alt="image-20221029134815029"></p>
+<p><img data-src="/./../../../image/image-20221029134815029.png" alt="image-20221029134815029"></p>
 <p>控制器接收用户请求，根据信息调用模型组件业务方法，对哦业务信息处理后，根据模型返回结果选择试图组件来显示处理结果和模型中的数据。</p>
 
       <div class="tags">
@@ -268,7 +262,7 @@ Java Web--MVC设计模式 - Java Web - 课程学习 |
     <div class="item left">
       
 
-  <a href="/2022/10/26/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/md%E7%BC%96%E5%86%99%E7%BB%83%E4%B9%A0%E9%A2%98/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1593483316242-efb5420596ca?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8MTQ0fHxjYXR8ZW58MHx8MHx8&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="练习题与答案">
+  <a href="/2022/10/26/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/md%E7%BC%96%E5%86%99%E7%BB%83%E4%B9%A0%E9%A2%98/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1597626133663-53df9633b799?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8MTEyfHxjYXR8ZW58MHx8MHx8&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="练习题与答案">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 博客</span>
   <h3>练习题与答案</h3>
@@ -278,7 +272,7 @@ Java Web--MVC设计模式 - Java Web - 课程学习 |
     <div class="item right">
       
 
-  <a href="/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/JDBC/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1574063413132-354db9f190fd?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8ODB8fGNhdHxlbnwwfHwwfHw%3D&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="JDBC">
+  <a href="/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/JDBC/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1626602411112-10742f9a3ab8?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8ODF8fGNhdHxlbnwwfHwwfHw%3D&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="JDBC">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> Java Web</span>
   <h3>JDBC</h3>
@@ -300,7 +294,7 @@ Java Web--MVC设计模式 - Java Web - 课程学习 |
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#mvc%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text"> MVC 设计模式</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#MVC%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">MVC设计模式</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -412,12 +406,12 @@ Java Web--MVC设计模式 - Java Web - 课程学习 |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<a href="/categories/%E6%9D%82%E8%B0%88/" title="分类于 杂谈">杂谈</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/" title="分类于 vue">vue</a>
+<a href="/categories/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/" title="分类于 博客">博客</a>
 </div>
 
-    <span><a href="/2022/11/02/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/Vue2%E9%A1%B9%E7%9B%AE%E7%BB%93%E5%90%88%E9%80%9A%E7%94%A8%E4%BE%9D%E8%B5%96%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/" title="Vue2项目结合通用依赖进行项目搭建">Vue2项目结合通用依赖进行项目搭建</a></span>
+    <span><a href="/2022/10/26/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/%E7%BC%96%E5%86%99md%E6%96%87%E6%A1%A3/" title="md文档编写注意事项">md文档编写注意事项</a></span>
   </li>
 
       
@@ -448,10 +442,22 @@ Java Web--MVC设计模式 - Java Web - 课程学习 |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%9D%82%E8%B0%88/" title="分类于 杂谈">杂谈</a>
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" title="分类于 课程学习">课程学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/" title="分类于 网络前沿安全技术">网络前沿安全技术</a>
 </div>
 
-    <span><a href="/2022/09/06/%E6%9D%82%E8%B0%88/hello-world/" title="第一篇个人博客">第一篇个人博客</a></span>
+    <span><a href="/2022/09/09/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" title="古典密码学：凯撒密码和维吉尼亚密码">古典密码学：凯撒密码和维吉尼亚密码</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/BUG/" title="分类于 BUG">BUG</a>
+</div>
+
+    <span><a href="/2022/09/07/BUG/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/" title="react中引入react-redux使用subscribe监听入口render出现页面空白问题">react中引入react-redux使用subscribe监听入口render出现页面空白问题</a></span>
   </li>
 
       
@@ -460,58 +466,10 @@ Java Web--MVC设计模式 - Java Web - 课程学习 |
 <div class="breadcrumb">
 <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/" title="分类于 canvas">canvas</a>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
 </div>
 
-    <span><a href="/2022/10/25/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/%E7%BA%BF%E6%80%A7%E5%B0%8F%E7%90%83%E7%89%B9%E6%95%88/" title="线性小球特效">线性小球特效</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/react/" title="分类于 react">react</a>
-</div>
-
-    <span><a href="/2022/09/06/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" title="react与vue的路由辨析">react与vue的路由辨析</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/" title="分类于 canvas">canvas</a>
-</div>
-
-    <span><a href="/2022/10/25/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/%E7%BB%98%E5%88%B6%E6%97%B6%E9%92%9F/" title="canvas绘制时钟">canvas绘制时钟</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/flutter/" title="分类于 flutter">flutter</a>
-</div>
-
-    <span><a href="/2022/09/13/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/flutter/flutter-01-introduce/" title="flutter-01-introduce">flutter-01-introduce</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%9D%82%E8%B0%88/" title="分类于 杂谈">杂谈</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/" title="分类于 博客">博客</a>
-</div>
-
-    <span><a href="/2022/10/26/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/md%E7%BC%96%E5%86%99%E7%BB%83%E4%B9%A0%E9%A2%98/" title="练习题与答案">练习题与答案</a></span>
+    <span><a href="/2022/10/17/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/01-EC%E5%92%8CJS%E6%89%A7%E8%A1%8C/" title="JavaScript预编辑">JavaScript预编辑</a></span>
   </li>
 
       
@@ -520,10 +478,42 @@ Java Web--MVC设计模式 - Java Web - 课程学习 |
 <div class="breadcrumb">
 <a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/" title="分类于 扩展技术">扩展技术</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/" title="分类于 WebSocket">WebSocket</a>
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Nginx/" title="分类于 Nginx">Nginx</a>
 </div>
 
-    <span><a href="/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E9%80%89%E5%9E%8B%EF%BC%9AWebSocket/" title="即时通讯协议选型：WebSocket协议">即时通讯协议选型：WebSocket协议</a></span>
+    <span><a href="/2022/11/04/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Nginx/Nginx%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="Nginx学习记录">Nginx学习记录</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E4%BD%9C%E5%93%81/" title="分类于 作品">作品</a>
+</div>
+
+    <span><a href="/2022/10/26/%E4%BD%9C%E5%93%81/%E6%89%B6%E6%91%87%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%B9%B3%E5%8F%B0/" title="扶摇低代码平台">扶摇低代码平台</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/07-JSON/" title="JSON">JSON</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%9D%82%E8%B0%88/" title="分类于 杂谈">杂谈</a>
+</div>
+
+    <span><a href="/2022/09/06/%E6%9D%82%E8%B0%88/hello-world/" title="第一篇个人博客">第一篇个人博客</a></span>
   </li>
 
   </ul>
