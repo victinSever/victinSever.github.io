@@ -1,0 +1,671 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="victinSever" href="http://victinsever.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="victinSever" href="http://victinsever.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="victinSever" href="http://victinsever.github.io/feed.json" />
+
+
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="Nginx" />
+
+
+<link rel="canonical" href="http://victinsever.github.io/2022/11/04/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Nginx/Nginx%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+
+
+
+  <title>
+Nginx学习记录 - Nginx - 扩展技术 |
+眸光似星辰 = victinSever</title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Nginx学习记录
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-04 01:07:01">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-04T01:07:01+08:00">2022-11-04</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.7k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">眸光似星辰</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1487300001871-12053913095d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1599572739984-8ae9388f23b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTR8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1622883442068-322bd2ca988c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTczfHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1584290867415-527a8475726d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://plus.unsplash.com/premium_photo-1664285640471-458aba53cbc4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/" itemprop="item" rel="index" title="分类于 扩展技术"><span itemprop="name">扩展技术</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Nginx/" itemprop="item" rel="index" title="分类于 Nginx"><span itemprop="name">Nginx</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://victinsever.github.io/2022/11/04/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Nginx/Nginx%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="victinSever">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="victinSever">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><h2 id="Nginx概述"><a href="#Nginx概述" class="headerlink" title="Nginx概述"></a>Nginx概述</h2><ul>
+<li>高性能的HTTP和方向代理服务器，特点是战友内存少，并发能力强，同类型的网页服务器表现较好。</li>
+<li>转为性能优化而开发，性能和效率是最重要的考量，能经受高负载的考研，并发可高达50000个。</li>
+</ul>
+<h2 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h2><ul>
+<li>正向代理<ul>
+<li>在客户端（浏览器）配置代理服务器，来实现对服务器的访问</li>
+</ul>
+</li>
+<li>反向代理<ul>
+<li>请求发送给代理服务器，由代理服务器去选择目标服务器返回响应给客户端，暴露了代理服务器，隐藏了目标服务器</li>
+</ul>
+</li>
+</ul>
+<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p>单个服务器会造成比较大的并发压力，需要增加服务器数量，将请求分发到各个服务器上，即请求集中到一个服务器上的情况变成均分到多个服务器处理。</p>
+<h2 id="动静分离"><a href="#动静分离" class="headerlink" title="动静分离"></a>动静分离</h2><p>为加快网站解析速度，将服务器部署的静态资源（html、css、js、图片）和动态资源（jsp，servlet）分开部署，降低原来单个服务器的压力。</p>
+<h2 id="Nginx环境搭建"><a href="#Nginx环境搭建" class="headerlink" title="Nginx环境搭建"></a>Nginx环境搭建</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
+<li>Linux环境（可用本地VM运行linux系统，也可远程链接服务器虚拟机环境）</li>
+<li>nginx的linux软件包</li>
+</ul>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><ul>
+<li><p>安装pcre依赖</p>
+<ul>
+<li><p>联网下载 pcre 压缩文件依赖(这里通过wget下载，也可直接在官网下载tar包）</p>
+<figure class="highlight bash"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://downloads.sourceforge.net/project/pcre/pcre/8.37/pcre-8.37.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装包放在linux系统（如果在window中下载的直接拖拽或者用xftp移过来）</p>
+</li>
+<li><p>解压压缩文件</p>
+<figure class="highlight bash"><figcaption><span>2</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar –xvf pcre-8.37.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>进入解压目录，执行编译配置</p>
+<figure class="highlight bash"><figcaption><span>3</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./pcre-8.37</span><br><span class="line">./configure</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用make进行安装</p>
+<figure class="highlight bash"><figcaption><span>4</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装完成检查版本</p>
+<figure class="highlight bash"><figcaption><span>5</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcre-config --version</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>安装其他依赖文件（<strong>openssl</strong> <strong>、</strong>zlib <strong>、</strong> <strong>gcc</strong> ）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install make zlib zlib-devel gcc-c++ libtool openssl openssl-devel</span><br></pre></td></tr></table></figure>
+
+<p>如果没有yum，则会报错，本人在这里耽误很长时间，本地linux没有yum，安装yum找不到文件源，因此采用的远程链接腾讯云服务器。或者不用yum安装也可。</p>
+</li>
+<li><p>安装nginx</p>
+<ul>
+<li><p>下载nginx安装包（<span class="exturl" data-url="aHR0cDovL25naW54Lm9yZy8=">nginx</span>）选择linux版本，如最新的nginx-1.23.2 （pgp）</p>
+</li>
+<li><p>接下来流程同上pcre的安装流程</p>
+</li>
+<li><p>安装成功后进入usr文件夹查看多出的local&#x2F;nginx文件夹，多出了sbin脚本</p>
+<figure class="highlight bash"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr</span><br><span class="line"><span class="built_in">ls</span></span><br><span class="line"><span class="built_in">cd</span> <span class="built_in">local</span>/nginx</span><br><span class="line"><span class="built_in">ls</span></span><br><span class="line"><span class="built_in">cd</span> sbin</span><br><span class="line"><span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检查脚本启动</p>
+<figure class="highlight bash"><figcaption><span>2</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./nginx</span><br><span class="line">ps -ef | grep nginx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>浏览器中查看结果（输入服务器地址）</p>
+<p><img data-src="/./../../../../../../%E9%A1%B9%E7%9B%AE/blog/source/image/image-20221104133932732.png" alt="image-20221104133932732"></p>
+</li>
+</ul>
+</li>
+<li><p>在 windows 系统中访问 linux 中 nginx，默认不能访问的，因为防火墙问题</p>
+<ul>
+<li><p>查看开放的端口号</p>
+</li>
+<li><p><strong>firewall-cmd –list-all</strong></p>
+</li>
+<li><p>设置开放的端口号</p>
+<ul>
+<li><strong>firewall-cmd –add-service&#x3D;http –permanent</strong></li>
+<li><strong>firewall-cmd –add-port&#x3D;80&#x2F;tcp –permanent</strong></li>
+</ul>
+</li>
+<li><p>重启防火墙</p>
+<ul>
+<li><strong>firewall-cmd –reload</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Nginx常用命令"><a href="#Nginx常用命令" class="headerlink" title="Nginx常用命令"></a>Nginx常用命令</h2><ul>
+<li><p><strong>进入</strong> <strong>nginx</strong> <strong>目录中才能使用命令</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/sbin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>1、查看</strong> <strong>nginx</strong> <strong>版本号</strong></p>
+<ul>
+<li>&#96;&#96;&#96;<br>.&#x2F;nginx -v<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- **2、启动nginx**</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    ./nginx</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>3、停止nginx</strong></p>
+<ul>
+<li>&#96;&#96;&#96;<br>.&#x2F;nginx -s stop<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- **4、重新加载 nginx**</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    ./nginx -s reload</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>5、查看状态 nginx</strong></p>
+<ul>
+<li><pre><code>ps -ef | grep nginx
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Nginx配置文件"><a href="#Nginx配置文件" class="headerlink" title="Nginx配置文件"></a>Nginx配置文件</h2><p>包含三部分内容<br>（1）全局块：配置服务器整体运行的配置指令<br>比如 worker_processes 1;处理并发数的配置<br>（2）events 块：影响 Nginx 服务器与用户的网络连接<br>比如 worker_connections 1024; 支持的最大连接数为 1024<br>（3）http 块<br>还包含两部分：<br>http 全局块<br>server 块</p>
+<p>Nginx的三个重要配置一般都在http模块下。</p>
+
+      <div class="tags">
+          <a href="/tags/Nginx/" rel="tag"><i class="ic i-tag"></i> Nginx</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-11-04 14:50:43" itemprop="dateModified" datetime="2022-11-04T14:50:43+08:00">2022-11-04</time>
+  </span>
+  <span id="2022/11/04/扩展技术/Nginx/Nginx学习记录/" class="item leancloud_visitors" data-flag-title="Nginx学习记录" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechat-pay.png" alt="victinSever 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>victinSever <i class="ic i-at"><em>@</em></i>victinSever
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://victinsever.github.io/2022/11/04/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Nginx/Nginx%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="Nginx学习记录">http://victinsever.github.io/2022/11/04/扩展技术/Nginx/Nginx学习记录/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/11/02/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/Vue2%E9%A1%B9%E7%9B%AE%E7%BB%93%E5%90%88%E9%80%9A%E7%94%A8%E4%BE%9D%E8%B5%96%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;large&#x2F;008cs7isly8h7qpubgmcrj305k05kjr9.jpg" title="Vue2项目结合通用依赖进行项目搭建">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> vue</span>
+  <h3>Vue2项目结合通用依赖进行项目搭建</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Nginx"><span class="toc-number">1.</span> <span class="toc-text">Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">Nginx概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86"><span class="toc-number">1.2.</span> <span class="toc-text">反向代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="toc-number">1.3.</span> <span class="toc-text">负载均衡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB"><span class="toc-number">1.4.</span> <span class="toc-text">动静分离</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">1.5.</span> <span class="toc-text">Nginx环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.5.1.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B"><span class="toc-number">1.5.2.</span> <span class="toc-text">流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">1.6.</span> <span class="toc-text">Nginx常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">1.7.</span> <span class="toc-text">Nginx配置文件</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2022/11/04/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Nginx/Nginx%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" rel="bookmark" title="Nginx学习记录">Nginx学习记录</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="victinSever"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">victinSever</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">31</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">18</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">34</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3ZpY3RpblNldmVy" title="https:&#x2F;&#x2F;github.com&#x2F;victinSever"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9naXRlZS5jb20vdmljdGlu" title="https:&#x2F;&#x2F;gitee.com&#x2F;victin"><i class="ic i-check-circle"></i></span>
+      <a href="/victinzhong@163.com" title="victinzhong@163.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item csdn" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU0MzUzNjMxP3NwbT0xMDAwLjIxMTUuMzAwMS41MzQz" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_54353631?spm&#x3D;1000.2115.3001.5343"><i class="ic i-coffee"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/" title="分类于 canvas">canvas</a>
+</div>
+
+    <span><a href="/2022/10/25/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/%E7%BB%98%E5%88%B6%E6%97%B6%E9%92%9F/" title="canvas绘制时钟">canvas绘制时钟</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/react/" title="分类于 react">react</a>
+</div>
+
+    <span><a href="/2022/09/06/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" title="react与vue的路由辨析">react与vue的路由辨析</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/17/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/01-EC%E5%92%8CJS%E6%89%A7%E8%A1%8C/" title="JavaScript预编辑">JavaScript预编辑</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" title="分类于 课程学习">课程学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java-Web/" title="分类于 Java Web">Java Web</a>
+</div>
+
+    <span><a href="/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/JDBC/" title="JDBC">JDBC</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/06-%E7%BB%A7%E6%89%BF/" title="JS继承">JS继承</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/10-%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9AJS%E4%B8%AD%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8Ba%E7%AD%89%E4%BA%8E1%E6%88%96%E8%80%852%E6%88%96%E8%80%853/" title="面试题：JS中在什么情况下a等于1或者2或者3">面试题：JS中在什么情况下a等于1或者2或者3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/" title="分类于 扩展技术">扩展技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/" title="分类于 WebSocket">WebSocket</a>
+</div>
+
+    <span><a href="/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E9%80%89%E5%9E%8B%EF%BC%9AWebSocket/" title="即时通讯协议选型：WebSocket协议">即时通讯协议选型：WebSocket协议</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/" title="分类于 扩展技术">扩展技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Nginx/" title="分类于 Nginx">Nginx</a>
+</div>
+
+    <span><a href="/2022/11/04/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Nginx/Nginx%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="Nginx学习记录">Nginx学习记录</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%9D%82%E8%B0%88/" title="分类于 杂谈">杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/" title="分类于 博客">博客</a>
+</div>
+
+    <span><a href="/2022/10/17/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/hexo%E5%92%8CTypora%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" title="hexo和Typora中插入图片">hexo和Typora中插入图片</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/" title="分类于 js高级">js高级</a>
+</div>
+
+    <span><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/08-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/" title="数据存储">数据存储</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">victinSever @ 眸光似星辰</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">41k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">37 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/11/04/扩展技术/Nginx/Nginx学习记录/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

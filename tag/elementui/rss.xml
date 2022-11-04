@@ -40,6 +40,7 @@
         <category>维吉尼亚密码</category>
         <category>hexo</category>
         <category>Typora</category>
+        <category>Nginx</category>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/11/02/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/Vue2%E9%A1%B9%E7%9B%AE%E7%BB%93%E5%90%88%E9%80%9A%E7%94%A8%E4%BE%9D%E8%B5%96%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/</guid>
             <title>Vue2项目结合通用依赖进行项目搭建</title>
