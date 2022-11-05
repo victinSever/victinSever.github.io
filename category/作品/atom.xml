@@ -3,7 +3,7 @@
     <id>http://victinSever.github.io</id>
     <title>victinSever • Posts by &#34;作品&#34; category</title>
     <link href="http://victinSever.github.io" />
-    <updated>2022-10-26T11:57:24.000Z</updated>
+    <updated>2022-11-05T06:11:01.000Z</updated>
     <category term="react" />
     <category term="react-redux" />
     <category term="redux" />
@@ -38,6 +38,64 @@
     <category term="密码学" />
     <category term="凯斯密码" />
     <category term="维吉尼亚密码" />
+    <entry>
+        <id>http://victinsever.github.io/2022/11/05/%E4%BD%9C%E5%93%81/FLPT/</id>
+        <title>扶摇低代码平台</title>
+        <link rel="alternate" href="http://victinsever.github.io/2022/11/05/%E4%BD%9C%E5%93%81/FLPT/"/>
+        <content type="html">&lt;h1 id=&#34;flpt&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#flpt&#34;&gt;#&lt;/a&gt; FLPT&lt;/h1&gt;
+&lt;p&gt;一个专为法律人打造的社交、辩论，答疑平台，基于智能文本抽取算法，可以进行文本抽取，文案生成，法律辩论和信息检索&lt;/p&gt;
+&lt;h2 id=&#34;技术架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#技术架构&#34;&gt;#&lt;/a&gt; 技术架构&lt;/h2&gt;
+&lt;p&gt;前端技术架构主要为 Vue2 项目，具体技术栈如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vue2（框架）&lt;/li&gt;
+&lt;li&gt;Vuex（状态管理）&lt;/li&gt;
+&lt;li&gt;Vue-router（路由管理）&lt;/li&gt;
+&lt;li&gt;ElementUI（组件库）&lt;/li&gt;
+&lt;li&gt;Sass（CSS 语法扩展）&lt;/li&gt;
+&lt;li&gt;Axios（ajax 请求封装库）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;优化技术：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NProgress（微进度条）&lt;/li&gt;
+&lt;li&gt;iconfont (阿里矢量图标库)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;工具：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VScode&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9waWMuZ2ltaG95LmNvbS8=&#34;&gt;新浪图床&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目搭建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#项目搭建&#34;&gt;#&lt;/a&gt; 项目搭建&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;依赖安装&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;依赖安装&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;启动服务&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;启动服务&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm run serve&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;项目打包&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;项目打包&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm run build&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目模块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#项目模块&#34;&gt;#&lt;/a&gt; 项目模块&lt;/h2&gt;
+&lt;p&gt;暂未更新&lt;/p&gt;
+&lt;h2 id=&#34;版本&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#版本&#34;&gt;#&lt;/a&gt; 版本&lt;/h2&gt;
+&lt;p&gt;1.0.0&lt;/p&gt;
+&lt;h2 id=&#34;部署&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#部署&#34;&gt;#&lt;/a&gt; 部署&lt;/h2&gt;
+&lt;p&gt;部署链接：&lt;/p&gt;
+&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;vitinSever&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;a href=&#34;https://victinsever.github.io/MIPT/dist/index.html&#34; class=&#34;image&#34; data-background-image=&#34;/images/avatar.jpg&#34;&gt;&lt;/a&gt;
+          &lt;div class=&#34;info&#34;&gt;
+          &lt;a href=&#34;https://victinsever.github.io/MIPT/dist/index.html&#34; class=&#34;title&#34;&gt;部署地址&lt;/a&gt;
+          &lt;p class=&#34;desc&#34;&gt;Web端上线地址&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;vitinSever&#34; style=&#34;--block-color:#9d5b8b;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3ZpY3RpblNldmVyL01JUFQ=&#34; data-background-image=&#34;/images/avatar.jpg&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3ZpY3RpblNldmVyL01JUFQ=&#34;&gt;项目仓库&lt;/span&gt;
+          &lt;p class=&#34;desc&#34;&gt;Web端仓库地址&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</content>
+        <updated>2022-11-05T06:11:01.000Z</updated>
+    </entry>
     <entry>
         <id>http://victinsever.github.io/2022/10/26/%E4%BD%9C%E5%93%81/%E6%89%B6%E6%91%87%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%B9%B3%E5%8F%B0/</id>
         <title>扶摇低代码平台</title>
