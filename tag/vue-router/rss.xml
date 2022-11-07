@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>victinSever • Posts by &#34;vue-router&#34; tag</title>
+        <title>眸光似星辰 • Posts by &#34;vue-router&#34; tag</title>
         <link>http://victinSever.github.io</link>
         <description></description>
         <language>zh-CN</language>
@@ -11,47 +11,47 @@
         <category>react-redux</category>
         <category>redux</category>
         <category>canvas</category>
+        <category>JavaScript</category>
+        <category>原型</category>
+        <category>原型链</category>
+        <category>this</category>
+        <category>继承</category>
+        <category>JSON</category>
+        <category>cache</category>
+        <category>面试题</category>
         <category>vue</category>
         <category>react-router-dom</category>
         <category>vue-router</category>
-        <category>Vue2</category>
         <category>Vuex</category>
         <category>Vue-router</category>
         <category>ElementUI</category>
         <category>axios</category>
         <category>sass</category>
         <category>NProgress</category>
-        <category>JavaScript</category>
-        <category>this</category>
-        <category>原型</category>
-        <category>原型链</category>
-        <category>继承</category>
-        <category>JSON</category>
-        <category>cache</category>
-        <category>面试题</category>
-        <category>hexo</category>
-        <category>Typora</category>
         <category>Nginx</category>
-        <category>WebSocket</category>
         <category>Svelet</category>
         <category>Solid.js</category>
+        <category>hexo</category>
+        <category>Typora</category>
+        <category>WebSocket</category>
         <category>JDBC</category>
         <category>MVC</category>
         <category>Dijkstra</category>
         <category>密码学</category>
         <category>凯斯密码</category>
         <category>维吉尼亚密码</category>
+        <category>Vue</category>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/11/02/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/Vue2%E9%A1%B9%E7%9B%AE%E7%BB%93%E5%90%88%E9%80%9A%E7%94%A8%E4%BE%9D%E8%B5%96%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/</guid>
             <title>Vue2项目结合通用依赖进行项目搭建</title>
             <link>http://victinsever.github.io/2022/11/02/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/Vue2%E9%A1%B9%E7%9B%AE%E7%BB%93%E5%90%88%E9%80%9A%E7%94%A8%E4%BE%9D%E8%B5%96%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/</link>
-            <category>Vue2</category>
             <category>Vuex</category>
             <category>Vue-router</category>
             <category>ElementUI</category>
             <category>axios</category>
             <category>sass</category>
             <category>NProgress</category>
+            <category>Vue</category>
             <pubDate>Wed, 02 Nov 2022 12:57:01 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;Vue2项目结合通用依赖进行项目搭建&#34;&gt;&lt;a href=&#34;#Vue2项目结合通用依赖进行项目搭建&#34; class=&#34;headerlink&#34; title=&#34;Vue2项目结合通用依赖进行项目搭建&#34;&gt;&lt;/a&gt;Vue2项目结合通用依赖进行项目搭建&lt;/h1&gt;&lt;h2 id=&#34;技术栈&#34;&gt;&lt;a href=&#34;#技术栈&#34; class=&#34;headerlink&#34; title=&#34;技术栈&#34;&gt;&lt;/a&gt;技术栈&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Vue-cli&lt;/strong&gt;（框架）&lt;/p&gt;
@@ -106,7 +106,7 @@
             <category>react-router-dom</category>
             <category>vue-router</category>
             <pubDate>Tue, 06 Sep 2022 22:25:24 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;react-router-dom是react中的内置插件&lt;/p&gt;
+            <description><![CDATA[ &lt;p&gt;react-router-dom 是 react 中的内置插件&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

@@ -1,15 +1,41 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "victinSever • All posts by \"vue\" tag",
+    "title": "眸光似星辰 • All posts by \"vue\" tag",
     "description": "",
     "home_page_url": "http://victinSever.github.io",
     "items": [
+        {
+            "id": "http://victinsever.github.io/2022/11/07/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/vue%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0/",
+            "url": "http://victinsever.github.io/2022/11/07/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/vue%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0/",
+            "title": "Vue源码解析笔记",
+            "date_published": "2022-11-07T04:15:01.000Z",
+            "content_html": "<h1 id=\"Vue重点模块源码解析\"><a href=\"#Vue重点模块源码解析\" class=\"headerlink\" title=\"Vue重点模块源码解析\"></a>Vue重点模块源码解析</h1><h2 id=\"new-Vue\"><a href=\"#new-Vue\" class=\"headerlink\" title=\"new Vue\"></a>new Vue</h2><ul>\n<li><p>_init：</p>\n<p>初始化时，调用了_init方法，生成一个uid并混入一些全局的api，此时将加入beforeCreate勾子，然后渲染初始化数据后，加入created勾子，然后开始进行挂载。</p>\n</li>\n<li><p>$mount</p>\n<ul>\n<li><p>具体实现思路是：根据传入的el查看节点，根据是否有render，没有的话是否有template模板，都没有就用outerHTML作为渲染模板</p>\n</li>\n<li><p>在挂载阶段主要是得到render函数</p>\n</li>\n</ul>\n</li>\n<li><p>mountCompontent</p>\n<ul>\n<li>挂载真实dom，创建了渲染使用的Watcher，初次渲染时内部调用了updateCompontent方法更新组件</li>\n</ul>\n</li>\n<li><p>_render</p>\n<p>render函数被调用得到Vnode</p>\n</li>\n<li><p>update</p>\n<p>在update中获取Vnode，进行页面视图更新，这个Vnode是指的旧的Vnode，没有则通过el更新，有则通过旧节点更新</p>\n</li>\n<li><p>patch</p>\n<p>用Vnode首次渲染真实dom，通过递归等方法判断内部节点的渲染方式</p>\n</li>\n</ul>\n<h2 id=\"双向数据绑定\"><a href=\"#双向数据绑定\" class=\"headerlink\" title=\"双向数据绑定\"></a>双向数据绑定</h2><ul>\n<li>核心方法：Object.defineProperty(obj, prop, descriptor)</li>\n<li>核心类：Watcher，Dep</li>\n<li>原理：<strong>初始化data调用observe方法给data中的数据重写get和set方法，渲染真实dom时，渲染watcher会去访问页面上使用了的属性变量，给属性的Dep加上渲染函数，每次修改就会通知watcher修改视图</strong>。</li>\n<li>初始化data，递归给data属性重写get，set，同时增加一个Dep类，渲染阶段的Dep会收集watcher，每次修改通知watcher调用dep.notify()更新。</li>\n<li>个人idea：其实这就是MVC设计中的视图和模型之间的数据流通和绑定思路。</li>\n</ul>\n<h2 id=\"数组响应式\"><a href=\"#数组响应式\" class=\"headerlink\" title=\"数组响应式\"></a>数组响应式</h2><p>获取数组原型拿到数组原有方法进行重写，重写主要针对7个要对数组有直接变更的方法，数组是响应式的就会拿到数组上的__ob__属性，调用该属性上的notify()方法。</p>\n<h2 id=\"Watch监听实现\"><a href=\"#Watch监听实现\" class=\"headerlink\" title=\"Watch监听实现\"></a>Watch监听实现</h2><p>核心：利用watcher和dep两个类实现，区别于数据绑定的是watcher保留用户传入的watch回调函数</p>\n<h2 id=\"computed实现\"><a href=\"#computed实现\" class=\"headerlink\" title=\"computed实现\"></a>computed实现</h2><p>重点：计算属性方法内部变量的Dep上有两个watcher，分别是计算属性watcher和渲染watcher，计算属性watcher只控制是否重新计算，跟随渲染watcher重新计算</p>\n<h2 id=\"nextTick原理\"><a href=\"#nextTick原理\" class=\"headerlink\" title=\"nextTick原理\"></a>nextTick原理</h2><ul>\n<li>采用异步队列方式控制DOM的更新（异步函数执行是在同步函数之后）</li>\n<li>采用vue异步方式降级策略，为了适应兼容性：promise,MutationObserver,setTmmediate,setTimeout</li>\n</ul>\n<h2 id=\"Vue-extend\"><a href=\"#Vue-extend\" class=\"headerlink\" title=\"Vue.extend\"></a>Vue.extend</h2><p>基于Vue的构造函数，创建一个子类，子类继承父类的所有属性和方法，最后返回这个子类。</p>\n<p>每一个子组件都是一个Sub构造函数。</p>\n<p>子组件的创建流程和new Vue初始化的流程区别不大。</p>\n<p>子组件创建的时候没有el生成，在vue自身进行渲染时，调用本身的child.$mount(undefined)，这个没有传入el，因此不会挂载到页面上去，是直接放在vnode.compontentInstance.el上，通过父组件渲染页面时，压入页面上。</p>\n<p>参考文章：<span class=\"exturl\" data-url=\"aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC80MTk4OTY0NDM=\">vue源码阅读解析（超详细） - 知乎 (zhihu.com)</span></p>\n",
+            "tags": [
+                "Vue"
+            ]
+        },
+        {
+            "id": "http://victinsever.github.io/2022/11/02/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/Vue2%E9%A1%B9%E7%9B%AE%E7%BB%93%E5%90%88%E9%80%9A%E7%94%A8%E4%BE%9D%E8%B5%96%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/",
+            "url": "http://victinsever.github.io/2022/11/02/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/Vue2%E9%A1%B9%E7%9B%AE%E7%BB%93%E5%90%88%E9%80%9A%E7%94%A8%E4%BE%9D%E8%B5%96%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/",
+            "title": "Vue2项目结合通用依赖进行项目搭建",
+            "date_published": "2022-11-02T04:57:01.000Z",
+            "content_html": "<h1 id=\"Vue2项目结合通用依赖进行项目搭建\"><a href=\"#Vue2项目结合通用依赖进行项目搭建\" class=\"headerlink\" title=\"Vue2项目结合通用依赖进行项目搭建\"></a>Vue2项目结合通用依赖进行项目搭建</h1><h2 id=\"技术栈\"><a href=\"#技术栈\" class=\"headerlink\" title=\"技术栈\"></a>技术栈</h2><ul>\n<li><p><strong>Vue-cli</strong>（框架）</p>\n<ul>\n<li>Vue项目框架，基于 Vue.js 进行快速开发的完整系统</li>\n<li>本次项目为Vue2项目框架</li>\n</ul>\n</li>\n<li><p><strong>Vuex</strong>（数据管理）</p>\n<ul>\n<li>一个专为 Vue.js 应用程序开发的<strong>状态管理模式 + 库</strong>。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化</li>\n<li>本项目中作为全局共享数据库，采用三版本</li>\n</ul>\n</li>\n<li><p><strong>Vue-router</strong>（路由管理）</p>\n<ul>\n<li>Vue.js官方的路由插件，它和vue.js是<span class=\"exturl\" data-url=\"aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT0lRTYlQjclQjElRTUlQkElQTYmc3BtPTEwMDEuMjEwMS4zMDAxLjcwMjA=\">深度</span>集成的，适合用于构建单页面应用</li>\n<li>本项目中作为路由链接管理插件，采用三版本</li>\n</ul>\n</li>\n<li><p><strong>ElementUI</strong>（组件库）</p>\n<ul>\n<li>基于 Vue 2.0 的桌面端组件库</li>\n<li>本项目作为主要的全局组件库，进行样式美化</li>\n</ul>\n</li>\n<li><p><strong>axios</strong>（ajax请求封装库）</p>\n<ul>\n<li>一个基于 promise 的网络请求库，可以用于浏览器和 node.js</li>\n<li>本项目作为数据请求发送的封装库，对前后端数据进行连接</li>\n</ul>\n</li>\n<li><p><strong>Sass</strong>（CSS扩展语言插件）</p>\n<ul>\n<li>进行CSS的语言扩展，提高CSS样式的可读性，便于CSS样式设计</li>\n</ul>\n</li>\n<li><p><strong>NProgress</strong>（小进度条插件）</p>\n</li>\n</ul>\n<p>上述技术有很多等价的技术可以代替，但是基本的技术如框架，路由管理必不可少，此处只是本人最常用的Vue2技术套装，本文章做一个一般流程记录，推荐的代替技术在最后（仅供参考）。</p>\n<h2 id=\"搭建项目\"><a href=\"#搭建项目\" class=\"headerlink\" title=\"搭建项目\"></a>搭建项目</h2><p>下面是项目搭建和依赖下载和搭配流程，特别强调部分的技术版本依赖必须一一对应。</p>\n<p>- </p>\n",
+            "tags": [
+                "Vuex",
+                "Vue-router",
+                "ElementUI",
+                "axios",
+                "sass",
+                "NProgress",
+                "Vue"
+            ]
+        },
         {
             "id": "http://victinsever.github.io/2022/09/06/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/",
             "url": "http://victinsever.github.io/2022/09/06/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/",
             "title": "react与vue的路由辨析",
             "date_published": "2022-09-06T14:25:24.000Z",
-            "content_html": "<p>react-router-dom是react中的内置插件</p>\n",
+            "content_html": "<p>react-router-dom 是 react 中的内置插件</p>\n",
             "tags": [
                 "react",
                 "vue",
