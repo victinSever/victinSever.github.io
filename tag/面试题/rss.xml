@@ -10,11 +10,23 @@
         <category>react</category>
         <category>react-redux</category>
         <category>redux</category>
+        <category>Svelet</category>
+        <category>Solid.js</category>
+        <category>Nginx</category>
+        <category>WebSocket</category>
+        <category>hexo</category>
+        <category>Typora</category>
+        <category>密码学</category>
+        <category>凯斯密码</category>
+        <category>维吉尼亚密码</category>
+        <category>Dijkstra</category>
+        <category>JDBC</category>
         <category>canvas</category>
+        <category>MVC</category>
         <category>JavaScript</category>
+        <category>this</category>
         <category>原型</category>
         <category>原型链</category>
-        <category>this</category>
         <category>继承</category>
         <category>JSON</category>
         <category>cache</category>
@@ -22,25 +34,13 @@
         <category>vue</category>
         <category>react-router-dom</category>
         <category>vue-router</category>
+        <category>Vue</category>
         <category>Vuex</category>
         <category>Vue-router</category>
         <category>ElementUI</category>
         <category>axios</category>
         <category>sass</category>
         <category>NProgress</category>
-        <category>Nginx</category>
-        <category>Svelet</category>
-        <category>Solid.js</category>
-        <category>hexo</category>
-        <category>Typora</category>
-        <category>WebSocket</category>
-        <category>JDBC</category>
-        <category>MVC</category>
-        <category>Dijkstra</category>
-        <category>密码学</category>
-        <category>凯斯密码</category>
-        <category>维吉尼亚密码</category>
-        <category>Vue</category>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/10-%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9AJS%E4%B8%AD%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8Ba%E7%AD%89%E4%BA%8E1%E6%88%96%E8%80%852%E6%88%96%E8%80%853/</guid>
             <title>面试题：JS中在什么情况下a等于1或者2或者3</title>
@@ -48,25 +48,31 @@
             <category>JavaScript</category>
             <category>面试题</category>
             <pubDate>Fri, 21 Oct 2022 23:02:20 +0800</pubDate>
-            <description><![CDATA[ &lt;h3 id=&#34;面试题1js中在什么情况下a等于1或者2或者3&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#面试题1js中在什么情况下a等于1或者2或者3&#34;&gt;#&lt;/a&gt; 面试题 1：JS 中在什么情况下 a 等于 1 或者 2 或者 3？&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;题目详情如下：&lt;/strong&gt;&lt;/p&gt;
+            <description><![CDATA[ &lt;h3 id=&#34;面试题1：JS中在什么情况下a等于1或者2或者3？&#34;&gt;&lt;a href=&#34;#面试题1：JS中在什么情况下a等于1或者2或者3？&#34; class=&#34;headerlink&#34; title=&#34;面试题1：JS中在什么情况下a等于1或者2或者3？&#34;&gt;&lt;/a&gt;面试题1：JS中在什么情况下a等于1或者2或者3？&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;题目详情如下：&lt;/strong&gt;&lt;/p&gt;
 &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;let a = ?;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;if (a == 1 &amp;amp;&amp;amp; a == 2 &amp;amp;&amp;amp; a == 3) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    console.log(&amp;quot;i love you~&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
 &lt;ul&gt;
-&lt;li&gt;方案一：通过重写 valueOf 方法返回 1,2,3&lt;/li&gt;
+&lt;li&gt;方案一：通过重写valueOf方法返回1,2,3&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; a = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;i&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;valueOf&lt;/span&gt;: &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; ++&lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;i&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
 &lt;ul&gt;
-&lt;li&gt;方案二：通过重写 toString 方法返回 1,2,3&lt;/li&gt;
+&lt;li&gt;方案二：通过重写toString方法返回1,2,3&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; a = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;i&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;toString&lt;/span&gt;: &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; ++&lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;i&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
 &lt;ul&gt;
-&lt;li&gt;方案三：通过数组的 shift 每次拿到 1,2,3 赋值给 toString 方法&lt;/li&gt;
+&lt;li&gt;方案三：通过数组的shift每次拿到1,2,3赋值给toString方法&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; a = [&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;a.&lt;span class=&#34;property&#34;&gt;toString&lt;/span&gt; = a.&lt;span class=&#34;property&#34;&gt;shift&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
 &lt;ul&gt;
-&lt;li&gt;方案四：通过 Object.defineProperty 定义变量进行迭代&lt;/li&gt;
+&lt;li&gt;方案四：通过Object.defineProperty定义变量进行迭代&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; i = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title class_&#34;&gt;Object&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;defineProperty&lt;/span&gt;(&lt;span class=&#34;variable language_&#34;&gt;window&lt;/span&gt;,&lt;span class=&#34;string&#34;&gt;&amp;quot;a&amp;quot;&lt;/span&gt;,&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;title function_&#34;&gt;get&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; ++i;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
  ]]></description>
         </item>
     </channel>
