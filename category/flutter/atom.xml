@@ -3,7 +3,7 @@
     <id>http://victinSever.github.io</id>
     <title>眸光似星辰 • Posts by &#34;flutter&#34; category</title>
     <link href="http://victinSever.github.io" />
-    <updated>2022-09-13T08:37:55.000Z</updated>
+    <updated>2022-11-11T09:38:55.000Z</updated>
     <category term="react" />
     <category term="react-redux" />
     <category term="redux" />
@@ -39,9 +39,16 @@
     <category term="sass" />
     <category term="NProgress" />
     <entry>
-        <id>http://victinsever.github.io/2022/09/13/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/flutter/flutter-01-introduce/</id>
-        <title>flutter-01-introduce</title>
-        <link rel="alternate" href="http://victinsever.github.io/2022/09/13/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/flutter/flutter-01-introduce/"/>
+        <id>http://victinsever.github.io/2022/11/11/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/flutter/Flutter%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E7%AC%AC%E4%B8%80%E4%B8%AAFlutter%E5%BA%94%E7%94%A8/</id>
+        <title>Flutter学习笔记 - 第一个Flutter应用</title>
+        <link rel="alternate" href="http://victinsever.github.io/2022/11/11/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/flutter/Flutter%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E7%AC%AC%E4%B8%80%E4%B8%AAFlutter%E5%BA%94%E7%94%A8/"/>
+        <content type="html"></content>
+        <updated>2022-11-11T09:38:55.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://victinsever.github.io/2022/09/13/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/flutter/Flutter%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20Flutter%E6%98%AF%E4%BB%80%E4%B9%88/</id>
+        <title>Flutter学习笔记 - Flutter是什么</title>
+        <link rel="alternate" href="http://victinsever.github.io/2022/09/13/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/flutter/Flutter%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20Flutter%E6%98%AF%E4%BB%80%E4%B9%88/"/>
         <content type="html">&lt;h2 id=&#34;Flutter特点&#34;&gt;&lt;a href=&#34;#Flutter特点&#34; class=&#34;headerlink&#34; title=&#34;Flutter特点&#34;&gt;&lt;/a&gt;Flutter特点&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;多平台支持 iOS Android Linux 未来 Fuchsia OS&lt;/p&gt;
 &lt;/li&gt;

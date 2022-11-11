@@ -39,9 +39,9 @@
     <category term="sass" />
     <category term="NProgress" />
     <entry>
-        <id>http://victinsever.github.io/2022/10/18/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/03-JS%E7%9A%84this/</id>
+        <id>http://victinsever.github.io/2022/10/18/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/03-JS%E7%9A%84this/</id>
         <title>JS的this</title>
-        <link rel="alternate" href="http://victinsever.github.io/2022/10/18/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/03-JS%E7%9A%84this/"/>
+        <link rel="alternate" href="http://victinsever.github.io/2022/10/18/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/03-JS%E7%9A%84this/"/>
         <content type="html">&lt;h2 id=&#34;this&#34;&gt;&lt;a href=&#34;#this&#34; class=&#34;headerlink&#34; title=&#34;this&#34;&gt;&lt;/a&gt;this&lt;/h2&gt;&lt;h3 id=&#34;this是什么&#34;&gt;&lt;a href=&#34;#this是什么&#34; class=&#34;headerlink&#34; title=&#34;this是什么&#34;&gt;&lt;/a&gt;this是什么&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;this到底是什么和你书写的位置没有关系，和调用方式有关系&lt;/li&gt;
 &lt;li&gt;this是在产生EC时，动态绑定的&lt;/li&gt;

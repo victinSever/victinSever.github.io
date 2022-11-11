@@ -1,0 +1,621 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="眸光似星辰" href="http://victinsever.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="眸光似星辰" href="http://victinsever.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="眸光似星辰" href="http://victinsever.github.io/feed.json" />
+
+
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="JavaScript" />
+
+
+<link rel="canonical" href="http://victinsever.github.io/2022/11/11/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/JavaScript%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/">
+
+
+
+  <title>
+JavaScript常用函数 - JavaScript - 前端技术 |
+vintinSever = 眸光似星辰</title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">JavaScript常用函数
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-11 23:21:29">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-11T23:21:29+08:00">2022-11-11</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2.7k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">vintinSever</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://plus.unsplash.com/premium_photo-1661508614319-b5e40d1143bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1487300001871-12053913095d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1517451330947-7809dead78d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTk1fHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1566847438217-76e82d383f84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI5fHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1536500152107-01ab1422f932?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTU1fHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="item" rel="index" title="分类于 前端技术"><span itemprop="name">前端技术</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/" itemprop="item" rel="index" title="分类于 JavaScript"><span itemprop="name">JavaScript</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://victinsever.github.io/2022/11/11/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/JavaScript%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="眸光似星辰">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="眸光似星辰">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="开发中常用的随机函数"><a href="#开发中常用的随机函数" class="headerlink" title="开发中常用的随机函数"></a>开发中常用的随机函数</h1><h2 id="生成随机颜色"><a href="#生成随机颜色" class="headerlink" title="生成随机颜色"></a>生成随机颜色</h2><p>生成随机颜色。</p>
+<figure class="highlight javascript"><figcaption><span>生成随机颜色</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">generateRandomHexColor</span> = (<span class="params"></span>) =&gt; <span class="string">`#<span class="subst">$&#123;<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">0xffffff</span>).toString(<span class="number">16</span>)&#125;</span>`</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">generateRandomHexColor</span>())</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="数组重排序"><a href="#数组重排序" class="headerlink" title="数组重排序"></a>数组重排序</h2><p>原生数组没有重排序功能</p>
+<figure class="highlight javascript"><figcaption><span>数组重排序</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">shuffle</span> = (<span class="params">arr</span>) =&gt; arr.<span class="title function_">sort</span>(<span class="function">() =&gt;</span> <span class="title class_">Math</span>.<span class="title function_">random</span>() - <span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">shuffle</span>(arr))</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="复制到剪贴板"><a href="#复制到剪贴板" class="headerlink" title="复制到剪贴板"></a>复制到剪贴板</h2><p>对数组的元素进行重新排序是一项非常重要的技巧，但是原生 Array 中并没有这项功能。</p>
+<figure class="highlight javascript"><figcaption><span>复制到剪贴板</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">copyToClipboard</span> = (<span class="params">text</span>) =&gt; navigator.<span class="property">clipboard</span> &amp;&amp; navigator.<span class="property">clipboard</span>.<span class="property">writeText</span> &amp;&amp; navigator.<span class="property">clipboard</span>.<span class="title function_">writeText</span>(text)</span><br><span class="line"></span><br><span class="line"><span class="title function_">copyToClipboard</span>(<span class="string">&quot;Hello World!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="检测暗色主题"><a href="#检测暗色主题" class="headerlink" title="检测暗色主题"></a>检测暗色主题</h2><p>暗色主题日益普及，很多用的都会在设备中启用案模式，我们将应用程序切换到暗色主题可以提高用户体验度。</p>
+<figure class="highlight javascript"><figcaption><span>检测暗色主题</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">isDarkMode</span> = (<span class="params"></span>) =&gt; <span class="variable language_">window</span>.<span class="property">matchMedia</span> &amp;&amp; <span class="variable language_">window</span>.<span class="title function_">matchMedia</span>(<span class="string">&quot;(prefers-color-scheme: dark)&quot;</span>).<span class="property">matches</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">isDarkMode</span>())</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="滚动到顶部"><a href="#滚动到顶部" class="headerlink" title="滚动到顶部"></a>滚动到顶部</h2><p>将元素滚动到顶部最简单的方法是使用 scrollIntoView。设置 block 为 start 可以滚动到顶部；设置 behavior 为 smooth 可以开启平滑滚动。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">scrollToTop</span> = (<span class="params">element</span>) =&gt; element.<span class="title function_">scrollIntoView</span>(&#123; <span class="attr">behavior</span>: <span class="string">&quot;smooth&quot;</span>, <span class="attr">block</span>: <span class="string">&quot;start&quot;</span> &#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="滚动到底部"><a href="#滚动到底部" class="headerlink" title="滚动到底部"></a>滚动到底部</h2><p>与滚动到顶部一样，滚动到底部只需要设置 block 为 end 即可。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">scrollToBottom</span> = (<span class="params">element</span>) =&gt; element.<span class="title function_">scrollIntoView</span>(&#123; <span class="attr">behavior</span>: <span class="string">&quot;smooth&quot;</span>, <span class="attr">block</span>: <span class="string">&quot;end&quot;</span> &#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="检测元素是否在屏幕中"><a href="#检测元素是否在屏幕中" class="headerlink" title="检测元素是否在屏幕中"></a>检测元素是否在屏幕中</h2><p>检查元素是否在窗口中最好的方法是使用 IntersectionObserver。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">callback</span> = (<span class="params">entries</span>) =&gt; &#123;</span><br><span class="line">  entries.<span class="title function_">forEach</span>(<span class="function">(<span class="params">entry</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (entry.<span class="property">isIntersecting</span>) &#123;</span><br><span class="line">      <span class="comment">// `entry.target` is the dom element</span></span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;entry.target.id&#125;</span> is visible`</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> options = &#123;</span><br><span class="line">  <span class="attr">threshold</span>: <span class="number">1.0</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> observer = <span class="keyword">new</span> <span class="title class_">IntersectionObserver</span>(callback, options);</span><br><span class="line"><span class="keyword">const</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;btn&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> bottomBtn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;bottom-btn&quot;</span>);</span><br><span class="line">observer.<span class="title function_">observe</span>(btn);</span><br><span class="line">observer.<span class="title function_">observe</span>(bottomBtn);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="检测设备"><a href="#检测设备" class="headerlink" title="检测设备"></a>检测设备</h2><p>使用 navigator.userAgent 来检测网站运行在哪种平台设备上。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">detectDeviceType</span> = (<span class="params"></span>) =&gt;</span><br><span class="line">  <span class="regexp">/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i</span>.<span class="title function_">test</span>(</span><br><span class="line">    navigator.<span class="property">userAgent</span></span><br><span class="line">  ) ? <span class="string">&quot;Mobile&quot;</span> : <span class="string">&quot;Desktop&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">detectDeviceType</span>());</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="隐藏元素"><a href="#隐藏元素" class="headerlink" title="隐藏元素"></a>隐藏元素</h2><p>我们可以将元素的 style.visibility 设置为 hidden，隐藏元素的可见性，但元素的空间仍然会被占用。如果设置元素的 style.display 为 none，会将元素从渲染流中删除。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">hideElement</span> = (<span class="params">el, removeFromFlow = <span class="literal">false</span></span>) =&gt; &#123;</span><br><span class="line">  removeFromFlow ? (el.<span class="property">style</span>.<span class="property">display</span> = <span class="string">&#x27;none&#x27;</span>)</span><br><span class="line">  : (el.<span class="property">style</span>.<span class="property">visibility</span> = <span class="string">&#x27;hidden&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="从-URL-中获取参数"><a href="#从-URL-中获取参数" class="headerlink" title="从 URL 中获取参数"></a>从 URL 中获取参数</h2><p>JavaScript 中有一个 URL 对象，通过它可以非常方便的获取 URL 中的参数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">getParamByUrl</span> = (<span class="params">key</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> url = <span class="keyword">new</span> <span class="title function_">URL</span>(location.<span class="property">href</span>)</span><br><span class="line">  <span class="keyword">return</span> url.<span class="property">searchParams</span>.<span class="title function_">get</span>(key)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="深拷贝对象"><a href="#深拷贝对象" class="headerlink" title="深拷贝对象"></a>深拷贝对象</h2><p>深拷贝对象非常简单，先将对象转换为字符串，再转换成对象即可。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">deepCopy</span> = obj =&gt; <span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(obj))</span><br></pre></td></tr></table></figure>
+
+<p>除了利用 JSON 的 API，还有更新的深拷贝对象的 structuredClone API，但并不是在所有的浏览器中都支持。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">structuredClone</span>(obj)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="等待函数"><a href="#等待函数" class="headerlink" title="等待函数"></a>等待函数</h2><p>JavaScript 提供了 setTimeout 函数，但是它并不返回 Promise 对象，所以我们没办法使用 async 作用在这个函数上，但是我们可以封装等待函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">wait</span> = (<span class="params">ms</span>) =&gt; <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve</span>)=&gt;</span> <span class="built_in">setTimeout</span>(resolve, ms))</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">asyncFn</span> = <span class="keyword">async</span> (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">wait</span>(<span class="number">1000</span>)</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;等待异步函数执行结束&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">asyncFn</span>()</span><br></pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/JavaScript/" rel="tag"><i class="ic i-tag"></i> JavaScript</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-11-11 23:36:35" itemprop="dateModified" datetime="2022-11-11T23:36:35+08:00">2022-11-11</time>
+  </span>
+  <span id="2022/11/11/前端技术/JavaScript/JavaScript常用函数/" class="item leancloud_visitors" data-flag-title="JavaScript常用函数" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 支持一下</button>
+  <p>请我一杯冬天的奶茶~(￣▽￣)~金主大大~</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechat-pay.png" alt="眸光似星辰 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>眸光似星辰 <i class="ic i-at"><em>@</em></i>眸光似星辰
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://victinsever.github.io/2022/11/11/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/JavaScript%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/" title="JavaScript常用函数">http://victinsever.github.io/2022/11/11/前端技术/JavaScript/JavaScript常用函数/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/11/11/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/flutter/Flutter%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E7%AC%AC%E4%B8%80%E4%B8%AAFlutter%E5%BA%94%E7%94%A8/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1626602411112-10742f9a3ab8?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8ODF8fGNhdHxlbnwwfHwwfHw%3D&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="Flutter学习笔记 - 第一个Flutter应用">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> flutter</span>
+  <h3>Flutter学习笔记 - 第一个Flutter应用</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">开发中常用的随机函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E9%A2%9C%E8%89%B2"><span class="toc-number">1.1.</span> <span class="toc-text">生成随机颜色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E9%87%8D%E6%8E%92%E5%BA%8F"><span class="toc-number">1.2.</span> <span class="toc-text">数组重排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E5%88%B0%E5%89%AA%E8%B4%B4%E6%9D%BF"><span class="toc-number">1.3.</span> <span class="toc-text">复制到剪贴板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E6%9A%97%E8%89%B2%E4%B8%BB%E9%A2%98"><span class="toc-number">1.4.</span> <span class="toc-text">检测暗色主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BB%9A%E5%8A%A8%E5%88%B0%E9%A1%B6%E9%83%A8"><span class="toc-number">1.5.</span> <span class="toc-text">滚动到顶部</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BB%9A%E5%8A%A8%E5%88%B0%E5%BA%95%E9%83%A8"><span class="toc-number">1.6.</span> <span class="toc-text">滚动到底部</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E5%85%83%E7%B4%A0%E6%98%AF%E5%90%A6%E5%9C%A8%E5%B1%8F%E5%B9%95%E4%B8%AD"><span class="toc-number">1.7.</span> <span class="toc-text">检测元素是否在屏幕中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E8%AE%BE%E5%A4%87"><span class="toc-number">1.8.</span> <span class="toc-text">检测设备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0"><span class="toc-number">1.9.</span> <span class="toc-text">隐藏元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E-URL-%E4%B8%AD%E8%8E%B7%E5%8F%96%E5%8F%82%E6%95%B0"><span class="toc-number">1.10.</span> <span class="toc-text">从 URL 中获取参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.11.</span> <span class="toc-text">深拷贝对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AD%89%E5%BE%85%E5%87%BD%E6%95%B0"><span class="toc-number">1.12.</span> <span class="toc-text">等待函数</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2022/10/17/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/01-EC%E5%92%8CJS%E6%89%A7%E8%A1%8C/" rel="bookmark" title="JavaScript预编辑">JavaScript预编辑</a></li><li><a href="/2022/10/18/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/02-%E5%8F%98%E9%87%8F%E5%92%8C%E9%97%AD%E5%8C%85/" rel="bookmark" title="变量和闭包">变量和闭包</a></li><li><a href="/2022/10/18/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/03-JS%E7%9A%84this/" rel="bookmark" title="JS的this">JS的this</a></li><li><a href="/2022/10/18/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/04-OOP%E5%8F%8A%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%A1%88/" rel="bookmark" title="OOP">OOP</a></li><li><a href="/2022/10/19/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/05-%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" rel="bookmark" title="原型和原型链">原型和原型链</a></li><li><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/06-%E7%BB%A7%E6%89%BF/" rel="bookmark" title="JS继承">JS继承</a></li><li><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/07-JSON/" rel="bookmark" title="JSON">JSON</a></li><li><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/08-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/" rel="bookmark" title="数据存储">数据存储</a></li><li><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/09-with%EF%BC%8Ceval%EF%BC%8C%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/" rel="bookmark" title="with，eval，严格模式">with，eval，严格模式</a></li><li><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/10-%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9AJS%E4%B8%AD%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8Ba%E7%AD%89%E4%BA%8E1%E6%88%96%E8%80%852%E6%88%96%E8%80%853/" rel="bookmark" title="面试题：JS中在什么情况下a等于1或者2或者3">面试题：JS中在什么情况下a等于1或者2或者3</a></li><li><a href="/2022/10/22/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/11-%E6%89%8B%E5%86%99new%EF%BC%8Ccall%EF%BC%8Capply%E7%9A%84%E5%AE%9E%E7%8E%B0/" rel="bookmark" title="手写new，call，apply的实现">手写new，call，apply的实现</a></li><li class="active"><a href="/2022/11/11/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/JavaScript%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/" rel="bookmark" title="JavaScript常用函数">JavaScript常用函数</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="眸光似星辰"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">眸光似星辰</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">35</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">18</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">34</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3ZpY3RpblNldmVy" title="https:&#x2F;&#x2F;github.com&#x2F;victinSever"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9naXRlZS5jb20vdmljdGlu" title="https:&#x2F;&#x2F;gitee.com&#x2F;victin"><i class="ic i-check-circle"></i></span>
+      <a href="/victinzhong@163.com" title="victinzhong@163.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item csdn" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU0MzUzNjMxP3NwbT0xMDAwLjIxMTUuMzAwMS41MzQz" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_54353631?spm&#x3D;1000.2115.3001.5343"><i class="ic i-coffee"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/" title="分类于 扩展技术">扩展技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Svelet/" title="分类于 Svelet">Svelet</a>
+</div>
+
+    <span><a href="/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Svelet/Svelte%E5%92%8CSolid.js%EF%BC%9A%E6%96%B0%E9%94%90%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/" title="Svelte和Solid.js：新锐前端框架">Svelte和Solid.js：新锐前端框架</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/" title="分类于 JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/08-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/" title="数据存储">数据存储</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/" title="分类于 扩展技术">扩展技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/" title="分类于 WebSocket">WebSocket</a>
+</div>
+
+    <span><a href="/2022/10/24/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E9%80%89%E5%9E%8B%EF%BC%9AWebSocket/" title="即时通讯协议选型：WebSocket协议">即时通讯协议选型：WebSocket协议</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/" title="分类于 JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/10-%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9AJS%E4%B8%AD%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8Ba%E7%AD%89%E4%BA%8E1%E6%88%96%E8%80%852%E6%88%96%E8%80%853/" title="面试题：JS中在什么情况下a等于1或者2或者3">面试题：JS中在什么情况下a等于1或者2或者3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E4%BD%9C%E5%93%81/" title="分类于 作品">作品</a>
+</div>
+
+    <span><a href="/2022/10/26/%E4%BD%9C%E5%93%81/%E6%89%B6%E6%91%87%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%B9%B3%E5%8F%B0/" title="扶摇低代码平台">扶摇低代码平台</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/" title="分类于 JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/18/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/02-%E5%8F%98%E9%87%8F%E5%92%8C%E9%97%AD%E5%8C%85/" title="变量和闭包">变量和闭包</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/" title="分类于 扩展技术">扩展技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Nginx/" title="分类于 Nginx">Nginx</a>
+</div>
+
+    <span><a href="/2022/11/04/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/Nginx/Nginx%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="Nginx学习记录">Nginx学习记录</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" title="分类于 课程学习">课程学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java-Web/" title="分类于 Java Web">Java Web</a>
+</div>
+
+    <span><a href="/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/MVC%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="Java Web--MVC设计模式">Java Web--MVC设计模式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/react/" title="分类于 react">react</a>
+</div>
+
+    <span><a href="/2022/09/06/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/react/react%E4%B8%8Evue%E7%9A%84%E8%B7%AF%E7%94%B1%E8%BE%A8%E6%9E%90/" title="react与vue的路由辨析">react与vue的路由辨析</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/" title="分类于 JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/2022/10/17/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/01-EC%E5%92%8CJS%E6%89%A7%E8%A1%8C/" title="JavaScript预编辑">JavaScript预编辑</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">眸光似星辰 @ vintinSever</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">46k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">42 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/11/11/前端技术/JavaScript/JavaScript常用函数/',
+    favicon: {
+      show: "（●´3｀●）眸光似星辰",
+      hide: "(´Д｀)星辰如烛火！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

@@ -39,9 +39,9 @@
     <category term="sass" />
     <category term="NProgress" />
     <entry>
-        <id>http://victinsever.github.io/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/07-JSON/</id>
+        <id>http://victinsever.github.io/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/07-JSON/</id>
         <title>JSON</title>
-        <link rel="alternate" href="http://victinsever.github.io/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/js%E9%AB%98%E7%BA%A7/07-JSON/"/>
+        <link rel="alternate" href="http://victinsever.github.io/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/07-JSON/"/>
         <content type="html">&lt;h2 id=&#34;JSON&#34;&gt;&lt;a href=&#34;#JSON&#34; class=&#34;headerlink&#34; title=&#34;JSON&#34;&gt;&lt;/a&gt;JSON&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;JSON: JavaScript Object Notation JS对象描述符&lt;/li&gt;
 &lt;li&gt;前后端交互的一种数据格式，我们可以把JSON数据扔给后端，后端也可以响应JSON数据&lt;/li&gt;
