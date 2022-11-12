@@ -38,6 +38,7 @@
     <category term="axios" />
     <category term="sass" />
     <category term="NProgress" />
+    <category term="dp" />
     <entry>
         <id>http://victinsever.github.io/2022/10/17/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/hexo%E5%92%8CTypora%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</id>
         <title>hexo和Typora中插入图片</title>
