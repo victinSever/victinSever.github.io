@@ -42,6 +42,7 @@
         <category>sass</category>
         <category>NProgress</category>
         <category>dp</category>
+        <category>跨域</category>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/11/07/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/vue%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0/</guid>
             <title>Vue源码解析笔记</title>

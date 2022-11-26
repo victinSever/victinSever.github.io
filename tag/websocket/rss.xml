@@ -42,6 +42,7 @@
         <category>sass</category>
         <category>NProgress</category>
         <category>dp</category>
+        <category>跨域</category>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/11/14/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/WebSocket%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/</guid>
             <title>WebSocket客户端和服务端的简单实现</title>
@@ -151,7 +152,7 @@ public class MyWebSocket &amp;#123;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;编辑一个 WebSocket 工具类：WebSocketMapUtil.java&lt;/p&gt;
-&lt;p&gt;&amp;#96;&amp;#96;&amp;#96;java WebSocketMapUtil.java&lt;br&gt;package com.test.websocket;&lt;/p&gt;
+&lt;p&gt;&amp;#96;&amp;#96;&amp;#96;java WebSocketMapUtil&lt;br&gt;package com.test.websocket;&lt;/p&gt;
 &lt;p&gt;import java.util.Collection;&lt;br&gt;import java.util.concurrent.ConcurrentHashMap;&lt;br&gt;import java.util.concurrent.ConcurrentMap;&lt;/p&gt;
 &lt;p&gt;public class WebSocketMapUtil {&lt;br&gt;public static ConcurrentMap&amp;lt;String, MyWebSocket&amp;gt; webSocketMap &amp;#x3D; new ConcurrentHashMap&amp;lt;&amp;gt;();&lt;br&gt;&lt;br&gt;public static void put(String key, MyWebSocket myWebSocket) {&lt;br&gt;    webSocketMap.put(key, myWebSocket);&lt;br&gt;}&lt;br&gt;&lt;br&gt;public static MyWebSocket get(String key) {&lt;br&gt;    return webSocketMap.get(key);&lt;br&gt;}&lt;br&gt;&lt;br&gt;public static void remove(String key) {&lt;br&gt;    webSocketMap.remove(key);&lt;br&gt;}&lt;br&gt;&lt;br&gt;public static Collection&lt;MyWebSocket&gt; getValues() {&lt;br&gt;    return webSocketMap.values();&lt;br&gt;}&lt;br&gt;&lt;br&gt;public static int getOnlineCount() {&lt;br&gt;    return webSocketMap.size();&lt;br&gt;}&lt;br&gt;}&lt;/p&gt;
 &lt;/li&gt;
