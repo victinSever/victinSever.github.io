@@ -7,27 +7,15 @@
     <category term="react" />
     <category term="react-redux" />
     <category term="redux" />
-    <category term="Svelet" />
-    <category term="Solid.js" />
-    <category term="Nginx" />
-    <category term="WebSocket" />
-    <category term="hexo" />
-    <category term="Typora" />
-    <category term="密码学" />
-    <category term="凯斯密码" />
-    <category term="维吉尼亚密码" />
-    <category term="Dijkstra" />
-    <category term="JDBC" />
-    <category term="canvas" />
-    <category term="MVC" />
     <category term="JavaScript" />
     <category term="this" />
+    <category term="继承" />
     <category term="原型" />
     <category term="原型链" />
-    <category term="继承" />
-    <category term="JSON" />
-    <category term="cache" />
     <category term="面试题" />
+    <category term="cache" />
+    <category term="JSON" />
+    <category term="canvas" />
     <category term="vue" />
     <category term="react-router-dom" />
     <category term="vue-router" />
@@ -38,35 +26,53 @@
     <category term="axios" />
     <category term="sass" />
     <category term="NProgress" />
-    <category term="dp" />
+    <category term="Nginx" />
     <category term="跨域" />
+    <category term="WebSocket" />
+    <category term="hexo" />
+    <category term="Typora" />
+    <category term="Svelet" />
+    <category term="Solid.js" />
+    <category term="MVC" />
+    <category term="Dijkstra" />
+    <category term="JDBC" />
+    <category term="密码学" />
+    <category term="凯斯密码" />
+    <category term="维吉尼亚密码" />
+    <category term="dp" />
     <entry>
         <id>http://victinsever.github.io/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/MVC%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
         <title>Java Web--MVC设计模式</title>
         <link rel="alternate" href="http://victinsever.github.io/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/MVC%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-        <content type="html">&lt;h3 id=&#34;MVC设计模式&#34;&gt;&lt;a href=&#34;#MVC设计模式&#34; class=&#34;headerlink&#34; title=&#34;MVC设计模式&#34;&gt;&lt;/a&gt;MVC设计模式&lt;/h3&gt;&lt;p&gt;MVC设计模式是对软件开发的一中模块划分的方法。将软件程序分为三个核心模块：模型（Model）、视图（View）和控制器（Controller）。&lt;/p&gt;
+        <content type="html">&lt;h3 id=&#34;mvc设计模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mvc设计模式&#34;&gt;#&lt;/a&gt; MVC 设计模式&lt;/h3&gt;
+&lt;p&gt;MVC 设计模式是对软件开发的一中模块划分的方法。将软件程序分为三个核心模块：模型（Model）、视图（View）和控制器（Controller）。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;1、模型&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;1、模型&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;作用：管理业务数据，定义访问控制以及修改数据的业务规则。&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;作用：管理业务数据，定义访问控制以及修改数据的业务规则。&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;业务流程：当模型状态改变。会通知视图发生改变，为视图提供查询模型状态的方法。&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;业务流程：当模型状态改变。会通知视图发生改变，为视图提供查询模型状态的方法。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;2、视图&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;2、视图&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;作用：负责和用户打交道，从模型中获取数据向用户展示，将用户请求传递给控制器处理。&lt;/li&gt;
 &lt;li&gt;模型状态改变，视图对用户界面同步更新，保证模型和页面的一致性。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;3、控制器&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;3、控制器&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;作用：负责处理用户交互，从视图中获取数据，控制用户输入，并向模型发送数据。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img data-src=&#34;/./../../../image/image-20221029134815029.png&#34; alt=&#34;image-20221029134815029&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;./../../../image/image-20221029134815029.png&#34; alt=&#34;image-20221029134815029&#34;&gt;&lt;/p&gt;
 &lt;p&gt;控制器接收用户请求，根据信息调用模型组件业务方法，对哦业务信息处理后，根据模型返回结果选择试图组件来显示处理结果和模型中的数据。&lt;/p&gt;
 </content>
         <category term="MVC" />

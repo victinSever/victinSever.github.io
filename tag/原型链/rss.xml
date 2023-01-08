@@ -10,27 +10,15 @@
         <category>react</category>
         <category>react-redux</category>
         <category>redux</category>
-        <category>Svelet</category>
-        <category>Solid.js</category>
-        <category>Nginx</category>
-        <category>WebSocket</category>
-        <category>hexo</category>
-        <category>Typora</category>
-        <category>密码学</category>
-        <category>凯斯密码</category>
-        <category>维吉尼亚密码</category>
-        <category>Dijkstra</category>
-        <category>JDBC</category>
-        <category>canvas</category>
-        <category>MVC</category>
         <category>JavaScript</category>
         <category>this</category>
+        <category>继承</category>
         <category>原型</category>
         <category>原型链</category>
-        <category>继承</category>
-        <category>JSON</category>
-        <category>cache</category>
         <category>面试题</category>
+        <category>cache</category>
+        <category>JSON</category>
+        <category>canvas</category>
         <category>vue</category>
         <category>react-router-dom</category>
         <category>vue-router</category>
@@ -41,8 +29,20 @@
         <category>axios</category>
         <category>sass</category>
         <category>NProgress</category>
-        <category>dp</category>
+        <category>Nginx</category>
         <category>跨域</category>
+        <category>WebSocket</category>
+        <category>hexo</category>
+        <category>Typora</category>
+        <category>Svelet</category>
+        <category>Solid.js</category>
+        <category>MVC</category>
+        <category>Dijkstra</category>
+        <category>JDBC</category>
+        <category>密码学</category>
+        <category>凯斯密码</category>
+        <category>维吉尼亚密码</category>
+        <category>dp</category>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/10/19/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/05-%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/</guid>
             <title>原型和原型链</title>
@@ -51,83 +51,111 @@
             <category>原型</category>
             <category>原型链</category>
             <pubDate>Wed, 19 Oct 2022 21:29:05 +0800</pubDate>
-            <description><![CDATA[ &lt;h3 id=&#34;原型&#34;&gt;&lt;a href=&#34;#原型&#34; class=&#34;headerlink&#34; title=&#34;原型&#34;&gt;&lt;/a&gt;原型&lt;/h3&gt;&lt;h4 id=&#34;原型对象&#34;&gt;&lt;a href=&#34;#原型对象&#34; class=&#34;headerlink&#34; title=&#34;原型对象&#34;&gt;&lt;/a&gt;原型对象&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;显示原型&lt;/p&gt;
+            <description><![CDATA[ &lt;h3 id=&#34;原型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#原型&#34;&gt;#&lt;/a&gt; 原型&lt;/h3&gt;
+&lt;h4 id=&#34;原型对象&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#原型对象&#34;&gt;#&lt;/a&gt; 原型对象&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;每个构造器（类）上都有一个叫prototype属性&lt;/li&gt;
-&lt;li&gt;prototype叫显示原型&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;显示原型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个构造器（类）上都有一个叫 prototype 属性&lt;/li&gt;
+&lt;li&gt;prototype 叫显示原型&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;隐式原型&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;隐式原型&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;只要是一个对象，它的身上必定有一个属性，叫 _&lt;em&gt;proto__，&lt;/em&gt; __proto__是属性名，叫隐式原型，对象的值是一个对象&lt;/p&gt;
-&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; obj = &amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;obj.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt; &lt;span class=&#34;comment&#34;&gt;//隐式原型对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只要是一个对象，它的身上必定有一个属性，叫 &lt;strong&gt;proto&lt;/strong&gt;，_ __proto__是属性名，叫隐式原型，对象的值是一个对象&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; obj = &amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;obj.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt; &lt;span class=&#34;comment&#34;&gt;//隐式原型对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;显示原型和隐式原型指向同一个对象，叫做原型对象&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;显示原型和隐式原型指向同一个对象，叫做原型对象&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;对象的私有和公有属性&#34;&gt;&lt;a href=&#34;#对象的私有和公有属性&#34; class=&#34;headerlink&#34; title=&#34;对象的私有和公有属性&#34;&gt;&lt;/a&gt;对象的私有和公有属性&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;obj是一个对象，属性的无序集合，属性的分类有两种：&lt;/p&gt;
+&lt;h4 id=&#34;对象的私有和公有属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#对象的私有和公有属性&#34;&gt;#&lt;/a&gt; 对象的私有和公有属性&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;私有属性&lt;ul&gt;
-&lt;li&gt;非proto找到的属性&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;obj 是一个对象，属性的无序集合，属性的分类有两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;私有属性
+&lt;ul&gt;
+&lt;li&gt;非 proto 找到的属性&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;公有属性  沿着__proto__找到的属性都是公有属性&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;对象在调用属性时，先使用hasOwnProperty方法判断是否是私有属性，如果没有就会沿着原型链向上查找&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;对象在调用属性时，先使用 hasOwnProperty 方法判断是否是私有属性，如果没有就会沿着原型链向上查找&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;两个属性存在判断方法&#34;&gt;&lt;a href=&#34;#两个属性存在判断方法&#34; class=&#34;headerlink&#34; title=&#34;两个属性存在判断方法&#34;&gt;&lt;/a&gt;两个属性存在判断方法&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;hasOwnProperty&lt;/p&gt;
+&lt;h4 id=&#34;两个属性存在判断方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#两个属性存在判断方法&#34;&gt;#&lt;/a&gt; 两个属性存在判断方法&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;判断当前对象自身是否有该属性（不在原型链上寻找，判断是否是私有）&lt;/p&gt;
-&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;name&lt;/span&gt;:&lt;span class=&#34;string&#34;&gt;&amp;quot;wc&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;age&lt;/span&gt;:&lt;span class=&#34;number&#34;&gt;18&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(obj.&lt;span class=&#34;title function_&#34;&gt;hasOwnProperty&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;name&amp;#x27;&lt;/span&gt;));  &lt;span class=&#34;comment&#34;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;in&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;hasOwnProperty&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;判断当前对象是否有该属性（任何位置，不管是公有还是私有）&lt;/p&gt;
-&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; arr = [];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;push&amp;quot;&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; arr);  &lt;span class=&#34;comment&#34;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;
+&lt;p&gt;判断当前对象自身是否有该属性（不在原型链上寻找，判断是否是私有）&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;name&lt;/span&gt;:&lt;span class=&#34;string&#34;&gt;&amp;quot;wc&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;age&lt;/span&gt;:&lt;span class=&#34;number&#34;&gt;18&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(obj.&lt;span class=&#34;title function_&#34;&gt;hasOwnProperty&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;name&amp;#x27;&lt;/span&gt;));  &lt;span class=&#34;comment&#34;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;原型链&#34;&gt;&lt;a href=&#34;#原型链&#34; class=&#34;headerlink&#34; title=&#34;原型链&#34;&gt;&lt;/a&gt;原型链&lt;/h3&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// arr1是对象  对象身上都有一个隐式原型&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// Array是类，也叫构造器，本质就是函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 函数身都都一个显示原型&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; arr1 = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Array&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;wc&amp;quot;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;quot;xq&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; arr2 = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Array&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;jj&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;title class_&#34;&gt;Array&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;prototype&lt;/span&gt;&lt;/span&gt; == arr1.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;title class_&#34;&gt;Array&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;prototype&lt;/span&gt;&lt;/span&gt; == arr2.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(arr1.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt; == &lt;span class=&#34;title class_&#34;&gt;Object&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;prototype&lt;/span&gt;&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(arr1.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// null&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-&lt;li&gt;作用域链：在EC中查找数据的机制&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img data-src=&#34;/./../../image/12321-1666190602837-3.png&#34; alt=&#34;12321&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;原型链：在对象上查找某个属性的机制&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;上图中的查找顺序如下图红色线所指：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/./../../image/14-%E5%8E%9F%E5%9E%8B%E9%93%BE.png&#34; alt=&#34;14-原型链&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;原型查找不断向上寻找作用域链中的属性&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;in&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;判断当前对象是否有该属性（任何位置，不管是公有还是私有）&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; arr = [];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;push&amp;quot;&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; arr);  &lt;span class=&#34;comment&#34;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;原型链&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#原型链&#34;&gt;#&lt;/a&gt; 原型链&lt;/h3&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// arr1是对象  对象身上都有一个隐式原型&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// Array是类，也叫构造器，本质就是函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 函数身都都一个显示原型&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; arr1 = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Array&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;wc&amp;quot;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;quot;xq&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; arr2 = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Array&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;jj&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;title class_&#34;&gt;Array&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;prototype&lt;/span&gt;&lt;/span&gt; == arr1.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;title class_&#34;&gt;Array&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;prototype&lt;/span&gt;&lt;/span&gt; == arr2.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(arr1.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt; == &lt;span class=&#34;title class_&#34;&gt;Object&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;prototype&lt;/span&gt;&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(arr1.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// null&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;作用域链：在 EC 中查找数据的机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;./../../image/12321-1666190602837-3.png&#34; alt=&#34;12321&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;原型链：在对象上查找某个属性的机制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;上图中的查找顺序如下图红色线所指：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;./../../image/14-%E5%8E%9F%E5%9E%8B%E9%93%BE.png&#34; alt=&#34;14-原型链&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;原型查找不断向上寻找作用域链中的属性&lt;/p&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 构造器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;Person&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;name,age&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;name&lt;/span&gt; = name;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;age&lt;/span&gt; = age;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; p = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Person&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;wc&amp;quot;&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;18&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(p.&lt;span class=&#34;property&#34;&gt;__proto__&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;constructor&lt;/span&gt; == &lt;span class=&#34;title class_&#34;&gt;Person&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img data-src=&#34;/./../../image/15-%E5%8E%9F%E5%9E%8B%E9%93%BE.png&#34; alt=&#34;15-原型链&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;./../../image/15-%E5%8E%9F%E5%9E%8B%E9%93%BE.png&#34; alt=&#34;15-原型链&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;一切都是对象&lt;/p&gt;
+&lt;h3 id=&#34;总结&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一切都是对象&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;对象是属性的无序集合&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;对象是属性的无序集合&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;属性分公有属性和私有属性&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;属性分公有属性和私有属性&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;每个对象身上都有一个__proto__属性，叫隐式原型 &lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;每个对象身上都有一个__proto__属性，叫隐式原型&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;每个函数身上都有一个prototype属性，叫显示式原型&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;每个函数身上都有一个 prototype 属性，叫显示式原型&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;对象的隐式原型和函数的显示原型，指向一个对象，叫原型对象&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;对象的隐式原型和函数的显示原型，指向一个对象，叫原型对象&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;每一个原型对象身上有一个constructor属性，指向函数本身&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;每一个原型对象身上有一个 constructor 属性，指向函数本身&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
  ]]></description>

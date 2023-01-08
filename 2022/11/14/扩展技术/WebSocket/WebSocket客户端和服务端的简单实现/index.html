@@ -76,7 +76,7 @@ vintinSever = 眸光似星辰</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>6k</span>
+    <span>5.9k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -118,11 +118,11 @@ vintinSever = 眸光似星辰</title>
       <div id="imgs" class="pjax">
         <ul>
           <li class="item" data-background-image="https://images.unsplash.com/photo-1599572739984-8ae9388f23b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTR8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
-          <li class="item" data-background-image="https://images.unsplash.com/photo-1596789866050-b7d8cf68c636?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjA4fHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
-          <li class="item" data-background-image="https://plus.unsplash.com/premium_photo-1661508614319-b5e40d1143bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"></li>
-          <li class="item" data-background-image="https://images.unsplash.com/photo-1574063413132-354db9f190fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODB8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
-          <li class="item" data-background-image="https://images.unsplash.com/photo-1606011334315-025e4baab810?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODR8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1594142404563-64cccaf5a10f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTIwfHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA2fHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1566847438217-76e82d383f84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI5fHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
           <li class="item" data-background-image="https://images.unsplash.com/uploads/141319662617846f3b4c9/1677b57d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTIyfHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1517451330947-7809dead78d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTk1fHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
         </ul>
       </div>
     </header>
@@ -171,123 +171,35 @@ vintinSever = 眸光似星辰</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="WebSocket客户端和服务端的简单实现"><a href="#WebSocket客户端和服务端的简单实现" class="headerlink" title="WebSocket客户端和服务端的简单实现"></a>WebSocket客户端和服务端的简单实现</h1><h2 id="WebSocket-客户端页面实现"><a href="#WebSocket-客户端页面实现" class="headerlink" title="WebSocket 客户端页面实现"></a>WebSocket 客户端页面实现</h2><p>本地访问服务端地址为：ws:&#x2F;&#x2F;localhost:8080&#x2F;WebSocket_war_exploded&#x2F;websocket</p>
+    <h1 id="websocket客户端和服务端的简单实现"><a class="markdownIt-Anchor" href="#websocket客户端和服务端的简单实现">#</a> WebSocket 客户端和服务端的简单实现</h1>
+<h2 id="websocket-客户端页面实现"><a class="markdownIt-Anchor" href="#websocket-客户端页面实现">#</a> WebSocket 客户端页面实现</h2>
+<p>本地访问服务端地址为：ws://localhost:8080/WebSocket_war_exploded/websocket</p>
 <figure class="highlight html"><figcaption><span>WebSocket 客户端页面实现</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>WebSocket测试<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center;&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">h2</span>&gt;</span>WebSocket测试<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;txt&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;sendWebSocket()&quot;</span>&gt;</span>发送<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;checkWebSocket()&quot;</span>&gt;</span>测试WebSocket<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;connectWebSocket()&quot;</span>&gt;</span>连接WebSocket<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;closeWebSocket()&quot;</span>&gt;</span>关闭WebSocket<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;message&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> websocket = <span class="literal">null</span>;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">checkWebSocket</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">if</span> (<span class="string">&quot;WebSocket&quot;</span> <span class="keyword">in</span> <span class="variable language_">window</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">// alert(&quot;您的浏览器支持 WebSocket!&quot;);</span></span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">setMessageInnerHTML</span>(<span class="string">&quot;您的浏览器支持 WebSocket!&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">// 浏览器不支持 WebSocket</span></span></span><br><span class="line"><span class="language-javascript">            <span class="comment">// alert(&quot;您的浏览器不支持 WebSocket!&quot;);</span></span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">setMessageInnerHTML</span>(<span class="string">&quot;您的浏览器不支持 WebSocket!&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 连接  WebSocket</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">connectWebSocket</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="comment">// 打开一个 web socket</span></span></span><br><span class="line"><span class="language-javascript">        websocket = <span class="keyword">new</span> <span class="title class_">WebSocket</span>(<span class="string">&quot;ws://localhost:8080/WebSocket_war_exploded/websocket&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        websocket.<span class="property">onopen</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;<span class="comment">// Web Socket 已连接上，使用 send() 方法发送数据</span></span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">setMessageInnerHTML</span>(<span class="string">&quot;WebSocket 已连接...&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125;;</span></span><br><span class="line"><span class="language-javascript">        websocket.<span class="property">onmessage</span> = <span class="keyword">function</span> (<span class="params">evt</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">var</span> received_msg = evt.<span class="property">data</span>;</span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">setMessageInnerHTML</span>(<span class="string">&quot;收到消息：&quot;</span> + received_msg);</span></span><br><span class="line"><span class="language-javascript">        &#125;;</span></span><br><span class="line"><span class="language-javascript">        websocket.<span class="property">onclose</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">setMessageInnerHTML</span>(<span class="string">&quot;WebSocket 已关闭...&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125;;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 向WebSocket服务端发送消息</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">sendWebSocket</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">if</span> (websocket) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">if</span> (websocket.<span class="property">readyState</span> == websocket.<span class="property">OPEN</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="keyword">var</span> message = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;txt&#x27;</span>).<span class="property">value</span>;</span></span><br><span class="line"><span class="language-javascript">                websocket.<span class="title function_">send</span>(message);</span></span><br><span class="line"><span class="language-javascript">            &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="title function_">setMessageInnerHTML</span>(<span class="string">&quot;WebSocket 未连接...&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">        &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">setMessageInnerHTML</span>(<span class="string">&quot;WebSocket 未创建...&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 监听窗口关闭事件，当窗口关闭时，主动去关闭websocket连接，防止连接还没断开就关闭窗口，server端会抛异常。</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">window</span>.<span class="property">onbeforeunload</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">closeWebSocket</span>();</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 关闭WebSocket连接</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">closeWebSocket</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        websocket.<span class="title function_">close</span>();</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 将消息显示在网页上</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">setMessageInnerHTML</span>(<span class="params">innerHTML</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;message&#x27;</span>).<span class="property">innerHTML</span> += innerHTML + <span class="string">&#x27;&lt;br/&gt;&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="WebSocket-服务端-Java-实现"><a href="#WebSocket-服务端-Java-实现" class="headerlink" title="WebSocket 服务端 Java 实现"></a>WebSocket 服务端 Java 实现</h2><p>由于本人没了解spring框架，对其研究不深，这里用简单的Tomcat的java端实现。</p>
+<h2 id="websocket-服务端-java-实现"><a class="markdownIt-Anchor" href="#websocket-服务端-java-实现">#</a> WebSocket 服务端 Java 实现</h2>
+<p>由于本人没了解 spring 框架，对其研究不深，这里用简单的 Tomcat 的 java 端实现。</p>
 <ul>
-<li><p>新建一个Maven Web工程，在pom.xml中加入如下websocket依赖：</p>
+<li>
+<p>新建一个 Maven Web 工程，在 pom.xml 中加入如下 websocket 依赖：</p>
 <figure class="highlight xml"><figcaption><span>pom.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.websocket<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javax.websocket-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>编辑一个 WebSocket 服务端类：MyWebSocket.java</p>
-<pre><code class="java">package com.test.websocket;
-
-import java.io.IOException;
-import javax.websocket.OnClose;
-import javax.websocket.OnError;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
-import javax.websocket.server.ServerEndpoint;
-
-@ServerEndpoint(&quot;/websocket&quot;)
-public class MyWebSocket &#123;
-
-    private Session session;
-
-    /**
-     * 连接建立后触发的方法
-     */
-    @OnOpen
-    public void onOpen(Session session) &#123;
-        this.session = session;
-        WebSocketMapUtil.put(session.getId(), this);
-        System.out.println(&quot;-------- onOpen: 当前在线人数 &quot; + WebSocketMapUtil.getOnlineCount() + &quot;，连接人 &quot; + session.getId() + &quot; --------&quot;);
-    &#125;
-
-    /**
-     * 连接关闭后触发的方法
-     */
-    @OnClose
-    public void onClose() &#123;
-        // 从map中删除
-        WebSocketMapUtil.remove(session.getId());
-        System.out.println(&quot;-------- onClose: 当前在线人数 &quot; + WebSocketMapUtil.getOnlineCount() + &quot;，关闭人 &quot; + session.getId() + &quot; --------&quot;);
-    &#125;
-
-    /**
-     * 接收到客户端消息时触发的方法
-     */
-    @OnMessage
-    public void onMessage(String message, Session session) throws Exception &#123;
-        // 获取服务端到客户端的通道
-        MyWebSocket myWebSocket = WebSocketMapUtil.get(session.getId());
-        System.out.println(&quot;收到来自 &quot; + session.getId() + &quot; 的消息：&quot; + message);
-
-        // 返回消息给Web Socket客户端（浏览器）
-        myWebSocket.sendMessageAll(&quot;服务端已收到消息：&quot; + message);
-    &#125;
-
-    /**
-     * 发生错误时触发的方法
-     */
-    @OnError
-    public void onError(Session session, Throwable error) &#123;
-        System.out.println(&quot;-------- onError: 当前在线人数 &quot; + WebSocketMapUtil.getOnlineCount() + &quot;，连接发生错误 &quot; + session.getId() + &quot;-&quot; + error.getMessage() + &quot; --------&quot;);
-        // error.printStackTrace();
-    &#125;
-
-    /**
-     * 给单个客户端发送消息
-     *
-     * @param message
-     * @param sessionId
-     * @throws IOException
-     */
-    public void sendMessageSingle(String message, String sessionId) throws IOException &#123;
-
-        // session.getBasicRemote().sendText(message); 同步消息
-        // session.getAsyncRemote().sendText(message); 异步消息
-
-        MyWebSocket myWebSocket = WebSocketMapUtil.get(sessionId);
-        if (myWebSocket != null) &#123;
-            myWebSocket.session.getBasicRemote().sendText(message);
-        &#125;
-    &#125;
-
-    /**
-     * 给所有客户端发送消息
-     *
-     * @param message
-     * @throws IOException
-     */
-    public void sendMessageAll(String message) throws IOException &#123;
-        for (MyWebSocket item : WebSocketMapUtil.getValues()) &#123;
-            item.session.getAsyncRemote().sendText(message);
-            System.out.println(item.session.getId());
-            System.out.println(item.session.isSecure());
-            System.out.println(item.session.isOpen());
-        &#125;
-    &#125;
-
-&#125;
-</code></pre>
-</li>
-<li><p>编辑一个 WebSocket 工具类：WebSocketMapUtil.java</p>
-<p>&#96;&#96;&#96;java WebSocketMapUtil<br>package com.test.websocket;</p>
-<p>import java.util.Collection;<br>import java.util.concurrent.ConcurrentHashMap;<br>import java.util.concurrent.ConcurrentMap;</p>
-<p>public class WebSocketMapUtil {<br>public static ConcurrentMap&lt;String, MyWebSocket&gt; webSocketMap &#x3D; new ConcurrentHashMap&lt;&gt;();<br><br>public static void put(String key, MyWebSocket myWebSocket) {<br>    webSocketMap.put(key, myWebSocket);<br>}<br><br>public static MyWebSocket get(String key) {<br>    return webSocketMap.get(key);<br>}<br><br>public static void remove(String key) {<br>    webSocketMap.remove(key);<br>}<br><br>public static Collection<MyWebSocket> getValues() {<br>    return webSocketMap.values();<br>}<br><br>public static int getOnlineCount() {<br>    return webSocketMap.size();<br>}<br>}</p>
-</li>
+<li>
+<p>编辑一个 WebSocket 服务端类：MyWebSocket.java</p>
+<figure class="highlight java"><figcaption data-lang="java"><span>MyWebSocket</span></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>test<span class="token punctuation">.</span>websocket</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span></span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>websocket<span class="token punctuation">.</span></span><span class="token class-name">OnClose</span></span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>websocket<span class="token punctuation">.</span></span><span class="token class-name">OnError</span></span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>websocket<span class="token punctuation">.</span></span><span class="token class-name">OnMessage</span></span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>websocket<span class="token punctuation">.</span></span><span class="token class-name">OnOpen</span></span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>websocket<span class="token punctuation">.</span></span><span class="token class-name">Session</span></span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>websocket<span class="token punctuation">.</span>server<span class="token punctuation">.</span></span><span class="token class-name">ServerEndpoint</span></span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token annotation punctuation">@ServerEndpoint</span><span class="token punctuation">(</span><span class="token string">"/websocket"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyWebSocket</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="13"></td><td><pre></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token keyword">private</span> <span class="token class-name">Session</span> session<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="17"></td><td><pre>     * 连接建立后触发的方法</pre></td></tr><tr><td data-num="18"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token annotation punctuation">@OnOpen</span></pre></td></tr><tr><td data-num="20"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onOpen</span><span class="token punctuation">(</span><span class="token class-name">Session</span> session<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>        <span class="token keyword">this</span><span class="token punctuation">.</span>session <span class="token operator">=</span> session<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="22"></td><td><pre>        <span class="token class-name">WebSocketMapUtil</span><span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>session<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"-------- onOpen: 当前在线人数 "</span> <span class="token operator">+</span> <span class="token class-name">WebSocketMapUtil</span><span class="token punctuation">.</span><span class="token function">getOnlineCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"，连接人 "</span> <span class="token operator">+</span> session<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" --------"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="24"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="25"></td><td><pre></pre></td></tr><tr><td data-num="26"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="27"></td><td><pre>     * 连接关闭后触发的方法</pre></td></tr><tr><td data-num="28"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="29"></td><td><pre>    <span class="token annotation punctuation">@OnClose</span></pre></td></tr><tr><td data-num="30"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClose</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="31"></td><td><pre>        <span class="token comment">// 从 map 中删除</span></pre></td></tr><tr><td data-num="32"></td><td><pre>        <span class="token class-name">WebSocketMapUtil</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>session<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="33"></td><td><pre>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"-------- onClose: 当前在线人数 "</span> <span class="token operator">+</span> <span class="token class-name">WebSocketMapUtil</span><span class="token punctuation">.</span><span class="token function">getOnlineCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"，关闭人 "</span> <span class="token operator">+</span> session<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" --------"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="34"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="35"></td><td><pre></pre></td></tr><tr><td data-num="36"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="37"></td><td><pre>     * 接收到客户端消息时触发的方法</pre></td></tr><tr><td data-num="38"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="39"></td><td><pre>    <span class="token annotation punctuation">@OnMessage</span></pre></td></tr><tr><td data-num="40"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">,</span> <span class="token class-name">Session</span> session<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>        <span class="token comment">// 获取服务端到客户端的通道</span></pre></td></tr><tr><td data-num="42"></td><td><pre>        <span class="token class-name">MyWebSocket</span> myWebSocket <span class="token operator">=</span> <span class="token class-name">WebSocketMapUtil</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>session<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="43"></td><td><pre>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"收到来自 "</span> <span class="token operator">+</span> session<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" 的消息："</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="44"></td><td><pre></pre></td></tr><tr><td data-num="45"></td><td><pre>        <span class="token comment">// 返回消息给 Web Socket 客户端（浏览器）</span></pre></td></tr><tr><td data-num="46"></td><td><pre>        myWebSocket<span class="token punctuation">.</span><span class="token function">sendMessageAll</span><span class="token punctuation">(</span><span class="token string">"服务端已收到消息："</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="47"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="48"></td><td><pre></pre></td></tr><tr><td data-num="49"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="50"></td><td><pre>     * 发生错误时触发的方法</pre></td></tr><tr><td data-num="51"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="52"></td><td><pre>    <span class="token annotation punctuation">@OnError</span></pre></td></tr><tr><td data-num="53"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">Session</span> session<span class="token punctuation">,</span> <span class="token class-name">Throwable</span> error<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="54"></td><td><pre>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"-------- onError: 当前在线人数 "</span> <span class="token operator">+</span> <span class="token class-name">WebSocketMapUtil</span><span class="token punctuation">.</span><span class="token function">getOnlineCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"，连接发生错误 "</span> <span class="token operator">+</span> session<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"-"</span> <span class="token operator">+</span> error<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" --------"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="55"></td><td><pre>        <span class="token comment">// error.printStackTrace();</span></pre></td></tr><tr><td data-num="56"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="57"></td><td><pre></pre></td></tr><tr><td data-num="58"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="59"></td><td><pre>     * 给单个客户端发送消息</pre></td></tr><tr><td data-num="60"></td><td><pre>     *</pre></td></tr><tr><td data-num="61"></td><td><pre>     * @param message</pre></td></tr><tr><td data-num="62"></td><td><pre>     * @param sessionId</pre></td></tr><tr><td data-num="63"></td><td><pre>     * @throws IOException</pre></td></tr><tr><td data-num="64"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="65"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sendMessageSingle</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">,</span> <span class="token class-name">String</span> sessionId<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="66"></td><td><pre></pre></td></tr><tr><td data-num="67"></td><td><pre>        <span class="token comment">//session.getBasicRemote ().sendText (message); 同步消息</span></pre></td></tr><tr><td data-num="68"></td><td><pre>        <span class="token comment">//session.getAsyncRemote ().sendText (message); 异步消息</span></pre></td></tr><tr><td data-num="69"></td><td><pre></pre></td></tr><tr><td data-num="70"></td><td><pre>        <span class="token class-name">MyWebSocket</span> myWebSocket <span class="token operator">=</span> <span class="token class-name">WebSocketMapUtil</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>sessionId<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="71"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>myWebSocket <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="72"></td><td><pre>            myWebSocket<span class="token punctuation">.</span>session<span class="token punctuation">.</span><span class="token function">getBasicRemote</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sendText</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="73"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="74"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="75"></td><td><pre></pre></td></tr><tr><td data-num="76"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="77"></td><td><pre>     * 给所有客户端发送消息</pre></td></tr><tr><td data-num="78"></td><td><pre>     *</pre></td></tr><tr><td data-num="79"></td><td><pre>     * @param message</pre></td></tr><tr><td data-num="80"></td><td><pre>     * @throws IOException</pre></td></tr><tr><td data-num="81"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="82"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sendMessageAll</span><span class="token punctuation">(</span><span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="83"></td><td><pre>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">MyWebSocket</span> item <span class="token operator">:</span> <span class="token class-name">WebSocketMapUtil</span><span class="token punctuation">.</span><span class="token function">getValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="84"></td><td><pre>            item<span class="token punctuation">.</span>session<span class="token punctuation">.</span><span class="token function">getAsyncRemote</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sendText</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="85"></td><td><pre>            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>session<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="86"></td><td><pre>            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>session<span class="token punctuation">.</span><span class="token function">isSecure</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="87"></td><td><pre>            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>session<span class="token punctuation">.</span><span class="token function">isOpen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="88"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="89"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="90"></td><td><pre></pre></td></tr><tr><td data-num="91"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure></li>
+<li>
+<p>编辑一个 WebSocket 工具类：WebSocketMapUtil.java</p>
+<figure class="highlight java"><figcaption data-lang="java"><span>WebSocketMapUtil</span></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>test<span class="token punctuation">.</span>websocket</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Collection</span></span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">ConcurrentHashMap</span></span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">ConcurrentMap</span></span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">WebSocketMapUtil</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">ConcurrentMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">MyWebSocket</span><span class="token punctuation">></span></span> webSocketMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ConcurrentHashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">put</span><span class="token punctuation">(</span><span class="token class-name">String</span> key<span class="token punctuation">,</span> <span class="token class-name">MyWebSocket</span> myWebSocket<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        webSocketMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> myWebSocket<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="13"></td><td><pre></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">MyWebSocket</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token class-name">String</span> key<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        <span class="token keyword">return</span> webSocketMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token class-name">String</span> key<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>        webSocketMap<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="21"></td><td><pre></pre></td></tr><tr><td data-num="22"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Collection</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MyWebSocket</span><span class="token punctuation">></span></span> <span class="token function">getValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>        <span class="token keyword">return</span> webSocketMap<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="24"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="25"></td><td><pre></pre></td></tr><tr><td data-num="26"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">getOnlineCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="27"></td><td><pre>        <span class="token keyword">return</span> webSocketMap<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="28"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="29"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>项目运行结果：</p>
-<p><img data-src="/../../../image/image-20221114095607448.png" alt="image-20221114095607448"></p>
+<h2 id="测试"><a class="markdownIt-Anchor" href="#测试">#</a> 测试</h2>
+<p>项目运行结果：</p>
+<p><img data-src="../../../image/image-20221114095607448.png" alt="image-20221114095607448"></p>
 <p>测试结果：</p>
-<p><img data-src="/../../../image/image-20221114095725205.png" alt="image-20221114095725205"></p>
+<p><img data-src="../../../image/image-20221114095725205.png" alt="image-20221114095725205"></p>
 <p>网络连接分析</p>
-<p><img data-src="/../../../image/image-20221114100227219.png" alt="image-20221114100227219"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>客户端通过<code>new WebSocket(url)</code>向服务器请求建立websocket连接，服务端收到请求后对其建立全双工信道，并重写一些方法对客户端的操作进行响应，每次客户端则直接通过<code>send()</code>方法发送前端信息给后端，后端进行处理。</p>
-<p>当浏览器关闭时，websocket连接自动断掉。</p>
-<p>以上就是websocket简单应用实例，只是应用的话还是比较基础的。</p>
+<p><img data-src="../../../image/image-20221114100227219.png" alt="image-20221114100227219"></p>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结">#</a> 总结</h2>
+<p>客户端通过 <code>new WebSocket(url)</code>  向服务器请求建立 websocket 连接，服务端收到请求后对其建立全双工信道，并重写一些方法对客户端的操作进行响应，每次客户端则直接通过 <code>send()</code>  方法发送前端信息给后端，后端进行处理。</p>
+<p>当浏览器关闭时，websocket 连接自动断掉。</p>
+<p>以上就是 websocket 简单应用实例，只是应用的话还是比较基础的。</p>
 
       <div class="tags">
           <a href="/tags/WebSocket/" rel="tag"><i class="ic i-tag"></i> WebSocket</a>
@@ -321,7 +233,7 @@ public class MyWebSocket &#123;
   <div id="qr">
       
       <div>
-        <img data-src="/images/wechat-pay.png" alt="眸光似星辰 微信支付">
+        <img data-src="/images/wechat-pay.jpg" alt="眸光似星辰 微信支付">
         <p>微信支付</p>
       </div>
   </div>
@@ -355,7 +267,7 @@ public class MyWebSocket &#123;
     <div class="item left">
       
 
-  <a href="/2022/11/12/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%BA%94%E9%83%A8%E6%9B%B2-%E7%88%AC%E6%A5%BC%E6%A2%AF%E9%97%AE%E9%A2%98/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1518791841217-8f162f1e1131?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGNhdHxlbnwwfHwwfHw%3D&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="动态规划五部曲-爬楼梯问题">
+  <a href="/2022/11/12/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%BA%94%E9%83%A8%E6%9B%B2-%E7%88%AC%E6%A5%BC%E6%A2%AF%E9%97%AE%E9%A2%98/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1566847438217-76e82d383f84?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8MTI5fHxjYXR8ZW58MHx8MHx8&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="动态规划五部曲-爬楼梯问题">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 算法分析与设计</span>
   <h3>动态规划五部曲-爬楼梯问题</h3>
@@ -365,7 +277,7 @@ public class MyWebSocket &#123;
     <div class="item right">
       
 
-  <a href="/2022/11/22/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/http/%E8%B7%A8%E5%9F%9F%E7%9A%84%E4%B8%89%E7%A7%8D%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1597626133663-53df9633b799?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8MTEyfHxjYXR8ZW58MHx8MHx8&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="跨域的三种解决方案">
+  <a href="/2022/11/22/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/http/%E8%B7%A8%E5%9F%9F%E7%9A%84%E4%B8%89%E7%A7%8D%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;plus.unsplash.com&#x2F;premium_photo-1661508614319-b5e40d1143bb?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0fGVufDB8fDB8fA%3D%3D&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="跨域的三种解决方案">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> http</span>
   <h3>跨域的三种解决方案</h3>
@@ -387,7 +299,7 @@ public class MyWebSocket &#123;
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#WebSocket%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.</span> <span class="toc-text">WebSocket客户端和服务端的简单实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#WebSocket-%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%A1%B5%E9%9D%A2%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.1.</span> <span class="toc-text">WebSocket 客户端页面实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WebSocket-%E6%9C%8D%E5%8A%A1%E7%AB%AF-Java-%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.2.</span> <span class="toc-text">WebSocket 服务端 Java 实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-number">1.3.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.4.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#websocket%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.</span> <span class="toc-text"> WebSocket 客户端和服务端的简单实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#websocket-%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%A1%B5%E9%9D%A2%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.1.</span> <span class="toc-text"> WebSocket 客户端页面实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#websocket-%E6%9C%8D%E5%8A%A1%E7%AB%AF-java-%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.2.</span> <span class="toc-text"> WebSocket 服务端 Java 实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-number">1.3.</span> <span class="toc-text"> 测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.4.</span> <span class="toc-text"> 总结</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -405,13 +317,13 @@ public class MyWebSocket &#123;
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">39</span>
+        <span class="count">42</span>
         <span class="name">文章</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">20</span>
+        <span class="count">21</span>
         <span class="name">分类</span>
       </a>
     </div>
@@ -499,10 +411,12 @@ public class MyWebSocket &#123;
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E4%BD%9C%E5%93%81/" title="分类于 作品">作品</a>
+<a href="/categories/%E6%9D%82%E8%B0%88/" title="分类于 杂谈">杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%9D%82%E8%B0%88/%E5%88%B7%E9%A2%98/" title="分类于 刷题">刷题</a>
 </div>
 
-    <span><a href="/2022/10/26/%E4%BD%9C%E5%93%81/%E6%89%B6%E6%91%87%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%B9%B3%E5%8F%B0/" title="扶摇低代码平台">扶摇低代码平台</a></span>
+    <span><a href="/2023/01/08/%E6%9D%82%E8%B0%88/%E5%88%B7%E9%A2%98/%E7%89%9B%E5%AE%A2%E7%BD%91%E5%88%B7%E9%A2%98/" title="牛客网刷题">牛客网刷题</a></span>
   </li>
 
       
@@ -521,12 +435,21 @@ public class MyWebSocket &#123;
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/" title="分类于 vue">vue</a>
 </div>
 
-    <span><a href="/2022/11/07/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/vue%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0/" title="Vue源码解析笔记">Vue源码解析笔记</a></span>
+    <span><a href="/2023/01/03/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/mongodb/mongodb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/" title="分类于 canvas">canvas</a>
+</div>
+
+    <span><a href="/2022/10/25/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/%E7%BA%BF%E6%80%A7%E5%B0%8F%E7%90%83%E7%89%B9%E6%95%88/" title="线性小球特效">线性小球特效</a></span>
   </li>
 
       
@@ -538,19 +461,7 @@ public class MyWebSocket &#123;
 <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/" title="分类于 JavaScript">JavaScript</a>
 </div>
 
-    <span><a href="/2022/10/21/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/06-%E7%BB%A7%E6%89%BF/" title="JS继承">JS继承</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%9D%82%E8%B0%88/" title="分类于 杂谈">杂谈</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/" title="分类于 面试">面试</a>
-</div>
-
-    <span><a href="/2022/11/26/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E5%B0%B1%E6%98%AF%E5%AD%97%E8%8A%82%EF%BC%8C%E5%A4%A7%E5%85%AC%E5%8F%B8%E7%A1%AE%E5%AE%9Ehr%E6%8C%BA%E5%A5%BD%E7%9A%84%EF%BC%8C%E5%B0%B1%E6%98%AF%E6%88%91%E4%B8%8D%E8%A1%8C/" title="第一次面试就是字节，大公司确实hr挺好的，就是我不行">第一次面试就是字节，大公司确实hr挺好的，就是我不行</a></span>
+    <span><a href="/2022/10/22/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/11-%E6%89%8B%E5%86%99new%EF%BC%8Ccall%EF%BC%8Capply%E7%9A%84%E5%AE%9E%E7%8E%B0/" title="手写new，call，apply的实现">手写new，call，apply的实现</a></span>
   </li>
 
       
@@ -569,6 +480,15 @@ public class MyWebSocket &#123;
   <li class="item">
     
 <div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/01/08/%E6%9D%82%E8%B0%88/%E5%88%B7%E9%A2%98/%E9%9D%A2%E8%AF%95%E7%BC%96%E7%A8%8B%E9%A2%98/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
 <i class="ic i-angle-right"></i>
 <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/flutter/" title="分类于 flutter">flutter</a>
@@ -581,36 +501,24 @@ public class MyWebSocket &#123;
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" title="分类于 课程学习">课程学习</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java-Web/" title="分类于 Java Web">Java Web</a>
-</div>
-
-    <span><a href="/2022/10/29/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/Java%20Web/JDBC/" title="JDBC">JDBC</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" title="分类于 课程学习">课程学习</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/" title="分类于 网络前沿安全技术">网络前沿安全技术</a>
-</div>
-
-    <span><a href="/2022/09/09/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E5%AD%A6%EF%BC%9A%E5%87%AF%E6%92%92%E5%AF%86%E7%A0%81%E5%92%8C%E7%BB%B4%E5%90%89%E5%B0%BC%E4%BA%9A%E5%AF%86%E7%A0%81/" title="古典密码学：凯撒密码和维吉尼亚密码">古典密码学：凯撒密码和维吉尼亚密码</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
 <i class="ic i-angle-right"></i>
 <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/" title="分类于 JavaScript">JavaScript</a>
 </div>
 
-    <span><a href="/2022/10/22/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/11-%E6%89%8B%E5%86%99new%EF%BC%8Ccall%EF%BC%8Capply%E7%9A%84%E5%AE%9E%E7%8E%B0/" title="手写new，call，apply的实现">手写new，call，apply的实现</a></span>
+    <span><a href="/2022/10/18/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/JavaScript/03-JS%E7%9A%84this/" title="JS的this">JS的this</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" title="分类于 课程学习">课程学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/" title="分类于 算法分析与设计">算法分析与设计</a>
+</div>
+
+    <span><a href="/2022/09/15/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/algorithm-01-%E7%AE%97%E6%B3%95%E5%A2%9E%E9%95%BF/" title="algorithm-01-算法增长">algorithm-01-算法增长</a></span>
   </li>
 
   </ul>
@@ -624,8 +532,8 @@ public class MyWebSocket &#123;
         <div class="status">
   <div class="copyright">
     
-    &copy; 
-    <span itemprop="copyrightYear">2022</span>
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2023</span>
     <span class="with-love">
       <i class="ic i-sakura rotate"></i>
     </span>
@@ -635,13 +543,13 @@ public class MyWebSocket &#123;
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">69k 字</span>
+    <span title="站点总字数">74k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:03</span>
+    <span title="站点阅读时长">1:07</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

@@ -5,32 +5,20 @@
         <link>http://victinSever.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Sat, 26 Nov 2022 13:26:01 +0800</pubDate>
-        <lastBuildDate>Sat, 26 Nov 2022 13:26:01 +0800</lastBuildDate>
+        <pubDate>Sun, 08 Jan 2023 18:04:01 +0800</pubDate>
+        <lastBuildDate>Sun, 08 Jan 2023 18:04:01 +0800</lastBuildDate>
         <category>react</category>
         <category>react-redux</category>
         <category>redux</category>
-        <category>Svelet</category>
-        <category>Solid.js</category>
-        <category>Nginx</category>
-        <category>WebSocket</category>
-        <category>hexo</category>
-        <category>Typora</category>
-        <category>密码学</category>
-        <category>凯斯密码</category>
-        <category>维吉尼亚密码</category>
-        <category>Dijkstra</category>
-        <category>JDBC</category>
-        <category>canvas</category>
-        <category>MVC</category>
         <category>JavaScript</category>
         <category>this</category>
+        <category>继承</category>
         <category>原型</category>
         <category>原型链</category>
-        <category>继承</category>
-        <category>JSON</category>
-        <category>cache</category>
         <category>面试题</category>
+        <category>cache</category>
+        <category>JSON</category>
+        <category>canvas</category>
         <category>vue</category>
         <category>react-router-dom</category>
         <category>vue-router</category>
@@ -41,8 +29,31 @@
         <category>axios</category>
         <category>sass</category>
         <category>NProgress</category>
-        <category>dp</category>
+        <category>Nginx</category>
         <category>跨域</category>
+        <category>WebSocket</category>
+        <category>hexo</category>
+        <category>Typora</category>
+        <category>Svelet</category>
+        <category>Solid.js</category>
+        <category>MVC</category>
+        <category>Dijkstra</category>
+        <category>JDBC</category>
+        <category>密码学</category>
+        <category>凯斯密码</category>
+        <category>维吉尼亚密码</category>
+        <category>dp</category>
+        <item>
+            <guid isPermalink="true">http://victinsever.github.io/2023/01/08/%E6%9D%82%E8%B0%88/%E5%88%B7%E9%A2%98/%E7%89%9B%E5%AE%A2%E7%BD%91%E5%88%B7%E9%A2%98/</guid>
+            <title>牛客网刷题</title>
+            <link>http://victinsever.github.io/2023/01/08/%E6%9D%82%E8%B0%88/%E5%88%B7%E9%A2%98/%E7%89%9B%E5%AE%A2%E7%BD%91%E5%88%B7%E9%A2%98/</link>
+            <pubDate>Sun, 08 Jan 2023 18:04:01 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;中文金额转数字&#34;&gt;&lt;a href=&#34;#中文金额转数字&#34; class=&#34;headerlink&#34; title=&#34;中文金额转数字&#34;&gt;&lt;/a&gt;中文金额转数字&lt;/h3&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;process.&lt;span class=&#34;property&#34;&gt;stdin&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;on&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;readable&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;function&#34;&gt;() =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; input = process.&lt;span class=&#34;property&#34;&gt;stdin&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;read&lt;/span&gt;().&lt;span class=&#34;title function_&#34;&gt;toString&lt;/span&gt;()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    input = input.&lt;span class=&#34;title function_&#34;&gt;substring&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, input.&lt;span class=&#34;property&#34;&gt;length&lt;/span&gt; - &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;title function_&#34;&gt;solve&lt;/span&gt;(input)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//一亿二千三百零五万三千五百零二&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;/**&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt; * 支持千亿以内的中文金额转数字算法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;solve&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;input&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; nums = &amp;#123; &lt;span class=&#34;string&#34;&gt;&amp;#x27;一&amp;#x27;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;二&amp;#x27;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;三&amp;#x27;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;四&amp;#x27;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;五&amp;#x27;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;5&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;六&amp;#x27;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;6&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;七&amp;#x27;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;7&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;八&amp;#x27;&lt;/span&gt;:&lt;span class=&#34;number&#34;&gt;8&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;九&amp;#x27;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;9&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;零&amp;#x27;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; anits = &amp;#123; &lt;span class=&#34;string&#34;&gt;&amp;#x27;亿&amp;#x27;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;100000000&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;万&amp;#x27;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;10000&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;千&amp;#x27;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;1000&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;百&amp;#x27;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;100&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;十&amp;#x27;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;10&lt;/span&gt; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;strToNum&lt;/span&gt; = (&lt;span class=&#34;params&#34;&gt;str&lt;/span&gt;) =&amp;gt; &amp;#123;    &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; sum = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;(&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; i = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;; i &amp;lt; str.&lt;span class=&#34;property&#34;&gt;length&lt;/span&gt;; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(str[i] === &lt;span class=&#34;string&#34;&gt;&amp;#x27;零&amp;#x27;&lt;/span&gt;) &lt;span class=&#34;keyword&#34;&gt;continue&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(nums[str[i]])&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(i + &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt; &amp;lt; str.&lt;span class=&#34;property&#34;&gt;length&lt;/span&gt; &amp;amp;&amp;amp; anits[str[i + &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;]]) sum += nums[str[i]] * anits[str[i + &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;]]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt; sum += nums[str[i]]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                i++&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; sum&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; sum = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; index = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;comment&#34;&gt;//索引&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; sub = &lt;span class=&#34;string&#34;&gt;&amp;#x27;&amp;#x27;&lt;/span&gt; &lt;span class=&#34;comment&#34;&gt;//分隔需要处理的字符串&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;(&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; key &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; anits) &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        index = input.&lt;span class=&#34;title function_&#34;&gt;indexOf&lt;/span&gt;(key)     &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(index !== - &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            sub = input.&lt;span class=&#34;title function_&#34;&gt;substring&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, index + &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;) &lt;span class=&#34;comment&#34;&gt;//处理的字符串&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            input = input.&lt;span class=&#34;title function_&#34;&gt;substring&lt;/span&gt;(index + &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, input.&lt;span class=&#34;property&#34;&gt;length&lt;/span&gt;) &lt;span class=&#34;comment&#34;&gt;//剩余字符串&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            sum += &lt;span class=&#34;title function_&#34;&gt;strToNum&lt;/span&gt;(sub.&lt;span class=&#34;title function_&#34;&gt;substring&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, sub.&lt;span class=&#34;property&#34;&gt;length&lt;/span&gt; - &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;)) * anits[sub[sub.&lt;span class=&#34;property&#34;&gt;length&lt;/span&gt; - &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;]]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    sum += &lt;span class=&#34;title function_&#34;&gt;strToNum&lt;/span&gt;(input) &lt;span class=&#34;comment&#34;&gt;//剩余的个位数收尾&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(sum)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;字符串全排列&#34;&gt;&lt;a href=&#34;#字符串全排列&#34; class=&#34;headerlink&#34; title=&#34;字符串全排列&#34;&gt;&lt;/a&gt;字符串全排列&lt;/h3&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;process.&lt;span class=&#34;property&#34;&gt;stdin&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;on&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;readable&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;function&#34;&gt;() =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; input = process.&lt;span class=&#34;property&#34;&gt;stdin&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;read&lt;/span&gt;()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    input = input.&lt;span class=&#34;title function_&#34;&gt;substring&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, input.&lt;span class=&#34;property&#34;&gt;length&lt;/span&gt; - &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; result = [], len = input.&lt;span class=&#34;property&#34;&gt;length&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; dfs = &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;str&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(len === str.&lt;span class=&#34;property&#34;&gt;length&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            result.&lt;span class=&#34;title function_&#34;&gt;push&lt;/span&gt;(str)           &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;(&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; i = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;; i &amp;lt; len; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(str.&lt;span class=&#34;title function_&#34;&gt;includes&lt;/span&gt;(input[i])) &lt;span class=&#34;keyword&#34;&gt;continue&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;title function_&#34;&gt;dfs&lt;/span&gt;(str + input[i])&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;title function_&#34;&gt;dfs&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(result.&lt;span class=&#34;title function_&#34;&gt;join&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;、&amp;#x27;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/11/26/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E5%B0%B1%E6%98%AF%E5%AD%97%E8%8A%82%EF%BC%8C%E5%A4%A7%E5%85%AC%E5%8F%B8%E7%A1%AE%E5%AE%9Ehr%E6%8C%BA%E5%A5%BD%E7%9A%84%EF%BC%8C%E5%B0%B1%E6%98%AF%E6%88%91%E4%B8%8D%E8%A1%8C/</guid>
             <title>第一次面试就是字节，大公司确实hr挺好的，就是我不行</title>
@@ -96,7 +107,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;8，js 算法&lt;/p&gt;
-&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption&gt;&lt;span&gt;1&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title function_&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;sumOf&lt;/span&gt;() &lt;span class=&#34;comment&#34;&gt;// 6&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title function_&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;)(&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;sumOf&lt;/span&gt;() &lt;span class=&#34;comment&#34;&gt;//10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//后面还有，忘了&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption&gt;&lt;span&gt;1&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title function_&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;sumOf&lt;/span&gt;() &lt;span class=&#34;comment&#34;&gt;// 6&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title function_&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;)(&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;sumOf&lt;/span&gt;() &lt;span class=&#34;comment&#34;&gt;//10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title function_&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;)(&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;)(&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;sumOf&lt;/span&gt;() &lt;span class=&#34;comment&#34;&gt;//···&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//后面还有，忘了&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;问：设计 js 代码，输入结果等于后面的注释&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -113,7 +124,7 @@
 &lt;p&gt;面试官补充：你有什么想问的吗？&lt;/p&gt;
 &lt;p&gt;反问：你对我的评价是怎么样的？&lt;/p&gt;
 &lt;p&gt;hr：语言表达可以，项目也有特色，很多知识都有涉及，但是有点庞杂，显得不太精，需要多专一个知识，找一个方向特别精通的地步&lt;/p&gt;
-&lt;p&gt;hr：可以看看网络的知识，缓存，懒加载等等，比如三次握手和四次挥手，以及・・・・（我心想，这些你也没问也），vue 更加深层的应用，毕竟不能只是应用技术，还要做拓展和深入研究，&lt;/p&gt;
+&lt;p&gt;hr：可以看看网络的知识，缓存，懒加载等等，比如三次握手和四次挥手，以及跨域・・・・（我心想，这些你也没问也），vue 更加深层的应用，毕竟不能只是应用技术，还要做拓展和深入研究，&lt;/p&gt;
 &lt;p&gt;我：这些我都学习了解了的&lt;/p&gt;
 &lt;p&gt;hr：没事，面试不是第一次，每次期待下一次（凉了！~）&lt;/p&gt;
 &lt;h3 id=&#34;总结&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h3&gt;
@@ -126,38 +137,44 @@
             <title>md编写练习题</title>
             <link>http://victinsever.github.io/2022/10/26/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/md%E7%BC%96%E5%86%99%E7%BB%83%E4%B9%A0%E9%A2%98/</link>
             <pubDate>Wed, 26 Oct 2022 20:50:01 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;md编写练习题&#34;&gt;&lt;a href=&#34;#md编写练习题&#34; class=&#34;headerlink&#34; title=&#34;md编写练习题&#34;&gt;&lt;/a&gt;md编写练习题&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;编译时多态主要指运算符重载与函数重载，而运行时多态主要指虚函数。 {.quiz .true}&lt;/p&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;md编写练习题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#md编写练习题&#34;&gt;#&lt;/a&gt; md 编写练习题&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li class=&#34;quiz true&#34;&gt;
+&lt;p&gt;编译时多态主要指运算符重载与函数重载，而运行时多态主要指虚函数。&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;有基类 &lt;code&gt;SHAPE&lt;/code&gt;，派生类 &lt;code&gt;CIRCLE&lt;/code&gt;，声明如下变量：  {.quiz .multi}&lt;/p&gt;
+&lt;li class=&#34;quiz multi&#34;&gt;
+&lt;p&gt;有基类  &lt;code&gt;SHAPE&lt;/code&gt; ，派生类  &lt;code&gt;CIRCLE&lt;/code&gt; ，声明如下变量： &lt;/p&gt;
  &lt;figure class=&#34;highlight c++&#34;&gt;&lt;figcaption&gt;&lt;span&gt;声明如下&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;SHAPE shape1,*p1;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;CIRCLE circle1,*q1;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt; 下列哪些项是 “派生类对象替换基类对象”。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;p1=&amp;amp;circle1;&lt;/code&gt; {.correct}&lt;/li&gt;
+&lt;p&gt;下列哪些项是 “派生类对象替换基类对象”。&lt;/p&gt;
+&lt;ul class=&#34;options&#34;&gt;
+&lt;li class=&#34;correct&#34;&gt;&lt;code&gt;p1=&amp;amp;circle1;&lt;/code&gt; &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;q1=&amp;amp;shape1;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;shape1=circle1;&lt;/code&gt; {.correct}&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;circle1=shape1;&lt;/code&gt;&lt;br&gt; {.options}&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;:heavy_check_mark: 令基类对象的指针指向派生类对象&lt;/li&gt;
-&lt;li&gt;:x: 派生类指针指向基类的引用&lt;/li&gt;
-&lt;li&gt;:heavy_check_mark: 派生类对象给基类对象赋值&lt;/li&gt;
-&lt;li&gt;:x: 基类对象给派生类对象赋值&lt;br&gt;{.options}&lt;/li&gt;
+&lt;li class=&#34;correct&#34;&gt;&lt;code&gt;shape1=circle1;&lt;/code&gt; &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;circle1=shape1;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;ul class=&#34;options&#34;&gt;
+&lt;li&gt;✔️ 令基类对象的指针指向派生类对象&lt;/li&gt;
+&lt;li&gt;❌ 派生类指针指向基类的引用&lt;/li&gt;
+&lt;li&gt;✔️ 派生类对象给基类对象赋值&lt;/li&gt;
+&lt;li&gt;❌ 基类对象给派生类对象赋值&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;下列叙述正确的是 []{.gap} 。 {.quiz}&lt;/p&gt;
-&lt;ul&gt;
+&lt;li class=&#34;quiz&#34;&gt;
+&lt;p&gt;下列叙述正确的是 &lt;span class=&#34;gap&#34;&gt;&lt;/span&gt; 。&lt;/p&gt;
+&lt;ul class=&#34;options&#34;&gt;
 &lt;li&gt;虚函数只能定义成无参函数&lt;/li&gt;
 &lt;li&gt;虚函数不能有返回值&lt;/li&gt;
 &lt;li&gt;能定义虚构造函数&lt;/li&gt;
-&lt;li&gt;A、B、C 都不对 {.correct}&lt;br&gt; {.options}&lt;/li&gt;
+&lt;li class=&#34;correct&#34;&gt;A、B、C 都不对&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;如果定义 &lt;code&gt;int e=8; double f=6.4, g=8.9;&lt;/code&gt;，则表达式 &lt;code&gt;f+int (e/3*int (f+g)/2)%4&lt;/code&gt; 的值为 [9.4]{.gap}。 {.quiz .fill}&lt;/p&gt;
+&lt;li class=&#34;quiz fill&#34;&gt;
+&lt;p&gt;如果定义  &lt;code&gt;int e=8; double f=6.4, g=8.9;&lt;/code&gt; ，则表达式  &lt;code&gt;f+int (e/3*int (f+g)/2)%4&lt;/code&gt;  的值为 &lt;span class=&#34;gap&#34;&gt;9.4&lt;/span&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;注意运算顺序和数据类型&lt;br&gt;[8.4]{.mistake}&lt;/p&gt;
+&lt;p&gt;注意运算顺序和数据类型&lt;br&gt;
+&lt;span class=&#34;mistake&#34;&gt; 8.4&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -168,9 +185,12 @@
             <title>md文档编写注意事项</title>
             <link>http://victinsever.github.io/2022/10/26/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/%E7%BC%96%E5%86%99md%E6%96%87%E6%A1%A3/</link>
             <pubDate>Wed, 26 Oct 2022 20:37:01 +0800</pubDate>
-            <description><![CDATA[ &lt;h5 id=&#34;参考文章&#34;&gt;&lt;a href=&#34;#参考文章&#34; class=&#34;headerlink&#34; title=&#34;参考文章&#34;&gt;&lt;/a&gt;参考文章&lt;/h5&gt;&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUvY29tcHV0ZXItc2NpZW5jZS9ub3RlL3RoZW1lLXNob2thLWRvYy9zcGVjaWFsLw==&#34;&gt;Step.4 主题特殊功能 - Theme Shoka Documentation - 二进制杂谈 - 计算机科学 | Yume Shoka &amp;#x3D; 優萌初華 &amp;#x3D; 有夢書架 (lostyu.me)&lt;/span&gt;&lt;/p&gt;
-&lt;h4 id=&#34;代码块编写&#34;&gt;&lt;a href=&#34;#代码块编写&#34; class=&#34;headerlink&#34; title=&#34;代码块编写&#34;&gt;&lt;/a&gt;代码块编写&lt;/h4&gt;&lt;p&gt;&lt;img data-src=&#34;/./../../../image/image-20221026203726497.png&#34; alt=&#34;image-20221026203726497&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;&#34;&gt;&lt;a href=&#34;#&#34; class=&#34;headerlink&#34; title=&#34;&#34;&gt;&lt;/a&gt;&lt;/h4&gt; ]]></description>
+            <description><![CDATA[ &lt;h5 id=&#34;参考文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参考文章&#34;&gt;#&lt;/a&gt; 参考文章&lt;/h5&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUvY29tcHV0ZXItc2NpZW5jZS9ub3RlL3RoZW1lLXNob2thLWRvYy9zcGVjaWFsLw==&#34;&gt;Step.4 主题特殊功能 - Theme Shoka Documentation - 二进制杂谈 - 计算机科学 | Yume Shoka = 優萌初華 = 有夢書架 (lostyu.me)&lt;/span&gt;&lt;/p&gt;
+&lt;h4 id=&#34;代码块编写&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#代码块编写&#34;&gt;#&lt;/a&gt; 代码块编写&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;./../../../image/image-20221026203726497.png&#34; alt=&#34;image-20221026203726497&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#&#34;&gt;#&lt;/a&gt; &lt;/h4&gt;
+ ]]></description>
         </item>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/10/17/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/hexo%E5%92%8CTypora%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</guid>
@@ -179,51 +199,63 @@
             <category>hexo</category>
             <category>Typora</category>
             <pubDate>Mon, 17 Oct 2022 21:39:01 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;hexo与Typora完美结合：插入图片方便&#34;&gt;&lt;a href=&#34;#hexo与Typora完美结合：插入图片方便&#34; class=&#34;headerlink&#34; title=&#34;hexo与Typora完美结合：插入图片方便&#34;&gt;&lt;/a&gt;hexo与Typora完美结合：插入图片方便&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;安装插件hexo-renderer-marked&lt;/p&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;hexo与typora完美结合插入图片方便&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hexo与typora完美结合插入图片方便&#34;&gt;#&lt;/a&gt; hexo 与 Typora 完美结合：插入图片方便&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安装插件 hexo-renderer-marked&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;安装插件hexo-renderer-marked&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-renderer-marked&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在config.yml中修改配置如下&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;在 config.yml 中修改配置如下&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;config.yml&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;post_asset_folder: &lt;span class=&#34;literal&#34;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在config.yml中添加配置如下&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;在 config.yml 中添加配置如下&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption&gt;&lt;span&gt;config.yml&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;marked:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  prependRoot: &lt;span class=&#34;literal&#34;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  postAsset: &lt;span class=&#34;literal&#34;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在source文件中创建一个文件夹来存储图片，我这里创建的文件名为image（不要再主题的source文件夹下创建），如下&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/./../../../image/1.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;在 source 文件中创建一个文件夹来存储图片，我这里创建的文件名为 image（不要再主题的 source 文件夹下创建），如下&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;./../../../image/1.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;打开typora:文件-&amp;gt;偏好设置-&amp;gt;图像，选择复制到指定路径-&amp;gt;点开文件图标，选择刚刚创建的“image”（自己创建的存储图片的文件）文件-&amp;gt;勾选如图下的四个勾选，版本不同可能不同，如图下：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/../../../image/2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;打开 typora: 文件 -&amp;gt; 偏好设置 -&amp;gt; 图像，选择复制到指定路径 -&amp;gt; 点开文件图标，选择刚刚创建的 “image”（自己创建的存储图片的文件）文件 -&amp;gt; 勾选如图下的四个勾选，版本不同可能不同，如图下：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;../../../image/2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;接下来在用typora时，右键点击导入或者直接拖动图片直接复制进来进好啦会进行自动复制配置在你的image下了，此时已经可以正常使用了，如果本地使用 &lt;strong&gt;hexo s&lt;/strong&gt; 命令后发现并没有成功，请看下一步。&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;接下来在用 typora 时，右键点击导入或者直接拖动图片直接复制进来进好啦会进行自动复制配置在你的 image 下了，此时已经可以正常使用了，如果本地使用 &lt;strong&gt;hexo s&lt;/strong&gt; 命令后发现并没有成功，请看下一步。&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;大概率可能是命名重复，需要手动点击设置。&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;大概率可能是命名重复，需要手动点击设置。&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;需要在Typora中右击图片选择复制到image&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/./../../image/3-1666019418250-12.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;需要在 Typora 中右击图片选择复制到 image&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;./../../image/3-1666019418250-12.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;大功告成！&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;大功告成！&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;参考文章：hexo博客如何插入图片-知乎-zhihu-com&#34;&gt;&lt;a href=&#34;#参考文章：hexo博客如何插入图片-知乎-zhihu-com&#34; class=&#34;headerlink&#34; title=&#34;参考文章：hexo博客如何插入图片 - 知乎 (zhihu.com)&#34;&gt;&lt;/a&gt;参考文章：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yNjUwNzc0Njg=&#34;&gt;hexo博客如何插入图片 - 知乎 (zhihu.com)&lt;/span&gt;&lt;/h5&gt; ]]></description>
+&lt;h5 id=&#34;参考文章hexo博客如何插入图片-知乎-zhihucom&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参考文章hexo博客如何插入图片-知乎-zhihucom&#34;&gt;#&lt;/a&gt; 参考文章：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yNjUwNzc0Njg=&#34;&gt;hexo 博客如何插入图片 - 知乎 (zhihu.com)&lt;/span&gt;&lt;/h5&gt;
+ ]]></description>
         </item>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/09/06/%E6%9D%82%E8%B0%88/hello-world/</guid>
             <title>第一篇个人博客</title>
             <link>http://victinsever.github.io/2022/09/06/%E6%9D%82%E8%B0%88/hello-world/</link>
             <pubDate>Tue, 06 Sep 2022 16:58:55 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;该博客使用&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;和Node技术进行搭建，主题在hexo上面找个一个二次元风主题，大部分内容可以自定义，后续将陆续上传博客中！博客依赖&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vdmljdGluL3ZpY3Rpbg==&#34;&gt;码云&lt;/span&gt;搭建，更多内容可以进一步关注本人博客内容！&lt;/p&gt;
-&lt;h2 id=&#34;博客发布命令&#34;&gt;&lt;a href=&#34;#博客发布命令&#34; class=&#34;headerlink&#34; title=&#34;博客发布命令&#34;&gt;&lt;/a&gt;博客发布命令&lt;/h2&gt;&lt;h3 id=&#34;创建博客&#34;&gt;&lt;a href=&#34;#创建博客&#34; class=&#34;headerlink&#34; title=&#34;创建博客&#34;&gt;&lt;/a&gt;创建博客&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;第一篇个人博客&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
+            <description><![CDATA[ &lt;p&gt;该博客使用&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt; Hexo&lt;/span&gt; 和 Node 技术进行搭建，主题在 hexo 上面找个一个二次元风主题，大部分内容可以自定义，后续将陆续上传博客中！博客依赖&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vdmljdGluL3ZpY3Rpbg==&#34;&gt;码云&lt;/span&gt;搭建，更多内容可以进一步关注本人博客内容！&lt;/p&gt;
+&lt;h2 id=&#34;博客发布命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#博客发布命令&#34;&gt;#&lt;/a&gt; 博客发布命令&lt;/h2&gt;
+&lt;h3 id=&#34;创建博客&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建博客&#34;&gt;#&lt;/a&gt; 创建博客&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;第一篇个人博客&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;更多信息: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;本地运行服务&#34;&gt;&lt;a href=&#34;#本地运行服务&#34; class=&#34;headerlink&#34; title=&#34;本地运行服务&#34;&gt;&lt;/a&gt;本地运行服务&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
+&lt;h3 id=&#34;本地运行服务&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#本地运行服务&#34;&gt;#&lt;/a&gt; 本地运行服务&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;更多信息: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;创建静态文件&#34;&gt;&lt;a href=&#34;#创建静态文件&#34; class=&#34;headerlink&#34; title=&#34;创建静态文件&#34;&gt;&lt;/a&gt;创建静态文件&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
+&lt;h3 id=&#34;创建静态文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建静态文件&#34;&gt;#&lt;/a&gt; 创建静态文件&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;更多信息: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;远程发布&#34;&gt;&lt;a href=&#34;#远程发布&#34; class=&#34;headerlink&#34; title=&#34;远程发布&#34;&gt;&lt;/a&gt;远程发布&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
+&lt;h3 id=&#34;远程发布&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#远程发布&#34;&gt;#&lt;/a&gt; 远程发布&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;更多信息: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
  ]]></description>
         </item>

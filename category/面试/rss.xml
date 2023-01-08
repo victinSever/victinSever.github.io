@@ -10,27 +10,15 @@
         <category>react</category>
         <category>react-redux</category>
         <category>redux</category>
-        <category>Svelet</category>
-        <category>Solid.js</category>
-        <category>Nginx</category>
-        <category>WebSocket</category>
-        <category>hexo</category>
-        <category>Typora</category>
-        <category>密码学</category>
-        <category>凯斯密码</category>
-        <category>维吉尼亚密码</category>
-        <category>Dijkstra</category>
-        <category>JDBC</category>
-        <category>canvas</category>
-        <category>MVC</category>
         <category>JavaScript</category>
         <category>this</category>
+        <category>继承</category>
         <category>原型</category>
         <category>原型链</category>
-        <category>继承</category>
-        <category>JSON</category>
-        <category>cache</category>
         <category>面试题</category>
+        <category>cache</category>
+        <category>JSON</category>
+        <category>canvas</category>
         <category>vue</category>
         <category>react-router-dom</category>
         <category>vue-router</category>
@@ -41,8 +29,20 @@
         <category>axios</category>
         <category>sass</category>
         <category>NProgress</category>
-        <category>dp</category>
+        <category>Nginx</category>
         <category>跨域</category>
+        <category>WebSocket</category>
+        <category>hexo</category>
+        <category>Typora</category>
+        <category>Svelet</category>
+        <category>Solid.js</category>
+        <category>MVC</category>
+        <category>Dijkstra</category>
+        <category>JDBC</category>
+        <category>密码学</category>
+        <category>凯斯密码</category>
+        <category>维吉尼亚密码</category>
+        <category>dp</category>
         <item>
             <guid isPermalink="true">http://victinsever.github.io/2022/11/26/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E5%B0%B1%E6%98%AF%E5%AD%97%E8%8A%82%EF%BC%8C%E5%A4%A7%E5%85%AC%E5%8F%B8%E7%A1%AE%E5%AE%9Ehr%E6%8C%BA%E5%A5%BD%E7%9A%84%EF%BC%8C%E5%B0%B1%E6%98%AF%E6%88%91%E4%B8%8D%E8%A1%8C/</guid>
             <title>第一次面试就是字节，大公司确实hr挺好的，就是我不行</title>
@@ -96,7 +96,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;8，js 算法&lt;/p&gt;
-&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption&gt;&lt;span&gt;1&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title function_&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;sumOf&lt;/span&gt;() &lt;span class=&#34;comment&#34;&gt;// 6&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title function_&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;)(&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;sumOf&lt;/span&gt;() &lt;span class=&#34;comment&#34;&gt;//10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//后面还有，忘了&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption&gt;&lt;span&gt;1&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title function_&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;sumOf&lt;/span&gt;() &lt;span class=&#34;comment&#34;&gt;// 6&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title function_&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;)(&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;sumOf&lt;/span&gt;() &lt;span class=&#34;comment&#34;&gt;//10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;title function_&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;)(&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;)(&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;).&lt;span class=&#34;title function_&#34;&gt;sumOf&lt;/span&gt;() &lt;span class=&#34;comment&#34;&gt;//···&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//后面还有，忘了&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;问：设计 js 代码，输入结果等于后面的注释&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -113,7 +113,7 @@
 &lt;p&gt;面试官补充：你有什么想问的吗？&lt;/p&gt;
 &lt;p&gt;反问：你对我的评价是怎么样的？&lt;/p&gt;
 &lt;p&gt;hr：语言表达可以，项目也有特色，很多知识都有涉及，但是有点庞杂，显得不太精，需要多专一个知识，找一个方向特别精通的地步&lt;/p&gt;
-&lt;p&gt;hr：可以看看网络的知识，缓存，懒加载等等，比如三次握手和四次挥手，以及・・・・（我心想，这些你也没问也），vue 更加深层的应用，毕竟不能只是应用技术，还要做拓展和深入研究，&lt;/p&gt;
+&lt;p&gt;hr：可以看看网络的知识，缓存，懒加载等等，比如三次握手和四次挥手，以及跨域・・・・（我心想，这些你也没问也），vue 更加深层的应用，毕竟不能只是应用技术，还要做拓展和深入研究，&lt;/p&gt;
 &lt;p&gt;我：这些我都学习了解了的&lt;/p&gt;
 &lt;p&gt;hr：没事，面试不是第一次，每次期待下一次（凉了！~）&lt;/p&gt;
 &lt;h3 id=&#34;总结&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h3&gt;
