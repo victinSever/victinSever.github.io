@@ -1,0 +1,872 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="眸光似星辰" href="http://victinsever.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="眸光似星辰" href="http://victinsever.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="眸光似星辰" href="http://victinsever.github.io/feed.json" />
+
+
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://victinsever.github.io/2023/01/08/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/mongodb/mongodb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+
+
+  <title>
+mongodb学习笔记 - mongodb - 前端技术 |
+vintinSever = 眸光似星辰</title>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">mongodb学习笔记
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-01-08 21:04:01">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-01-08T21:04:01+08:00">2023-01-08</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>9.8k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>9 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">vintinSever</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1492370284958-c20b15c692d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1602592818892-305611f06492?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjAwfHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1571570703598-39eb580a0329?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzJ8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1491485880348-85d48a9e5312?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGNhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></li>
+          <li class="item" data-background-image="https://images.unsplash.com/photo-1517451330947-7809dead78d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTk1fHxjYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="item" rel="index" title="分类于 前端技术"><span itemprop="name">前端技术</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/mongodb/" itemprop="item" rel="index" title="分类于 mongodb"><span itemprop="name">mongodb</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://victinsever.github.io/2023/01/08/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/mongodb/mongodb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="眸光似星辰">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="眸光似星辰">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>数据库，集合，数据&#x2F;文档</p>
+<h3 id="进入数据库"><a href="#进入数据库" class="headerlink" title="进入数据库"></a>进入数据库</h3><ul>
+<li>配置环境变量直到可以输入mongo或者mongosh进入数据库命令行操作模式</li>
+</ul>
+<h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><ul>
+<li>show databases 展示数据库</li>
+<li>use admin 选择一个数据库<ul>
+<li>可选择现成的数据库，也可以选择不存在的，选择不存在则隐式创建数据库</li>
+</ul>
+</li>
+<li>show collections 展示集合</li>
+<li>db.createCollection(“c1”) 创建集合</li>
+<li>db.c1.drop() 删除集合</li>
+</ul>
+<h3 id="增删查改"><a href="#增删查改" class="headerlink" title="增删查改"></a>增删查改</h3><h4 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h4><ul>
+<li><p>语法：db.集合名.insert(json数据)</p>
+</li>
+<li><p>&#96;&#96;&#96;js 1<br>db.getCollection(‘user’).insert({“userId” : “014”,”uclass” : “B”,”name” : “Back”,”age” : 11,”email” : “<span class="exturl" data-url="bWFpbHRvOiYjeDYyOyYjeDMxOyYjNTI7JiN4NDA7JiMxMTU7JiMxMDU7JiN4NmU7JiN4NjE7JiM0NjsmI3g2MzsmIzExMTsmIzEwOTs=">&#x62;&#x31;&#52;&#x40;&#115;&#105;&#x6e;&#x61;&#46;&#x63;&#111;&#109;</span>“,”birthday” : ISODate(“2018-07-31T03:46:13.885Z”),”dataStatus” : 1});</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 注意</span><br><span class="line"></span><br><span class="line">  - 自定义_id，只需要插入的json数据存在_id这个数据进行覆盖</span><br><span class="line"></span><br><span class="line">  - 一次插入多个数据</span><br><span class="line"></span><br><span class="line">    ```js 1</span><br><span class="line">    db.c1.insert([</span><br><span class="line">    	&#123;name:&#x27;张三&#x27;,age:14&#125;,</span><br><span class="line">    	&#123;name:&#x27;李四&#x27;,age:14&#125;,</span><br><span class="line">    ])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>插入循环数据</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">	db.<span class="property">c2</span>.<span class="title function_">insert</span>(&#123;<span class="attr">name</span>:<span class="string">&#x27;a&#x27;</span>+i,<span class="attr">age</span>:i&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/../../../image/image-20230103230437314.png" alt="image-20230103230437314"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h4><ul>
+<li><p>语法：</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.集合名.<span class="title function_">find</span>(条件，[,查询的列])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>查询全部</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="property">c1</span>.<span class="title function_">find</span>()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询一列</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="property">c1</span>.<span class="title function_">find</span>(&#123;&#125;,&#123;<span class="attr">name</span>:<span class="number">1</span>&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询除了某一列</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="property">c1</span>.<span class="title function_">find</span>(&#123;&#125;,&#123;<span class="attr">name</span>:<span class="number">0</span>&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>语法升级：</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db.集合名.<span class="title function_">find</span>(&#123;</span><br><span class="line">	<span class="attr">age</span>: &#123;运算符:值&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>年龄大于5</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="property">c1</span>.<span class="title function_">find</span>(&#123;<span class="attr">age</span>:&#123;<span class="attr">$gt</span>:<span class="number">5</span>&#125;&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>年龄为5,8,10</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="property">c1</span>.<span class="title function_">find</span>(&#123;<span class="attr">age</span>:&#123;<span class="attr">$in</span>:[<span class="number">5</span>,<span class="number">8</span>,<span class="number">10</span>]&#125;&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>运算符</p>
+<p><img data-src="/../../../image/image-20230103231503013.png" alt="image-20230103231503013"></p>
+</li>
+</ul>
+<h4 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h4><ul>
+<li><p>语法：</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.集合名.<span class="title function_">update</span>(条件,新数据 [，是否新增，是否修改多条])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>升级语法：</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.集合名.<span class="title function_">update</span>(<span class="params">条件,新数据</span>)</span><br><span class="line">					&#123;修改器：&#123;键：值&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/../../../image/image-20230103232023122.png" alt="image-20230103232023122"></p>
+</li>
+<li><p>因为不用修改器，默认是替换而不是修改，所以在修改数据需要使用修改器</p>
+</li>
+<li><p>测试</p>
+<ul>
+<li><p>修改一个信息</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="property">c3</span>.<span class="title function_">update</span>(&#123;<span class="attr">name</span>:<span class="string">&#x27;a1&#x27;</span>&#125;,&#123;<span class="attr">$set</span>:&#123;<span class="attr">name</span>:<span class="string">&#x27;s1&#x27;</span>&#125;&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改多个信息</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="property">c4</span>.<span class="title function_">update</span>(&#123;<span class="attr">name</span>:<span class="string">&quot;哈哈&quot;</span>&#125;,&#123;</span><br><span class="line">	<span class="attr">$set</span>:&#123;<span class="attr">name</span>:<span class="string">&quot;haha&quot;</span>&#125;，</span><br><span class="line">	$inc：&#123;age：<span class="number">111</span>&#125;，</span><br><span class="line">	<span class="attr">$rename</span>:&#123;<span class="attr">who</span>:<span class="string">&quot;sex&quot;</span>&#125;,</span><br><span class="line">	<span class="attr">$unset</span>:&#123;<span class="attr">other</span>:<span class="literal">true</span>&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><ul>
+<li><p>语法：</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.集合名.<span class="title function_">remove</span>(条件,[,是否删除一条])</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="查询语句扩展"><a href="#查询语句扩展" class="headerlink" title="查询语句扩展"></a>查询语句扩展</h3><ul>
+<li><p>格式化</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="property">c1</span>.<span class="title function_">find</span>().<span class="title function_">pretty</span>()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>排序</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="property">c1</span>.<span class="title function_">find</span>().<span class="title function_">sort</span>(json)</span><br><span class="line"></span><br><span class="line"><span class="comment">//sort(&#123;列:1/-1&#125;)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="property">c1</span>.<span class="title function_">find</span>().<span class="title function_">sort</span>(&#123;<span class="attr">age</span>:-<span class="number">1</span>&#125;) <span class="comment">//以年龄降序</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>limit和skip方法</p>
+<figure class="highlight js"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db.集合名.<span class="title function_">find</span>().<span class="title function_">sort</span>().<span class="title function_">skip</span>(数字).<span class="title function_">limit</span>(数字)</span><br><span class="line"><span class="comment">//skip跳过指定数量(可选)</span></span><br><span class="line"><span class="comment">//limit限制查询的数量(可选)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>分页展示</p>
+<figure class="highlight js"><figcaption><span>11</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.集合名.<span class="title function_">find</span>().<span class="title function_">skip</span>().<span class="title function_">limit</span>(<span class="number">2</span>)</span><br><span class="line"><span class="comment">//skip计算公式：（当前页 - 1） * 每页显示条数</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>count方法：统计数量</p>
+</li>
+</ul>
+<h3 id="聚合查询"><a href="#聚合查询" class="headerlink" title="聚合查询"></a>聚合查询</h3><ul>
+<li><p>语法：</p>
+<figure class="highlight js"><figcaption><span>11</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">db.集合名.<span class="title function_">aggregate</span>([</span><br><span class="line">    &#123;管道：&#123;表达式&#125;&#125;</span><br><span class="line">    ···</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/../../../image/image-20230103235138600.png" alt="image-20230103235138600"><img data-src="/../../../image/image-20230103235145652.png" alt="image-20230103235145652"></p>
+</li>
+<li><p>练习</p>
+<ul>
+<li><p>统计男生女生总年龄</p>
+<figure class="highlight js"><figcaption><span>11</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="property">c1</span>.<span class="title function_">aggregate</span>([</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="attr">$group</span>:&#123;</span><br><span class="line">			<span class="attr">_id</span>:<span class="string">&quot;$sex&quot;</span>,</span><br><span class="line">			<span class="attr">rs</span>:&#123;<span class="attr">$sum</span>:<span class="string">&quot;$age&quot;</span>&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>统计男女生人数</p>
+<figure class="highlight js"><figcaption><span>11</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="property">c1</span>.<span class="title function_">aggregate</span>([</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="attr">$group</span>:&#123;</span><br><span class="line">			<span class="attr">_id</span>:<span class="string">&quot;$sex&quot;</span>,</span><br><span class="line">			<span class="attr">rs</span>:&#123;<span class="attr">$sum</span>:<span class="number">1</span>&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>人总数和，平局年龄</p>
+<figure class="highlight js"><figcaption><span>11</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="property">c1</span>.<span class="title function_">aggregate</span>([</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="attr">$group</span>:&#123;</span><br><span class="line">			<span class="attr">_id</span>:<span class="literal">null</span>,</span><br><span class="line">			<span class="attr">total_num</span>:&#123;<span class="attr">$sum</span>:<span class="number">1</span>&#125;,</span><br><span class="line">			<span class="attr">total_avg</span>:&#123;<span class="attr">$avg</span>:<span class="string">&quot;$age&quot;</span>&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>人数升序查询男女生人数</p>
+<figure class="highlight js"><figcaption><span>mongodb</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="property">c1</span>.<span class="title function_">aggregate</span>([</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="attr">$group</span>:&#123;</span><br><span class="line">			<span class="attr">_id</span>:<span class="string">&quot;$sex&quot;</span>,</span><br><span class="line">			<span class="attr">rs</span>:&#123;<span class="attr">$sum</span>:<span class="number">1</span>&#125;,</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="attr">$sort</span>:&#123;<span class="attr">rs</span>:<span class="number">1</span>&#125;</span><br><span class="line">	&#125;</span><br><span class="line">])</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="索引操作"><a href="#索引操作" class="headerlink" title="索引操作"></a>索引操作</h3><ul>
+<li><p>优点：提高数据库查询效率，降低数据库IO，降低数据排序成本，降低CPU消耗</p>
+</li>
+<li><p>缺点：占用磁盘空间，增加了索引数据，空间插入和修改需要更新索引</p>
+</li>
+<li><p>语法</p>
+<ul>
+<li>创建：db.集合名.createIndex(待创建索引的列,[,额外选项])<ul>
+<li>1升序， -1降序</li>
+</ul>
+</li>
+<li>删除全部：db.集合名.dropIndexes()</li>
+<li>删除指定：db.集合名.dropIndex(索引名)</li>
+<li>查看索引：db.集合名.getIndexes()</li>
+<li>分析索引：db.集合名.explain(“executionStatus”)</li>
+</ul>
+</li>
+<li><p>练习</p>
+<ul>
+<li><p>创建唯一索引</p>
+<figure class="highlight js"><figcaption><span>mongodb</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.集合名.<span class="title function_">createIndex</span>(待添加索引列, &#123;<span class="attr">unique</span>: 列名&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>选择规则</p>
+<ul>
+<li>为常用条件、排序、分组的字段简历索引</li>
+<li>选择唯一性索引</li>
+<li>选择较小的数据列，为长字符串使用前缀索引</li>
+</ul>
+</li>
+</ul>
+<h3 id="权限机制"><a href="#权限机制" class="headerlink" title="权限机制"></a>权限机制</h3><p>使用权限机制开启账号机制</p>
+<ul>
+<li><p>开启验证模式</p>
+<ul>
+<li><p>添加超级管理员</p>
+<ul>
+<li><p>&#96;&#96;&#96;js mongodb<br>use admin</p>
+<p>db.createUser({<br>“user”: “admin”,<br>“pwd”: “123456”,<br>“roles”: [{<br>    role: “root”,<br>    db: “admin”<br>}]<br>})</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 退出卸载服务</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    在mogodb的bin目录下</span><br><span class="line">    mongod --remove</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>重新安装需要输入账密的服务</p>
+<ul>
+<li>&#96;&#96;&#96;js mongodb<br>在mogodb的bin目录下<br>mongod –install –dbpath E:\Application\mongodb\data –logpath E:\Application\mongodb\logs\mongodb2.log –auth<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 启动服务</span><br><span class="line"></span><br><span class="line">  - ```js mongodb</span><br><span class="line">    net start mongodb</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>登录测试</p>
+<ul>
+<li><p>&#96;&#96;&#96;js mongodb<br>mongo或者mongosh</p>
+<p>use admin</p>
+<p>db.auth(‘admin’, ‘123456’)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ```js mongodb</span><br><span class="line">  mongosh 127.0.0.1:27017/admin -u admin -p 123456</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>添加用户权限</p>
+<ul>
+<li><p>&#96;&#96;&#96;js mongodb<br>&#x2F;&#x2F;在管理员权限下，进入新的数据库</p>
+<p>use shop</p>
+<p>&#x2F;&#x2F;shop1 只读权限<br>db.createUser({<br>“user”: “shop1”,<br>“pwd”: “123456”,<br>“roles”: [{<br>    role: “read”,<br>    db: “shop”<br>}]<br>})<br>&#x2F;&#x2F;shop2 可读可写权限<br>db.createUser({<br>“user”: “shop2”,<br>“pwd”: “123456”,<br>“roles”: [{<br>    role: “readWrite”,<br>    db: “shop”<br>}]<br>})</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 备份和还原数据库</span><br><span class="line"></span><br><span class="line">- 备份</span><br><span class="line"></span><br><span class="line">  - 语法：</span><br><span class="line"></span><br><span class="line">    &gt; 导出数据库语法：mongodbump -h -port -u -p -d -o</span><br><span class="line">    &gt;</span><br><span class="line">    &gt; 说明：</span><br><span class="line">    &gt;</span><br><span class="line">    &gt; ​	-h   		host服务器IP地址</span><br><span class="line">    &gt;</span><br><span class="line">    &gt; ​	-port			 端口</span><br><span class="line">    &gt;</span><br><span class="line">    &gt; ​	-u 		 user账号</span><br><span class="line">    &gt;</span><br><span class="line">    &gt; ​	-p 		 pwd 密码</span><br><span class="line">    &gt;</span><br><span class="line">    &gt; ​	-d		  database 数据库</span><br><span class="line">    &gt;</span><br><span class="line">    &gt; ​	-o 		 open 备份到指定目录下</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">  - 练习</span><br><span class="line"></span><br><span class="line">    - 备份所有数据：</span><br><span class="line"></span><br><span class="line">      &gt;mongodbump  -u admin -p 123456 -o E:\Application\mongodb\bak</span><br><span class="line"></span><br><span class="line">    - 备份指定数据：</span><br><span class="line"></span><br><span class="line">      &gt; mongodbump  -u shop -p 123456 -d shop -o E:\Application\mongodb\bak2</span><br><span class="line"></span><br><span class="line">- 还原</span><br><span class="line"></span><br><span class="line">  - 语法：</span><br><span class="line"></span><br><span class="line">    &gt; 导出数据库语法：mongorestore -h -port -u -p -d -drop</span><br><span class="line">    &gt;</span><br><span class="line">    &gt; 说明：</span><br><span class="line">    &gt;</span><br><span class="line">    &gt; ​	-h   		host服务器IP地址</span><br><span class="line">    &gt;</span><br><span class="line">    &gt; ​	-port			 端口</span><br><span class="line">    &gt;</span><br><span class="line">    &gt; ​	-u 		 user账号</span><br><span class="line">    &gt;</span><br><span class="line">    &gt; ​	-p 		 pwd 密码</span><br><span class="line">    &gt;</span><br><span class="line">    &gt; ​	-d		  database 数据库</span><br><span class="line">    &gt;</span><br><span class="line">    &gt; ​	-drop 	drop</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">  - 练习</span><br><span class="line"></span><br><span class="line">    - 还原所有数据库：</span><br><span class="line"></span><br><span class="line">      &gt;mongorestore -u admin -p 123456 -drop E:\Application\mongodb\bak</span><br><span class="line"></span><br><span class="line">    - 还原指定数据库：（删除时不能删除admin数据库）</span><br><span class="line"></span><br><span class="line">      &gt; mongorestore -u shop -p 123456 -d shop -drop E:\Application\mongodb\bak2</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">## mongoose</span><br><span class="line"></span><br><span class="line">- 使用node语言管理mongodb</span><br><span class="line"></span><br><span class="line">- 是node中的一个模块包</span><br><span class="line"></span><br><span class="line">- 核心概念</span><br><span class="line">  - schema</span><br><span class="line">    - 约束字段</span><br><span class="line">  - model</span><br><span class="line">    - 模型</span><br><span class="line">    - 对应集合，用户数据增删改查</span><br><span class="line"></span><br><span class="line">- 使用</span><br><span class="line"></span><br><span class="line">  - 下载</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>npm i mongoose 或 yarn add mongoose</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 语法</span><br><span class="line"></span><br><span class="line">  ```js mongodb-connection.js</span><br><span class="line">  //导入数据库</span><br><span class="line">  var mongoose = require(&#x27;mongoose&#x27;);</span><br><span class="line">  </span><br><span class="line">  //链接数据库</span><br><span class="line">  const db = mongoose.createConnection(&#x27;mongodb://admin:123456@localhost:27017/weblog?authMechanism=DEFAULT&amp;authSource=admin&#x27;, &#123;</span><br><span class="line">      useNewUrlParser: true,</span><br><span class="line">      useUnifiedTopology: true</span><br><span class="line">  &#125;, err =&gt; &#123;</span><br><span class="line">      if(err) console.error(&quot;连接出错：&quot; + err)</span><br><span class="line">      else console.log(&quot;weblog数据库连接成功！&quot;)</span><br><span class="line">  &#125;)</span><br><span class="line">  </span><br><span class="line">  //创建模型</span><br><span class="line">  const Users = db.model(&#x27;users&#x27;, &#123;</span><br><span class="line">      name: String,</span><br><span class="line">      age: Number</span><br><span class="line">  &#125;)</span><br><span class="line">  </span><br><span class="line">  //实例操作</span><br><span class="line">  </span><br><span class="line">  //增</span><br><span class="line">  //增加一条数据</span><br><span class="line">  async function insertOne(obj) &#123;</span><br><span class="line">      const res = await new Users(obj).save()</span><br><span class="line">      console.log(res);</span><br><span class="line">  &#125;</span><br><span class="line">  // insertOne(&#123; name: &#x27;神龙&#x27;,age: 100000 &#125;)</span><br><span class="line">  </span><br><span class="line">  //查</span><br><span class="line">  //查一条</span><br><span class="line">  async function search(obj) &#123;</span><br><span class="line">      const res = await Users.find(obj)</span><br><span class="line">      console.log(res);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  //查全部</span><br><span class="line">  async function searchAll() &#123;</span><br><span class="line">      const res = await Users.find(&#123;&#125;)</span><br><span class="line">      console.log(res);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  //分页查询</span><br><span class="line">  async function searchPagination(page = 1, size = 2) &#123;</span><br><span class="line">      const res = await Users.find(&#123;&#125;).skip((page - 1) * size).limit(size)</span><br><span class="line">      console.log(res);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  // search(&#123; name: &#x27;神龙&#x27;&#125;)</span><br><span class="line">  // searchAll()</span><br><span class="line">  searchPagination(2)</span><br><span class="line">  </span><br><span class="line">  // db.close()</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ul>
+<li><p>作用</p>
+<ul>
+<li>数据角度：让项目静态&#x2F;固定数据动态</li>
+<li>功能角度：天气接口，获取IP接口，名言接口</li>
+</ul>
+</li>
+<li><p>接口地址</p>
+<ul>
+<li>通过编程语言实现：node&#x2F;go&#x2F;java&#x2F;php&#x2F;asp</li>
+<li>使用第三方接口</li>
+</ul>
+</li>
+<li><p>一次编写，多次接入</p>
+</li>
+<li><p>一个返回json或者xml数据的文件</p>
+</li>
+</ul>
+<h3 id="接口开发规范"><a href="#接口开发规范" class="headerlink" title="接口开发规范"></a>接口开发规范</h3><ul>
+<li><p>保证多人开发编写的规范性，可以方便后期维护，使用Restful API思想</p>
+</li>
+<li><p>Restful</p>
+<ul>
+<li>目前流行的互联网软件架构</li>
+<li>申明一个设计原则和规范</li>
+<li>规范条件<ul>
+<li>项目统一有模块标准</li>
+<li>根据URL知道操作资源</li>
+<li>根据H团体票Method知道操作动作</li>
+<li>根据Http Status Code知道操作结果</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>接口测试工具</p>
+</li>
+</ul>
+<h3 id="接口测试工具"><a href="#接口测试工具" class="headerlink" title="接口测试工具"></a>接口测试工具</h3><ul>
+<li>Postman，apifox···</li>
+<li>测试接口<ul>
+<li>测试地址：<span class="exturl" data-url="aHR0cDovL2pzb252aWV3LmNvbS9leGFtcGxlLmpzb24=">http://jsonview.com/example.json</span></li>
+</ul>
+</li>
+<li>使用<ul>
+<li>后端：调试接口</li>
+<li>前端：测试接口</li>
+</ul>
+</li>
+</ul>
+<h2 id="接口开发"><a href="#接口开发" class="headerlink" title="接口开发"></a>接口开发</h2><ul>
+<li><p>下载模块依赖</p>
+<ul>
+<li><p>express</p>
+<blockquote>
+<p>框架</p>
+</blockquote>
+</li>
+<li><p>body-parser</p>
+<blockquote>
+<p>request解析</p>
+</blockquote>
+</li>
+<li><p>mongoose</p>
+<blockquote>
+<p>node操作mongodb</p>
+</blockquote>
+</li>
+<li><pre><code class="json">&#123;
+  &quot;dependencies&quot;: &#123;
+    &quot;body-parser&quot;: &quot;^1.20.1&quot;,
+    &quot;express&quot;: &quot;^4.18.2&quot;,
+    &quot;mongoose&quot;: &quot;^6.8.3&quot;
+  &#125;
+&#125;
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 开发实战</span><br><span class="line"></span><br><span class="line">  - 目录</span><br><span class="line"></span><br><span class="line">    ![image-20230109234239665](../../../image/image-20230109234239665.png)</span><br><span class="line"></span><br><span class="line">  - 根文件http.js</span><br><span class="line"></span><br><span class="line">    ```js http.js</span><br><span class="line">    //引入express</span><br><span class="line">    const express = require(&#x27;express&#x27;)</span><br><span class="line">    </span><br><span class="line">    //创建app</span><br><span class="line">    const app = express()</span><br><span class="line">    </span><br><span class="line">    //引入body-parser模块</span><br><span class="line">    const bodyparser = require(&#x27;body-parser&#x27;)</span><br><span class="line">    app.use(bodyparser.urlencoded(&#123;extend: true&#125;))</span><br><span class="line">    app.use(bodyparser.json())</span><br><span class="line">    </span><br><span class="line">    //路由语法</span><br><span class="line">    app.get(&#x27;/&#x27;, (request, response) =&gt; &#123;</span><br><span class="line">        response.send(&#x27;访问成功！&#x27;)    </span><br><span class="line">    &#125;)</span><br><span class="line">    </span><br><span class="line">    const userController = require(process.cwd() + &#x27;/controller/user&#x27;)</span><br><span class="line">    </span><br><span class="line">    app.post(&#x27;/user/addUser&#x27;, userController.addUser)</span><br><span class="line">    app.get(&#x27;/user/getAllUser&#x27;, userController.getAllUser)</span><br><span class="line">    app.get(&#x27;/user/getUserList&#x27;, userController.getUserList)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    app.listen(8000, () =&gt; &#123;</span><br><span class="line">        console.log(&quot;http://localhost:8000接口服务正在运行中···&quot;);</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><p>控制器controller</p>
+<figure class="highlight js"><figcaption><span>controller/user.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//导入模型</span></span><br><span class="line"><span class="keyword">const</span> &#123;</span><br><span class="line">    createUserModel, listUserModel, listUserModelByPagination</span><br><span class="line">&#125; = <span class="built_in">require</span>(process.<span class="title function_">cwd</span>() + <span class="string">&#x27;/models/user&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义处理方法</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//添加一条数据</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">addUser</span> = <span class="keyword">async</span> (<span class="params">req, res</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> rs = <span class="keyword">await</span> <span class="title function_">createUserModel</span>(req.<span class="property">body</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment">//判断返回值</span></span><br><span class="line">        <span class="keyword">if</span> (rs) &#123;</span><br><span class="line">            res.<span class="title function_">send</span>(&#123;</span><br><span class="line">                <span class="attr">meta</span>: &#123;</span><br><span class="line">                    <span class="attr">state</span>: <span class="number">200</span>,</span><br><span class="line">                    <span class="attr">msg</span>: <span class="string">&#x27;添加成功！&#x27;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="attr">data</span>: <span class="literal">null</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            res.<span class="title function_">send</span>(&#123;</span><br><span class="line">                <span class="attr">meta</span>: &#123;</span><br><span class="line">                    <span class="attr">state</span>: <span class="number">500</span>,</span><br><span class="line">                    <span class="attr">msg</span>: <span class="string">&#x27;添加失败！&#x27;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123; <span class="variable language_">console</span>.<span class="title function_">log</span>(err) &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取所有用户</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">getAllUser</span> = <span class="keyword">async</span> (<span class="params">req, res</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> data = <span class="keyword">await</span> <span class="title function_">listUserModel</span>()</span><br><span class="line"></span><br><span class="line">    <span class="comment">//判断返回值</span></span><br><span class="line">    <span class="keyword">if</span> (data) &#123;</span><br><span class="line">        res.<span class="title function_">send</span>(&#123;</span><br><span class="line">            <span class="attr">meta</span>: &#123;</span><br><span class="line">                <span class="attr">state</span>: <span class="number">200</span>,</span><br><span class="line">                <span class="attr">msg</span>: <span class="string">&#x27;查询成功！&#x27;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">data</span>: data</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取所有用户</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">getUserList</span> = <span class="keyword">async</span> (<span class="params">req, res</span>) =&gt; &#123; </span><br><span class="line">    <span class="keyword">const</span> &#123; query &#125; = req</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(query);</span><br><span class="line">    <span class="keyword">const</span> page = <span class="built_in">parseInt</span>(query.<span class="property">page</span>), size = <span class="built_in">parseInt</span>(query.<span class="property">size</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(page, size);</span><br><span class="line">    <span class="keyword">let</span> data = <span class="keyword">await</span> <span class="title function_">listUserModel</span>(page, size)</span><br><span class="line"></span><br><span class="line">    <span class="comment">//判断返回值</span></span><br><span class="line">    <span class="keyword">if</span> (data) &#123;</span><br><span class="line">        res.<span class="title function_">send</span>(&#123;</span><br><span class="line">            <span class="attr">meta</span>: &#123;</span><br><span class="line">                <span class="attr">state</span>: <span class="number">200</span>,</span><br><span class="line">                <span class="attr">msg</span>: <span class="string">&#x27;查询成功！&#x27;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">data</span>: data</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    addUser, getAllUser, getUserList</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>模型model</p>
+<figure class="highlight js"><figcaption><span>model/user.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//导入数据库</span></span><br><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//链接数据库</span></span><br><span class="line"><span class="keyword">const</span> db = mongoose.<span class="title function_">createConnection</span>(<span class="string">&#x27;mongodb://admin:123456@localhost:27017/weblog?authMechanism=DEFAULT&amp;authSource=admin&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">useNewUrlParser</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">useUnifiedTopology</span>: <span class="literal">true</span></span><br><span class="line">&#125;, <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(err) <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&quot;连接出错：&quot;</span> + err)</span><br><span class="line">    <span class="keyword">else</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;weblog数据库连接成功！&quot;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建模型</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Users</span> = db.<span class="title function_">model</span>(<span class="string">&#x27;users&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">username</span>: &#123; <span class="attr">type</span>: <span class="title class_">String</span>, <span class="attr">default</span>: <span class="string">&#x27;未命名用户&#x27;</span> &#125;,</span><br><span class="line">    <span class="attr">password</span>: &#123; <span class="attr">type</span>: <span class="title class_">String</span>, <span class="attr">default</span>: <span class="string">&#x27;&#x27;</span> &#125;,</span><br><span class="line">    <span class="attr">phone</span>: &#123; <span class="attr">type</span>: <span class="title class_">String</span>, <span class="attr">default</span>: <span class="string">&#x27;&#x27;</span> &#125;,</span><br><span class="line">    <span class="attr">role</span>: &#123; <span class="attr">type</span>: <span class="title class_">String</span>, <span class="attr">default</span>: <span class="string">&#x27;user&#x27;</span> &#125;,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//实例操作</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//创建模型</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">createUserModel</span> = (<span class="params">obj</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Users</span>(obj).<span class="title function_">save</span>()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//分页查询模型列表</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">listUserModel</span> = (<span class="params">page = <span class="number">1</span>, size = <span class="number">10</span></span>) =&gt; &#123;   </span><br><span class="line"> <span class="keyword">return</span> <span class="title class_">Users</span>.<span class="title function_">find</span>(&#123;&#125;).<span class="title function_">skip</span>((page - <span class="number">1</span>) * size).<span class="title function_">limit</span>(size)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    createUserModel,</span><br><span class="line">    listUserModel</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// db.close()</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="接口文档"><a href="#接口文档" class="headerlink" title="接口文档"></a>接口文档</h3><ul>
+<li><p>工具：apidoc</p>
+</li>
+<li><p>apidoc</p>
+<ul>
+<li>根据注释生产接口文档</li>
+</ul>
+</li>
+<li><p>使用</p>
+<ul>
+<li><p>下载（1次）</p>
+<blockquote>
+<p>npm i apidoc -g</p>
+</blockquote>
+</li>
+<li><p>根目录下创建apidoc.json文件（1次）</p>
+<blockquote>
+<p>{</p>
+<p>​	“name”: “weblog”,</p>
+<p>​	“version”: “1.0.0”,</p>
+<p>​	“description”:  “该项目为博客系统，基于mongodb+node+express搭建的后台平台”，</p>
+<p>​	“title”: “暂无”,</p>
+<p>​	“url”: “”</p>
+<p>}</p>
+</blockquote>
+</li>
+<li><p>写接口注释（N次）</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * @api &#123;get&#125; /user/getUserList 分页获取用户</span><br><span class="line"> * @apiName 分页获取用户</span><br><span class="line"> * @apiGroup User</span><br><span class="line"> *</span><br><span class="line"> * @apiParam &#123;Number&#125; page  当前页</span><br><span class="line"> * @apiParam &#123;Number&#125; size  每页显示条数</span><br><span class="line"> *</span><br><span class="line"> * @apiSuccess &#123;String&#125; meta 状态码&amp;提示信息</span><br><span class="line"> * @apiSuccess &#123;String&#125; data 数据</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>创建接口文档</p>
+<blockquote>
+<p>apidoc -i .&#x2F;接口注释目录 -o .&#x2F;接口文档存放目录</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-01-10 00:14:35" itemprop="dateModified" datetime="2023-01-10T00:14:35+08:00">2023-01-10</time>
+  </span>
+  <span id="2023/01/08/前端技术/mongodb/mongodb学习笔记/" class="item leancloud_visitors" data-flag-title="mongodb学习笔记" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 支持一下</button>
+  <p>请我一杯冬天的奶茶~(￣▽￣)~金主大大~</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechat-pay.jpg" alt="眸光似星辰 微信支付">
+        <p>微信支付</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>眸光似星辰 <i class="ic i-at"><em>@</em></i>眸光似星辰
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://victinsever.github.io/2023/01/08/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/mongodb/mongodb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="mongodb学习笔记">http://victinsever.github.io/2023/01/08/前端技术/mongodb/mongodb学习笔记/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/01/08/%E6%9D%82%E8%B0%88/%E5%88%B7%E9%A2%98/%E9%9D%A2%E8%AF%95%E7%BC%96%E7%A8%8B%E9%A2%98/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.unsplash.com&#x2F;photo-1560114928-40f1f1eb26a0?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGNhdHxlbnwwfHwwfHw%3D&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;500&amp;q&#x3D;60" title="未命名">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>未命名</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#mongodb"><span class="toc-number">1.</span> <span class="toc-text">mongodb</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">1.2.</span> <span class="toc-text">进入数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-number">1.3.</span> <span class="toc-text">基本命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A2%9E%E5%88%A0%E6%9F%A5%E6%94%B9"><span class="toc-number">1.4.</span> <span class="toc-text">增删查改</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A2%9E%E5%8A%A0"><span class="toc-number">1.4.1.</span> <span class="toc-text">增加</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.4.2.</span> <span class="toc-text">查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9"><span class="toc-number">1.4.3.</span> <span class="toc-text">修改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">1.4.4.</span> <span class="toc-text">删除</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5%E6%89%A9%E5%B1%95"><span class="toc-number">1.5.</span> <span class="toc-text">查询语句扩展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%9A%E5%90%88%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.6.</span> <span class="toc-text">聚合查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E6%93%8D%E4%BD%9C"><span class="toc-number">1.7.</span> <span class="toc-text">索引操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%83%E9%99%90%E6%9C%BA%E5%88%B6"><span class="toc-number">1.8.</span> <span class="toc-text">权限机制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-number">2.</span> <span class="toc-text">接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83"><span class="toc-number">2.1.</span> <span class="toc-text">接口开发规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="toc-number">2.2.</span> <span class="toc-text">接口测试工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%BC%80%E5%8F%91"><span class="toc-number">3.</span> <span class="toc-text">接口开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3"><span class="toc-number">3.1.</span> <span class="toc-text">接口文档</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2023/01/08/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/mongodb/mongodb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="bookmark" title="mongodb学习笔记">mongodb学习笔记</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="眸光似星辰"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">眸光似星辰</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">42</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">22</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">36</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3ZpY3RpblNldmVy" title="https:&#x2F;&#x2F;github.com&#x2F;victinSever"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9naXRlZS5jb20vdmljdGlu" title="https:&#x2F;&#x2F;gitee.com&#x2F;victin"><i class="ic i-check-circle"></i></span>
+      <a href="/victinzhong@163.com" title="victinzhong@163.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item csdn" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU0MzUzNjMxP3NwbT0xMDAwLjIxMTUuMzAwMS41MzQz" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_54353631?spm&#x3D;1000.2115.3001.5343"><i class="ic i-coffee"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" title="分类于 课程学习">课程学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/" title="分类于 网络前沿安全技术">网络前沿安全技术</a>
+</div>
+
+    <span><a href="/2022/09/13/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C%E5%89%8D%E6%B2%BF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%AE%80%E8%BF%B0/" title="密码学简述">密码学简述</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/BUG/" title="分类于 BUG">BUG</a>
+</div>
+
+    <span><a href="/2022/09/07/BUG/react%E4%B8%AD%E5%BC%95%E5%85%A5react-redux%E4%BD%BF%E7%94%A8store%E3%80%81sub%E5%8C%85%E8%A3%B9%E5%85%A5%E5%8F%A3render%E5%87%BA%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%A9%BA%E7%99%BD%E9%97%AE%E9%A2%98/" title="react中引入react-redux使用subscribe监听入口render出现页面空白问题">react中引入react-redux使用subscribe监听入口render出现页面空白问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" title="分类于 课程学习">课程学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/" title="分类于 算法分析与设计">算法分析与设计</a>
+</div>
+
+    <span><a href="/2022/09/15/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/algorithm-01-%E7%AE%97%E6%B3%95%E5%A2%9E%E9%95%BF/" title="algorithm-01-算法增长">algorithm-01-算法增长</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/" title="分类于 canvas">canvas</a>
+</div>
+
+    <span><a href="/2022/10/25/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/%E7%BA%BF%E6%80%A7%E5%B0%8F%E7%90%83%E7%89%B9%E6%95%88/" title="线性小球特效">线性小球特效</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%9D%82%E8%B0%88/" title="分类于 杂谈">杂谈</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/" title="分类于 博客">博客</a>
+</div>
+
+    <span><a href="/2022/10/26/%E6%9D%82%E8%B0%88/%E5%8D%9A%E5%AE%A2/%E7%BC%96%E5%86%99md%E6%96%87%E6%A1%A3/" title="md文档编写注意事项">md文档编写注意事项</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/" title="分类于 扩展技术">扩展技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/" title="分类于 WebSocket">WebSocket</a>
+</div>
+
+    <span><a href="/2022/11/14/%E6%89%A9%E5%B1%95%E6%8A%80%E6%9C%AF/WebSocket/WebSocket%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/" title="WebSocket客户端和服务端的简单实现">WebSocket客户端和服务端的简单实现</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/mongodb/" title="分类于 mongodb">mongodb</a>
+</div>
+
+    <span><a href="/2023/01/08/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/mongodb/mongodb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="mongodb学习笔记">mongodb学习笔记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/" title="分类于 vue">vue</a>
+</div>
+
+    <span><a href="/2022/11/02/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/vue/Vue2%E9%A1%B9%E7%9B%AE%E7%BB%93%E5%90%88%E9%80%9A%E7%94%A8%E4%BE%9D%E8%B5%96%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/" title="Vue2项目结合通用依赖进行项目搭建">Vue2项目结合通用依赖进行项目搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E4%BD%9C%E5%93%81/" title="分类于 作品">作品</a>
+</div>
+
+    <span><a href="/2022/10/26/%E4%BD%9C%E5%93%81/%E6%89%B6%E6%91%87%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%B9%B3%E5%8F%B0/" title="扶摇低代码平台">扶摇低代码平台</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" title="分类于 前端技术">前端技术</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/" title="分类于 canvas">canvas</a>
+</div>
+
+    <span><a href="/2022/10/25/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/canvas/%E7%BB%98%E5%88%B6%E6%97%B6%E9%92%9F/" title="canvas绘制时钟">canvas绘制时钟</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">眸光似星辰 @ vintinSever</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">80k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:13</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/01/08/前端技术/mongodb/mongodb学习笔记/',
+    favicon: {
+      show: "（●´3｀●）眸光似星辰",
+      hide: "(´Д｀)星辰如烛火！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
