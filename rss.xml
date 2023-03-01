@@ -5,8 +5,8 @@
         <link>http://victinSever.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Fri, 17 Feb 2023 13:26:54 +0800</pubDate>
-        <lastBuildDate>Fri, 17 Feb 2023 13:26:54 +0800</lastBuildDate>
+        <pubDate>Wed, 01 Mar 2023 19:20:54 +0800</pubDate>
+        <lastBuildDate>Wed, 01 Mar 2023 19:20:54 +0800</lastBuildDate>
         <category>react</category>
         <category>react-redux</category>
         <category>redux</category>
@@ -41,120 +41,169 @@
         <category>维吉尼亚密码</category>
         <category>dp</category>
         <item>
-            <guid isPermalink="true">http://victinsever.github.io/2023/02/17/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%99%BE%E5%BA%A6%E4%B8%80%E9%9D%A2/</guid>
+            <guid isPermalink="true">http://victinsever.github.io/2023/03/01/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E4%B9%9D%E5%8F%B7/%E4%B9%9D%E5%8F%B7%E4%B8%80%E9%9D%A2/</guid>
+            <title>九号一面</title>
+            <link>http://victinsever.github.io/2023/03/01/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E4%B9%9D%E5%8F%B7/%E4%B9%9D%E5%8F%B7%E4%B8%80%E9%9D%A2/</link>
+            <pubDate>Wed, 01 Mar 2023 19:20:54 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;公司： 九号公司&lt;/p&gt;
+&lt;p&gt;base：北京-海淀区&lt;/p&gt;
+&lt;p&gt;time：2022-2-17 上午11:00-11:45&lt;/p&gt;
+&lt;p&gt;时长：35min左右&lt;/p&gt;
+&lt;h3 id=&#34;自我介绍&#34;&gt;&lt;a href=&#34;#自我介绍&#34; class=&#34;headerlink&#34; title=&#34;自我介绍&#34;&gt;&lt;/a&gt;自我介绍&lt;/h3&gt;&lt;h3 id=&#34;你的组件库项目怎么使用的？&#34;&gt;&lt;a href=&#34;#你的组件库项目怎么使用的？&#34; class=&#34;headerlink&#34; title=&#34;你的组件库项目怎么使用的？&#34;&gt;&lt;/a&gt;你的组件库项目怎么使用的？&lt;/h3&gt;&lt;h3 id=&#34;组件库有考虑模块引入吗？组件模块引入怎么做？&#34;&gt;&lt;a href=&#34;#组件库有考虑模块引入吗？组件模块引入怎么做？&#34; class=&#34;headerlink&#34; title=&#34;组件库有考虑模块引入吗？组件模块引入怎么做？&#34;&gt;&lt;/a&gt;组件库有考虑模块引入吗？组件模块引入怎么做？&lt;/h3&gt;&lt;h3 id=&#34;TSX或者JSX你有考虑它是怎么转化成HTML的嘛？&#34;&gt;&lt;a href=&#34;#TSX或者JSX你有考虑它是怎么转化成HTML的嘛？&#34; class=&#34;headerlink&#34; title=&#34;TSX或者JSX你有考虑它是怎么转化成HTML的嘛？&#34;&gt;&lt;/a&gt;TSX或者JSX你有考虑它是怎么转化成HTML的嘛？&lt;/h3&gt;&lt;h3 id=&#34;浏览器输入网址后然后到页面渲染经历哪些步骤？&#34;&gt;&lt;a href=&#34;#浏览器输入网址后然后到页面渲染经历哪些步骤？&#34; class=&#34;headerlink&#34; title=&#34;浏览器输入网址后然后到页面渲染经历哪些步骤？&#34;&gt;&lt;/a&gt;浏览器输入网址后然后到页面渲染经历哪些步骤？&lt;/h3&gt;&lt;h3 id=&#34;你说到了浏览器最后会进行渲染，在渲染时遇到JS时会发生什么？&#34;&gt;&lt;a href=&#34;#你说到了浏览器最后会进行渲染，在渲染时遇到JS时会发生什么？&#34; class=&#34;headerlink&#34; title=&#34;你说到了浏览器最后会进行渲染，在渲染时遇到JS时会发生什么？&#34;&gt;&lt;/a&gt;你说到了浏览器最后会进行渲染，在渲染时遇到JS时会发生什么？&lt;/h3&gt;&lt;h3 id=&#34;你有遇到JS时的动态加载吗？怎么用的？&#34;&gt;&lt;a href=&#34;#你有遇到JS时的动态加载吗？怎么用的？&#34; class=&#34;headerlink&#34; title=&#34;你有遇到JS时的动态加载吗？怎么用的？&#34;&gt;&lt;/a&gt;你有遇到JS时的动态加载吗？怎么用的？&lt;/h3&gt;&lt;h3 id=&#34;JS有一个defer和async，你讲一讲他们的区别？&#34;&gt;&lt;a href=&#34;#JS有一个defer和async，你讲一讲他们的区别？&#34; class=&#34;headerlink&#34; title=&#34;JS有一个defer和async，你讲一讲他们的区别？&#34;&gt;&lt;/a&gt;JS有一个defer和async，你讲一讲他们的区别？&lt;/h3&gt;&lt;h3 id=&#34;算法题：&#34;&gt;&lt;a href=&#34;#算法题：&#34; class=&#34;headerlink&#34; title=&#34;算法题：&#34;&gt;&lt;/a&gt;算法题：&lt;/h3&gt;&lt;p&gt;两个数组，设计算法求公共交集&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;figcaption&gt;&lt;span&gt;test&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; arr1 = [&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;5&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; arr2 = [&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;5&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;6&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;7&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;8&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;solve&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;arr1, arr2&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;数组相关的优化你知道哪些？&#34;&gt;&lt;a href=&#34;#数组相关的优化你知道哪些？&#34; class=&#34;headerlink&#34; title=&#34;数组相关的优化你知道哪些？&#34;&gt;&lt;/a&gt;数组相关的优化你知道哪些？&lt;/h3&gt;&lt;h3 id=&#34;查找相关的算法？&#34;&gt;&lt;a href=&#34;#查找相关的算法？&#34; class=&#34;headerlink&#34; title=&#34;查找相关的算法？&#34;&gt;&lt;/a&gt;查找相关的算法？&lt;/h3&gt;&lt;h3 id=&#34;Vue-router的实现原理？&#34;&gt;&lt;a href=&#34;#Vue-router的实现原理？&#34; class=&#34;headerlink&#34; title=&#34;Vue-router的实现原理？&#34;&gt;&lt;/a&gt;Vue-router的实现原理？&lt;/h3&gt;&lt;h3 id=&#34;Vue-router怎么在页面地址变化时，让页面重新渲染的？&#34;&gt;&lt;a href=&#34;#Vue-router怎么在页面地址变化时，让页面重新渲染的？&#34; class=&#34;headerlink&#34; title=&#34;Vue-router怎么在页面地址变化时，让页面重新渲染的？&#34;&gt;&lt;/a&gt;Vue-router怎么在页面地址变化时，让页面重新渲染的？&lt;/h3&gt;&lt;h3 id=&#34;JS是单线程的，你讲一讲JS的运行过程？&#34;&gt;&lt;a href=&#34;#JS是单线程的，你讲一讲JS的运行过程？&#34; class=&#34;headerlink&#34; title=&#34;JS是单线程的，你讲一讲JS的运行过程？&#34;&gt;&lt;/a&gt;JS是单线程的，你讲一讲JS的运行过程？&lt;/h3&gt;&lt;h3 id=&#34;说一说你感兴趣的前端领域的东西，或者正在学习的？&#34;&gt;&lt;a href=&#34;#说一说你感兴趣的前端领域的东西，或者正在学习的？&#34; class=&#34;headerlink&#34; title=&#34;说一说你感兴趣的前端领域的东西，或者正在学习的？&#34;&gt;&lt;/a&gt;说一说你感兴趣的前端领域的东西，或者正在学习的？&lt;/h3&gt;&lt;h3 id=&#34;服务端渲染你了解吗？SSR解决方案？&#34;&gt;&lt;a href=&#34;#服务端渲染你了解吗？SSR解决方案？&#34; class=&#34;headerlink&#34; title=&#34;服务端渲染你了解吗？SSR解决方案？&#34;&gt;&lt;/a&gt;服务端渲染你了解吗？SSR解决方案？&lt;/h3&gt;&lt;h3 id=&#34;讲一讲Nuxt-js&#34;&gt;&lt;a href=&#34;#讲一讲Nuxt-js&#34; class=&#34;headerlink&#34; title=&#34;讲一讲Nuxt.js&#34;&gt;&lt;/a&gt;讲一讲Nuxt.js&lt;/h3&gt;&lt;p&gt;不了解&lt;/p&gt;
+&lt;h3 id=&#34;什么专业的？&#34;&gt;&lt;a href=&#34;#什么专业的？&#34; class=&#34;headerlink&#34; title=&#34;什么专业的？&#34;&gt;&lt;/a&gt;什么专业的？&lt;/h3&gt;&lt;p&gt;了解我是计科的，想问我操作系统和算法知识，因为时间原因没问了&lt;/p&gt;
+&lt;h3 id=&#34;反问&#34;&gt;&lt;a href=&#34;#反问&#34; class=&#34;headerlink&#34; title=&#34;反问&#34;&gt;&lt;/a&gt;反问&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;不问面评，我就想问我面试过程中还可以怎么改进？&lt;/li&gt;
+&lt;li&gt;公司业务是什么？我如果进去后做什么？&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://victinsever.github.io/2023/02/27/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E4%BA%91%E5%8F%AF%E7%A7%91%E6%8A%80/%E4%BA%91%E5%8F%AF%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2/</guid>
+            <title>云可科技一面（初创公司）</title>
+            <link>http://victinsever.github.io/2023/02/27/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E4%BA%91%E5%8F%AF%E7%A7%91%E6%8A%80/%E4%BA%91%E5%8F%AF%E7%A7%91%E6%8A%80%E4%B8%80%E9%9D%A2/</link>
+            <pubDate>Mon, 27 Feb 2023 20:20:54 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;公司： 云可科技（初创，搞元宇宙和AR技术的）&lt;/p&gt;
+&lt;p&gt;base：北京&lt;/p&gt;
+&lt;p&gt;time： 2月27日星期一16点00分&lt;/p&gt;
+&lt;p&gt;时长：1hour20min左右&lt;/p&gt;
+&lt;p&gt;面试官：3个，一个前端技术面试，一个算法技术面试，一个CEO&lt;/p&gt;
+&lt;h3 id=&#34;自我介绍&#34;&gt;&lt;a href=&#34;#自我介绍&#34; class=&#34;headerlink&#34; title=&#34;自我介绍&#34;&gt;&lt;/a&gt;自我介绍&lt;/h3&gt;&lt;h2 id=&#34;前端技术面试&#34;&gt;&lt;a href=&#34;#前端技术面试&#34; class=&#34;headerlink&#34; title=&#34;前端技术面试&#34;&gt;&lt;/a&gt;前端技术面试&lt;/h2&gt;&lt;h3 id=&#34;你了解的新潮的前端或者web技术，哪些前沿知识？&#34;&gt;&lt;a href=&#34;#你了解的新潮的前端或者web技术，哪些前沿知识？&#34; class=&#34;headerlink&#34; title=&#34;你了解的新潮的前端或者web技术，哪些前沿知识？&#34;&gt;&lt;/a&gt;你了解的新潮的前端或者web技术，哪些前沿知识？&lt;/h3&gt;&lt;h3 id=&#34;serverless和flutter已经不是新技术了吧？&#34;&gt;&lt;a href=&#34;#serverless和flutter已经不是新技术了吧？&#34; class=&#34;headerlink&#34; title=&#34;serverless和flutter已经不是新技术了吧？&#34;&gt;&lt;/a&gt;serverless和flutter已经不是新技术了吧？&lt;/h3&gt;&lt;h3 id=&#34;你项目中的低代码编辑怎么获取到表单的数据的？如何验证表单数据的？&#34;&gt;&lt;a href=&#34;#你项目中的低代码编辑怎么获取到表单的数据的？如何验证表单数据的？&#34; class=&#34;headerlink&#34; title=&#34;你项目中的低代码编辑怎么获取到表单的数据的？如何验证表单数据的？&#34;&gt;&lt;/a&gt;你项目中的低代码编辑怎么获取到表单的数据的？如何验证表单数据的？&lt;/h3&gt;&lt;h3 id=&#34;你是怎么分类表单组件类型的？&#34;&gt;&lt;a href=&#34;#你是怎么分类表单组件类型的？&#34; class=&#34;headerlink&#34; title=&#34;你是怎么分类表单组件类型的？&#34;&gt;&lt;/a&gt;你是怎么分类表单组件类型的？&lt;/h3&gt;&lt;h3 id=&#34;你项目封装了hook，问问你最有意思封装的hook是什么？&#34;&gt;&lt;a href=&#34;#你项目封装了hook，问问你最有意思封装的hook是什么？&#34; class=&#34;headerlink&#34; title=&#34;你项目封装了hook，问问你最有意思封装的hook是什么？&#34;&gt;&lt;/a&gt;你项目封装了hook，问问你最有意思封装的hook是什么？&lt;/h3&gt;&lt;h3 id=&#34;你了解的HTML5新增的标签？&#34;&gt;&lt;a href=&#34;#你了解的HTML5新增的标签？&#34; class=&#34;headerlink&#34; title=&#34;你了解的HTML5新增的标签？&#34;&gt;&lt;/a&gt;你了解的HTML5新增的标签？&lt;/h3&gt;&lt;h3 id=&#34;Canvas你在项目里面怎么使用的？&#34;&gt;&lt;a href=&#34;#Canvas你在项目里面怎么使用的？&#34; class=&#34;headerlink&#34; title=&#34;Canvas你在项目里面怎么使用的？&#34;&gt;&lt;/a&gt;Canvas你在项目里面怎么使用的？&lt;/h3&gt;&lt;h3 id=&#34;CSS3隐藏元素的方式有哪些？&#34;&gt;&lt;a href=&#34;#CSS3隐藏元素的方式有哪些？&#34; class=&#34;headerlink&#34; title=&#34;CSS3隐藏元素的方式有哪些？&#34;&gt;&lt;/a&gt;CSS3隐藏元素的方式有哪些？&lt;/h3&gt;&lt;h3 id=&#34;了解BFC和IFC吗？讲一讲？&#34;&gt;&lt;a href=&#34;#了解BFC和IFC吗？讲一讲？&#34; class=&#34;headerlink&#34; title=&#34;了解BFC和IFC吗？讲一讲？&#34;&gt;&lt;/a&gt;了解BFC和IFC吗？讲一讲？&lt;/h3&gt;&lt;h3 id=&#34;讲一讲多端适配方案？你了解哪些？&#34;&gt;&lt;a href=&#34;#讲一讲多端适配方案？你了解哪些？&#34; class=&#34;headerlink&#34; title=&#34;讲一讲多端适配方案？你了解哪些？&#34;&gt;&lt;/a&gt;讲一讲多端适配方案？你了解哪些？&lt;/h3&gt;&lt;h3 id=&#34;了解前端动画吗？有哪些方案？&#34;&gt;&lt;a href=&#34;#了解前端动画吗？有哪些方案？&#34; class=&#34;headerlink&#34; title=&#34;了解前端动画吗？有哪些方案？&#34;&gt;&lt;/a&gt;了解前端动画吗？有哪些方案？&lt;/h3&gt;&lt;h3 id=&#34;什么是伪类，什么是伪元素，说一说他们的作用和区别？&#34;&gt;&lt;a href=&#34;#什么是伪类，什么是伪元素，说一说他们的作用和区别？&#34; class=&#34;headerlink&#34; title=&#34;什么是伪类，什么是伪元素，说一说他们的作用和区别？&#34;&gt;&lt;/a&gt;什么是伪类，什么是伪元素，说一说他们的作用和区别？&lt;/h3&gt;&lt;h3 id=&#34;JS运行机制？&#34;&gt;&lt;a href=&#34;#JS运行机制？&#34; class=&#34;headerlink&#34; title=&#34;JS运行机制？&#34;&gt;&lt;/a&gt;JS运行机制？&lt;/h3&gt;&lt;h3 id=&#34;用过闭包吗，哪些情况？&#34;&gt;&lt;a href=&#34;#用过闭包吗，哪些情况？&#34; class=&#34;headerlink&#34; title=&#34;用过闭包吗，哪些情况？&#34;&gt;&lt;/a&gt;用过闭包吗，哪些情况？&lt;/h3&gt;&lt;h3 id=&#34;讲一讲Promise？&#34;&gt;&lt;a href=&#34;#讲一讲Promise？&#34; class=&#34;headerlink&#34; title=&#34;讲一讲Promise？&#34;&gt;&lt;/a&gt;讲一讲Promise？&lt;/h3&gt;&lt;h3 id=&#34;JS的对象迭代？&#34;&gt;&lt;a href=&#34;#JS的对象迭代？&#34; class=&#34;headerlink&#34; title=&#34;JS的对象迭代？&#34;&gt;&lt;/a&gt;JS的对象迭代？&lt;/h3&gt;&lt;h3 id=&#34;Object-entries输出的是什么？&#34;&gt;&lt;a href=&#34;#Object-entries输出的是什么？&#34; class=&#34;headerlink&#34; title=&#34;Object.entries输出的是什么？&#34;&gt;&lt;/a&gt;Object.entries输出的是什么？&lt;/h3&gt;&lt;p&gt;二元键值对&lt;/p&gt;
+&lt;h3 id=&#34;HTTP状态码有哪些，说一下？&#34;&gt;&lt;a href=&#34;#HTTP状态码有哪些，说一下？&#34; class=&#34;headerlink&#34; title=&#34;HTTP状态码有哪些，说一下？&#34;&gt;&lt;/a&gt;HTTP状态码有哪些，说一下？&lt;/h3&gt;&lt;h3 id=&#34;说一下跨域解决方案？&#34;&gt;&lt;a href=&#34;#说一下跨域解决方案？&#34; class=&#34;headerlink&#34; title=&#34;说一下跨域解决方案？&#34;&gt;&lt;/a&gt;说一下跨域解决方案？&lt;/h3&gt;&lt;h3 id=&#34;了解Websocket吗？说一下他的优点和优化方案？&#34;&gt;&lt;a href=&#34;#了解Websocket吗？说一下他的优点和优化方案？&#34; class=&#34;headerlink&#34; title=&#34;了解Websocket吗？说一下他的优点和优化方案？&#34;&gt;&lt;/a&gt;了解Websocket吗？说一下他的优点和优化方案？&lt;/h3&gt;&lt;h3 id=&#34;Vue和React的区别？&#34;&gt;&lt;a href=&#34;#Vue和React的区别？&#34; class=&#34;headerlink&#34; title=&#34;Vue和React的区别？&#34;&gt;&lt;/a&gt;Vue和React的区别？&lt;/h3&gt;&lt;h3 id=&#34;Vue2的双向数据绑定原理？&#34;&gt;&lt;a href=&#34;#Vue2的双向数据绑定原理？&#34; class=&#34;headerlink&#34; title=&#34;Vue2的双向数据绑定原理？&#34;&gt;&lt;/a&gt;Vue2的双向数据绑定原理？&lt;/h3&gt;&lt;h3 id=&#34;了解React的哪些hooks？&#34;&gt;&lt;a href=&#34;#了解React的哪些hooks？&#34; class=&#34;headerlink&#34; title=&#34;了解React的哪些hooks？&#34;&gt;&lt;/a&gt;了解React的哪些hooks？&lt;/h3&gt;&lt;h3 id=&#34;useRef用过吗？讲一下这个勾子？&#34;&gt;&lt;a href=&#34;#useRef用过吗？讲一下这个勾子？&#34; class=&#34;headerlink&#34; title=&#34;useRef用过吗？讲一下这个勾子？&#34;&gt;&lt;/a&gt;useRef用过吗？讲一下这个勾子？&lt;/h3&gt;&lt;h3 id=&#34;useState哪些情况是同步哪些情况是异步的？&#34;&gt;&lt;a href=&#34;#useState哪些情况是同步哪些情况是异步的？&#34; class=&#34;headerlink&#34; title=&#34;useState哪些情况是同步哪些情况是异步的？&#34;&gt;&lt;/a&gt;useState哪些情况是同步哪些情况是异步的？&lt;/h3&gt;&lt;h3 id=&#34;Git操作中，你了解哪些命令？&#34;&gt;&lt;a href=&#34;#Git操作中，你了解哪些命令？&#34; class=&#34;headerlink&#34; title=&#34;Git操作中，你了解哪些命令？&#34;&gt;&lt;/a&gt;Git操作中，你了解哪些命令？&lt;/h3&gt;&lt;h3 id=&#34;你说了git-stash，如果我有一个test分支，需要切换到主分支，使用这个命令后出出现哪些问题需要主题，就是这个命令的注意事项有哪些？&#34;&gt;&lt;a href=&#34;#你说了git-stash，如果我有一个test分支，需要切换到主分支，使用这个命令后出出现哪些问题需要主题，就是这个命令的注意事项有哪些？&#34; class=&#34;headerlink&#34; title=&#34;你说了git stash，如果我有一个test分支，需要切换到主分支，使用这个命令后出出现哪些问题需要主题，就是这个命令的注意事项有哪些？&#34;&gt;&lt;/a&gt;你说了git stash，如果我有一个test分支，需要切换到主分支，使用这个命令后出出现哪些问题需要主题，就是这个命令的注意事项有哪些？&lt;/h3&gt;&lt;h3 id=&#34;最开始你说你了解了下Web3-0的一些概念，说一下你认识的web3-0？&#34;&gt;&lt;a href=&#34;#最开始你说你了解了下Web3-0的一些概念，说一下你认识的web3-0？&#34; class=&#34;headerlink&#34; title=&#34;最开始你说你了解了下Web3.0的一些概念，说一下你认识的web3.0？&#34;&gt;&lt;/a&gt;最开始你说你了解了下Web3.0的一些概念，说一下你认识的web3.0？&lt;/h3&gt;&lt;h3 id=&#34;你有了解three-js吗？你知道多少说多少&#34;&gt;&lt;a href=&#34;#你有了解three-js吗？你知道多少说多少&#34; class=&#34;headerlink&#34; title=&#34;你有了解three.js吗？你知道多少说多少&#34;&gt;&lt;/a&gt;你有了解three.js吗？你知道多少说多少&lt;/h3&gt;&lt;h2 id=&#34;数据结构面试&#34;&gt;&lt;a href=&#34;#数据结构面试&#34; class=&#34;headerlink&#34; title=&#34;数据结构面试&#34;&gt;&lt;/a&gt;数据结构面试&lt;/h2&gt;&lt;h3 id=&#34;说一下你了解的数据结构和算法？&#34;&gt;&lt;a href=&#34;#说一下你了解的数据结构和算法？&#34; class=&#34;headerlink&#34; title=&#34;说一下你了解的数据结构和算法？&#34;&gt;&lt;/a&gt;说一下你了解的数据结构和算法？&lt;/h3&gt;&lt;h3 id=&#34;你了解最短路径算法吗？你知道哪些最短路径算法？说一下&#34;&gt;&lt;a href=&#34;#你了解最短路径算法吗？你知道哪些最短路径算法？说一下&#34; class=&#34;headerlink&#34; title=&#34;你了解最短路径算法吗？你知道哪些最短路径算法？说一下&#34;&gt;&lt;/a&gt;你了解最短路径算法吗？你知道哪些最短路径算法？说一下&lt;/h3&gt;&lt;h3 id=&#34;Kruskal算法的时间复杂度？&#34;&gt;&lt;a href=&#34;#Kruskal算法的时间复杂度？&#34; class=&#34;headerlink&#34; title=&#34;Kruskal算法的时间复杂度？&#34;&gt;&lt;/a&gt;Kruskal算法的时间复杂度？&lt;/h3&gt;&lt;h3 id=&#34;这个算法的时间复杂度为什么是有个logn？&#34;&gt;&lt;a href=&#34;#这个算法的时间复杂度为什么是有个logn？&#34; class=&#34;headerlink&#34; title=&#34;这个算法的时间复杂度为什么是有个logn？&#34;&gt;&lt;/a&gt;这个算法的时间复杂度为什么是有个logn？&lt;/h3&gt;&lt;h3 id=&#34;Kruskal算法的这个图要求是一个什么图？&#34;&gt;&lt;a href=&#34;#Kruskal算法的这个图要求是一个什么图？&#34; class=&#34;headerlink&#34; title=&#34;Kruskal算法的这个图要求是一个什么图？&#34;&gt;&lt;/a&gt;Kruskal算法的这个图要求是一个什么图？&lt;/h3&gt;&lt;h3 id=&#34;这个边和点的关系是什么？&#34;&gt;&lt;a href=&#34;#这个边和点的关系是什么？&#34; class=&#34;headerlink&#34; title=&#34;这个边和点的关系是什么？&#34;&gt;&lt;/a&gt;这个边和点的关系是什么？&lt;/h3&gt;&lt;h3 id=&#34;给两个节点，在单树中查找他们的公共祖先节点，如何实现这个算法？&#34;&gt;&lt;a href=&#34;#给两个节点，在单树中查找他们的公共祖先节点，如何实现这个算法？&#34; class=&#34;headerlink&#34; title=&#34;给两个节点，在单树中查找他们的公共祖先节点，如何实现这个算法？&#34;&gt;&lt;/a&gt;给两个节点，在单树中查找他们的公共祖先节点，如何实现这个算法？&lt;/h3&gt;&lt;h3 id=&#34;如何提升这个算法的效率？如何优化？你这个算法是O-n-如何降低到O-logn-？&#34;&gt;&lt;a href=&#34;#如何提升这个算法的效率？如何优化？你这个算法是O-n-如何降低到O-logn-？&#34; class=&#34;headerlink&#34; title=&#34;如何提升这个算法的效率？如何优化？你这个算法是O(n)如何降低到O(logn)？&#34;&gt;&lt;/a&gt;如何提升这个算法的效率？如何优化？你这个算法是O(n)如何降低到O(logn)？&lt;/h3&gt;&lt;h2 id=&#34;HR面&#34;&gt;&lt;a href=&#34;#HR面&#34; class=&#34;headerlink&#34; title=&#34;HR面&#34;&gt;&lt;/a&gt;HR面&lt;/h2&gt;&lt;h3 id=&#34;如何学习新的技术栈的？&#34;&gt;&lt;a href=&#34;#如何学习新的技术栈的？&#34; class=&#34;headerlink&#34; title=&#34;如何学习新的技术栈的？&#34;&gt;&lt;/a&gt;如何学习新的技术栈的？&lt;/h3&gt;&lt;h3 id=&#34;学习新的技术栈一般用多久？&#34;&gt;&lt;a href=&#34;#学习新的技术栈一般用多久？&#34; class=&#34;headerlink&#34; title=&#34;学习新的技术栈一般用多久？&#34;&gt;&lt;/a&gt;学习新的技术栈一般用多久？&lt;/h3&gt;&lt;h3 id=&#34;比如学习uni-app你怎么学的？&#34;&gt;&lt;a href=&#34;#比如学习uni-app你怎么学的？&#34; class=&#34;headerlink&#34; title=&#34;比如学习uni-app你怎么学的？&#34;&gt;&lt;/a&gt;比如学习uni-app你怎么学的？&lt;/h3&gt;&lt;h3 id=&#34;&#34;&gt;&lt;a href=&#34;#&#34; class=&#34;headerlink&#34; title=&#34;&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3 id=&#34;反问&#34;&gt;&lt;a href=&#34;#反问&#34; class=&#34;headerlink&#34; title=&#34;反问&#34;&gt;&lt;/a&gt;反问&lt;/h3&gt;&lt;h3 id=&#34;公司主要业务是做虚拟3d产品吗？&#34;&gt;&lt;a href=&#34;#公司主要业务是做虚拟3d产品吗？&#34; class=&#34;headerlink&#34; title=&#34;公司主要业务是做虚拟3d产品吗？&#34;&gt;&lt;/a&gt;公司主要业务是做虚拟3d产品吗？&lt;/h3&gt;&lt;h3 id=&#34;需要学习游戏引擎吗？&#34;&gt;&lt;a href=&#34;#需要学习游戏引擎吗？&#34; class=&#34;headerlink&#34; title=&#34;需要学习游戏引擎吗？&#34;&gt;&lt;/a&gt;需要学习游戏引擎吗？&lt;/h3&gt;&lt;h3 id=&#34;需要会建模吗？&#34;&gt;&lt;a href=&#34;#需要会建模吗？&#34; class=&#34;headerlink&#34; title=&#34;需要会建模吗？&#34;&gt;&lt;/a&gt;需要会建模吗？&lt;/h3&gt;&lt;p&gt;&amp;#x2F; 七层模型&lt;br&gt;&amp;#x2F;&amp;#x2F; 了解哪些协议&lt;br&gt;&amp;#x2F;&amp;#x2F; 请求头字段&lt;br&gt;&amp;#x2F;&amp;#x2F; https的s是什么意思&lt;br&gt;&amp;#x2F;&amp;#x2F; 现在什么协议比较主流&lt;br&gt;&amp;#x2F;&amp;#x2F; 自己用过哪些协议&lt;br&gt;&amp;#x2F;&amp;#x2F; 强缓冲协商缓冲&lt;br&gt;&amp;#x2F;&amp;#x2F; http和https区别&lt;br&gt;&amp;#x2F;&amp;#x2F; 有ab文件，a文件引入a1，b文件引入b1，webpack会打包哪些文件&lt;br&gt;&amp;#x2F;&amp;#x2F; 还有些琐碎记不清了…&lt;br&gt;&amp;#x2F;&amp;#x2F; 我说我vue精通一点，所以就问的vue：&lt;br&gt;&amp;#x2F;&amp;#x2F;  vue用过哪些API:&lt;br&gt;&amp;#x2F;&amp;#x2F;  代理怎么实现的&lt;br&gt;&amp;#x2F;&amp;#x2F; 输出结果，这个记不清了，反正很简单&lt;br&gt;&amp;#x2F;&amp;#x2F; 算法题&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://victinsever.github.io/2023/02/27/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%BB%BF%E7%9B%9F/%E7%BB%BF%E7%9B%9F%E4%B8%80%E9%9D%A2/</guid>
+            <title>绿盟一面</title>
+            <link>http://victinsever.github.io/2023/02/27/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%BB%BF%E7%9B%9F/%E7%BB%BF%E7%9B%9F%E4%B8%80%E9%9D%A2/</link>
+            <pubDate>Mon, 27 Feb 2023 20:00:54 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;公司： 绿盟&lt;/p&gt;
+&lt;p&gt;base：西安&lt;/p&gt;
+&lt;p&gt;time： 2月27日星期一14点30分&lt;/p&gt;
+&lt;p&gt;时长：20min左右&lt;/p&gt;
+&lt;h3 id=&#34;自我介绍&#34;&gt;&lt;a href=&#34;#自我介绍&#34; class=&#34;headerlink&#34; title=&#34;自我介绍&#34;&gt;&lt;/a&gt;自我介绍&lt;/h3&gt;&lt;h3 id=&#34;JS的数据类型？&#34;&gt;&lt;a href=&#34;#JS的数据类型？&#34; class=&#34;headerlink&#34; title=&#34;JS的数据类型？&#34;&gt;&lt;/a&gt;JS的数据类型？&lt;/h3&gt;&lt;h3 id=&#34;typeof和instanceof的区别？&#34;&gt;&lt;a href=&#34;#typeof和instanceof的区别？&#34; class=&#34;headerlink&#34; title=&#34;typeof和instanceof的区别？&#34;&gt;&lt;/a&gt;typeof和instanceof的区别？&lt;/h3&gt;&lt;h3 id=&#34;箭头函数和普通函数的区别？&#34;&gt;&lt;a href=&#34;#箭头函数和普通函数的区别？&#34; class=&#34;headerlink&#34; title=&#34;箭头函数和普通函数的区别？&#34;&gt;&lt;/a&gt;箭头函数和普通函数的区别？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;还有吗？&lt;/li&gt;
+&lt;li&gt;还有补充的吗？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;1、箭头函数的定义要比function定义简洁、清晰得多，很快捷；&lt;/p&gt;
+&lt;p&gt;2、箭头函数不会创建自己的this，而function会；&lt;/p&gt;
+&lt;p&gt;3、箭头函数不能作为构造函数使用，而function能作为构造函数使用；&lt;/p&gt;
+&lt;p&gt;4、箭头函数没有自己的arguments，而function有。&lt;/p&gt;
+&lt;h3 id=&#34;JS的事件循环机制？&#34;&gt;&lt;a href=&#34;#JS的事件循环机制？&#34; class=&#34;headerlink&#34; title=&#34;JS的事件循环机制？&#34;&gt;&lt;/a&gt;JS的事件循环机制？&lt;/h3&gt;&lt;h3 id=&#34;说一说你知道哪些宏任务哪些微任务？&#34;&gt;&lt;a href=&#34;#说一说你知道哪些宏任务哪些微任务？&#34; class=&#34;headerlink&#34; title=&#34;说一说你知道哪些宏任务哪些微任务？&#34;&gt;&lt;/a&gt;说一说你知道哪些宏任务哪些微任务？&lt;/h3&gt;&lt;h3 id=&#34;虚拟DOM有什么好处？&#34;&gt;&lt;a href=&#34;#虚拟DOM有什么好处？&#34; class=&#34;headerlink&#34; title=&#34;虚拟DOM有什么好处？&#34;&gt;&lt;/a&gt;虚拟DOM有什么好处？&lt;/h3&gt;&lt;p&gt;（这里给自己挖了坑，说了虚拟dom的diff算法，然后就问了这个）&lt;/p&gt;
+&lt;h3 id=&#34;讲一讲Vue和React的diff算法，有什么不同？&#34;&gt;&lt;a href=&#34;#讲一讲Vue和React的diff算法，有什么不同？&#34; class=&#34;headerlink&#34; title=&#34;讲一讲Vue和React的diff算法，有什么不同？&#34;&gt;&lt;/a&gt;讲一讲Vue和React的diff算法，有什么不同？&lt;/h3&gt;&lt;h3 id=&#34;页面进入首页，讲一讲token鉴权？&#34;&gt;&lt;a href=&#34;#页面进入首页，讲一讲token鉴权？&#34; class=&#34;headerlink&#34; title=&#34;页面进入首页，讲一讲token鉴权？&#34;&gt;&lt;/a&gt;页面进入首页，讲一讲token鉴权？&lt;/h3&gt;&lt;h3 id=&#34;如何使用Vue勾子来达到页面权限管理，有了解吗？&#34;&gt;&lt;a href=&#34;#如何使用Vue勾子来达到页面权限管理，有了解吗？&#34; class=&#34;headerlink&#34; title=&#34;如何使用Vue勾子来达到页面权限管理，有了解吗？&#34;&gt;&lt;/a&gt;如何使用Vue勾子来达到页面权限管理，有了解吗？&lt;/h3&gt;&lt;p&gt;（我答的路由守卫）&lt;/p&gt;
+&lt;h3 id=&#34;讲一讲组件通信？&#34;&gt;&lt;a href=&#34;#讲一讲组件通信？&#34; class=&#34;headerlink&#34; title=&#34;讲一讲组件通信？&#34;&gt;&lt;/a&gt;讲一讲组件通信？&lt;/h3&gt;&lt;h3 id=&#34;讲一讲前后端交互是怎么做的？&#34;&gt;&lt;a href=&#34;#讲一讲前后端交互是怎么做的？&#34; class=&#34;headerlink&#34; title=&#34;讲一讲前后端交互是怎么做的？&#34;&gt;&lt;/a&gt;讲一讲前后端交互是怎么做的？&lt;/h3&gt;&lt;h3 id=&#34;项目里面写了权限分离，讲一讲怎么做的？&#34;&gt;&lt;a href=&#34;#项目里面写了权限分离，讲一讲怎么做的？&#34; class=&#34;headerlink&#34; title=&#34;项目里面写了权限分离，讲一讲怎么做的？&#34;&gt;&lt;/a&gt;项目里面写了权限分离，讲一讲怎么做的？&lt;/h3&gt;&lt;h3 id=&#34;你有考虑到后期页面增加吗，项目中的路由是固定写好的嘛？&#34;&gt;&lt;a href=&#34;#你有考虑到后期页面增加吗，项目中的路由是固定写好的嘛？&#34; class=&#34;headerlink&#34; title=&#34;你有考虑到后期页面增加吗，项目中的路由是固定写好的嘛？&#34;&gt;&lt;/a&gt;你有考虑到后期页面增加吗，项目中的路由是固定写好的嘛？&lt;/h3&gt;&lt;h3 id=&#34;项目中的多级嵌套是怎么做的，你有什么好的封装或者有意思的组件封装吗？&#34;&gt;&lt;a href=&#34;#项目中的多级嵌套是怎么做的，你有什么好的封装或者有意思的组件封装吗？&#34; class=&#34;headerlink&#34; title=&#34;项目中的多级嵌套是怎么做的，你有什么好的封装或者有意思的组件封装吗？&#34;&gt;&lt;/a&gt;项目中的多级嵌套是怎么做的，你有什么好的封装或者有意思的组件封装吗？&lt;/h3&gt;&lt;h3 id=&#34;你了解Echarts吗？有对Echarts封装过吗，怎么封装？&#34;&gt;&lt;a href=&#34;#你了解Echarts吗？有对Echarts封装过吗，怎么封装？&#34; class=&#34;headerlink&#34; title=&#34;你了解Echarts吗？有对Echarts封装过吗，怎么封装？&#34;&gt;&lt;/a&gt;你了解Echarts吗？有对Echarts封装过吗，怎么封装？&lt;/h3&gt;&lt;h3 id=&#34;你刚才说你封装Echarts会出现页面的表没有渲染出来，你有了解数据刷新吗&#34;&gt;&lt;a href=&#34;#你刚才说你封装Echarts会出现页面的表没有渲染出来，你有了解数据刷新吗&#34; class=&#34;headerlink&#34; title=&#34;你刚才说你封装Echarts会出现页面的表没有渲染出来，你有了解数据刷新吗&#34;&gt;&lt;/a&gt;你刚才说你封装Echarts会出现页面的表没有渲染出来，你有了解数据刷新吗&lt;/h3&gt;&lt;h3 id=&#34;反问&#34;&gt;&lt;a href=&#34;#反问&#34; class=&#34;headerlink&#34; title=&#34;反问&#34;&gt;&lt;/a&gt;反问&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;面试有几面？&lt;ul&gt;
+&lt;li&gt;一面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;业务是什么？&lt;ul&gt;
+&lt;li&gt;管理系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;技术栈是什么？&lt;ul&gt;
+&lt;li&gt;Vue和ElementUI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;如果可能了解这个需要多久到岗？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;一周可以到岗多少天？学校放你走吗？&#34;&gt;&lt;a href=&#34;#一周可以到岗多少天？学校放你走吗？&#34; class=&#34;headerlink&#34; title=&#34;一周可以到岗多少天？学校放你走吗？&#34;&gt;&lt;/a&gt;一周可以到岗多少天？学校放你走吗？&lt;/h3&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://victinsever.github.io/2023/02/17/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%99%BE%E5%BA%A6/%E7%99%BE%E5%BA%A6%E4%B8%80%E9%9D%A2/</guid>
             <title>百度一面</title>
-            <link>http://victinsever.github.io/2023/02/17/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%99%BE%E5%BA%A6%E4%B8%80%E9%9D%A2/</link>
+            <link>http://victinsever.github.io/2023/02/17/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%99%BE%E5%BA%A6/%E7%99%BE%E5%BA%A6%E4%B8%80%E9%9D%A2/</link>
             <pubDate>Fri, 17 Feb 2023 13:26:54 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;公司： 百度 - 前端国际化产品研发（北京）&lt;/p&gt;
-&lt;p&gt;面试时间：2022-2-17 上午 11:00-11:45&lt;/p&gt;
-&lt;p&gt;时长：45min 左右&lt;/p&gt;
-&lt;h3 id=&#34;自我介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#自我介绍&#34;&gt;#&lt;/a&gt; 自我介绍&lt;/h3&gt;
-&lt;h3 id=&#34;浏览器访问网站网站打开到对方返回数据这一些过程中在操作系统和网络层面经历了哪些流程呢介绍一下步骤就是发送请求到dns解析再到网络七层模型到服务端再到服务端怎么回来的这个过程就是发请求可以得到什么然后择取通过什么协议带上这几个东西去做什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浏览器访问网站网站打开到对方返回数据这一些过程中在操作系统和网络层面经历了哪些流程呢介绍一下步骤就是发送请求到dns解析再到网络七层模型到服务端再到服务端怎么回来的这个过程就是发请求可以得到什么然后择取通过什么协议带上这几个东西去做什么&#34;&gt;#&lt;/a&gt; 浏览器访问网站，网站打开到对方返回数据这一些过程中在操作系统和网络层面经历了哪些流程呢，介绍一下步骤？就是发送请求到 dns 解析再到网络七层模型到服务端再到服务端怎么回来的这个过程？就是发请求可以得到什么，然后择取通过什么协议带上这几个东西去做什么？&lt;/h3&gt;
-&lt;ul&gt;
+            <description><![CDATA[ &lt;p&gt;公司： 百度-前端国际化产品研发（北京）&lt;/p&gt;
+&lt;p&gt;面试时间：2022-2-17 上午11:00-11:45&lt;/p&gt;
+&lt;p&gt;时长：45min左右&lt;/p&gt;
+&lt;h3 id=&#34;自我介绍&#34;&gt;&lt;a href=&#34;#自我介绍&#34; class=&#34;headerlink&#34; title=&#34;自我介绍&#34;&gt;&lt;/a&gt;自我介绍&lt;/h3&gt;&lt;h3 id=&#34;浏览器访问网站，网站打开到对方返回数据这一些过程中在操作系统和网络层面经历了哪些流程呢，介绍一下步骤？就是发送请求到dns解析再到网络七层模型到服务端再到服务端怎么回来的这个过程？就是发请求可以得到什么，然后择取通过什么协议带上这几个东西去做什么&#34;&gt;&lt;a href=&#34;#浏览器访问网站，网站打开到对方返回数据这一些过程中在操作系统和网络层面经历了哪些流程呢，介绍一下步骤？就是发送请求到dns解析再到网络七层模型到服务端再到服务端怎么回来的这个过程？就是发请求可以得到什么，然后择取通过什么协议带上这几个东西去做什么&#34; class=&#34;headerlink&#34; title=&#34;浏览器访问网站，网站打开到对方返回数据这一些过程中在操作系统和网络层面经历了哪些流程呢，介绍一下步骤？就是发送请求到dns解析再到网络七层模型到服务端再到服务端怎么回来的这个过程？就是发请求可以得到什么，然后择取通过什么协议带上这几个东西去做什么?&#34;&gt;&lt;/a&gt;浏览器访问网站，网站打开到对方返回数据这一些过程中在操作系统和网络层面经历了哪些流程呢，介绍一下步骤？就是发送请求到dns解析再到网络七层模型到服务端再到服务端怎么回来的这个过程？就是发请求可以得到什么，然后择取通过什么协议带上这几个东西去做什么?&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;域名解析&lt;/li&gt;
-&lt;li&gt;TCP 的三次握手&lt;/li&gt;
-&lt;li&gt;数据传输：向服务器请求，封装成请求数据包，发送给服务器
-&lt;ul&gt;
+&lt;li&gt;TCP的三次握手&lt;/li&gt;
+&lt;li&gt;数据传输：向服务器请求，封装成请求数据包，发送给服务器&lt;ul&gt;
 &lt;li&gt;请求数据包从 客户机应用层 出发，经过 客户机传输层、客户机网络层、客户机数据链路层、客户机物理层、本地交换机物理层，到达 本地交换机数据链路层。&lt;/li&gt;
 &lt;li&gt;本地交换机向本地路由器转发数据包。&lt;/li&gt;
 &lt;li&gt;数据包从 本地交换机数据链路层 出发，经过 本地交换机物理层 、本地路由器物理层、本地路由器数据链路层，到达 本地路由器网络层。&lt;/li&gt;
 &lt;li&gt;本地路由器对数据包进行 分组过滤，依据 路由表 信息，将可传输的数据包 转发 至目的路由器。&lt;/li&gt;
 &lt;li&gt;数据包从 本地路由器网络层 出发，经过 本地路由器数据链路层、本地路由器物理层，通过 互联网 与 目的路由器的物理层 连接，然后经过 目的路由器的数据链路层，到达 目的路由器的网络层。&lt;/li&gt;
-&lt;li&gt;目的路由器根据 路由表 信息将数据包转发至目的交换机。&lt;br&gt;
-数据包从 目的路由器网络层 出发，经过 目的路由器数据链路层、目的路由器物理层、目的交换机物理层，到达 目的交换机数据链路层。&lt;br&gt;
-目的交换机转发数据包至对应服务器。&lt;/li&gt;
+&lt;li&gt;目的路由器根据 路由表 信息将数据包转发至目的交换机。&lt;br&gt;数据包从 目的路由器网络层 出发，经过 目的路由器数据链路层、目的路由器物理层、目的交换机物理层，到达 目的交换机数据链路层。&lt;br&gt;目的交换机转发数据包至对应服务器。&lt;/li&gt;
 &lt;li&gt;数据包从 目的交换机数据链路层 出发，经过 目的交换机物理层、服务器物理层、服务器数据链路层、服务器网络层、服务器传输层，到达 服务器应用层。&lt;/li&gt;
 &lt;li&gt;服务器 WEB 应用对请求数据包进行解析，提供对应资源，封装成响应数据包。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;响应数据包通过相同的流程返回给客户端应用层&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;tcp协议负责做什么ip协议负责做什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#tcp协议负责做什么ip协议负责做什么&#34;&gt;#&lt;/a&gt; TCP 协议负责做什么？IP 协议负责做什么？&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;TCP 协议：
-&lt;ul&gt;
+&lt;h3 id=&#34;TCP协议负责做什么？IP协议负责做什么？&#34;&gt;&lt;a href=&#34;#TCP协议负责做什么？IP协议负责做什么？&#34; class=&#34;headerlink&#34; title=&#34;TCP协议负责做什么？IP协议负责做什么？&#34;&gt;&lt;/a&gt;TCP协议负责做什么？IP协议负责做什么？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;TCP协议：&lt;ul&gt;
 &lt;li&gt;1、完成对数据报的确认、流量控制和网络拥塞；&lt;/li&gt;
 &lt;li&gt;2、自动检测数据报，并提供错误重发的功能；&lt;/li&gt;
 &lt;li&gt;3、将多条路径传送的数据报按照原来的顺序进行排列；&lt;/li&gt;
 &lt;li&gt;4、控制超时重发，自动调整超时值。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;IP 协议：寻址和分段&lt;/li&gt;
+&lt;li&gt;IP协议：寻址和分段&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;ip分类中c类地址的网络号是什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ip分类中c类地址的网络号是什么&#34;&gt;#&lt;/a&gt; IP 分类中 C 类地址的网络号是什么？&lt;/h3&gt;
-&lt;p&gt;一个 C 类 IP 地址由 3 字节的网络地址和 1 字节的主机地址组成，网络地址的最高位必须是 “110”。范围从 192.0.0.0 到 223.255.255.255。C 类网络可达 209 万余个，每个网络能容纳 254 个主机。&lt;/p&gt;
-&lt;h3 id=&#34;http2的特性是什么http2的首部压缩是怎么一回事&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#http2的特性是什么http2的首部压缩是怎么一回事&#34;&gt;#&lt;/a&gt; http2 的特性是什么？http2 的首部压缩是怎么一回事？&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;特性：&lt;/p&gt;
+&lt;h3 id=&#34;IP分类中C类地址的网络号是什么？&#34;&gt;&lt;a href=&#34;#IP分类中C类地址的网络号是什么？&#34; class=&#34;headerlink&#34; title=&#34;IP分类中C类地址的网络号是什么？&#34;&gt;&lt;/a&gt;IP分类中C类地址的网络号是什么？&lt;/h3&gt;&lt;p&gt; 一个C类IP地址由3字节的网络地址和1字节的主机地址组成，网络地址的最高位必须是“110”。范围从192.0.0.0到223.255.255.255。C类网络可达209万余个，每个网络能容纳254个主机。&lt;/p&gt;
+&lt;h3 id=&#34;http2的特性是什么？http2的首部压缩是怎么一回事？&#34;&gt;&lt;a href=&#34;#http2的特性是什么？http2的首部压缩是怎么一回事？&#34; class=&#34;headerlink&#34; title=&#34;http2的特性是什么？http2的首部压缩是怎么一回事？&#34;&gt;&lt;/a&gt;http2的特性是什么？http2的首部压缩是怎么一回事？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;特性：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;二进制分帧：减少服务器压力，网络拥塞减少，丢包回复加快&lt;/li&gt;
 &lt;li&gt;首部压缩：报头紧凑，利于数据传输，减少传输数据量&lt;/li&gt;
-&lt;li&gt;流量控制：基于 HTTP 链接的每一跳进行，而非端到端的控制&lt;/li&gt;
+&lt;li&gt;流量控制：基于HTTP链接的每一跳进行，而非端到端的控制&lt;/li&gt;
 &lt;li&gt;多路复用：请求和响应不影响，一个链接可以并行发送多个请求响应，减小延迟&lt;/li&gt;
 &lt;li&gt;请求优先级：可以让服务器决定数据优先级&lt;/li&gt;
 &lt;li&gt;服务器推送：服务器推送提高性能&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;首部压缩工作流程：&lt;/p&gt;
-&lt;p&gt;对于相同的数据，不再重新通过每次请求和响应发送。每个新的首部键值对要么追加到当前表的末尾，要么替换表中之前的值。首部表在 HTTP2.0 的链接存续期内始终存在，由客户端和服务端共同渐进的更新。&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;首部压缩工作流程：&lt;/p&gt;
+&lt;p&gt;对于相同的数据，不再重新通过每次请求和响应发送。每个新的首部键值对要么追加到当前表的末尾，要么替换表中之前的值。首部表在HTTP2.0的链接存续期内始终存在，由客户端和服务端共同渐进的更新。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;说一下nginx的匹配规则优先级就是对url进行匹配然后去做一些处理比如正则还是等号还有什么其他优先级你说一下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#说一下nginx的匹配规则优先级就是对url进行匹配然后去做一些处理比如正则还是等号还有什么其他优先级你说一下&#34;&gt;#&lt;/a&gt; 说一下 nginx 的匹配规则优先级，就是对 url 进行匹配，然后去做一些处理？比如正则还是等号还有什么其他优先级你说一下？&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;精确匹配 =&lt;br&gt;
- 前缀匹配 ^~&lt;br&gt;
- 按文件中顺序的正则匹配&lt;br&gt;
-匹配不带任何修饰的前缀匹配&lt;br&gt;
-交给 / 通用匹配&lt;br&gt;
-当有匹配成功时候，停止匹配，按当前匹配规则处理请求&lt;/li&gt;
+&lt;h3 id=&#34;说一下nginx的匹配规则优先级，就是对url进行匹配，然后去做一些处理？比如正则还是等号还有什么其他优先级你说一下？&#34;&gt;&lt;a href=&#34;#说一下nginx的匹配规则优先级，就是对url进行匹配，然后去做一些处理？比如正则还是等号还有什么其他优先级你说一下？&#34; class=&#34;headerlink&#34; title=&#34;说一下nginx的匹配规则优先级，就是对url进行匹配，然后去做一些处理？比如正则还是等号还有什么其他优先级你说一下？&#34;&gt;&lt;/a&gt;说一下nginx的匹配规则优先级，就是对url进行匹配，然后去做一些处理？比如正则还是等号还有什么其他优先级你说一下？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;精确匹配 &amp;#x3D;&lt;br&gt;前缀匹配 ^~&lt;br&gt;按文件中顺序的正则匹配&lt;br&gt;匹配不带任何修饰的前缀匹配&lt;br&gt;交给&amp;#x2F;通用匹配&lt;br&gt;当有匹配成功时候，停止匹配，按当前匹配规则处理请求&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;git中代码提交方面的准则&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git中代码提交方面的准则&#34;&gt;#&lt;/a&gt; git 中代码提交方面的准则？&lt;/h3&gt;
-&lt;table&gt;
+&lt;h3 id=&#34;git中代码提交方面的准则？&#34;&gt;&lt;a href=&#34;#git中代码提交方面的准则？&#34; class=&#34;headerlink&#34; title=&#34;git中代码提交方面的准则？&#34;&gt;&lt;/a&gt;git中代码提交方面的准则？&lt;/h3&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;类型&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;描述&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;类型&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;描述&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;add&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;新增功能&lt;/td&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;add&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;新增功能&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;update&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;更新功能&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;update&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;更新功能&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;delete&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;删除功能&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;delete&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;删除功能&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;fix&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;修复 BUG&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;fix&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;修复 BUG&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;refactor&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;代码重构&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;refactor&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;代码重构&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;revert&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;撤销上次 commit&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;revert&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;撤销上次commit&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;style&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;代码风格更改&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;style&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;代码风格更改&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;docs&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;修改文档相关内容&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;docs&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;修改文档相关内容&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;介绍使用git的几个操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#介绍使用git的几个操作&#34;&gt;#&lt;/a&gt; 介绍使用 git 的几个操作？&lt;/h3&gt;
-&lt;ul&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h3 id=&#34;介绍使用git的几个操作？&#34;&gt;&lt;a href=&#34;#介绍使用git的几个操作？&#34; class=&#34;headerlink&#34; title=&#34;介绍使用git的几个操作？&#34;&gt;&lt;/a&gt;介绍使用git的几个操作？&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;git add&lt;/li&gt;
 &lt;li&gt;git commit&lt;/li&gt;
 &lt;li&gt;git pull&lt;/li&gt;
@@ -172,72 +221,52 @@
 &lt;li&gt;git fetch&lt;/li&gt;
 &lt;li&gt;git status&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;我正在项目写代码突然线上有一个严重的bug然后本地仓库还有很多代码没有提交本地工作未完成是不能提交代码入库的我需要临时去处理这个高优先级问题如何做去切换到对应的新的分支去修改线上的这个问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#我正在项目写代码突然线上有一个严重的bug然后本地仓库还有很多代码没有提交本地工作未完成是不能提交代码入库的我需要临时去处理这个高优先级问题如何做去切换到对应的新的分支去修改线上的这个问题&#34;&gt;#&lt;/a&gt; 我正在项目写代码，突然线上有一个严重的 bug 然后本地仓库还有很多代码没有提交（本地工作未完成是不能提交代码入库的），我需要临时去处理这个高优先级问题，如何做去切换到对应的新的分支去修改线上的这个问题？&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;git stash&lt;/p&gt;
-&lt;p&gt;我在 a 分支 git stash save &amp;quot;sss&amp;quot; 暂存了一个修改，那么我切换到 b 分支，我使用 git stash pop 就能把在 a 分支保存的 &amp;quot;sss&amp;quot; 这个修改同步到了 b 分支上。所以当我们需要在不同的分支上取出不同的分支上保存的修改，那么就用到了 git stash list, 这个命令可以把在所有分支上暂存的信息显示出来，然后我们通过 git stash apply stash@{0} 来选择恢复哪个暂存，stash@{0} 这个会在 list 中列出来.&lt;/p&gt;
+&lt;h3 id=&#34;我正在项目写代码，突然线上有一个严重的bug然后本地仓库还有很多代码没有提交（本地工作未完成是不能提交代码入库的），我需要临时去处理这个高优先级问题，如何做去切换到对应的新的分支去修改线上的这个问题？&#34;&gt;&lt;a href=&#34;#我正在项目写代码，突然线上有一个严重的bug然后本地仓库还有很多代码没有提交（本地工作未完成是不能提交代码入库的），我需要临时去处理这个高优先级问题，如何做去切换到对应的新的分支去修改线上的这个问题？&#34; class=&#34;headerlink&#34; title=&#34;我正在项目写代码，突然线上有一个严重的bug然后本地仓库还有很多代码没有提交（本地工作未完成是不能提交代码入库的），我需要临时去处理这个高优先级问题，如何做去切换到对应的新的分支去修改线上的这个问题？&#34;&gt;&lt;/a&gt;我正在项目写代码，突然线上有一个严重的bug然后本地仓库还有很多代码没有提交（本地工作未完成是不能提交代码入库的），我需要临时去处理这个高优先级问题，如何做去切换到对应的新的分支去修改线上的这个问题？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;git stash&lt;/p&gt;
+&lt;p&gt;我在a分支git stash save “sss”暂存了一个修改,那么我切换到b分支,我使用git stash pop 就能把在a分支保存的”sss”这个修改同步到了b分支上.所以当我们需要在不同的分支上取出不同的分支上保存的修改,那么就用到了git stash list,这个命令可以把在所有分支上暂存的信息显示出来,然后我们通过 git stash apply stash@{0} 来选择恢复哪个暂存,stash@{0}这个会在list中列出来.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;js的数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#js的数据类型&#34;&gt;#&lt;/a&gt; js 的数据类型？&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;普通数据类型：number，string，boolean，null，undefined，symbol，bigint&lt;/p&gt;
+&lt;h3 id=&#34;js的数据类型？&#34;&gt;&lt;a href=&#34;#js的数据类型？&#34; class=&#34;headerlink&#34; title=&#34;js的数据类型？&#34;&gt;&lt;/a&gt;js的数据类型？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;普通数据类型：number，string，boolean，null，undefined，symbol，bigint&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;引用数据类型：object，fuction&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;引用数据类型：object，fuction&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;对于js的数据类型哪些可以通过typeof判断出来哪些不行&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#对于js的数据类型哪些可以通过typeof判断出来哪些不行&#34;&gt;#&lt;/a&gt; 对于 js 的数据类型哪些可以通过 typeof 判断出来，哪些不行？&lt;/h3&gt;
-&lt;p&gt;除了对象都可以，如果是对象的话，都结果为 Object&lt;/p&gt;
-&lt;h3 id=&#34;有没有万能的判断数据的方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#有没有万能的判断数据的方法&#34;&gt;#&lt;/a&gt; 有没有万能的判断数据的方法？&lt;/h3&gt;
-&lt;p&gt;Object.prototype.toString.call()&lt;/p&gt;
-&lt;h3 id=&#34;js绑定事件的方法有哪些&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#js绑定事件的方法有哪些&#34;&gt;#&lt;/a&gt; js 绑定事件的方法有哪些？&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;原生添加属性绑定事件处理函数&lt;/p&gt;
+&lt;h3 id=&#34;对于js的数据类型哪些可以通过typeof判断出来，哪些不行？&#34;&gt;&lt;a href=&#34;#对于js的数据类型哪些可以通过typeof判断出来，哪些不行？&#34; class=&#34;headerlink&#34; title=&#34;对于js的数据类型哪些可以通过typeof判断出来，哪些不行？&#34;&gt;&lt;/a&gt;对于js的数据类型哪些可以通过typeof判断出来，哪些不行？&lt;/h3&gt;&lt;p&gt;除了对象都可以，如果是对象的话，都结果为Object&lt;/p&gt;
+&lt;h3 id=&#34;有没有万能的判断数据的方法？&#34;&gt;&lt;a href=&#34;#有没有万能的判断数据的方法？&#34; class=&#34;headerlink&#34; title=&#34;有没有万能的判断数据的方法？&#34;&gt;&lt;/a&gt;有没有万能的判断数据的方法？&lt;/h3&gt;&lt;p&gt;Object.prototype.toString.call()&lt;/p&gt;
+&lt;h3 id=&#34;js绑定事件的方法有哪些？&#34;&gt;&lt;a href=&#34;#js绑定事件的方法有哪些？&#34; class=&#34;headerlink&#34; title=&#34;js绑定事件的方法有哪些？&#34;&gt;&lt;/a&gt;js绑定事件的方法有哪些？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;原生添加属性绑定事件处理函数&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;添加监听器&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;添加监听器&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;对于js数组哪些方法可以在遍历的时候去进行一个break跳出&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#对于js数组哪些方法可以在遍历的时候去进行一个break跳出&#34;&gt;#&lt;/a&gt; 对于 js 数组哪些方法可以在遍历的时候去进行一个 break 跳出？&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;数组的方法没有可以在遍历时 break 跳出&lt;/li&gt;
-&lt;li&gt;但 some 和 every 可以通过 return 停止遍历，其他方法如 forEach，map，ffilter 使用 return 只是跳出本次循环&lt;/li&gt;
+&lt;h3 id=&#34;对于js数组哪些方法可以在遍历的时候去进行一个break跳出？&#34;&gt;&lt;a href=&#34;#对于js数组哪些方法可以在遍历的时候去进行一个break跳出？&#34; class=&#34;headerlink&#34; title=&#34;对于js数组哪些方法可以在遍历的时候去进行一个break跳出？&#34;&gt;&lt;/a&gt;对于js数组哪些方法可以在遍历的时候去进行一个break跳出？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;数组的方法没有可以在遍历时break跳出&lt;/li&gt;
+&lt;li&gt;但some和every可以通过return停止遍历，其他方法如forEach，map，ffilter使用return只是跳出本次循环&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;forforin和forof有没有可以或者不可以break跳出&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#forforin和forof有没有可以或者不可以break跳出&#34;&gt;#&lt;/a&gt; for，for…in 和 for…of 有没有可以或者不可以 break 跳出？&lt;/h3&gt;
-&lt;p&gt;都可以跳出&lt;/p&gt;
-&lt;h3 id=&#34;我有三个接口独立不相关可请求需要在一个mounted同时调用它们我使用await将三个接口依次放在mounted中加载这个写法有没有什么问题和不使用asyncawait的方法有什么区别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#我有三个接口独立不相关可请求需要在一个mounted同时调用它们我使用await将三个接口依次放在mounted中加载这个写法有没有什么问题和不使用asyncawait的方法有什么区别&#34;&gt;#&lt;/a&gt; 我有三个接口，独立不相关可请求，需要在一个 mounted 同时调用它们，我使用 await 将三个接口依次放在 mounted 中加载，这个写法有没有什么问题？和不使用 async/await 的方法有什么区别？&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;若响应不及时或者等待时间过程，await 会阻塞后续 js 的运行。&lt;/li&gt;
-&lt;li&gt;区别：需要等待每一个 promise 响应结束&lt;/li&gt;
+&lt;h3 id=&#34;for，for…in和for…of有没有可以或者不可以break跳出？&#34;&gt;&lt;a href=&#34;#for，for…in和for…of有没有可以或者不可以break跳出？&#34; class=&#34;headerlink&#34; title=&#34;for，for…in和for…of有没有可以或者不可以break跳出？&#34;&gt;&lt;/a&gt;for，for…in和for…of有没有可以或者不可以break跳出？&lt;/h3&gt;&lt;p&gt;都可以跳出&lt;/p&gt;
+&lt;h3 id=&#34;我有三个接口，独立不相关可请求，需要在一个mounted同时调用它们，我使用await将三个接口依次放在mounted中加载，这个写法有没有什么问题？和不使用async-x2F-await的方法有什么区别？&#34;&gt;&lt;a href=&#34;#我有三个接口，独立不相关可请求，需要在一个mounted同时调用它们，我使用await将三个接口依次放在mounted中加载，这个写法有没有什么问题？和不使用async-x2F-await的方法有什么区别？&#34; class=&#34;headerlink&#34; title=&#34;我有三个接口，独立不相关可请求，需要在一个mounted同时调用它们，我使用await将三个接口依次放在mounted中加载，这个写法有没有什么问题？和不使用async&amp;#x2F;await的方法有什么区别？&#34;&gt;&lt;/a&gt;我有三个接口，独立不相关可请求，需要在一个mounted同时调用它们，我使用await将三个接口依次放在mounted中加载，这个写法有没有什么问题？和不使用async&amp;#x2F;await的方法有什么区别？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;若响应不及时或者等待时间过程，await会阻塞后续js的运行。&lt;/li&gt;
+&lt;li&gt;区别：需要等待每一个promise响应结束&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;优化上述场景如何解决做项目的时候有没有遇到过&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#优化上述场景如何解决做项目的时候有没有遇到过&#34;&gt;#&lt;/a&gt; 优化上述场景如何解决？做项目的时候有没有遇到过？&lt;/h3&gt;
-&lt;p&gt;Promise.all()&lt;/p&gt;
-&lt;h3 id=&#34;css选择器的优先级&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css选择器的优先级&#34;&gt;#&lt;/a&gt; CSS 选择器的优先级？&lt;/h3&gt;
-&lt;p&gt;!important &amp;gt; 内联样式 &amp;gt; 嵌入演示 &amp;gt; 外链样式 &amp;gt; id 选择器 &amp;gt; 类选择器 &amp;gt; 标签选择器 &amp;gt; 子选择器 &amp;gt; 后代选择器 &amp;gt; 伪类选择器 &amp;gt; 继承属性&lt;/p&gt;
+&lt;h3 id=&#34;优化上述场景如何解决？做项目的时候有没有遇到过？&#34;&gt;&lt;a href=&#34;#优化上述场景如何解决？做项目的时候有没有遇到过？&#34; class=&#34;headerlink&#34; title=&#34;优化上述场景如何解决？做项目的时候有没有遇到过？&#34;&gt;&lt;/a&gt;优化上述场景如何解决？做项目的时候有没有遇到过？&lt;/h3&gt;&lt;p&gt;Promise.all()&lt;/p&gt;
+&lt;h3 id=&#34;CSS选择器的优先级？&#34;&gt;&lt;a href=&#34;#CSS选择器的优先级？&#34; class=&#34;headerlink&#34; title=&#34;CSS选择器的优先级？&#34;&gt;&lt;/a&gt;CSS选择器的优先级？&lt;/h3&gt;&lt;p&gt;!important &amp;gt; 内联样式 &amp;gt; 嵌入演示 &amp;gt; 外链样式 &amp;gt; id选择器 &amp;gt; 类选择器 &amp;gt; 标签选择器 &amp;gt; 子选择器 &amp;gt; 后代选择器 &amp;gt; 伪类选择器 &amp;gt; 继承属性&lt;/p&gt;
 &lt;p&gt;优先级相同采用最后出现的样式&lt;/p&gt;
-&lt;h3 id=&#34;我用了id选择器和class选择器相比会造成什么问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#我用了id选择器和class选择器相比会造成什么问题&#34;&gt;#&lt;/a&gt; 我用了 id 选择器，和 class 选择器相比会造成什么问题？&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;id 选择器只能使用一次&lt;/li&gt;
-&lt;li&gt;id 选择器不能结合使用&lt;/li&gt;
+&lt;h3 id=&#34;我用了id选择器，和class选择器相比会造成什么问题？&#34;&gt;&lt;a href=&#34;#我用了id选择器，和class选择器相比会造成什么问题？&#34; class=&#34;headerlink&#34; title=&#34;我用了id选择器，和class选择器相比会造成什么问题？&#34;&gt;&lt;/a&gt;我用了id选择器，和class选择器相比会造成什么问题？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;id选择器只能使用一次&lt;/li&gt;
+&lt;li&gt;id选择器不能结合使用&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;vue使用elmentui很多地方会有样式穿透有用过吗跟我讲一讲这个&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue使用elmentui很多地方会有样式穿透有用过吗跟我讲一讲这个&#34;&gt;#&lt;/a&gt; vue 使用 elmentui 很多地方会有样式穿透，有用过吗，跟我讲一讲这个？&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;普通 CSS 写法：&amp;gt;&amp;gt;&amp;gt;&lt;/li&gt;
-&lt;li&gt;SCSS 写法：::v-deep&lt;/li&gt;
-&lt;li&gt;sass 语法 /less 语法：/deep/&lt;/li&gt;
+&lt;h3 id=&#34;vue使用elmentui很多地方会有样式穿透，有用过吗，跟我讲一讲这个？&#34;&gt;&lt;a href=&#34;#vue使用elmentui很多地方会有样式穿透，有用过吗，跟我讲一讲这个？&#34; class=&#34;headerlink&#34; title=&#34;vue使用elmentui很多地方会有样式穿透，有用过吗，跟我讲一讲这个？&#34;&gt;&lt;/a&gt;vue使用elmentui很多地方会有样式穿透，有用过吗，跟我讲一讲这个？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;普通CSS写法：&amp;gt;&amp;gt;&amp;gt;&lt;/li&gt;
+&lt;li&gt;SCSS写法：::v-deep &lt;/li&gt;
+&lt;li&gt;sass语法&amp;#x2F;less语法：&amp;#x2F;deep&amp;#x2F;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;你有关注前端一些新的领域这些吗能和我说说最近学习了哪些新领域的东西关注的东西&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#你有关注前端一些新的领域这些吗能和我说说最近学习了哪些新领域的东西关注的东西&#34;&gt;#&lt;/a&gt; 你有关注前端一些新的领域这些吗，能和我说说最近学习了哪些新领域的东西，关注的东西？&lt;/h3&gt;
-&lt;h3 id=&#34;平时是怎么学习的呢&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#平时是怎么学习的呢&#34;&gt;#&lt;/a&gt; 平时是怎么学习的呢？&lt;/h3&gt;
-&lt;h3 id=&#34;我可能问了一些你没有准备到的你觉得哪些是你擅长的&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#我可能问了一些你没有准备到的你觉得哪些是你擅长的&#34;&gt;#&lt;/a&gt; 我可能问了一些你没有准备到的，你觉得哪些是你擅长的？&lt;/h3&gt;
- ]]></description>
+&lt;h3 id=&#34;你有关注前端一些新的领域这些吗，能和我说说最近学习了哪些新领域的东西，关注的东西？&#34;&gt;&lt;a href=&#34;#你有关注前端一些新的领域这些吗，能和我说说最近学习了哪些新领域的东西，关注的东西？&#34; class=&#34;headerlink&#34; title=&#34;你有关注前端一些新的领域这些吗，能和我说说最近学习了哪些新领域的东西，关注的东西？&#34;&gt;&lt;/a&gt;你有关注前端一些新的领域这些吗，能和我说说最近学习了哪些新领域的东西，关注的东西？&lt;/h3&gt;&lt;h3 id=&#34;平时是怎么学习的呢？&#34;&gt;&lt;a href=&#34;#平时是怎么学习的呢？&#34; class=&#34;headerlink&#34; title=&#34;平时是怎么学习的呢？&#34;&gt;&lt;/a&gt;平时是怎么学习的呢？&lt;/h3&gt;&lt;h3 id=&#34;我可能问了一些你没有准备到的，你觉得哪些是你擅长的？&#34;&gt;&lt;a href=&#34;#我可能问了一些你没有准备到的，你觉得哪些是你擅长的？&#34; class=&#34;headerlink&#34; title=&#34;我可能问了一些你没有准备到的，你觉得哪些是你擅长的？&#34;&gt;&lt;/a&gt;我可能问了一些你没有准备到的，你觉得哪些是你擅长的？&lt;/h3&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://victinsever.github.io/2023/02/16/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E4%BA%AC%E4%B8%9C%E4%BA%8C%E9%9D%A2/</guid>
+            <guid isPermalink="true">http://victinsever.github.io/2023/02/16/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E4%BA%AC%E4%B8%9C/%E4%BA%AC%E4%B8%9C%E4%BA%8C%E9%9D%A2/</guid>
             <title>京东二面</title>
-            <link>http://victinsever.github.io/2023/02/16/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E4%BA%AC%E4%B8%9C%E4%BA%8C%E9%9D%A2/</link>
+            <link>http://victinsever.github.io/2023/02/16/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E4%BA%AC%E4%B8%9C/%E4%BA%AC%E4%B8%9C%E4%BA%8C%E9%9D%A2/</link>
             <pubDate>Thu, 16 Feb 2023 16:26:54 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;公司： 京东（北京）&lt;/p&gt;
 &lt;p&gt;面试时间：2022-2-16 下午2:30-3:30&lt;/p&gt;
@@ -344,9 +373,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://victinsever.github.io/2023/02/15/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E4%BA%AC%E4%B8%9C%E4%B8%80%E9%9D%A2/</guid>
+            <guid isPermalink="true">http://victinsever.github.io/2023/02/15/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E4%BA%AC%E4%B8%9C/%E4%BA%AC%E4%B8%9C%E4%B8%80%E9%9D%A2/</guid>
             <title>京东一面</title>
-            <link>http://victinsever.github.io/2023/02/15/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E4%BA%AC%E4%B8%9C%E4%B8%80%E9%9D%A2/</link>
+            <link>http://victinsever.github.io/2023/02/15/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E4%BA%AC%E4%B8%9C/%E4%BA%AC%E4%B8%9C%E4%B8%80%E9%9D%A2/</link>
             <pubDate>Wed, 15 Feb 2023 16:26:54 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;公司： 京东（北京）&lt;/p&gt;
 &lt;p&gt;一面时间：2022-2-14 下午2:30-4:30&lt;/p&gt;
@@ -1159,9 +1188,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://victinsever.github.io/2022/11/26/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E5%AD%97%E8%8A%82%E4%B8%80%E9%9D%A2/</guid>
+            <guid isPermalink="true">http://victinsever.github.io/2022/11/26/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E5%AD%97%E8%8A%82/%E5%AD%97%E8%8A%82%E4%B8%80%E9%9D%A2/</guid>
             <title>字节一面（第一次面试）</title>
-            <link>http://victinsever.github.io/2022/11/26/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E5%AD%97%E8%8A%82%E4%B8%80%E9%9D%A2/</link>
+            <link>http://victinsever.github.io/2022/11/26/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E5%AD%97%E8%8A%82/%E5%AD%97%E8%8A%82%E4%B8%80%E9%9D%A2/</link>
             <pubDate>Sat, 26 Nov 2022 13:26:01 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;第一次面试记录&#34;&gt;&lt;a href=&#34;#第一次面试记录&#34; class=&#34;headerlink&#34; title=&#34;第一次面试记录&#34;&gt;&lt;/a&gt;第一次面试记录&lt;/h2&gt;&lt;p&gt;公司： 字节跳动-懂车帝&lt;/p&gt;
 &lt;p&gt;一面时间：2022-11-25 下午4:30-5:30&lt;/p&gt;
