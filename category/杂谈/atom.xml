@@ -3,7 +3,7 @@
     <id>http://victinSever.github.io</id>
     <title>眸光似星辰 • Posts by &#34;杂谈&#34; category</title>
     <link href="http://victinSever.github.io" />
-    <updated>2023-03-31T10:26:54.000Z</updated>
+    <updated>2023-04-24T13:54:54.000Z</updated>
     <category term="react" />
     <category term="react-redux" />
     <category term="redux" />
@@ -37,6 +37,110 @@
     <category term="凯斯密码" />
     <category term="维吉尼亚密码" />
     <category term="dp" />
+    <entry>
+        <id>http://victinsever.github.io/2023/04/24/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/360/360-%E6%A0%A1%E6%8B%9B%E4%B8%80%E9%9D%A2/</id>
+        <title>360-校招一面</title>
+        <link rel="alternate" href="http://victinsever.github.io/2023/04/24/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/360/360-%E6%A0%A1%E6%8B%9B%E4%B8%80%E9%9D%A2/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;公司：百度-测试研发组&lt;/p&gt;
+&lt;p&gt;面试时间：2023-04-24 14:50:00&lt;/p&gt;
+&lt;p&gt;时长：45min左右&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;自我介绍&lt;/li&gt;
+&lt;li&gt;实习项目提问：低代码集成工具&lt;/li&gt;
+&lt;li&gt;echarts了解了，还了解其他图表工具吗？&lt;/li&gt;
+&lt;li&gt;团队项目提问：残疾人婚恋平台&lt;/li&gt;
+&lt;li&gt;残疾人婚恋平台登录注册如何做的&lt;/li&gt;
+&lt;li&gt;有做适合残疾人的适配吗，比如语音引导？&lt;/li&gt;
+&lt;li&gt;vue2和vue3的区别？&lt;ul&gt;
+&lt;li&gt;双向绑定&lt;/li&gt;
+&lt;li&gt;写法&lt;/li&gt;
+&lt;li&gt;打包&lt;/li&gt;
+&lt;li&gt;v-if，v-for&lt;/li&gt;
+&lt;li&gt;单根和多根&lt;/li&gt;
+&lt;li&gt;生命周期&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;vue3中setup写在script里面和外面有什么区别？&lt;ul&gt;
+&lt;li&gt;里面适合数据少，外面适合数据多和杂&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;map和foreach区别&lt;/li&gt;
+&lt;li&gt;some，every返回值是什么，分别有啥作用&lt;/li&gt;
+&lt;li&gt;css选择器优先级&lt;/li&gt;
+&lt;li&gt;通配符选择器优先级？&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <updated>2023-04-24T13:54:54.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://victinsever.github.io/2023/04/24/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%99%BE%E5%BA%A6/%E7%99%BE%E5%BA%A6-%E6%B5%8B%E8%AF%95%E7%A0%94%E5%8F%91%E7%BB%84/</id>
+        <title>百度-测试研发组</title>
+        <link rel="alternate" href="http://victinsever.github.io/2023/04/24/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%99%BE%E5%BA%A6/%E7%99%BE%E5%BA%A6-%E6%B5%8B%E8%AF%95%E7%A0%94%E5%8F%91%E7%BB%84/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;公司：百度-测试研发组&lt;/p&gt;
+&lt;p&gt;面试时间：2023-04-24 18:00:00&lt;/p&gt;
+&lt;p&gt;时长：45min左右&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;自我介绍&#34;&gt;&lt;a href=&#34;#自我介绍&#34; class=&#34;headerlink&#34; title=&#34;自我介绍&#34;&gt;&lt;/a&gt;自我介绍&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;一行元素只有一个有长宽的div，设置浮动之后如何消除浮动？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;box-sizing说一下理解&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;标准盒模型&lt;/li&gt;
+&lt;li&gt;怪异盒模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如何改本地的分支名字&lt;/p&gt;
+&lt;p&gt;git branch -m 新分支名&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;说一说cookie？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如果我只是打开，不想用cookie登录呢？（说实话，没太理解面试官意思）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;网站如何对cookie进行识别的，识别是哪一个网站地址的cookie？（×）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;HttpOnly？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;字符串如何转成数字？说出所有想到的方案&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;parseInt&lt;/li&gt;
+&lt;li&gt;隐式转化：str * 1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;数字如何转成字符串？说出所有想到的方案&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;隐式转化：num + ‘’&lt;/li&gt;
+&lt;li&gt;String(num)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;0-n，统计含有0的数字个数？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方法1：遍历，通过转化为字符串判断含0&lt;/li&gt;
+&lt;li&gt;方法2：判断n位数，然后分别除以位数以内的10的次方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;算法：求字符串数组的最长前缀？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;es6的特性说一下？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;var，let，const区别？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;说一下变量提升做什么？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;浏览器输入到渲染整个流程？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;vuex说一下什么时候会用到？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;vuex持久化存储？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;页面刷新如何保证？&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <updated>2023-04-24T12:30:54.000Z</updated>
+    </entry>
     <entry>
         <id>http://victinsever.github.io/2023/03/31/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%99%BE%E5%BA%A6/%E7%99%BE%E5%BA%A6%E5%9E%82%E7%B1%BB-%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E6%97%A5%E5%B8%B8%E4%B8%80%E9%9D%A2/</id>
         <title>百度垂类-用户体验日常一面</title>

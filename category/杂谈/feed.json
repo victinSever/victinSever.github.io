@@ -5,6 +5,22 @@
     "home_page_url": "http://victinSever.github.io",
     "items": [
         {
+            "id": "http://victinsever.github.io/2023/04/24/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/360/360-%E6%A0%A1%E6%8B%9B%E4%B8%80%E9%9D%A2/",
+            "url": "http://victinsever.github.io/2023/04/24/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/360/360-%E6%A0%A1%E6%8B%9B%E4%B8%80%E9%9D%A2/",
+            "title": "360-校招一面",
+            "date_published": "2023-04-24T13:54:54.000Z",
+            "content_html": "<blockquote>\n<p>公司：百度-测试研发组</p>\n<p>面试时间：2023-04-24 14:50:00</p>\n<p>时长：45min左右</p>\n</blockquote>\n<ul>\n<li>自我介绍</li>\n<li>实习项目提问：低代码集成工具</li>\n<li>echarts了解了，还了解其他图表工具吗？</li>\n<li>团队项目提问：残疾人婚恋平台</li>\n<li>残疾人婚恋平台登录注册如何做的</li>\n<li>有做适合残疾人的适配吗，比如语音引导？</li>\n<li>vue2和vue3的区别？<ul>\n<li>双向绑定</li>\n<li>写法</li>\n<li>打包</li>\n<li>v-if，v-for</li>\n<li>单根和多根</li>\n<li>生命周期</li>\n</ul>\n</li>\n<li>vue3中setup写在script里面和外面有什么区别？<ul>\n<li>里面适合数据少，外面适合数据多和杂</li>\n</ul>\n</li>\n<li>map和foreach区别</li>\n<li>some，every返回值是什么，分别有啥作用</li>\n<li>css选择器优先级</li>\n<li>通配符选择器优先级？</li>\n</ul>\n",
+            "tags": []
+        },
+        {
+            "id": "http://victinsever.github.io/2023/04/24/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%99%BE%E5%BA%A6/%E7%99%BE%E5%BA%A6-%E6%B5%8B%E8%AF%95%E7%A0%94%E5%8F%91%E7%BB%84/",
+            "url": "http://victinsever.github.io/2023/04/24/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%99%BE%E5%BA%A6/%E7%99%BE%E5%BA%A6-%E6%B5%8B%E8%AF%95%E7%A0%94%E5%8F%91%E7%BB%84/",
+            "title": "百度-测试研发组",
+            "date_published": "2023-04-24T12:30:54.000Z",
+            "content_html": "<blockquote>\n<p>公司：百度-测试研发组</p>\n<p>面试时间：2023-04-24 18:00:00</p>\n<p>时长：45min左右</p>\n</blockquote>\n<h4 id=\"自我介绍\"><a href=\"#自我介绍\" class=\"headerlink\" title=\"自我介绍\"></a>自我介绍</h4><ul>\n<li><p>一行元素只有一个有长宽的div，设置浮动之后如何消除浮动？</p>\n</li>\n<li><p>box-sizing说一下理解</p>\n<ul>\n<li>标准盒模型</li>\n<li>怪异盒模型</li>\n</ul>\n</li>\n<li><p>如何改本地的分支名字</p>\n<p>git branch -m 新分支名</p>\n</li>\n<li><p>说一说cookie？</p>\n</li>\n<li><p>如果我只是打开，不想用cookie登录呢？（说实话，没太理解面试官意思）</p>\n</li>\n<li><p>网站如何对cookie进行识别的，识别是哪一个网站地址的cookie？（×）</p>\n</li>\n<li><p>HttpOnly？</p>\n</li>\n<li><p>字符串如何转成数字？说出所有想到的方案</p>\n<ul>\n<li>parseInt</li>\n<li>隐式转化：str * 1</li>\n</ul>\n</li>\n<li><p>数字如何转成字符串？说出所有想到的方案</p>\n<ul>\n<li>隐式转化：num + ‘’</li>\n<li>String(num)</li>\n</ul>\n</li>\n<li><p>0-n，统计含有0的数字个数？</p>\n<ul>\n<li>方法1：遍历，通过转化为字符串判断含0</li>\n<li>方法2：判断n位数，然后分别除以位数以内的10的次方</li>\n</ul>\n</li>\n<li><p>算法：求字符串数组的最长前缀？</p>\n</li>\n<li><p>es6的特性说一下？</p>\n</li>\n<li><p>var，let，const区别？</p>\n</li>\n<li><p>说一下变量提升做什么？</p>\n</li>\n<li><p>浏览器输入到渲染整个流程？</p>\n</li>\n<li><p>vuex说一下什么时候会用到？</p>\n</li>\n<li><p>vuex持久化存储？</p>\n</li>\n<li><p>页面刷新如何保证？</p>\n</li>\n</ul>\n",
+            "tags": []
+        },
+        {
             "id": "http://victinsever.github.io/2023/03/31/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%99%BE%E5%BA%A6/%E7%99%BE%E5%BA%A6%E5%9E%82%E7%B1%BB-%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E6%97%A5%E5%B8%B8%E4%B8%80%E9%9D%A2/",
             "url": "http://victinsever.github.io/2023/03/31/%E6%9D%82%E8%B0%88/%E9%9D%A2%E8%AF%95/%E7%99%BE%E5%BA%A6/%E7%99%BE%E5%BA%A6%E5%9E%82%E7%B1%BB-%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E6%97%A5%E5%B8%B8%E4%B8%80%E9%9D%A2/",
             "title": "百度垂类-用户体验日常一面",
